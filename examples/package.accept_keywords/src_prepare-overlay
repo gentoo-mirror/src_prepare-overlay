@@ -1,0 +1,2 @@
+# Unmask everything in src_prepare-overlay
+*/*::src_prepare-overlay **
