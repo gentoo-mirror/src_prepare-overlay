@@ -16,7 +16,21 @@ Mostly to have fun.
 
 ## How do I add this?
 
+### Official list
+
+With layman: `layman -a myov`
+
+or
+
+With eselect-repository: `eselect repository enable myov`
+
+### Manual
+
 Check out `examples/repos.conf/src_prepare-overlay.conf`
+
+or
+
+With layman: `layman -o 'https://gitlab.com/src_prepare/src_prepare-overlay/raw/master/repositories.xml' -f -a myov`
 
 ## How do I sync this?
 
