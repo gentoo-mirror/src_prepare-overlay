@@ -18,11 +18,11 @@ Mostly to have fun.
 
 ### Official list
 
-With layman: `layman -a myov`
+With layman: `layman -a src_prepare-overlay`
 
 or
 
-With eselect-repository: `eselect repository enable myov`
+With eselect-repository: `eselect repository enable src_prepare-overlay`
 
 ### Manual
 
@@ -30,7 +30,7 @@ Check out `examples/repos.conf/src_prepare-overlay.conf`
 
 or
 
-With layman: `layman -o 'https://gitlab.com/src_prepare/src_prepare-overlay/raw/master/repositories.xml' -f -a myov`
+With layman: `layman -o 'https://gitlab.com/src_prepare/src_prepare-overlay/raw/master/repositories.xml' -f -a src_prepare-overlay`
 
 ## How do I sync this?
 
