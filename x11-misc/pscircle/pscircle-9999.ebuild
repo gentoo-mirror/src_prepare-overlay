@@ -11,6 +11,7 @@ EGIT_REPO_URI="${HOMEPAGE}.git"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="x11-libs/cairo"
