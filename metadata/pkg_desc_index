@@ -1,2 +1,3 @@
 sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
+x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur
 x11-misc/pscircle 9999: pscircle visualizes Linux processes in a form of radial tree
