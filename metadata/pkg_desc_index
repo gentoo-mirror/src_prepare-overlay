@@ -1,3 +1,4 @@
+app-editors/vscodium 1.40.0 1.40.2 1.41.1: Open Source Software Binaries of VSCode
 sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
 x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
