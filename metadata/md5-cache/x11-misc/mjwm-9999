@@ -1,0 +1,11 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=postinst prepare unpack
+DESCRIPTION=mjwm creates JWM application menu from (freedesktop) desktop files
+EAPI=7
+HOMEPAGE=https://github.com/chiku/mjwm
+LICENSE=GPL-2
+PROPERTIES=live
+RESTRICT=mirror
+SLOT=0
+_eclasses_=autotools	ea7865c8fba1ea8d3639f355fffe1a3c	git-r3	7d6c351ee8b1feb12ed8c8b0adae088b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_md5_=6e5bb3001fd378cd3d5d83e04d8b96aa
