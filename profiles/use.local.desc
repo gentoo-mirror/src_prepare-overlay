@@ -5,3 +5,7 @@
 app-editors/vscodium:libsecret - Enable libsecret support
 x11-misc/compton-tryone:drm - Enable VSync with DRM_IOCTL_WAIT_VBLANK
 x11-misc/compton-tryone:opengl - Enable VSync with SGI_swap_control OpenGL extension
+x11-misc/polybar:i3wm - Add support for i3 window manager
+x11-misc/polybar:ipc - Add support for Inter-Process Messaging
+x11-misc/polybar:mpd - Add support for Music Player Daemon
+x11-misc/polybar:network - Enable network support
