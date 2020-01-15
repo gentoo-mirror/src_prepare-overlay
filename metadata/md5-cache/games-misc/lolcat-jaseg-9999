@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=High-performance implementation of lolcat
+EAPI=7
+HOMEPAGE=https://github.com/jaseg/lolcat
+LICENSE=WTFPL-2
+PROPERTIES=live
+RDEPEND=!games-misc/lolcat
+RESTRICT=mirror
+SLOT=0
+_eclasses_=git-r3	809e27702c573cbba31c08ed00bbad33
+_md5_=1c06de6d3b2969bec032dbefffb43e61
