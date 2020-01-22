@@ -5,3 +5,4 @@ x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kaw
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
 x11-misc/polybar 9999: A fast and easy-to-use status bar
 x11-misc/pscircle 9999: pscircle visualizes Linux processes in a form of radial tree
+x11-terms/xst 9999: Simple terminal implementation for X with Xresources support and other patches

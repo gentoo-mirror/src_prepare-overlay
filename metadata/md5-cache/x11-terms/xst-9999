@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install postinst unpack
+DEPEND=>=sys-libs/ncurses-6.0:0= media-libs/fontconfig x11-libs/libX11 x11-libs/libXft virtual/pkgconfig x11-base/xorg-proto
+DESCRIPTION=Simple terminal implementation for X with Xresources support and other patches
+EAPI=7
+HOMEPAGE=https://github.com/gnotclub/xst
+IUSE=savedconfig savedconfig
+LICENSE=MIT-with-advertising
+PROPERTIES=live
+RDEPEND=>=sys-libs/ncurses-6.0:0= media-libs/fontconfig x11-libs/libX11 x11-libs/libXft
+SLOT=0
+_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	git-r3	809e27702c573cbba31c08ed00bbad33	multilib	1d91b03d42ab6308b5f4f6b598ed110e	portability	2b88d3ecc35035a3b8ab628b49cafb0e	savedconfig	a3c113056e77e36a1d78ff4eb475dfd1	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_md5_=425f6784e6966e22fd5efbb7632f28b8
