@@ -9,4 +9,4 @@ RDEPEND=!games-misc/lolcat
 RESTRICT=mirror
 SLOT=0
 _eclasses_=git-r3	809e27702c573cbba31c08ed00bbad33
-_md5_=1c06de6d3b2969bec032dbefffb43e61
+_md5_=778b6d03e40fcf856620f9902b83e814

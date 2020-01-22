@@ -8,4 +8,4 @@ RDEPEND=!games-misc/lolcat
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/jaseg/lolcat/archive/v1.0.tar.gz -> lolcat-1.0.tar.gz
-_md5_=1c06de6d3b2969bec032dbefffb43e61
+_md5_=778b6d03e40fcf856620f9902b83e814
