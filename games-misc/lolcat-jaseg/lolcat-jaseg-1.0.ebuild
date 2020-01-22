@@ -23,13 +23,13 @@ LICENSE="WTFPL-2"
 SLOT="0"
 IUSE=""
 
-if [[ ${PV} != *9999* ]]; then
-	S="${WORKDIR}/${MY_P}"
-fi
-
 RDEPEND="
 	!games-misc/lolcat
 "
+
+if [[ ${PV} != *9999* ]]; then
+	S="${WORKDIR}/${MY_P}"
+fi
 
 src_install() {
 	insinto "/usr/bin"
