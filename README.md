@@ -26,7 +26,7 @@ With eselect-repository: `eselect repository enable src_prepare-overlay`
 
 ### Manual
 
-Check out `examples/repos.conf/src_prepare-overlay.conf`
+Check out [examples/repos.conf/src_prepare-overlay.conf](https://gitlab.com/src_prepare/src_prepare-overlay/blob/master/examples/repos.conf/src_prepare-overlay.conf)
 
 or
 
@@ -38,7 +38,7 @@ Run `sudo emaint sync -r src_prepare-overlay`
 
 ## It says the ebuild is masked, what do I do?
 
-Check out `examples/package.accept_keywords/src_prepare-overlay`
+Check out [examples/package.accept_keywords/src_prepare-overlay](https://gitlab.com/src_prepare/src_prepare-overlay/blob/master/examples/package.accept_keywords/src_prepare-overlay)
 
 ## I can help, what ebuilds do you need?
 
