@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Unix command line queue utility
+EAPI=7
+HOMEPAGE=https://github.com/chneukirchen/nq
+LICENSE=CC0-1.0
+PROPERTIES=live
+RESTRICT=mirror
+SLOT=0
+_eclasses_=git-r3	809e27702c573cbba31c08ed00bbad33
+_md5_=6bc325178c8eba99b8106191ec84ee1c
