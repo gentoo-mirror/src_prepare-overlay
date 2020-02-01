@@ -4,14 +4,14 @@
 EAPI=7
 
 DESCRIPTION="Unix command line queue utility"
-HOMEPAGE="https://github.com/chneukirchen/nq"
+HOMEPAGE="https://github.com/leahneukirchen/nq"
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/chneukirchen/${PN}.git"
+	EGIT_REPO_URI="https://github.com/leahneukirchen/${PN}.git"
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/leahneukirchen/${PN}/archive/v0.3.1.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/leahneukirchen/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 fi
 
