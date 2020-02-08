@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst postrm setup unpack
+DEPEND=x11-apps/bdftopcf X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=An iconic bitmap font based on Stlarch with additional glyphs
+EAPI=7
+HOMEPAGE=https://github.com/stark/siji
+IUSE=+pcf X
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=x11-apps/bdftopcf
+RESTRICT=mirror
+SLOT=0
+_eclasses_=font	af70de9a23b2f34d4fe4dcb222be0346	git-r3	809e27702c573cbba31c08ed00bbad33
+_md5_=850a2f087ab9962a641d4711e96fdeba
