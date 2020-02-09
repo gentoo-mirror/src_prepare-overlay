@@ -60,4 +60,6 @@ See [TODO.md](https://gitlab.com/src_prepare/src_prepare-overlay/-/blob/master/T
 
 ### Testing ebuilds
 
-`ebuild FILE clean manifest merge`
+`repoman manifest`
+
+`sudo ebuild FILE clean merge`
