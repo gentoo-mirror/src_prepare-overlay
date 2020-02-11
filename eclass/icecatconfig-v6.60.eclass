@@ -1,21 +1,18 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 2019-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 #
-# @DEAD
-# All consumers are gone.  Removal in 14 days
-#
-# @ECLASS: mozconfig-v6.60.eclass
+# @ECLASS: icecatconfig-v6.60.eclass
 # @MAINTAINER:
-# mozilla team <mozilla@gentoo.org>
+# moog621@gmail.com
 # @SUPPORTED_EAPIS: 5 6 7
-# @BLURB: the new mozilla common configuration eclass for FF33 and newer, v6
+# @BLURB: the new gnuzilla common configuration eclass for FF33 and newer, v6
 # @DESCRIPTION:
-# This eclass is used in mozilla ebuilds (firefox, thunderbird, seamonkey)
-# to provide a single common place for the common mozilla engine compoments.
+# This eclass is used in gnuzilla ebuilds (icecat)
+# to provide a single common place for the common gnuzilla engine compoments.
 #
 # The eclass provides all common dependencies as well as common use flags.
 #
-# Some use flags which may be optional in particular mozilla packages can be
+# Some use flags which may be optional in particular gnuzilla packages can be
 # supported through setting eclass variables.
 #
 # This eclass inherits mozconfig helper functions as defined in mozcoreconf-v3,
@@ -77,7 +74,7 @@ inherit flag-o-matic toolchain-funcs mozcoreconf-v6
 # Set the variable to "enabled" if the use flag should be enabled by default.
 # Set the variable to any value if the use flag should exist but not be default-enabled.
 
-# use-flags common among all mozilla ebuilds
+# use-flags common among all gnuzilla ebuilds
 IUSE="${IUSE} clang dbus debug neon pulseaudio selinux startup-notification
  system-icu system-jpeg system-libevent system-sqlite system-libvpx"
 
@@ -210,7 +207,7 @@ RDEPEND+="
 
 # @FUNCTION: mozconfig_config
 # @DESCRIPTION:
-# Set common configure options for mozilla packages.
+# Set common configure options for gnuzilla packages.
 # Call this within src_configure() phase, after mozconfig_init
 #
 # Example:
@@ -297,7 +294,7 @@ mozconfig_config() {
 		mozconfig_use_enable jit ion
 	fi
 
-	# These are enabled by default in all mozilla applications
+	# These are enabled by default in all gnuzilla applications
 	mozconfig_annotate '' --with-system-nspr --with-nspr-prefix="${SYSROOT}${EPREFIX}"/usr
 	mozconfig_annotate '' --with-system-nss --with-nss-prefix="${SYSROOT}${EPREFIX}"/usr
 	mozconfig_annotate '' --x-includes="${SYSROOT}${EPREFIX}"/usr/include --x-libraries="${SYSROOT}${EPREFIX}"/usr/$(get_libdir)
@@ -339,10 +336,10 @@ mozconfig_config() {
 	fi
 	mozconfig_annotate "${toolkit_comment}" --enable-default-toolkit=${toolkit}
 
-	# Instead of the standard --build= and --host=, mozilla uses --host instead
+	# Instead of the standard --build= and --host=, gnuzilla uses --host instead
 	# of --build, and --target intstead of --host.
-	# Note, mozilla also has --build but it does not do what you think it does.
-	# Set both --target and --host as mozilla uses python to guess values otherwise
+	# Note, gnuzilla also has --build but it does not do what you think it does.
+	# Set both --target and --host as gnuzilla uses python to guess values otherwise
 	mozconfig_annotate '' --target="${CHOST}"
 	mozconfig_annotate '' --host="${CBUILD:-${CHOST}}"
 
@@ -384,7 +381,7 @@ mozconfig_config() {
 # @FUNCTION: mozconfig_install_prefs
 # @DESCRIPTION:
 # Set preferences into the prefs.js file specified as a parameter to
-# the function.  This sets both some common prefs to all mozilla
+# the function.  This sets both some common prefs to all gnuzilla
 # packages, and any prefs that may relate to the use flags administered
 # by mozconfig_config().
 #

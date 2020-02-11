@@ -1,14 +1,13 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 2019-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: icecatlinguas-v2.eclass
 # @MAINTAINER:
-# mozilla@gentoo.org
+# moog621@gmail.com
 # @AUTHOR:
-# Nirbheek Chauhan <nirbheek@gentoo.org>
-# Ian Stakenvicius <axs@gentoo.org>
+# moog621@gmail.com
 # @SUPPORTED_EAPIS: 2 3 4 5 6
-# @BLURB: Handle language packs for mozilla products
+# @BLURB: Handle language packs for gnuzilla products
 # @DESCRIPTION:
 # Sets IUSE according to MOZ_LANGS (language packs available). Also exports
 # src_unpack, src_compile and src_install for use in ebuilds, and provides
@@ -82,8 +81,8 @@ esac
 # @DESCRIPTION:
 # The status of the langpack, used to differentiate within
 # Manifests and on Gentoo mirrors as to when the langpacks are
-# generated officially by Mozilla or if they were generated
-# unofficially by others (ie the Gentoo mozilla team).  When
+# generated officially by gnuzilla or if they were generated
+# unofficially by others.  When
 # this var is set, the distfile will have a .unofficial.xpi
 # suffix.
 : ${MOZ_LANGPACK_UNOFFICIAL:=""}
@@ -204,7 +203,7 @@ icecatlinguas_export() {
 	for lingua in "${MOZ_LANGS[@]}"; do
 		# strip region subtag if $x is in the list
 		if has ${lingua} en en-US; then
-			# For mozilla products, en and en_US are handled internally
+			# For gnuzilla products, en and en_US are handled internally
 			continue
 		elif has ${lingua} "${MOZ_TOO_REGIONALIZED_FOR_L10N[@]}" ; then
 			lflag=${lingua%%-*}
@@ -216,7 +215,7 @@ icecatlinguas_export() {
 	# Compatibility code - Check LINGUAS and warn if anything set there isn't enabled via l10n
 	for lingua in ${LINGUAS}; do
 		if has ${lingua//[_@]/-} en en-US; then
-			# For mozilla products, en and en_US are handled internally
+			# For gnuzilla products, en and en_US are handled internally
 			continue
 		# If this language is supported by ${P},
 		elif has ${lingua} "${MOZ_LANGS[@]//-/_}"; then
