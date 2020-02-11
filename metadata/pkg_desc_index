@@ -4,6 +4,7 @@ mail-client/freelook-bin 1.0.0: Freelook, an Electron-based client for Microsoft
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
 sys-process/nq 0.3.1 9999: Unix command line queue utility
+www-client/icecat 60.7.0: IceCat Web Browser
 x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
 x11-misc/polybar 9999: A fast and easy-to-use status bar
