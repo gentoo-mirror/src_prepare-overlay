@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm setup unpack
+DESCRIPTION=Freelook, an Electron-based client for Microsoft Outlook
+EAPI=7
+HOMEPAGE=https://github.com/eNkru/freelook
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=>=net-print/cups-2.0.0 dev-libs/libappindicator dev-libs/nss gnome-base/gconf:2 x11-libs/libXtst x11-libs/libnotify
+RESTRICT=bindist mirror
+SLOT=0
+SRC_URI=https://github.com/eNkru/freelook/releases/download/v1.0.0/electron-outlook_1.0.0_amd64.deb
+_eclasses_=unpacker	3cd8bad0d31e525cd26be1bfa4e61631	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=805cd022e1d386489395e0f27aa16fff
