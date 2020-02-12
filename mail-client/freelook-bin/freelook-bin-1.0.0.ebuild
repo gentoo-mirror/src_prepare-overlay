@@ -10,7 +10,7 @@ inherit unpacker xdg-utils
 
 DESCRIPTION="Freelook, an Electron-based client for Microsoft Outlook"
 HOMEPAGE="https://github.com/eNkru/freelook"
-SRC_URI="https://github.com/eNkru/freelook/releases/download/v${PV}/${MY_P}_amd64.deb"
+SRC_URI="https://github.com/eNkru/${PN//-bin}/releases/download/v${PV}/${MY_P}_amd64.deb"
 RESTRICT="bindist mirror"
 
 LICENSE="MIT"
