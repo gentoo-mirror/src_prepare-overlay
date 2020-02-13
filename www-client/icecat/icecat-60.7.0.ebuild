@@ -51,6 +51,8 @@ RDEPEND="
 	jack? ( virtual/jack )
 	>=dev-libs/nss-3.36.7
 	>=dev-libs/nspr-4.19
+	<=virtual/rust-1.37.0
+	<=dev-lang/rust-1.37.0
 	selinux? ( sec-policy/selinux-mozilla )"
 
 DEPEND="${RDEPEND}
