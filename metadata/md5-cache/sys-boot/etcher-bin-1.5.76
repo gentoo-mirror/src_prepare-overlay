@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm unpack
+DESCRIPTION=Flash OS images to SD cards & USB drives, safely and easily.
+EAPI=7
+HOMEPAGE=https://etcher.io
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=app-arch/lzma dev-libs/atk dev-libs/expat dev-libs/libappindicator dev-libs/nss gnome-base/gconf:2 media-libs/fontconfig media-libs/freetype net-print/cups sys-apps/dbus sys-auth/polkit x11-apps/xrandr x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/libXScrnSaver x11-libs/libXcomposite x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrender x11-libs/libXtst x11-libs/libnotify
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/balena-io/etcher/releases/download/v1.5.76/balena-etcher-electron_1.5.76_amd64.deb
+_eclasses_=unpacker	3cd8bad0d31e525cd26be1bfa4e61631	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=92b7d413eef8a105d6d6ff5355238111
