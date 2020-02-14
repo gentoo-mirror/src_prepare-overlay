@@ -4,6 +4,7 @@
 
 app-editors/vscodium:libsecret - Enable libsecret support
 media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
+sys-apps/xbps:lto - Build with Link Time Optimization
 x11-misc/compton-tryone:drm - Enable VSync with DRM_IOCTL_WAIT_VBLANK
 x11-misc/compton-tryone:opengl - Enable VSync with SGI_swap_control OpenGL extension
 x11-misc/polybar:i3wm - Add support for i3 window manager
