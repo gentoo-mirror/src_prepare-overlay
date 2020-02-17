@@ -18,7 +18,8 @@ MOZ_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 MOZ_PV="${MOZ_PV/_beta/b}" # Handle beta for SRC_URI
 MOZ_PV="${MOZ_PV/_rc/rc}" # Handle rc for SRC_URI
 
-MOZ_HTTP_URI="https://ftp.gnu.org/gnu/${PN}"
+# https://ftp.gnu.org/gnu/
+MOZ_HTTP_URI="mirror://gnu/${PN}"
 
 MOZCONFIG_OPTIONAL_WIFI=1
 
