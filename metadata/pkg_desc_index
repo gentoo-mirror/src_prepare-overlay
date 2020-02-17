@@ -2,6 +2,7 @@ app-editors/vscodium 1.40.0 1.40.2 1.41.1 1.42.0: Open Source Software Binaries 
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 mail-client/freelook-bin 1.0.0: Freelook, an Electron-based client for Microsoft Outlook
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
+net-misc/ddgr 1.7 9999: DuckDuckGo from the terminal
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.5.76: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
