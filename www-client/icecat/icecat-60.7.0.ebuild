@@ -11,7 +11,11 @@ PYTHON_REQ_USE='ncurses,sqlite,ssl,threads(+)'
 
 # Get the list with this command:
 # curl https://ftp.gnu.org/gnu/icecat/${PV}/langpacks/ 2>/dev/null | grep langpack | sed 's/^.*href=\"icecat//;/xpi\.sig/d;s/\.langpack.*$//;/compare\-locales$/d;s/^.*\.//;/^[0-9]/d' | tr '\n' ' ' | sed 's/$/\n/'
-MOZ_LANGS=( ach af an ar as ast az be bg bn-BD bn-IN br bs ca cak cs cy da de dsb el en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et eu fa ff fi fr fy-NL ga-IE gd gl gn gu-IN he hi-IN hr hsb hu hy-AM ia id is it ja-JP-mac ja ka kab kk km kn ko lij lt lv mai mk ml mr ms my nb-NO ne-NP nl nn-NO oc or pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta te th tr uk ur uz vi xh zh-CN zh-TW )
+MOZ_LANGS=( ach af an ar as ast az be bg bn-BD bn-IN br bs ca cak cs cy da de dsb
+el en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et eu fa ff fi fr fy-NL ga-IE
+gd gl gn gu-IN he hi-IN hr hsb hu hy-AM ia id is it ja ka kab kk km kn ko lij lt lv
+mai mk ml mr ms my nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq
+sr sv-SE ta te th tr uk ur uz vi xh zh-CN zh-TW )
 
 # Convert the ebuild version to the upstream mozilla version, used by icecatlinguas
 MOZ_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
