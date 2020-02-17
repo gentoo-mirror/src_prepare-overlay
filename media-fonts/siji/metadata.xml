@@ -5,6 +5,6 @@
     <flag name="pcf">Install Portable Compiled Font (PCF)</flag>
   </use>
   <upstream>
-	<remote-id type="github">stark/siji</remote-id>
+    <remote-id type="github">stark/siji</remote-id>
   </upstream>
 </pkgmetadata>
