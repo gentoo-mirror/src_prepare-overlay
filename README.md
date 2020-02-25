@@ -24,13 +24,17 @@ In short, we want to contribute :)
 
 If you are using [Layman](https://wiki.gentoo.org/wiki/Layman), execute:
 
-`layman -a src_prepare-overlay`
+``` sh
+layman -a src_prepare-overlay
+```
 
 #### eselect-repository
 
 If you are using [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository), execute:
 
-`eselect repository enable src_prepare-overlay`
+``` sh
+eselect repository enable src_prepare-overlay
+```
 
 #### Manual
 
@@ -40,13 +44,17 @@ If you want to manually add the overlay, see [examples/repos.conf/src_prepare-ov
 
 If you are using [Layman](https://wiki.gentoo.org/wiki/Layman), execute:
 
-`layman -o 'https://gitlab.com/src_prepare/src_prepare-overlay/raw/master/repositories.xml' -f -a src_prepare-overlay`
+``` sh
+layman -o 'https://gitlab.com/src_prepare/src_prepare-overlay/raw/master/repositories.xml' -f -a src_prepare-overlay
+```
 
 ## How do I sync this?
 
 Execute:
 
-`emaint sync -r src_prepare-overlay`
+``` sh
+emaint sync -r src_prepare-overlay
+```
 
 ## It says the ebuild is masked, what do I do?
 
@@ -60,6 +68,7 @@ See [TODO.md](https://gitlab.com/src_prepare/src_prepare-overlay/-/blob/master/T
 
 ### Testing ebuilds
 
-`repoman manifest`
-
-`sudo ebuild FILE clean merge`
+``` sh
+repoman manifest
+sudo ebuild FILE clean merge
+```
