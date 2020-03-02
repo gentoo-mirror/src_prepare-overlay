@@ -9,4 +9,4 @@ RESTRICT=bindist mirror
 SLOT=0
 SRC_URI=https://github.com/eNkru/freelook/releases/download/v1.0.0/electron-outlook_1.0.0_amd64.deb
 _eclasses_=unpacker	3cd8bad0d31e525cd26be1bfa4e61631	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
-_md5_=706988df6ab24b059ef4859d351a60a3
+_md5_=f8dc036434e061ca9aa59cd0bf34578e
