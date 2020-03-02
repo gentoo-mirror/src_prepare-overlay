@@ -1,0 +1,17 @@
+Title: renamed vscodium to vscodium-bin
+Author: XenHat <me@xenh.at>
+Content-Type: text/plain
+Posted: 2020-03-02
+Revision: 1
+News-Item-Format: 2.0
+Display-If-Installed: app-editors/vscodium
+
+To conform with the package naming guidelines, vscodium has been renamed to 
+vscodium-bin, as the package being merged is not actually built from source.
+
+Simply unmerge vscodium and emerge vscodium-bin:
+
+# emerge --unmerge vscodium
+# emerge vscodium-bin
+
+Happy coding!
