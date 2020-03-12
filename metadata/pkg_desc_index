@@ -3,6 +3,7 @@ app-editors/vscodium-bin 1.42.0 1.42.1: Open Source Software Binaries of VSCode
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 mail-client/freelook-bin 1.0.0: Freelook, an Electron-based client for Microsoft Outlook
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
+media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-video/tartube 2.0.0 9999: A GUI front-end for youtube-dl
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
 net-misc/ddgr 1.7 9999: DuckDuckGo from the terminal
