@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DEPEND=app-emulation/wine-vanilla[abi_x86_32] app-arch/unshield
+DESCRIPTION=Burglary simulator
+EAPI=7
+HOMEPAGE=https://web.archive.org/web/20090106121638/http://www.thesting-thegame.com/frameset-d.htm
+KEYWORDS=~amd64 ~x86
+LICENSE=neoSoftware
+RDEPEND=app-emulation/wine-vanilla[abi_x86_32] app-arch/unshield
+SLOT=0
+_md5_=bc9c5644078d0c560bea70cd3d1e0ecf
