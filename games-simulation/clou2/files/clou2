@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -xeuo pipefail
+
+export WINEPREFIX=~/.wine_clou2
+export WINEARCH=win32
+
+pushd /usr/share/games/clou2
+wine regedit /C clou2.reg
+wine Sting.exe
