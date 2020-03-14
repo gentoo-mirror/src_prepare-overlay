@@ -4,6 +4,16 @@ set -xeuo pipefail
 export WINEPREFIX=~/.wine_clou2
 export WINEARCH=win32
 
-pushd /usr/share/games/clou2
-wine regedit /C clou2.reg
+if [ ! -d ~/.local/share/Clou2 ]; then
+	mkdir -p ~/.local/share/Clou2
+	pushd ~/.local/share/Clou2
+		for i in $(ls /usr/share/games/clou2 | grep -v ^clou2\\.reg$); do
+			ln -s /usr/share/games/clou2/$i $i
+		done
+	popd
+fi
+
+pushd ~/.local/share/Clou2
+wine regedit /C /usr/share/games/clou2/clou2.reg
 wine Sting.exe
+popd
