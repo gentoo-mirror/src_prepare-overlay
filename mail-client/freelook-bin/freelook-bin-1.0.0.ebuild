@@ -45,7 +45,7 @@ src_unpack() {
 src_install() {
 	mv * "${D}" || die
 	rm -rd "${D}/usr/share/doc"
-	dosym "../../opt/Freelook/${MY_PN}" "${EROOT}usr/bin/${MY_PN}"
+	dosym "../../opt/Freelook/${MY_PN}" "${EROOT}/usr/bin/${MY_PN}"
 }
 
 pkg_postinst() {
