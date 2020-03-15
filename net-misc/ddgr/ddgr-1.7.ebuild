@@ -10,12 +10,12 @@ inherit bash-completion-r1 python-r1
 DESCRIPTION="DuckDuckGo from the terminal"
 HOMEPAGE="https://github.com/jarun/ddgr"
 
-if [[ ${PV} == *9999* ]]; then
+if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="${HOMEPAGE}.git"
+	EGIT_REPO_URI="https://github.com/jarun/${PN}.git"
 	KEYWORDS=""
 else
-	SRC_URI="${HOMEPAGE}/archive/v${PV}.tar.gz"
+	SRC_URI="https://github.com/jarun/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 fi
 
