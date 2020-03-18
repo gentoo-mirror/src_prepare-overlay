@@ -3,6 +3,7 @@ app-editors/vscodium-bin 1.42.0 1.42.1 1.43.0: Open Source Software Binaries of 
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 games-simulation/clou2 2.0f: Burglary simulator
 mail-client/freelook-bin 1.0.0: Freelook, an Electron-based client for Microsoft Outlook
+media-fonts/fontawesome 9999: The iconic font
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-video/tartube 2.0.0 9999: A GUI front-end for youtube-dl

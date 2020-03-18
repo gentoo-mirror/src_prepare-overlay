@@ -3,6 +3,8 @@
 # * generated automatically using pmaint *
 
 app-editors/vscodium-bin:libsecret - Enable libsecret support
+media-fonts/fontawesome:otf - Install the OpenType version of the font
+media-fonts/fontawesome:ttf - Install the TrueType version of the font
 media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
 media-video/tartube:atomicparsley - Use AtomicParsley for embedding thumbnails in audio files
 net-misc/ddgr:fish-completion - Enable fish completion support
