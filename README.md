@@ -1,7 +1,5 @@
 # src_prepare Gentoo overlay
 
-## What is this?
-
 This is the overlay of our Telegram group where we talk about topics related to Gentoo (development, maintainance, mistakes, community).
 
 **WARNING: Do not expect high quality ebuilds!** While we do the best we can, most of us are still learning.
