@@ -1,0 +1,13 @@
+DEFINED_PHASES=install unpack
+DEPEND=net-misc/curl[-curl_ssl_gnutls]
+DESCRIPTION=libcurl libraries linked with gnutls
+EAPI=7
+HOMEPAGE=https://curl.haxx.se
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=net-misc/curl[-curl_ssl_gnutls]
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=amd64? ( https://mirror.rackspace.com/archlinux/community/os/x86_64/libcurl-gnutls-7.69.1-1-x86_64.pkg.tar.zst )
+_eclasses_=unpacker	3cd8bad0d31e525cd26be1bfa4e61631
+_md5_=21caa078c860447974a098cbdb05ef8f
