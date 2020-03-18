@@ -24,6 +24,9 @@ Before pulling a merge request, you will have to read the [pulling merge request
 Before contributing, you will have to read the contributing guidelines as we will **not** accept your request
 if you do not respect our community guidelines.
 
+**Before filing an issue or pulling a Merge Request,
+first check if the package you are providing is not in [TODO.md](/TODO.md).**
+
 #### Filing an issue
 
 When filing an issue you will have to provide:
