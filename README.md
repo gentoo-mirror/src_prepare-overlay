@@ -56,9 +56,10 @@ emaint sync -r src_prepare-overlay
 
 See [examples/package.accept_keywords/src_prepare-overlay](https://gitlab.com/src_prepare/src_prepare-overlay/blob/master/examples/package.accept_keywords/src_prepare-overlay).
 
-## I can help, what ebuilds do you need?
+## Contributing
 
-See [TODO.md](https://gitlab.com/src_prepare/src_prepare-overlay/-/blob/master/TODO.md)
+We appreciate and encourage for contribution. If you want a specific package or what to create a package for us to maintain, see [CONTRIBUTING.md](/CONTRIBUTING.md).
+
 
 ## Quick maintainer guide
 
