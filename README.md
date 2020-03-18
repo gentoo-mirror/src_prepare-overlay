@@ -10,11 +10,9 @@ A quick guide on how to test ebuilds will follow.
 
 Mostly to have fun.
 
-"My primary goal was to have all the ebuilds for small things for desktop "ricing" and weird ones that would not fit into the main overlay." ~XGQT 
+"My primary goal was to have all the ebuilds for small things for desktop "ricing" and weird ones that would not fit into the main overlay." ~XGQT
 
-In short, we want to contribute :)
-
-## How do I add this?
+## Adding the overlay
 
 ### Official list
 
@@ -68,5 +66,5 @@ See [TODO.md](https://gitlab.com/src_prepare/src_prepare-overlay/-/blob/master/T
 
 ``` sh
 repoman manifest
-sudo ebuild FILE clean merge
+ebuild FILE clean merge
 ```
