@@ -1,0 +1,14 @@
+BDEPEND=dev-util/ninja >=dev-util/cmake-3.9.6
+DEFINED_PHASES=compile configure install postinst postrm prepare test
+DEPEND=dev-cpp/gtkmm:3.0 dev-libs/openssl x11-themes/hicolor-icon-theme sys-boot/grub:2 app-arch/libarchive
+DESCRIPTION=A graphical grub2 settings manager
+EAPI=7
+HOMEPAGE=https://launchpad.net/grub-customizer
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-cpp/gtkmm:3.0 dev-libs/openssl x11-themes/hicolor-icon-theme sys-boot/grub:2 app-arch/libarchive
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://launchpad.net/grub-customizer/5.1/5.1.0/+download/grub-customizer_5.1.0.tar.gz
+_eclasses_=cmake-utils	be72eac95bd029ad1d81d5d656c3c83b	eutils	fcb2aa98e1948b835b5ae66ca52868c5	flag-o-matic	74b1bca587791941e9df7b808a01575b	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=403c6937d9cc64fd355b3fbc971a961f
