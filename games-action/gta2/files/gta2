@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+WINEPREFIX=~/.wine_gta2
+WINEARCH=win32
+GTA2_DATA_DIR="/usr/share/games/gta2"
+
+if [ ! -d ~/.local/share/GTA2 ]; then
+	mkdir -p ~/.local/share/GTA2
+	pushd ~/.local/share/GTA2
+		for i in $(ls ${GTA2_DATA_DIR} | grep -v ^player$); do
+			ln -s ${GTA2_DATA_DIR}/$i
+		done
+		mkdir -p player
+	popd
+fi
+
+pushd ~/.local/share/GTA2
+	set +e
+	DIRECTPLAY_INSTALLED=$(winetricks list-installed | grep ^directplay$ -c)
+	if [ ${DIRECTPLAY_INSTALLED} -eq 0 ]; then
+		set -e
+		winetricks directplay
+		set +e
+	fi
+	set -e
+	wine gta2.exe
+popd
