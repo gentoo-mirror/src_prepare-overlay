@@ -16,7 +16,7 @@ before_script:
   - git clone https://anongit.gentoo.org/git/repo/gentoo.git /var/db/repos/gentoo
   - git clone https://gitlab.com/src_prepare/src_prepare-overlay.git /var/db/repos/src_prepare-overlay
   - git clone https://gitlab.com/src_prepare/scripts.git
-  - cp scripts/check-commit /usr/bin
+  - cp scripts/src/check-commit /usr/bin
 
 test:
   stage: test
