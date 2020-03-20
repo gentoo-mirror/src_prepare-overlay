@@ -10,5 +10,5 @@ RDEPEND=media-gfx/ebdftopcf
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/fcambus/spleen/archive/1.7.0.tar.gz -> spleen-1.7.0.tar.gz
-_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	font	af70de9a23b2f34d4fe4dcb222be0346	font-ebdftopcf	e23db122fd578442f37e3e79267eedd8
+_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	font	4021fe3baa559f77681b3f3f58db27ce	font-ebdftopcf	e23db122fd578442f37e3e79267eedd8
 _md5_=2b78bbbe678dda217d2a91cc288b4205
