@@ -1,3 +1,4 @@
+BDEPEND=media-gfx/icoutils media-gfx/imagemagick
 DEFINED_PHASES=install unpack
 DEPEND=app-emulation/wine-vanilla[abi_x86_32] app-arch/unshield
 DESCRIPTION=Burglary simulator
@@ -7,4 +8,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=neoSoftware
 RDEPEND=app-emulation/wine-vanilla[abi_x86_32] app-arch/unshield
 SLOT=0
-_md5_=bc9c5644078d0c560bea70cd3d1e0ecf
+_md5_=c5a6bd7dc784c9766ef90d00265530af
