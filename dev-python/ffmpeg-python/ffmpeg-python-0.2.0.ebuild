@@ -46,4 +46,5 @@ RDEPEND="
 	${COMMON_DEPEND}
 	>=dev-python/future-0.18.2[${PYTHON_USEDEP}]
 	>=dev-python/numpy-1.16.5[${PYTHON_USEDEP}]
+	media-video/ffmpeg
 "
