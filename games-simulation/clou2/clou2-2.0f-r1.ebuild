@@ -10,6 +10,10 @@ LICENSE="neoSoftware"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
+BDEPEND="
+    media-gfx/icoutils
+    media-gfx/imagemagick"
+
 RDEPEND="
 	app-emulation/wine-vanilla[abi_x86_32]
 	app-arch/unshield"
