@@ -14,6 +14,7 @@ media-video/tartube 2.0.0 9999: A GUI front-end for youtube-dl
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
 net-libs/libcurl-gnutls 7.69.1: libcurl libraries linked with gnutls
 net-misc/ddgr 1.7 9999: DuckDuckGo from the terminal
+net-misc/downloader-cli 0.1.0 2019.11.15 9999: A simple downloader written in Python with an awesome progressbar
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.5.76: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
