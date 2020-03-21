@@ -15,7 +15,9 @@ BDEPEND="
 	app-arch/unzip
 	sys-apps/sed
 	sys-apps/coreutils
-	sys-apps/grep"
+	sys-apps/grep
+	media-gfx/icoutils
+	media-gfx/imagemagick"
 
 RDEPEND="
 	app-emulation/wine-vanilla[abi_x86_32]
@@ -41,11 +43,21 @@ src_unpack() {
 	done
 	wine GTA2/GTA2.exe /s /f1"${RESPONSE_FILE}" /f2"C:\iss.log"
 	mv ${WINEPREFIX}/drive_c/Program\ Files/Rockstar\ Games/GTA2 gta2
+	wrestool -x -t14 -n 128 -o . gta2/gta2\ manager.exe
+	wrestool -x -t14 -o . gta2/gta2.exe
+	convert 'gta2 manager.exe_14_128_2057.ico' gta2_manager.png
+	convert 'gta2.exe_14_101_2057.ico' gta2.png
 }
 
 src_install() {
 	insinto /usr/share/games
 	doins -r gta2
+	insinto /usr/share/pixmaps
+	doins gta2_manager.png
+	doins gta2.png
+	insinto /usr/share/applications
+	doins "${FILESDIR}/gta2.desktop"
+	doins "${FILESDIR}/gta2_manager.desktop"
 	dobin "${FILESDIR}/gta2"
 	dobin "${FILESDIR}/gta2_manager"
 }

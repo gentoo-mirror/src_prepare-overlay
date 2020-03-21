@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GTA2 Manager
+Comment=Configure GTA2 or set up a multiplayer game.
+Exec=gta2_manager
+Icon=gta2_manager
+Categories=Game;ActionGame;
