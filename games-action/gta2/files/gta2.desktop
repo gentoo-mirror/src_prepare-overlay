@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GTA2
+Comment=Start GTA2 immediately, no fuss.
+Exec=gta2
+Icon=gta2
+Categories=Game;ActionGame;
