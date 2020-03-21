@@ -29,10 +29,16 @@ src_unpack() {
 	cp -r ${CDROM_ROOT}/Game Program_Files
 	cp "${FILESDIR}"/clou2.reg Program_Files
 	mv Program_Files clou2
+	wrestool -x -t14 -n 188 -o . clou2/Sting.exe
+	convert Sting.exe_14_188_3079.ico clou2.png
 }
 
 src_install() {
 	insinto /usr/share/games
-	doins -r *
+	doins -r clou2
+	insinto /usr/share/pixmaps
+	doins clou2.png
+	insinto /usr/share/applications
+	doins "${FILESDIR}/clou2.desktop"
 	dobin "${FILESDIR}/clou2"
 }

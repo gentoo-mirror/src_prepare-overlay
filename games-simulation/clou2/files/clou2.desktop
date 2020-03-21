@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=The Sting!
+Comment=Burglary simulator.
+Exec=clou2
+Icon=clou2
+Categories=Game;Simulation;
