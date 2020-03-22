@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Map editor for Warcraft 3
+Exec=warcraft3_worldedit
+Icon=warcraft3_worldedit
+Categories=Game;StrategyGame;
