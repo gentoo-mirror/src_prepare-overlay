@@ -10,8 +10,6 @@ A quick guide on how to test ebuilds will follow.
 
 Mostly to have fun.
 
-"My primary goal was to have all the ebuilds for small things for desktop "ricing" and weird ones that would not fit into the main overlay." ~XGQT
-
 ## Adding the overlay
 
 ### Official list
