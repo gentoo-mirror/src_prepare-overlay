@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -xeuo pipefail
+IFS=$'\n\t'
+
+export WC3_DATA_DIR="/usr/share/games/warcraft3"
+export WINEPREFIX=~/.wine_wc3roc
+export WINEARCH=win32
+
+if [ ! -d ~/.local/share/Warcraft3 ]; then
+	mkdir -p ~/.local/share/Warcraft3
+	pushd ~/.local/share/Warcraft3
+		for i in $(ls ${WC3_DATA_DIR} | grep -vE '^replay$|^save$'); do
+			ln -s ${WC3_DATA_DIR}/$i $i
+		done
+		mkdir replay
+		mkdir save
+	popd
+fi
+
+pushd ~/.local/share/Warcraft3
+winetricks quartz
+wine War3.exe
+popd
