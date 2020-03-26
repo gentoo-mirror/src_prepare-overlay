@@ -24,7 +24,7 @@ sys-boot/etcher-bin 1.5.76: Flash OS images to SD cards & USB drives, safely and
 sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
 sys-kernel/gentoo-sources 5.5.13: Full sources including the Gentoo patchset for the 5.5 kernel tree
 sys-kernel/lqx-sources 5.5.11: The Liquorix Kernel Live Sources
-sys-kernel/pf-sources 5.5_p7: Linux kernel fork that includes the pf-kernel patchset and Gentoo's genpatches
+sys-kernel/pf-sources 5.5_p7 5.5_p8: Linux kernel fork that includes the pf-kernel patchset and Gentoo's genpatches
 sys-kernel/vanilla-sources 5.5.13: Full sources for the Linux kernel
 sys-kernel/zen-sources 5.5.9 5.5.10 5.5.11 5.5.13: The Zen Kernel Live Sources
 sys-process/nq 0.3.1 9999: Unix command line queue utility
