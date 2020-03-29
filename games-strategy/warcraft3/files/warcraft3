@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -xeuo pipefail
+set -euo pipefail
 IFS=$'\n\t'
 
 export WC3_DATA_DIR="/usr/share/games/warcraft3"
@@ -14,10 +14,11 @@ if [ ! -d ~/.local/share/Warcraft3 ]; then
 		done
 		mkdir replay
 		mkdir save
+		mkdir Errors
 	popd
 fi
 
 pushd ~/.local/share/Warcraft3
-winetricks quartz
-wine War3.exe
+	winetricks quartz
+	wine war3.exe
 popd
