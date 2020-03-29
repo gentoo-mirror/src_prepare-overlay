@@ -1,0 +1,11 @@
+BDEPEND=sys-apps/sed sys-apps/coreutils sys-apps/grep sys-apps/gawk sys-process/procps media-gfx/icoutils media-gfx/imagemagick x11-misc/xvfb-run x11-misc/xdotool x11-wm/openbox
+DEFINED_PHASES=install unpack
+DEPEND=app-emulation/wine-vanilla[abi_x86_32,gstreamer] media-plugins/gst-plugins-meta[ffmpeg] media-video/ffmpeg[mp3,xvid] app-emulation/winetricks app-shells/bash
+EAPI=7
+IUSE=tft video_cards_nouveau
+KEYWORDS=~amd64 ~x86
+LICENSE=Warcraft3_EULA
+RDEPEND=app-emulation/wine-vanilla[abi_x86_32,gstreamer] media-plugins/gst-plugins-meta[ffmpeg] media-video/ffmpeg[mp3,xvid] app-emulation/winetricks app-shells/bash
+SLOT=0
+SRC_URI=https://archive.org/download/wc3_patches/Windows/ROC/English/War3ROC_126a_English.exe https://archive.org/download/wc3_patches/Windows/TFT/English/War3TFT_126a_English.exe
+_md5_=f4196bd5c008c4f67ecccdef605a72c0

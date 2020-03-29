@@ -1,9 +1,0 @@
-BDEPEND=sys-apps/sed sys-apps/coreutils sys-apps/grep sys-apps/gawk sys-process/procps media-gfx/icoutils media-gfx/imagemagick x11-misc/xvfb-run x11-wm/openbox
-DEFINED_PHASES=install unpack
-DEPEND=app-emulation/wine-vanilla[abi_x86_32] app-emulation/winetricks app-shells/bash
-EAPI=7
-KEYWORDS=~amd64 ~x86
-LICENSE=Warcraft3_EULA
-RDEPEND=app-emulation/wine-vanilla[abi_x86_32] app-emulation/winetricks app-shells/bash
-SLOT=0
-_md5_=e1d605bc6f4f373afeaaf0768177023a
