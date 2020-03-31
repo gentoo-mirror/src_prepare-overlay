@@ -10,5 +10,5 @@ RDEPEND=>=media-libs/libpng-1.2.46:0 >=x11-libs/gtk+-3.0:3 x11-libs/cairo x11-li
 RESTRICT=mirror strip bindist
 SLOT=0
 SRC_URI=https://github.com/VSCodium/vscodium/releases/download/1.42.0/VSCodium-linux-x64-1.42.0.tar.gz -> vscodium-bin-1.42.0.tar.gz
-_eclasses_=desktop	3b1f1d9a6b749c9ce2d5182877265b23	pax-utils	a41d1fd1c111289ffa04490de6ee79d7
+_eclasses_=desktop	7fd20552ce4cc97e8acb132a499a7dd8	pax-utils	a41d1fd1c111289ffa04490de6ee79d7
 _md5_=f1dc68bcaa1ad4602059cef854acffb5
