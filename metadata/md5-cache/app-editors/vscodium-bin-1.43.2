@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst
+DEPEND=>=media-libs/libpng-1.2.46:0 >=x11-libs/gtk+-3.0:3 x11-libs/cairo x11-libs/libXtst
+DESCRIPTION=Open Source Software Binaries of VSCode
+EAPI=7
+HOMEPAGE=https://github.com/VSCodium/vscodium
+IUSE=libsecret
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=>=media-libs/libpng-1.2.46:0 >=x11-libs/gtk+-3.0:3 x11-libs/cairo x11-libs/libXtst >=net-print/cups-2.0.0 x11-libs/libnotify x11-libs/libXScrnSaver dev-libs/nss libsecret? ( app-crypt/libsecret[crypt] )
+RESTRICT=mirror strip bindist
+SLOT=0
+SRC_URI=https://github.com/VSCodium/vscodium/releases/download/1.43.2/VSCodium-linux-x64-1.43.2.tar.gz -> vscodium-bin-1.43.2.tar.gz
+_eclasses_=desktop	7fd20552ce4cc97e8acb132a499a7dd8	pax-utils	a41d1fd1c111289ffa04490de6ee79d7
+_md5_=f1dc68bcaa1ad4602059cef854acffb5
