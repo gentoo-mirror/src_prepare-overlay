@@ -56,7 +56,7 @@ See [examples/package.accept_keywords/src_prepare-overlay](https://gitlab.com/sr
 
 ## Contributing
 
-We appreciate and encourage for contribution. If you want a specific package or what to create a package for us to maintain, see [CONTRIBUTING.md](/CONTRIBUTING.md).
+We appreciate and encourage for contribution. If you want a specific package or want to create a package for us to maintain, see [CONTRIBUTING.md](/CONTRIBUTING.md).
 
 
 ## Quick maintainer guide
