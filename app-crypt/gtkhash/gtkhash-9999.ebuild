@@ -52,48 +52,48 @@ RDEPEND="
 	app-crypt/mhash
 	dev-libs/glib:2
 	blake2? (
-			app-crypt/libb2
+		app-crypt/libb2
 	)
 	caja? (
-		  mate-base/caja
-		  mate-extra/caja-extensions
+		mate-base/caja
+		mate-extra/caja-extensions
 	)
 	!gtk3? (
-		   gtk2? (
-				 x11-libs/gtk+:2
-				 )
+		gtk2? (
+			x11-libs/gtk+:2
+		)
 	)
 	gtk3? (
-		  x11-libs/gtk+:3
+		x11-libs/gtk+:3
 	)
 	gcrypt? (
-			dev-libs/libgcrypt
+		dev-libs/libgcrypt
 	)
 	mbedtls? (
-			 net-libs/mbedtls
+		net-libs/mbedtls
 	)
 	nautilus? (
-			  gnome-base/nautilus
+		gnome-base/nautilus
 	)
 	nemo? (
-		  gnome-extra/nemo
+		gnome-extra/nemo
 	)
 	nettle? (
-			dev-libs/nettle
+		dev-libs/nettle
 	)
 	!libressl? (
-			   openssl? (
-						>=dev-libs/openssl-1.1.1d
-						)
+		openssl? (
+			>=dev-libs/openssl-1.1.1d
+		)
 	)
 	libressl? (
-			  dev-libs/libressl
+		dev-libs/libressl
 	)
 	thunar? (
-			>=xfce-base/thunar-1.8.12
+		>=xfce-base/thunar-1.8.12
 	)
 	zlib? (
-		  sys-libs/zlib
+		sys-libs/zlib
 	)
 "
 DEPEND="
