@@ -20,7 +20,8 @@ KEYWORDS="~amd64"
 IUSE=""
 RESTRICT="mirror strip"
 
-DEPEND="net-misc/curl[-curl_ssl_gnutls]"
+DEPEND="net-misc/curl[-curl_ssl_gnutls]
+	app-arch/zstd"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
