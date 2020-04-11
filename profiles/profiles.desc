@@ -1,0 +1,4 @@
+#arch		profile_directory				status
+# DE-agnostic generic desktop profile using elogind instead of consolekit
+amd64		local/linux/amd64/17.1/desktop/elogind	   dev
+
