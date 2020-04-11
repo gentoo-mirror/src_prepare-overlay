@@ -32,6 +32,7 @@ sys-kernel/vanilla-sources 5.5.13: Full sources for the Linux kernel
 sys-kernel/zen-sources 5.5.9 5.5.10 5.5.11 5.5.13 5.6.2 5.6.3: The Zen Kernel Live Sources
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-client/icecat 60.7.0: IceCat Web Browser
+www-client/palemoon 28.9.1 9999: Pale Moon Web Browser
 x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
 x11-misc/polybar 9999: A fast and easy-to-use status bar

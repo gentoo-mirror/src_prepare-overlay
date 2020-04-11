@@ -35,6 +35,14 @@ www-client/icecat:system-jpeg - Use the system-wide media-libs/libjpeg-turbo ins
 www-client/icecat:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
 www-client/icecat:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
 www-client/icecat:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
+www-client/palemoon:devtools - Enable Mozilla Developer Tools
+www-client/palemoon:gtk2 - Use x11-libs/gtk+:2
+www-client/palemoon:gtk3 - Use x11-libs/gtk+:3
+www-client/palemoon:jemalloc - Replace memory allocator with jemalloc
+www-client/palemoon:necko-wifi - Enable the necko wifi scanner
+www-client/palemoon:official-branding - Enable official branding
+www-client/palemoon:optimize - Enable compiler optimization
+www-client/palemoon:valgrind - Enable Valgrind integration hooks
 x11-misc/compton-tryone:drm - Enable VSync with DRM_IOCTL_WAIT_VBLANK
 x11-misc/compton-tryone:opengl - Enable VSync with SGI_swap_control OpenGL extension
 x11-misc/polybar:i3wm - Add support for i3 window manager
