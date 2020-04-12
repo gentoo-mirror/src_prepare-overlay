@@ -1,12 +1,13 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl] >=dev-util/meson-0.51.2 >=dev-util/ninja-1.8.2
+BDEPEND=>=dev-util/meson-0.51.2 >=dev-util/ninja-1.8.2 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install test unpack
 DEPEND=x11-libs/cairo
-DESCRIPTION=pscircle visualizes Linux processes in a form of radial tree
+DESCRIPTION=Visualizes Linux processes in a radial tree
 EAPI=7
 HOMEPAGE=https://gitlab.com/mildlyparallel/pscircle
 LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=x11-libs/cairo media-libs/libpng x11-libs/libX11
+RESTRICT=mirror
 SLOT=0
 _eclasses_=git-r3	86a0188f2ad9eb3d65e4d031ab8a0422	meson	8702f112cb8ac56bbbf180872e275133	multilib	318e8ae683e57fd3ccd0d31a769d8ee8	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	6f5996d2ae01e0c6f2869ed18f023239	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
-_md5_=d8c057637625825ceca33a5b69e6359e
+_md5_=d27c8f4674515bc2c0bc670000844b43
