@@ -22,6 +22,7 @@ media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
 media-video/tartube:atomicparsley - Use AtomicParsley for embedding thumbnails in audio files
 net-misc/ddgr:fish-completion - Enable fish completion support
 sys-apps/xbps:lto - Build with Link Time Optimization
+sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 www-client/icecat:clang - Use Clang compiler instead of GCC
 www-client/icecat:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 www-client/icecat:eme-free - Disable EME (DRM plugin) cabability at build time
