@@ -91,8 +91,8 @@ src_unpack(){
 }
 
 src_install() {
-	mkdir -p ${D}
-	cp -r . ${D}
+	mkdir -p "${D}"
+	cp -r . "${D}"
 	local res
 	for res in 16 24 32 48 64 128 256; do
 		doicon -s ${res} opt/onlyoffice/desktopeditors/asc-de-${res}.png
