@@ -7,6 +7,7 @@ app-office/onlyoffice-bin 5.4.2 5.5.1: onlyoffice is an office productivity suit
 dev-python/ffmpeg-python 0.2.0 9999: Python bindings for FFmpeg - with complex filtering support
 dev-python/howdoi 1.2.1 9999: Instant coding answers via the command line
 dev-python/itunespy 1.5.3 9999: A simple library to fetch data from the iTunes Store API
+dev-python/pyfiglet 0.8.0 9999: An implementation of figlet written in Python
 games-action/gta2 9.6-r1: And remember - respect is everything!
 games-emulation/melonds 0.8.3 9999: DS emulator, sorta
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
