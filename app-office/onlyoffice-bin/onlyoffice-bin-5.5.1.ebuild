@@ -1,7 +1,5 @@
-# Copyright 1999-2020 Gentoo Foundation
+# Copyright 2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
-# This ebuild was based on Jorgicio's ebuild; all credits go to him.
 
 EAPI=7
 
@@ -15,7 +13,6 @@ HOMEPAGE="https://www.onlyoffice.com/"
 
 KEYWORDS="~amd64"
 
-
 SRC_URI="
 	amd64? (
 		https://github.com/ONLYOFFICE/DesktopEditors/releases/download/${MY_P}/${PN/bin/desktopeditors}_amd64.deb -> ${MY_P}_amd64.deb
@@ -27,7 +24,7 @@ RESTRICT="mirror strip"
 LICENSE="AGPL-3"
 IUSE=""
 
-NATIVE_DEPEND="
+DEPEND="
 	app-arch/bzip2
 	dev-libs/expat
 	dev-libs/glib:2
@@ -71,23 +68,20 @@ NATIVE_DEPEND="
 	media-fonts/crosextrafonts-carlito
 	net-print/cups
 	net-misc/wget
-	sys-devel/gcc
 	x11-libs/cairo
 	x11-libs/gtk+:2
-	x11-libs/gtkglext
 "
 RDEPEND="
-	${NATIVE_DEPEND}
+	${DEPEND}
 	dev-db/sqlite:3
 	net-libs/libcurl-gnutls
 	!app-office/onlyoffice
 "
-DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
 
 src_unpack(){
-	unpack_deb "${A}"
+	unpack_deb ${A}
 }
 
 src_install() {
