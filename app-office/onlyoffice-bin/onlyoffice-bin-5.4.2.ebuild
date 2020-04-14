@@ -1,7 +1,5 @@
-# Copyright 1999-2020 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
-# This ebuild was based on Jorgicio's ebuild; all credits go to him.
 
 EAPI=7
 
@@ -14,7 +12,6 @@ DESCRIPTION="onlyoffice is an office productivity suite (binary version)"
 HOMEPAGE="https://www.onlyoffice.com/"
 
 KEYWORDS="~amd64"
-
 
 SRC_URI="
 	amd64? (
@@ -71,10 +68,8 @@ NATIVE_DEPEND="
 	media-fonts/crosextrafonts-carlito
 	net-print/cups
 	net-misc/wget
-	sys-devel/gcc
 	x11-libs/cairo
 	x11-libs/gtk+:2
-	x11-libs/gtkglext
 "
 RDEPEND="
 	${NATIVE_DEPEND}
@@ -87,12 +82,12 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_unpack(){
-	unpack_deb "${A}"
+	unpack_deb ${A}
 }
 
 src_install() {
-	mkdir -p ${D}
-	cp -r . ${D}
+	mkdir -p "${D}"
+	cp -r . "${D}"
 	local res
 	for res in 16 24 32 48 64 128 256; do
 		doicon -s ${res} opt/onlyoffice/desktopeditors/asc-de-${res}.png
