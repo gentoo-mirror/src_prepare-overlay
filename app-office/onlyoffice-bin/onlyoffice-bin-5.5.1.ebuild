@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -24,7 +24,7 @@ RESTRICT="mirror strip"
 LICENSE="AGPL-3"
 IUSE=""
 
-NATIVE_DEPEND="
+DEPEND="
 	app-arch/bzip2
 	dev-libs/expat
 	dev-libs/glib:2
@@ -72,12 +72,11 @@ NATIVE_DEPEND="
 	x11-libs/gtk+:2
 "
 RDEPEND="
-	${NATIVE_DEPEND}
+	${DEPEND}
 	dev-db/sqlite:3
 	net-libs/libcurl-gnutls
 	!app-office/onlyoffice
 "
-DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
 
@@ -104,10 +103,12 @@ pkg_postinst() {
 	gnome2_gconf_install
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
+	xdg_icon_cache_update
 }
 
 pkg_postrm() {
 	gnome2_gconf_uninstall
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
+	xdg_icon_cache_update
 }
