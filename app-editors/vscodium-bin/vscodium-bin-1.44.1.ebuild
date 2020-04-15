@@ -7,15 +7,12 @@ inherit desktop pax-utils
 
 DESCRIPTION="Open Source Software Binaries of VSCode"
 HOMEPAGE="https://github.com/VSCodium/vscodium"
-SRC_URI="amd64? ( https://github.com/VSCodium/vscodium/releases/download/${PV}/VSCodium-linux-x64-${PV}.tar.gz -> vscodium-bin-${ARCH}-${PV}.tar.gz )
-	arm? ( https://github.com/VSCodium/vscodium/releases/download/${PV}/VSCodium-linux-arm-${PV}.tar.gz -> vscodium-bin-${ARCH}-${PV}.tar.gz )
-	arm64? ( https://github.com/VSCodium/vscodium/releases/download/${PV}/VSCodium-linux-arm64-${PV}.tar.gz -> vscodium-bin-${ARCH}-${PV}.tar.gz )"
-
+SRC_URI="https://github.com/VSCodium/vscodium/releases/download/${PV}/VSCodium-linux-x64-${PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror strip bindist"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 "
+KEYWORDS="~amd64"
 IUSE="libsecret"
 
 DEPEND="
