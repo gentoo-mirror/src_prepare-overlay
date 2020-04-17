@@ -13,6 +13,7 @@ games-emulation/melonds 0.8.3 9999: DS emulator, sorta
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 games-simulation/clou2 2.0f-r1: Burglary simulator
 games-strategy/warcraft3 1.26a: 
+games-util/lgogdownloader 3.7: Unofficial GOG.com downloader for Linux with patchset that allows integration with Portage
 mail-client/freelook-bin 1.0.0: Freelook, an Electron-based client for Microsoft Outlook
 media-fonts/fontawesome 9999: The iconic font
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
@@ -27,7 +28,7 @@ sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.5.76: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
 sys-boot/rpi-imager 1.2 9999: Raspberry Pi Imaging Utility
-sys-kernel/ck-sources 5.4.32 5.5.17: Gentoo's genpatches for Linux , with Con Kolivas' MuQSS process scheduler.
+sys-kernel/ck-sources 5.4.32 5.4.33 5.5.17: Gentoo's genpatches for Linux , with Con Kolivas' MuQSS process scheduler.
 sys-kernel/lqx-sources 5.5.11 5.5.13 5.5.15 5.5.16: The Liquorix Kernel Live Sources
 sys-kernel/pf-sources 5.5_p7 5.5_p8: Linux kernel fork that includes the pf-kernel patchset and Gentoo's genpatches
 sys-kernel/zen-sources 5.5.9 5.5.10 5.5.11 5.5.13 5.6.2 5.6.3 5.6.4: The Zen Kernel Live Sources
