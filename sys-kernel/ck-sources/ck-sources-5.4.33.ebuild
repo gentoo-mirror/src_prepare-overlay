@@ -11,7 +11,7 @@ inherit kernel-2
 detect_version
 detect_arch
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 amd64"
 HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches/
 	http://kernel.kolivas.org/"
 IUSE="experimental"
