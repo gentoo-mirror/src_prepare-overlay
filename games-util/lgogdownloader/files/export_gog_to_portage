@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+function stringify_dir {
+	tar -c "$1" | xz -z9evc 2>/dev/null | base64 | tr -d '\n' | sed 's/$/\n/'
+}
+
+pushd ~ >/dev/null
+	BACKUP=""
+	GOG_CONF_DIR=".config/lgogdownloader"
+	if [ -d ${GOG_CONF_DIR} ]; then
+		BACKUP=$(stringify_dir "${GOG_CONF_DIR}")
+	fi
+	rm -rf "${GOG_CONF_DIR}"
+	lgogdownloader --login
+	OUTPUT=$(stringify_dir "${GOG_CONF_DIR}")
+	rm -rf "${GOG_CONF_DIR}"
+	if [ "${BACKUP}" != "" ]; then
+		echo "${BACKUP}" | base64 -d | tar -Jxf - -C ~
+	fi
+popd >/dev/null
+
+echo "Your GOG_CONFIG:"
+echo "${OUTPUT}"
