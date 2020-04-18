@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Fallout
+Comment=Post-apocalyptic role-playing game.
+Exec=fallout1
+Icon=fallout1
+Categories=Game;RolePlaying;

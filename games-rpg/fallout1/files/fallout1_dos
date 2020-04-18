@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -xeuo pipefail
+
+if [ ! -d ~/.local/share/Fallout1 ]; then
+	mkdir -p ~/.local/share/Fallout1
+	pushd ~/.local/share/Fallout1
+		for i in $(ls /usr/share/games/fallout1 | grep -vE '^fallout\.cfg$|^DATA$|^dosbox\.conf$'); do
+			ln -s /usr/share/games/fallout1/$i $i
+		done
+		cp /usr/share/games/fallout1/dosbox.conf .
+		sed 's/^art_cache_size=.*$/art_cache_size=5/;s/^device=.*$/device=57344/;s/^dma=.*$/dma=1/;s/^irq=.*$/irq=7/;s/^port=.*$/port=544/' /usr/share/games/fallout1/fallout.cfg > fallout.cfg
+		mkdir DATA
+		pushd DATA
+			for i in $(ls /usr/share/games/fallout1/DATA | grep -vE '^SAVEGAME$|^MAPS$'); do
+				ln -s /usr/share/games/fallout1/DATA/$i $i
+			done
+			mkdir SAVEGAME
+			mkdir MAPS
+			pushd MAPS
+				for i in $(ls /usr/share/games/fallout1/DATA/MAPS); do
+					ln -s /usr/share/games/fallout1/DATA/MAPS/$i $i
+				done
+			popd
+		popd
+	popd
+fi
+
+dosbox -conf ~/.local/share/Fallout1/dosbox.conf
