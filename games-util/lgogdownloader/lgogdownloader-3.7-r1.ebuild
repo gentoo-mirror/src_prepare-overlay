@@ -19,7 +19,13 @@ RDEPEND=">=app-crypt/rhash-1.3.3-r2:0=
 	>=dev-libs/jsoncpp-1.7:0=
 	dev-libs/tinyxml2:0=
 	>=net-misc/curl-7.32:0=[ssl]
-	gui? ( dev-qt/qtwebengine:5=[widgets] )"
+	gui? ( dev-qt/qtwebengine:5=[widgets] )
+	portage? (	app-shells/bash
+			sys-apps/coreutils
+			app-arch/xz-utils
+			app-arch/tar
+			sys-apps/sed
+	)"
 
 DEPEND="${RDEPEND}"
 
@@ -39,4 +45,7 @@ src_configure() {
 src_install() {
 	cmake_src_install
 	gunzip "${ED}"/usr/share/man/man1/${PN}.1.gz || die
+	if use portage; then
+		dobin ${FILESDIR}/export_gog_to_portage
+	fi
 }
