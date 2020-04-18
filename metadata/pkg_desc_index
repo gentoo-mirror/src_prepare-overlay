@@ -12,9 +12,10 @@ dev-python/pyfiglet 0.8.0 9999: An implementation of figlet written in Python
 games-action/gta2 9.6-r1: And remember - respect is everything!
 games-emulation/melonds 0.8.3 9999: DS emulator, sorta
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
+games-rpg/fallout1 1.1: Post-apocalyptic role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
 games-strategy/warcraft3 1.26a: 
-games-util/lgogdownloader 3.7: Unofficial GOG.com downloader for Linux with patchset that allows integration with Portage
+games-util/lgogdownloader 3.7-r1: Unofficial GOG.com downloader for Linux with patchset that allows integration with Portage
 mail-client/freelook-bin 1.0.0: Freelook, an Electron-based client for Microsoft Outlook
 media-fonts/fontawesome 9999: The iconic font
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
