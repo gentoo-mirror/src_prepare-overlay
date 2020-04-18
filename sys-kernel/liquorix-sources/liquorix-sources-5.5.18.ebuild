@@ -16,15 +16,14 @@ KEYWORDS="~amd64 ~x86"
 HOMEPAGE="https://github.com/zen-kernel"
 IUSE=""
 
-DESCRIPTION="The Liquorix Kernel Live Sources"
-LQX_URI="https://github.com/zen-kernel/zen-kernel/releases/download/v${PV}-lqx1/v${PV}-lqx1.patch.xz"
-SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${LQX_URI}"
+DESCRIPTION="Liquorix sources including the Gentoo patchsets for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
+LIQUORIX_URI="https://github.com/zen-kernel/zen-kernel/releases/download/v${PV}-lqx1/v${PV}-lqx1.patch.xz"
+SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${LIQUORIX_URI}"
 
 UNIPATCH_LIST="${DISTDIR}/v${PV}-lqx1.patch.xz"
 UNIPATCH_STRICTORDER="yes"
 
-K_EXTRAEINFO="For more info on lqx-sources, and for how to report problems, see: \
-${HOMEPAGE}"
+K_EXTRAEINFO="For more info on ${PN}, and for how to report problems, see: ${HOMEPAGE}"
 
 pkg_setup() {
 	ewarn
