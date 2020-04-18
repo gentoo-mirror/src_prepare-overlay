@@ -16,6 +16,7 @@ app-crypt/gtkhash:openssl - Enable the libcrypto (dev-libs/openssl library)
 app-crypt/gtkhash:thunar - Build extension for xfce-base/thunar
 app-crypt/gtkhash:zlib - Add support for zlib (de)compression
 app-editors/vscodium-bin:libsecret - Enable libsecret support
+app-emulation/dos32a:binary - Fetch binary release instead of compiling the package from source.
 media-fonts/fontawesome:otf - Install the OpenType version of the font
 media-fonts/fontawesome:ttf - Install the TrueType version of the font
 media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
