@@ -1,0 +1,39 @@
+# Copyright 1999-2020 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+DESCRIPTION="Free software re-implementation of Tenberry Software DOS4GW, a DOS extender that allows to take full advantage of all physical memory under protected mode."
+HOMEPAGE="https://dos32a.narechk.net/content/main.html"
+
+LICENSE="Apache-1.1-sans-Apache"
+SLOT="0"
+KEYWORDS="~amd64 ~x86 ~ppc64 ~arm"
+
+#SRC_URI="http://download.narechk.net/dos32a-912-bin.zip http://download.narechk.net/dos32a-912-src.zip"
+SRC_URI="http://download.narechk.net/dos32a-912-bin.zip"
+
+IUSE="+binary"
+
+BDEPEND="
+	app-arch/unzip
+"
+
+RDEPEND=""
+
+DEPEND="${RDEPEND}"
+
+S=${WORKDIR}
+
+src_unpack() {
+	if ! use binary; then
+		die "Building DOS32A from source is not yet supported. Come back when we have an adequate DOS toolchain."
+	else
+		unzip -jd . "${DISTDIR}"/dos32a-912-bin.zip binw/*
+	fi
+}
+
+src_install() {
+	insinto /usr/share/dos32a
+	doins *.exe
+}
