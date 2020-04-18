@@ -2,6 +2,7 @@ app-admin/doas 6.6.1 9999: A portable fork of the OpenBSD doas command
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
 app-crypt/gtkhash 1.2 9999: A cross-platform desktop utility for computing message digests or checksums
 app-editors/vscodium-bin 1.42.0 1.42.1 1.43.0 1.43.2 1.44.0 1.44.1: Open Source Software Binaries of VSCode
+app-emulation/dos32a 9.1.2: Free software re-implementation of Tenberry Software DOS4GW, a DOS extender that allows to take full advantage of all physical memory under protected mode.
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
 app-office/onlyoffice-bin 5.4.2 5.5.1: onlyoffice is an office productivity suite (binary version)
 dev-python/ffmpeg-python 0.2.0 9999: Python bindings for FFmpeg - with complex filtering support
