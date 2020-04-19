@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <use>
+    <flag name="dos">
+      Selects DOSBox as a runtime provider for DOS release
+    </flag>
+    <flag name="wine">
+      Selects Wine as a runtime provider for Windows release
+    </flag>
+  </use>
+</pkgmetadata>
