@@ -5,7 +5,7 @@ EAPI=7
 
 inherit cmake
 
-DESCRIPTION="Unofficial GOG.com downloader for Linux with patchset that allows integration with Portage"
+DESCRIPTION="Unofficial downloader for GOG content."
 HOMEPAGE="https://sites.google.com/site/gogdownloader/"
 SRC_URI="https://sites.google.com/site/gogdownloader/${P}.tar.gz"
 LICENSE="WTFPL-2"

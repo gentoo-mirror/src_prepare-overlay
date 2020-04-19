@@ -5,8 +5,8 @@ EAPI=7
 
 inherit gog
 
-DESCRIPTION="Post-apocalyptic role-playing game."
-HOMEPAGE=""
+DESCRIPTION="Post-apocalyptic GURPS-like role-playing game."
+HOMEPAGE="https://www.gog.com/game/fallout"
 
 LICENSE+=" FALLOUT1_EULA"
 SLOT="0"

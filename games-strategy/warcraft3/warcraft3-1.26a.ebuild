@@ -9,6 +9,8 @@ HOMEPAGE=""
 LICENSE="Warcraft3_EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+DESCRIPTION="Third installment of Warcraft from Blizzard."
+HOMEPAGE="https://www.blizzard.com/games/war3/"
 
 SRC_URI="https://archive.org/download/wc3_patches/Windows/ROC/English/War3ROC_126a_English.exe https://archive.org/download/wc3_patches/Windows/TFT/English/War3TFT_126a_English.exe"
 
