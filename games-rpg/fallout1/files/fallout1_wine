@@ -13,10 +13,16 @@ if [ ! -d ~/.local/share/Fallout1 ]; then
 		cp /usr/share/games/fallout1/fallout.cfg .
 		mkdir DATA
 		pushd DATA
-			for i in $(ls /usr/share/games/fallout1/DATA | grep -v ^SAVEGAME$); do
+			for i in $(ls /usr/share/games/fallout1/DATA | grep -vE '^SAVEGAME$|^MAPS$'); do
 				ln -s /usr/share/games/fallout1/DATA/$i $i
 			done
 			mkdir SAVEGAME
+			mkdir MAPS
+			pushd MAPS
+				for i in $(ls /usr/share/games/fallout1/DATA/MAPS); do
+					ln -s /usr/share/games/fallout1/DATA/MAPS/$i $i
+				done
+			popd
 		popd
 	popd
 fi
