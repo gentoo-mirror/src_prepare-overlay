@@ -1,0 +1,16 @@
+Title: added patched genlop
+Author: XenHat <me@xenh.at>
+Content-Type: text/plain
+Posted: 2020-04-19
+Revision: 1
+News-Item-Format: 2.0
+Display-If-Installed: app-portage/genlop
+
+A new patched version of app-portage/genlop is now available.
+
+It available as unstable and live packages (~$ARCH and -9999).
+
+# echo 'app-portage/genlop ~amd64' | tee /etc/portage/package.accept_keywords/genlop
+# emerge --update app-portage/genlop
+
+Happy coding!
