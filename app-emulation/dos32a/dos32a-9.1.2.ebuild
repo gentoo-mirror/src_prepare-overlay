@@ -3,7 +3,7 @@
 
 EAPI=7
 
-DESCRIPTION="Free software re-implementation of Tenberry Software DOS4GW, a DOS extender that allows to take full advantage of all physical memory under protected mode."
+DESCRIPTION="Free replacement for DOS4GW."
 HOMEPAGE="https://dos32a.narechk.net/content/main.html"
 
 LICENSE="Apache-1.1-sans-Apache"
