@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <use>
-    <flag name="tft">
-      Installs The Frozen Throne expansion pack. (NOT SUPPORTED YET)
-    </flag>
-  </use>
+  <upstream>
+    <remote-id type="github">SrainApp/srain</remote-id>
+  </upstream>
 </pkgmetadata>
