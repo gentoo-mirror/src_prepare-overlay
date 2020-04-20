@@ -24,6 +24,7 @@ media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-video/tartube 2.0.0 9999: A GUI front-end for youtube-dl
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
 net-firewall/hblock 2.1.5 9999: Improve your security and privacy by blocking ads, tracking and malware domains
+net-im/srain 1.0.2 9999: Modern IRC client written in GTK
 net-libs/libcurl-gnutls 7.69.1: libcurl libraries linked with gnutls
 net-misc/ddgr 1.7 1.8 9999: DuckDuckGo from the terminal
 net-misc/downloader-cli 0.1.0 2019.11.15 9999: A simple downloader written in Python with an awesome progressbar

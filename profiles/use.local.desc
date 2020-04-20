@@ -19,6 +19,7 @@ app-editors/vscodium-bin:libsecret - Enable libsecret support
 app-emulation/dos32a:binary - Fetch binary release instead of compiling the package from source.
 games-rpg/fallout1:dos - Selects DOSBox as a runtime provider for DOS release
 games-rpg/fallout1:wine - Selects Wine as a runtime provider for Windows release
+games-strategy/warcraft3:tft - Installs The Frozen Throne expansion pack. (NOT SUPPORTED YET)
 games-util/lgogdownloader:gui - Graphical user interface
 games-util/lgogdownloader:portage - Enables headless operation required for Portage integration
 media-fonts/fontawesome:otf - Install the OpenType version of the font
