@@ -5,12 +5,12 @@ EAPI=7
 
 inherit gog
 
-DESCRIPTION="Post-apocalyptic role-playing game."
-HOMEPAGE=""
+DESCRIPTION="Post-apocalyptic GURPS-like role-playing game."
+HOMEPAGE="https://www.gog.com/game/fallout"
 
 LICENSE+=" FALLOUT1_EULA"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc64 ~arm"
+KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
 
 SRC_URI="
 	dos? (	https://archive.org/download/fallout1_dos/fallup1d.zip

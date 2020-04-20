@@ -39,7 +39,6 @@
 # through separate installers.
 : ${GOG_GAME_INSTALLER:=()}
 
-RESTRICT="network-sandbox"
 LICENSE="GOG_EULA"
 BDEPEND+="
 	games-util/lgogdownloader[portage]
