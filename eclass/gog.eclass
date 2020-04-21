@@ -16,6 +16,9 @@
 # It is up to the ebuild to enable and offer other alternate avenues to support
 # a particular game.
 
+# In order to disable network-sandbox:
+PROPERTIES+="live"
+
 # @ECLASS-VARIABLE: GOG_GAME_NAME
 # @DESCRIPTION:
 # Name of the game as it appears in lgogdownloader list.
@@ -39,15 +42,13 @@
 # through separate installers.
 : ${GOG_GAME_INSTALLER:=()}
 
-LICENSE="GOG_EULA"
+LICENSE+="GOG_EULA"
 BDEPEND+="
 	games-util/lgogdownloader[portage]
-	app-arch/innoextract"
+	app-arch/innoextract
+"
 
 gog_sanity_check() {
-	if [ $(echo ${FEATURES} | tr ' ' '\n' | grep -c network\-sandbox) -ne 0 ]; then
-		die "This ebuild requires network-sandbox to be removed from FEATURES."
-	fi
 	portageq envvar GOG_CONFIG >/dev/null 2>/dev/null
 	if [ $? -ne 0 ]; then
 		die "Please define GOG_CONFIG in /etc/portage/make.conf as the output of export_gog_to_portage."

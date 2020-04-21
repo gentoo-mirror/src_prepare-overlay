@@ -37,7 +37,7 @@ src_configure() {
 		-DUSE_QT_GUI=$(usex gui)
 	)
 	if use portage; then
-		patch -p1 < ${FILESDIR}/0001-recycle-cookies-and-tokens.patch
+		patch -p1 < "${FILESDIR}/0001-recycle-cookies-and-tokens.patch"
 	fi
 	cmake_src_configure
 }
@@ -46,6 +46,6 @@ src_install() {
 	cmake_src_install
 	gunzip "${ED}"/usr/share/man/man1/${PN}.1.gz || die
 	if use portage; then
-		dobin ${FILESDIR}/export_gog_to_portage
+		dobin "${FILESDIR}/export_gog_to_portage"
 	fi
 }
