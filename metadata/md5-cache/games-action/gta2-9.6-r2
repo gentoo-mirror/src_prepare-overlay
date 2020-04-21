@@ -1,0 +1,15 @@
+BDEPEND=app-arch/unzip media-gfx/icoutils media-gfx/imagemagick virtual/wine[abi_x86_32] sys-apps/sed sys-apps/coreutils sys-apps/grep sys-apps/sed sys-apps/coreutils
+DEFINED_PHASES=install unpack
+DEPEND=app-emulation/winetricks app-shells/bash:0
+DESCRIPTION=And remember - respect is everything!
+EAPI=7
+HOMEPAGE=https://www.rockstargames.com/gta2/homepage.html
+IUSE=+abi_x86_32
+KEYWORDS=~amd64 ~x86
+LICENSE=Rockstar_freeware_GTA2
+RDEPEND=app-emulation/winetricks app-shells/bash:0 virtual/wine[abi_x86_32]
+REQUIRED_USE=abi_x86_32
+SLOT=0
+SRC_URI=https://archive.org/download/pc_gta2/GTA2_full.zip
+_eclasses_=run-wine	9f389002a2c57ddceb5b9005ccda8e2e	windows-helper	38cfe9b76a5438ef982643787dca9048
+_md5_=eaacc4b8ea2af5bae4b995547e33eca5
