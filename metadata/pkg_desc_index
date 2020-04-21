@@ -35,7 +35,7 @@ sys-boot/rpi-imager 1.2 9999: Raspberry Pi Imaging Utility
 sys-kernel/ck-sources 5.4.32 5.4.33 5.5.17 5.5.18: Con Kolivas sources including the Gentoo patchset for the 5.5 kernel tree
 sys-kernel/liquorix-sources 5.5.14 5.5.15 5.5.16 5.5.18 5.5.19: Liquorix sources including the Gentoo patchsets for the 5.5 kernel tree
 sys-kernel/pf-sources 5.5_p7 5.5_p8: Linux kernel fork that includes the pf-kernel patchset and Gentoo's genpatches
-sys-kernel/xanmod-sources 5.6.5: XanMod sources including the Gentoo patchsets for the 5.6 kernel tree
+sys-kernel/xanmod-sources 5.6.5 5.6.6: XanMod sources including the Gentoo patchsets for the 5.6 kernel tree
 sys-kernel/zen-sources 5.5.9 5.5.10 5.5.11 5.5.13 5.6.2 5.6.3 5.6.4 5.6.5: ZEN sources including the Gentoo patchsets for the 5.6 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-client/icecat 60.7.0: IceCat Web Browser
