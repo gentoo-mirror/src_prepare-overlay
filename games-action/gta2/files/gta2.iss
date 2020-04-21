@@ -15,7 +15,7 @@ Result=1
 [{2987EE84-C4EE-4FF5-8160-32DE00D6ABC6}-SdLicense2-0]
 Result=1
 [{2987EE84-C4EE-4FF5-8160-32DE00D6ABC6}-SdAskDestPath2-0]
-szDir=C:\Program Files\Rockstar Games\GTA2
+szDir=C:\Program Files\Rockstar Games\gta2
 Result=1
 [{2987EE84-C4EE-4FF5-8160-32DE00D6ABC6}-SdStartCopy2-0]
 Result=1
