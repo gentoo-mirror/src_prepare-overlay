@@ -12,31 +12,14 @@ inherit kernel-2
 detect_version
 detect_arch
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 HOMEPAGE="https://github.com/zen-kernel"
 IUSE=""
 
-DESCRIPTION="The Zen Kernel Live Sources"
+DESCRIPTION="Zen sources including the Gentoo patchsets for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 
 ZEN_URI="https://github.com/zen-kernel/zen-kernel/releases/download/v${PV}-zen1/v${PV}-zen1.patch.xz"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${ZEN_URI}"
 
 UNIPATCH_LIST="${DISTDIR}/v${PV}-zen1.patch.xz"
 UNIPATCH_STRICTORDER="yes"
-
-K_EXTRAEINFO="For more info on zen-sources, and for how to report problems, see: \
-${HOMEPAGE}, also go to #zen-sources on freenode"
-
-pkg_setup() {
-	ewarn
-	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
-	ewarn "If you need support, please contact the zen developers directly."
-	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
-	ewarn "the ebuilds. Thank you."
-	ewarn
-	kernel-2_pkg_setup
-}
-
-pkg_postrm() {
-	kernel-2_pkg_postrm
-}
