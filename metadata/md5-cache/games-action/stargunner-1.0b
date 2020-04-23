@@ -1,0 +1,12 @@
+BDEPEND=app-arch/unzip app-arch/unrar sys-apps/coreutils
+DEFINED_PHASES=install unpack
+DEPEND=games-emulation/dosbox
+DESCRIPTION=Horizontal shooter by Apogee. Their last game, in fact.
+EAPI=7
+HOMEPAGE=https://3drealms.com/catalog/stargunner_45/
+KEYWORDS=~amd64 ~arm ~ppc64 ~x86
+LICENSE=Stargunner_freeware
+RDEPEND=games-emulation/dosbox
+SLOT=0
+SRC_URI=https://image.dosgamesarchive.com/games/stargunnerfreeware.zip
+_md5_=e70173a9b7dbe5d88f638781207ed9f9
