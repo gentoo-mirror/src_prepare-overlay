@@ -1,0 +1,42 @@
+Stargunner Freeware Release Notes - June 2005
+Stargunner is (c)1996/2005 Apogee Software, Ltd.
+------------------------------------------------
+
+This game was deleted from Apogee's product line quite some time ago, and has been re-released as freeware in June of 2005.  We were contacted by the game's original project leader asking if it could be released, so here it is!  There are a few notes you should be aware of with the release.
+
+1) We offer no support in helping to getting this freeware release running.
+
+2) This game was released before Windows 2000 & Windows XP were released, and as such, these more modern operating systems might have issues in running the game.  A third party program called DOSBox has been known to have been helpful in getting the game running.  You can obtain DOSBox here: http://dosbox.sourceforge.net
+
+3) The enclosed game manual is in PDF format, and requires the use of a program that can read it, such as Adobe Acrobat Reader - you can get that program for free at http://www.adobe.com
+
+4) This game is released as freeware.  That's not to be confused with public domain, abandonware (which is illegal), or releasing something under the GPL.   This is a freeware release, which means we retain full legal rights to the title and it's materials.  You are free to play the game as we've released it, but not free to "do whatever you want with it", which includes selling it or otherwise using the materials.
+
+That's about it - before we go, we'd like to leave you with a few thoughts on Stargunner by both David Pevreal (the game's original project leader), and Scott Miller (the President and founder of Apogee).
+
+Enjoy Stargunner!
+-- Apogee Tech Support, June 2005
+
+-----------------------------------------------------------------------------------------
+
+Stargunner, released late in 1996, was Apogee's final game.  Apogee had officially started in 1987 with the release of a shareware game, Kingdom of Kroz, solely developed by Apogee founder, Scott Miller.  The Apogee label rang loudly for nearly ten years in the shareware arena, with games like Commander Keen, Duke Nukem, Raptor, Wolfenstein 3-D (the father of the FPS genre), and Rise of the Triad.  Apogee pioneered the shareware method of selling games, and it was this method that allowed Apogee (as well as Id and Epic) to rise from nothing to become a successful, entirely independent game studios.
+
+But as the industry matured, it became apparent in to us 1994 that 3D was the future, and so a new company name was created, 3D Realms, and this is the name that soon replaced all signs of Apogee.
+
+Stargunner was Apogee's final song.  It was a great little game, but great little games didn't cut it by then, because in 1996 we lived in a would dominated by three-D's:  Doom, Duke, Descent -- the 3D revolution had begun.
+
+Many of Stargunner's developers are still in the industry, picked up by bigger studios and making their way just fine.  So the story ends well.  In fact, with the freeware release of Stargunner, the story continues...
+
+Scott Miller, CEO
+Apogee Software, Ltd.
+
+--------------------------------------------------------------------------------------------
+
+Stargunner represented the first completed attempt at a game for all of the developers involved. While the commercial success of the game was mild, it certainly launched the careers of the 3 programmers who all moved on to find success in the games industry. Stargunner's artist also found success in his chosen field, though outside of games.
+
+The game itself was written in C++, but with heavy usage of assembly for the video and sound routines. It was one of only a few games that could run at 60 frames per second on the current "486" hardware of the day. Most of the art was developed on the Amiga using Deluxe Paint. In fact, the game was originally supposed to be an Amiga game with a PC version supposed to follow, but the PC version soon overtook and led development, and sadly the Amiga version was eventually dropped.
+
+We hope you enjoy Stargunner, and appreciate the attempt to faithfully bring to life on the PC a style of game seen most commonly on the Commodore 64 and Commodore Amiga throughout the 80's; the good old days.
+
+David Pevreal
+Project Leader - Stargunner

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ ! -d ~/.local/share/Stargunner ]; then
+	mkdir -p ~/.local/share/Stargunner
+	pushd ~/.local/share/Stargunner >/dev/null
+		for i in $(ls /usr/share/games/stargunner | grep -vE '^dosbox\.conf$|^STARGUN\.CFG$'); do
+			ln -s /usr/share/games/stargunner/$i $i
+		done
+		cp /usr/share/games/stargunner/dosbox.conf .
+		cp /usr/share/games/stargunner/STARGUN.CFG .
+	popd
+fi
+
+dosbox -conf ~/.local/share/Stargunner/dosbox.conf
