@@ -1,14 +1,15 @@
 BDEPEND=>=dev-util/meson-0.51.2 >=dev-util/ninja-1.8.2 >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst postrm preinst test unpack
-DEPEND=>=dev-libs/glib-2.58.0 >=dev-libs/libpcre2-10.32 >=x11-libs/vte-0.54.4 dev-libs/appstream-glib[introspection] dev-util/desktop-file-utils dev-util/meson gnome-base/gsettings-desktop-schemas gui-libs/libhandy x11-libs/gtk+:3 gtop? ( >=gnome-base/libgtop-2.38.0 )
+DEFINED_PHASES=compile configure install postinst postrm preinst setup test unpack
+DEPEND=python_single_target_python3_6? ( >=dev-lang/python-3.6.10:3.6 >=dev-lang/python-exec-2:=[python_targets_python3_6] ) python_single_target_python3_7? ( >=dev-lang/python-3.7.7-r1:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_8? ( >=dev-lang/python-3.8.2:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) >=dev-libs/glib-2.58.0 >=dev-libs/libpcre2-10.32 >=x11-libs/vte-0.54.4 dev-libs/appstream-glib[introspection] dev-util/desktop-file-utils dev-util/meson gnome-base/gsettings-desktop-schemas gui-libs/libhandy x11-libs/gtk+:3 gtop? ( >=gnome-base/libgtop-2.38.0 )
 DESCRIPTION=A minimal terminal for GNOME
 EAPI=7
 HOMEPAGE=https://gitlab.gnome.org/ZanderBrown/kgx
-IUSE=doc generic -gir +gtop test -vapi
+IUSE=doc generic -gir +gtop test -vapi python_single_target_python3_6 python_single_target_python3_7 python_single_target_python3_8
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=>=dev-libs/glib-2.58.0 >=dev-libs/libpcre2-10.32 >=x11-libs/vte-0.54.4 dev-libs/appstream-glib[introspection] dev-util/desktop-file-utils dev-util/meson gnome-base/gsettings-desktop-schemas gui-libs/libhandy x11-libs/gtk+:3 gtop? ( >=gnome-base/libgtop-2.38.0 )
+RDEPEND=python_single_target_python3_6? ( >=dev-lang/python-3.6.10:3.6 >=dev-lang/python-exec-2:=[python_targets_python3_6] ) python_single_target_python3_7? ( >=dev-lang/python-3.7.7-r1:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_8? ( >=dev-lang/python-3.8.2:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) >=dev-libs/glib-2.58.0 >=dev-libs/libpcre2-10.32 >=x11-libs/vte-0.54.4 dev-libs/appstream-glib[introspection] dev-util/desktop-file-utils dev-util/meson gnome-base/gsettings-desktop-schemas gui-libs/libhandy x11-libs/gtk+:3 gtop? ( >=gnome-base/libgtop-2.38.0 )
+REQUIRED_USE=^^ ( python_single_target_python3_6 python_single_target_python3_7 python_single_target_python3_8 )
 RESTRICT=!test? ( test ) mirror
 SLOT=0
-_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	git-r3	86a0188f2ad9eb3d65e4d031ab8a0422	gnome2-utils	893e828f0f25f070f0b38d20c83c7670	meson	a339d4397e4e76786c0ad54ea512c2d9	multilib	318e8ae683e57fd3ccd0d31a769d8ee8	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	727554821dab8292d3a8198893c2ef8b	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
-_md5_=810b91bb1c53dc2e79cbab8c7a978a0e
+_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	git-r3	86a0188f2ad9eb3d65e4d031ab8a0422	gnome2-utils	893e828f0f25f070f0b38d20c83c7670	meson	a339d4397e4e76786c0ad54ea512c2d9	multilib	318e8ae683e57fd3ccd0d31a769d8ee8	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-single-r1	2d2617a730e75e491e1d17af87841ec5	python-utils-r1	727554821dab8292d3a8198893c2ef8b	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=018bccd32078919b35228b4dc04cbaaf
