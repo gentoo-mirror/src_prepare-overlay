@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8} )
 
-inherit gnome2-utils meson xdg-utils
+inherit gnome2-utils meson python-single-r1 xdg-utils
 
 DESCRIPTION="A minimal terminal for GNOME"
 HOMEPAGE="https://gitlab.gnome.org/ZanderBrown/kgx"
@@ -26,6 +26,7 @@ RESTRICT="
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="doc generic -gir +gtop test -vapi"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="
 	${PYTHON_DEPS}
