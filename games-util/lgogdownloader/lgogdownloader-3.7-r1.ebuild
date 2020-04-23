@@ -20,7 +20,7 @@ RDEPEND=">=app-crypt/rhash-1.3.3-r2:0=
 	dev-libs/tinyxml2:0=
 	>=net-misc/curl-7.32:0=[ssl]
 	gui? ( dev-qt/qtwebengine:5=[widgets] )
-	portage? (	app-shells/bash
+	portage? (	app-shells/bash:0
 			sys-apps/coreutils
 			app-arch/xz-utils
 			app-arch/tar
