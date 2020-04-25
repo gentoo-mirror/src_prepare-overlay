@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit user
+
 MY_P="${P/icecream/icecc}"
 
 DESCRIPTION="Distributed compiling of C(++) code across several machines; based on distcc"
