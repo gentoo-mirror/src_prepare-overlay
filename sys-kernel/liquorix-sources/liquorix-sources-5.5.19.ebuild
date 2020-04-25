@@ -12,7 +12,7 @@ inherit kernel-2
 detect_version
 detect_arch
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 HOMEPAGE="https://github.com/zen-kernel"
 IUSE=""
 
@@ -22,6 +22,3 @@ SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${LIQUORIX_URI}"
 
 UNIPATCH_LIST="${DISTDIR}/v${PV}-lqx1.patch.xz"
 UNIPATCH_STRICTORDER="yes"
-
-K_EXTRAEINFO="For more info on ${PN}, and for how to report problems, see: ${HOMEPAGE}"
-
