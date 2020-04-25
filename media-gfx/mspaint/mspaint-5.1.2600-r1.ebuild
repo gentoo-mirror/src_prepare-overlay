@@ -24,6 +24,8 @@ BDEPEND+="
 RDEPEND+="
 	app-shells/bash:0
 	virtual/wine[abi_x86_32]
+	app-emulation/winetricks
+	sys-apps/grep
 "
 
 DEPEND="${RDEPEND}"
