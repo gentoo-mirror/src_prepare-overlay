@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -uo pipefail
+MFC42_FOUND=$(winetricks list-installed | grep -cE '^mfc42$|^vcrun6$')
+if [ ${MFC42_FOUND} -eq 0 ]; then
+	winetricks mfc42
+fi
+wine /usr/share/mspaint/mspaint.exe

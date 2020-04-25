@@ -1,0 +1,12 @@
+This is a placeholder license for software which proved difficult enough to
+find a license text for, that the attempt was temporarily or permanently
+abandoned.
+
+Such software is software that:
+- FAILS to produce a license text in any of its running course
+- FAILS to produce a license text via `strings` analysis
+- FAILS to produce a copyright notice in any of its running course
+- FAILS to produce a copyright notice via `strings` analysis
+
+We deliver such software in ebuilds in good faith. Everyone is welcome to help
+find the license so that our ebuilds can be fully legally compliant.
