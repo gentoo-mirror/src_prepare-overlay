@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Microsoft Paint
+Comment=Microsoft Paint for Windows XP
+Keywords=mspaint;graphic;design;illustration;painting;
+Exec=mspaint
+Icon=mspaint
+Categories=Graphics;2DGraphics;RasterGraphics;
