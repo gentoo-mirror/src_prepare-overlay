@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit user
+inherit user systemd
 
 MY_P="${P/icecream/icecc}"
 
@@ -47,6 +47,8 @@ src_install() {
 
 	newconfd suse/sysconfig.icecream icecream
 	newinitd "${FILESDIR}"/icecream-r2 icecream
+	systemd_newunit "${FILESDIR}/icecream-scheduler.service" 'icecream-scheduler.service'
+	systemd_newunit "${FILESDIR}/icecream.service" 'icecream.service'
 
 	insinto /etc/logrotate.d
 	newins suse/logrotate icecream
