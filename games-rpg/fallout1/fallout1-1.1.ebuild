@@ -34,7 +34,7 @@ BDEPEND+="
 RDEPEND+="
 	dos?  (	games-emulation/dosbox
 			app-emulation/dos32a )
-	wine? (	app-emulation/wine-vanilla[abi_x86_32]:= )
+	wine? (	app-emulation/wine-vanilla:=[abi_x86_32] )
 "
 
 DEPEND="${RDEPEND}"

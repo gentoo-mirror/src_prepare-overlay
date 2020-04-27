@@ -16,7 +16,7 @@ BDEPEND+="
 "
 
 RDEPEND+="
-	app-emulation/wine-vanilla[abi_x86_32]:=
+	app-emulation/wine-vanilla:=[abi_x86_32]
 	app-arch/unshield
 "
 
