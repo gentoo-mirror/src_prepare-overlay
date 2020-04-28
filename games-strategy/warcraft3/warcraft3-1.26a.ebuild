@@ -32,7 +32,7 @@ BDEPEND+="
 	x11-wm/openbox"
 
 RDEPEND+="
-	app-emulation/wine-vanilla[abi_x86_32,gstreamer]
+	app-emulation/wine-vanilla:=[abi_x86_32,gstreamer]
 	media-plugins/gst-plugins-meta[ffmpeg]
 	media-video/ffmpeg[mp3,xvid]
 	app-emulation/winetricks
