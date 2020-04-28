@@ -44,7 +44,7 @@ sys-kernel/pf-sources 5.5_p7 5.5_p8: Linux kernel fork that includes the pf-kern
 sys-kernel/xanmod-sources 5.6.5 5.6.6: XanMod sources including the Gentoo patchsets for the 5.6 kernel tree
 sys-kernel/zen-sources 5.6.7: Zen sources including the Gentoo patchsets for the 5.6 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
-www-client/icecat 60.7.0: IceCat Web Browser
+www-client/icecat 68.7.0: GNU IceCat Web Browser
 www-client/palemoon 28.9.1 9999: Pale Moon Web Browser
 x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files

@@ -34,17 +34,20 @@ sys-apps/xbps:lto - Build with Link Time Optimization
 sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 www-client/icecat:clang - Use Clang compiler instead of GCC
 www-client/icecat:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
-www-client/icecat:eme-free - Disable EME (DRM plugin) cabability at build time
 www-client/icecat:geckodriver - Enable WebDriver support
 www-client/icecat:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/icecat:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
+www-client/icecat:lto - Enable Link Time Optimization (LTO). Requires Gold linker when using GCC or LDD linker when using Clang
+www-client/icecat:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
 www-client/icecat:screenshot - Allow to disable screenshot extension in global profile
+www-client/icecat:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled.
 www-client/icecat:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
 www-client/icecat:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 www-client/icecat:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
 www-client/icecat:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
 www-client/icecat:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
 www-client/icecat:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
+www-client/icecat:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
 www-client/palemoon:devtools - Enable Mozilla Developer Tools
 www-client/palemoon:gtk2 - Use x11-libs/gtk+:2
 www-client/palemoon:gtk3 - Use x11-libs/gtk+:3

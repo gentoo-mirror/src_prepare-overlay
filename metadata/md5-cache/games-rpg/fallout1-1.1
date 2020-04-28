@@ -1,6 +1,6 @@
 BDEPEND=media-gfx/icoutils media-gfx/imagemagick dos? ( app-arch/unzip ) games-util/lgogdownloader[portage] app-arch/innoextract
 DEFINED_PHASES=install unpack
-DEPEND=dos? ( games-emulation/dosbox app-emulation/dos32a ) wine? ( app-emulation/wine-vanilla[abi_x86_32] )
+DEPEND=dos? ( games-emulation/dosbox app-emulation/dos32a ) wine? ( app-emulation/wine-vanilla:=[abi_x86_32] )
 DESCRIPTION=Post-apocalyptic GURPS-like role-playing game.
 EAPI=7
 HOMEPAGE=https://www.gog.com/game/fallout
@@ -8,8 +8,8 @@ IUSE=-dos -wine
 KEYWORDS=~amd64 ~arm ~ppc64 ~x86
 LICENSE=GOG_EULA FALLOUT1_EULA
 PROPERTIES=live
-RDEPEND=dos? ( games-emulation/dosbox app-emulation/dos32a ) wine? ( app-emulation/wine-vanilla[abi_x86_32] )
+RDEPEND=dos? ( games-emulation/dosbox app-emulation/dos32a ) wine? ( app-emulation/wine-vanilla:=[abi_x86_32] )
 SLOT=0
 SRC_URI=dos? ( https://archive.org/download/fallout1_dos/fallup1d.zip https://archive.org/download/fallout1_dos/HMIDET.386 https://archive.org/download/fallout1_dos/HMIDRV.386 )
 _eclasses_=gog	aa3b6723656f357c68e2aa0b0b34e0a1
-_md5_=6247b25cbf584f2399fd7188f62c3238
+_md5_=3f85769aae75560ff87cbf352b6660c6
