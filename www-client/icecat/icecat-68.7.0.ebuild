@@ -50,7 +50,7 @@ KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="-bindist clang cpu_flags_x86_avx2 dbus debug geckodriver
-	+gmp-autoupdate hardened hwaccel jack lto cpu_flags_arm_neon
+	+gmp-autoupdate hardened hwaccel jack kernel_linux lto cpu_flags_arm_neon
 	pgo pulseaudio +screenshot selinux startup-notification +system-av1
 	+system-harfbuzz +system-icu +system-jpeg +system-libevent
 	+system-sqlite +system-libvpx +system-webp test wayland wifi"
@@ -293,12 +293,12 @@ src_unpack() {
 
 	# Unpack language packs
 #	mozlinguas_src_unpack
+	cd "${WORKDIR}"/gnuzilla-"${COMMIT_SHA}"
+	"${FILESDIR}"/patch_without_repoman_knowing.sh
+	./makeicecat
 }
 
 src_prepare() {
-	cd "${WORKDIR}"/gnuzilla-"${COMMIT_SHA}"
-	sed 's/\/tmp/\./g' -i makeicecat
-	./makeicecat
 	rm "${WORKDIR}"/firefox/2013_avoid_noinline_on_GCC_with_skcms.patch
 	rm "${WORKDIR}"/firefox/2015_fix_cssparser.patch
 	cp "${FILESDIR}"/1000_gentoo_preference_file.patch "${WORKDIR}"/firefox
