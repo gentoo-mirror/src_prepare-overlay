@@ -38,7 +38,7 @@ sys-boot/etcher-bin 1.5.76: Flash OS images to SD cards & USB drives, safely and
 sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
 sys-boot/rpi-imager 1.2 9999: Raspberry Pi Imaging Utility
 sys-devel/icecream 1.3.1: Distributed compiling of C(++) code across several machines; based on distcc
-sys-kernel/ck-sources 5.4.35 5.5.19: Con Kolivas sources including the Gentoo patchsets for the 5.5 kernel tree
+sys-kernel/ck-sources 5.4.35 5.5.19 5.6.7: Con Kolivas sources including the Gentoo patchsets for the 5.6 kernel tree
 sys-kernel/liquorix-sources 5.5.19 5.6.7: Liquorix sources including the Gentoo patchsets for the 5.6 kernel tree
 sys-kernel/pf-sources 5.5_p7 5.5_p8: Linux kernel fork that includes the pf-kernel patchset and Gentoo's genpatches
 sys-kernel/xanmod-sources 5.6.5 5.6.6: XanMod sources including the Gentoo patchsets for the 5.6 kernel tree
