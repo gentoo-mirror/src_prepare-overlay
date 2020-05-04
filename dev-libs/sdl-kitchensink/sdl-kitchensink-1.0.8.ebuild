@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
 IUSE="static sanitize examples"
 
 BDEPEND+="
-	!static? ( sys-apps/findutils )
 	examples? ( sys-apps/coreutils )
 "
 
@@ -36,26 +35,25 @@ src_prepare() {
 src_configure() {
 	SANITIZE="OFF"
 	EXAMPLES="OFF"
+	STATIC="OFF"
 	if use sanitize; then SANITIZE="ON"; fi
 	if use examples; then EXAMPLES="ON"; fi
+	if use static; then STATIC="ON"; fi
 	local mycmakeargs=(
 		-DUSE_ASAN="${SANITIZE}"
 		-DBUILD_EXAMPLES="${EXAMPLES}"
+		-DBUILD_STATIC="${STATIC}"
 	)
 	cmake-utils_src_configure
 }
 
 src_install() {
 	cmake-utils_src_install
-	if ! use static; then
-		elog "Removing static library libSDL_kitchensink_static.a"
-		find "${D}" -name libSDL_kitchensink_static.a -delete
-	fi
 	if use examples; then
 		for i in audio complex custom rwops simple; do
-			elog "Installing example: ${i}"
 			mv "${BUILD_DIR}"/${i} "${BUILD_DIR}"/SDL_kitchensink-${i}
 			dobin "${BUILD_DIR}"/SDL_kitchensink-${i}
+			elog "Installed ${i} example as SDL_kitchensink-${i}"
 		done
 		if use static; then
 			elog "Examples are linked against static SDL_kitchensink library."
