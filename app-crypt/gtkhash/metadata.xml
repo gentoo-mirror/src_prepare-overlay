@@ -26,9 +26,6 @@
     <flag name="nautilus">
       Build extension for gnome-base/nautilus
     </flag>
-    <flag name="nemo">
-      Build extension for gnome-extra/nemo
-    </flag>
     <flag name="nettle">
       Use the Nettle cryptographic library
     </flag>

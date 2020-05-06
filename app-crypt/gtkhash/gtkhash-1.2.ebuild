@@ -31,7 +31,6 @@ IUSE="
 	libressl
 	mbedtls
 	nautilus
-	nemo
 	nettle
 	nls
 	+openssl
@@ -74,9 +73,6 @@ RDEPEND="
 	)
 	nautilus? (
 		gnome-base/nautilus
-	)
-	nemo? (
-		gnome-extra/nemo
 	)
 	nettle? (
 		dev-libs/nettle
@@ -128,7 +124,6 @@ src_configure() {
 		$(use_enable linux-crypto)
 		$(use_enable mbedtls)
 		$(use_enable nautilus)
-		$(use_enable nemo)
 		$(use_enable nettle)
 		$(use_enable nls)
 		$(use_enable openssl libcrypto)
