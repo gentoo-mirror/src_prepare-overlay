@@ -10,7 +10,6 @@ app-crypt/gtkhash:gtk3 - Support GTK+ 3.x instead of GTK+ 2.x
 app-crypt/gtkhash:linux-crypto - Use the Linux kernel hash algorithm interface (CONFIG_CRYPTO_USER_API_HASH)
 app-crypt/gtkhash:mbedtls - Use mbed TLS instead of OpenSSL
 app-crypt/gtkhash:nautilus - Build extension for gnome-base/nautilus
-app-crypt/gtkhash:nemo - Build extension for gnome-extra/nemo
 app-crypt/gtkhash:nettle - Use the Nettle cryptographic library
 app-crypt/gtkhash:openssl - Enable the libcrypto (dev-libs/openssl library)
 app-crypt/gtkhash:thunar - Build extension for xfce-base/thunar
