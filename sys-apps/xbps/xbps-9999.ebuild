@@ -33,10 +33,12 @@ BDEPEND="
 "
 DEPEND="
 	sys-libs/zlib
+	test? (
+		>=dev-libs/atf-0.15
+	)
 "
 RDEPEND="
 	${COMMON_DEPEND}
-	test? ( >=dev-libs/atf-0.15 )
 "
 
 src_configure() {
