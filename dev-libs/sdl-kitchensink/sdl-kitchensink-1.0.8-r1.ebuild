@@ -20,7 +20,7 @@ BDEPEND+="
 "
 
 RDEPEND+="
-	sanitize? ( sys-devel/gcc[sanitize] )
+	sanitize? ( >=sys-devel/gcc-5.0.0[sanitize] )
 	media-libs/libsdl2
 	media-video/ffmpeg[libass]
 "
