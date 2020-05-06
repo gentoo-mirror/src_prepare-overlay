@@ -1,14 +1,14 @@
 BDEPEND=>=app-arch/libarchive-3.3.3[lz4,zstd] virtual/pkgconfig doc? ( app-doc/doxygen media-gfx/graphviz ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=configure postinst unpack
-DEPEND=sys-libs/zlib
+DEPEND=sys-libs/zlib test? ( >=dev-libs/atf-0.15 )
 DESCRIPTION=The X Binary Package System
 EAPI=7
 HOMEPAGE=https://voidlinux.org/xbps
 IUSE=debug doc lto static test
 LICENSE=BSD
 PROPERTIES=live
-RDEPEND=>=app-arch/libarchive-3.3.3[lz4,zstd] test? ( >=dev-libs/atf-0.15 )
+RDEPEND=>=app-arch/libarchive-3.3.3[lz4,zstd]
 RESTRICT=!test? ( test ) mirror
 SLOT=0
 _eclasses_=git-r3	86a0188f2ad9eb3d65e4d031ab8a0422
-_md5_=622c1dcdb4a84f2b5133620e5950e3dd
+_md5_=268d47328c2fe8a61c14055560a1aa39
