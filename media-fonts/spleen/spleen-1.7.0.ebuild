@@ -10,7 +10,7 @@ HOMEPAGE="https://www.cambus.net/spleen-monospaced-bitmap-fonts/"
 
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/fcambus/${P}.git"
+	EGIT_REPO_URI="https://github.com/fcambus/${PN}.git"
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/fcambus/${PN}/archive/1.7.0.tar.gz -> ${P}.tar.gz"
@@ -22,19 +22,8 @@ LICENSE="BSD-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="
-	media-gfx/ebdftopcf
-"
-RDEPEND="
-	${DEPEND}
-"
-
 DOCS=(
 	AUTHORS
 	ChangeLog
 	README.md
 )
-
-src_compile() {
-	font-ebdftopcf_src_compile
-}

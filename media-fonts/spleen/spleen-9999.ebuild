@@ -22,19 +22,8 @@ LICENSE="BSD-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="
-	media-gfx/ebdftopcf
-"
-RDEPEND="
-	${DEPEND}
-"
-
 DOCS=(
 	AUTHORS
 	ChangeLog
 	README.md
 )
-
-src_compile() {
-	font-ebdftopcf_src_compile
-}
