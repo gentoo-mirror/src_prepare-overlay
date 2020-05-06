@@ -2,24 +2,27 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
-ETYPE="sources"
-K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="2"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
-
+XANMOD_VERSION="1"
+ETYPE="sources"
 inherit kernel-2
 detect_version
-detect_arch
 
-KEYWORDS="~amd64 ~x86"
-HOMEPAGE="https://xanmod.org/"
-IUSE=""
+DESCRIPTION="A general-purpose kernel with custom settings and new features"
+HOMEPAGE="https://xanmod.org"
+LICENSE+=" CDDL"
+SRC_URI="${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz https://github.com/xanmod/linux/releases/download/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 
-DESCRIPTION="XanMod sources including the Gentoo patchsets for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
+UNIPATCH_LIST_DEFAULT=""
+UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 
-XANMOD_URI="https://github.com/xanmod/linux/releases/download/${PV}-xanmod1/patch-${PV}-xanmod1.xz"
-SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${XANMOD_URI}"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
-UNIPATCH_LIST="${DISTDIR}/patch-${PV}-xanmod1.xz"
-UNIPATCH_STRICTORDER="yes"
+src_prepare() {
+
+	kernel-2_src_prepare
+
+	rm ${S}/.config || die
+
+}
