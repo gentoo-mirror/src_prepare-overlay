@@ -6,5 +6,5 @@ EAPI=7
 inherit acct-group
 
 DESCRIPTION="Sensu program group"
-ACCT_GROUP_ID=999
+ACCT_GROUP_ID=499
 SLOT="0"
