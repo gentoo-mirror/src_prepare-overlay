@@ -11,7 +11,7 @@ app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
 dev-libs/fuzzylite 6.0: A fuzzy logic control library in C++
 dev-libs/sdl-kitchensink 1.0.8-r1: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
 dev-perl/File-Rename 1.10: A filename renaming utility based on perl regular expression used by Debian
-dev-python/ffmpeg-python 0.2.0 9999: Python bindings for FFmpeg - with complex filtering support
+dev-python/ffmpeg-python 0.2.0 9999: Python bindings for FFmpeg with complex filtering support
 dev-python/itunespy 1.5.3 9999: A simple library to fetch data from the iTunes Store API
 dev-python/pyfiglet 0.8.0 9999: An implementation of figlet written in Python
 games-action/gta2 9.6-r2: And remember - respect is everything!
@@ -28,7 +28,7 @@ media-fonts/fontawesome 9999: The iconic font
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
-media-video/tartube 2.0.0 9999: A GUI front-end for youtube-dl
+media-video/tartube 2.0.0 2.1.0 9999: A GUI front-end for youtube-dl
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
 net-analyzer/sensu 5.19.3: Simple. Scalable. Multi-cloud monitoring.
 net-firewall/hblock 2.1.5 9999: Improve your security and privacy by blocking ads, tracking and malware domains
