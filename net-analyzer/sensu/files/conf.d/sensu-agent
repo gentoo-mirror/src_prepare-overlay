@@ -1,0 +1,6 @@
+# config file for /etc/init.d/sensu-agent
+
+SENSU_AGENT_CONFIG="/etc/sensu/agent.yml"
+SENSU_AGENT_DATADIR="/var/lib/sensu"
+SENSU_AGENT_LOGDIR="/var/log/sensu"
+SENSU_AGENT_CACHEDIR="/var/cache/sensu"

@@ -1,0 +1,23 @@
+#!/sbin/openrc-run
+# Copyright 1999-2017 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+description=""
+
+name="Sensu Agent"
+command="/usr/sbin/sensu-agent"
+command_args="start -c ${SENSU_AGENT_CONFIG}"
+command_user="${SENSU_USER:-sensu}"
+command_background=true
+pidfile="/run/${SVCNAME}.pid"
+required_files="${SENSU_AGENT_CONFIG}"
+retry=${SENSU_AGENT_TERMTIMEOUT:-"TERM/20/KILL/5"}
+start_stop_daemon_args="${SSD_OPTS:-}"
+
+depend() {
+	need localmount net
+}
+
+start_pre() {
+	checkpath -d -m 0750 -o "${command_user}" "${SENSU_AGENT_LOGDIR}" "${SENSU_AGENT_DATADIR}" "${SENSU_AGENT_CACHEDIR}"
+}
