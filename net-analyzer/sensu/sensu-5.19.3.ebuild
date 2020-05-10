@@ -147,32 +147,28 @@ src_unpack() {
 	local BUILD_SIGNATURE="-X github.com/sensu/sensu-go/version.Version=${PV} -X github.com/sensu/sensu-go/version.BuildDate=${TODAY}"
 	if use agent; then
 		go build -ldflags "${BUILD_SIGNATURE}" -o bin/sensu-agent ./cmd/sensu-agent >/dev/null
-		cp "${DISTDIR}"/"${PN}"_"${PV}"_agent.yml "${S}"/agent.yml
+		cp "${DISTDIR}"/"${PN}"_"${PV}"_agent.yml "${S}"/agent.yml.example
 	fi
 	if use backend; then
 		go build -ldflags "${BUILD_SIGNATURE}" -o bin/sensu-backend ./cmd/sensu-backend >/dev/null
-		cp "${DISTDIR}"/"${PN}"_"${PV}"_backend.yml "${S}"/backend.yml
+		cp "${DISTDIR}"/"${PN}"_"${PV}"_backend.yml "${S}"/backend.yml.example
 	fi
 	go build -ldflags "${BUILD_SIGNATURE}" -o bin/sensuctl ./cmd/sensuctl >/dev/null
 }
 
 src_install() {
 	if use agent; then
-		exeinto /etc/init.d
-		doexe "${FILESDIR}"/init.d/sensu-agent
-		insinto /etc/conf.d
-		doins "${FILESDIR}"/conf.d/sensu-agent
+		doinitd "${FILESDIR}"/init.d/sensu-agent
+		doconfd "${FILESDIR}"/conf.d/sensu-agent
 		insinto /etc/sensu
-		doins agent.yml
+		doins agent.yml.example
 		dosbin "${PN}-go-${PV}"/bin/sensu-agent
 	fi
 	if use backend; then
-		exeinto /etc/init.d
 		doexe "${FILESDIR}"/init.d/sensu-backend
-		insinto /etc/conf.d
 		doins "${FILESDIR}"/conf.d/sensu-backend
 		insinto /etc/sensu
-		doins backend.yml
+		doins backend.yml.example
 		dosbin "${PN}-go-${PV}"/bin/sensu-backend
 	fi
 	dosbin "${PN}-go-${PV}"/bin/sensuctl
