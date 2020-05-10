@@ -6,7 +6,7 @@ K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
 ETYPE="sources"
-inherit kernel-2
+inherit kernel-2-src-prepare-overlay
 detect_version
 
 DESCRIPTION="A general-purpose kernel with custom settings and new features"
@@ -23,6 +23,6 @@ src_prepare() {
 
 	kernel-2_src_prepare
 
-	rm ${S}/.config || die
+	rm "${S}"/.config || die
 
 }
