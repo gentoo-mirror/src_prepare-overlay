@@ -8,5 +8,5 @@ RDEPEND=app-arch/lzma dev-libs/atk dev-libs/expat dev-libs/libappindicator dev-l
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/balena-io/etcher/releases/download/v1.5.76/balena-etcher-electron_1.5.76_amd64.deb
-_eclasses_=unpacker	3cd8bad0d31e525cd26be1bfa4e61631	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_eclasses_=unpacker	b5891c9326ad2e7905c011d44c927c34	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
 _md5_=92b7d413eef8a105d6d6ff5355238111
