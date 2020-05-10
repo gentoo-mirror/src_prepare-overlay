@@ -1,0 +1,6 @@
+# config file for /etc/init.d/sensu-backend
+
+SENSU_BACKEND_CONFIG="/etc/sensu/backend.yml"
+SENSU_BACKEND_DATADIR="/var/lib/sensu"
+SENSU_BACKEND_LOGDIR="/var/log/sensu"
+SENSU_BACKEND_CACHEDIR="/var/cache/sensu"

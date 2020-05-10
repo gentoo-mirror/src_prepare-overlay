@@ -1,0 +1,23 @@
+#!/sbin/openrc-run
+# Copyright 1999-2017 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+description=""
+
+name="Sensu Monitoring Framework"
+command="/usr/sbin/sensu-backend"
+command_args="start -c ${SENSU_BACKEND_CONFIG}"
+command_user="sensu"
+command_background=true
+pidfile="/run/${SVCNAME}.pid"
+required_files="${SENSU_BACKEND_CONFIG}"
+retry=${SENSU_BACKEND_TERMTIMEOUT:-"TERM/20/KILL/5"}
+start_stop_daemon_args="${SSD_OPTS:-}"
+
+depend() {
+	need localmount net
+}
+
+start_pre() {
+	checkpath -d -m 0750 -o "${command_user}" "${SENSU_BACKEND_LOGDIR}" "${SENSU_BACKEND_DATADIR}" "${SENSU_BACKEND_CACHEDIR}"
+}
