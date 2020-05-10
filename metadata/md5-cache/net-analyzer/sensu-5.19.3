@@ -1,0 +1,13 @@
+BDEPEND=!gcc? ( dev-lang/go ) gcc? ( sys-devel/gcc[go] ) sys-apps/coreutils app-arch/tar app-arch/gzip
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=Simple. Scalable. Multi-cloud monitoring.
+EAPI=7
+HOMEPAGE=https://sensu.io
+IUSE=agent backend gcc systemd
+KEYWORDS=~amd64 ~arm ~ppc64 ~x86
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=virtual/libc acct-group/sensu acct-user/sensu
+SLOT=0
+SRC_URI=https://github.com/sensu/sensu-go/archive/v5.19.3.tar.gz -> sensu-5.19.3.tar.gz backend? ( https://docs.sensu.io/sensu-go/5.19/files/backend.yml -> sensu_5.19.3_backend.yml ) agent? ( https://docs.sensu.io/sensu-go/5.19/files/agent.yml -> sensu_5.19.3_agent.yml )
+_md5_=56aa2f29d562fcabb025729e5c6c10db
