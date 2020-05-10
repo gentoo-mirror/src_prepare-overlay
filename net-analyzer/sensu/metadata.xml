@@ -7,6 +7,7 @@
     </flag>
     <flag name="backend">
       Install Sensu dashboard and backend server
+    </flag>
     <flag name="gcc">
       Compile with GCC's Go compiler instead of Google's reference Go compiler (NOT SUPPORTED)
     </flag>

@@ -108,7 +108,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
 
-IUSE="gcc systemd backend agent"
+IUSE="agent backend gcc systemd"
 
 BDEPEND+="
 	!gcc? ( dev-lang/go )
@@ -141,7 +141,7 @@ src_unpack() {
 	if use backend && (use x86 || use arm) && [ ${I_KNOW_WHAT_IM_DOING} -eq 0 ]; then
 		die "Backend does not work reliably on 32bit hosts. If you really want this, re-emerge with I_KNOW_WHAT_IM_DOING=1"
 	fi
-	tar -xf ${DISTDIR}/sensu-${PV}.tar.gz
+	tar -xf "${DISTDIR}"/sensu-${PV}.tar.gz
 	cd ${PN}-go-${PV}
 	local TODAY=$(date +%Y-%m-%d)
 	local BUILD_SIGNATURE="-X github.com/sensu/sensu-go/version.Version=${PV} -X github.com/sensu/sensu-go/version.BuildDate=${TODAY}"
@@ -187,4 +187,3 @@ pkg_postinst() {
 		elog "Remember that this command has to be run WHILE sensu-backend service is running."
 	fi
 }
-
