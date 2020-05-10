@@ -1,4 +1,4 @@
-acct-group/sensu 0: Sensu program group
+acct-group/sensu 1: Sensu program group
 acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/doas 6.6.1 9999: A portable fork of the OpenBSD doas command
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
@@ -46,9 +46,9 @@ sys-kernel/ck-sources 5.4.35 5.4.36 5.4.37 5.4.38 5.4.39 5.5.19 5.6.7 5.6.8 5.6.
 sys-kernel/liquorix-sources 5.5.19 5.6.7 5.6.8 5.6.9 5.6.10 5.6.11: Liquorix sources including the Gentoo patchsets for the 5.6 kernel tree
 sys-kernel/pf-sources 5.5_p7 5.5_p8: Linux kernel fork that includes the pf-kernel patchset and Gentoo's genpatches
 sys-kernel/xanmod-sources 5.5.10 5.5.13 5.6.5 5.6.6 5.6.8 5.6.10: A general-purpose kernel with custom settings and new features
-sys-kernel/zen-sources 5.6.7 5.6.8 5.6.9 5.6.10 5.6.11: Zen sources including the Gentoo patchsets for the 5.6 kernel tree
+sys-kernel/zen-sources 5.6.7 5.6.8 5.6.9 5.6.10 5.6.11 5.6.12: Zen sources including the Gentoo patchsets for the 5.6 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
-www-client/icecat 68.7.0 68.7.0-r1: GNU IceCat Web Browser
+www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
 www-client/palemoon 28.9.1 9999: Pale Moon Web Browser
 x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files

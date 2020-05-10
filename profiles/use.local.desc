@@ -38,6 +38,7 @@ net-analyzer/sensu:systemd - Install systemd service units rather than OpenRC in
 net-misc/ddgr:fish-completion - Enable fish completion support
 sys-apps/xbps:lto - Build with Link Time Optimization
 sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
+www-client/icecat:amd64 - You should not be able to see this
 www-client/icecat:clang - Use Clang compiler instead of GCC
 www-client/icecat:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 www-client/icecat:geckodriver - Enable WebDriver support
@@ -54,6 +55,7 @@ www-client/icecat:system-libevent - Use the system-wide dev-libs/libevent instea
 www-client/icecat:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
 www-client/icecat:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 www-client/icecat:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
+www-client/icecat:x86 - You should not be able to see this
 www-client/palemoon:devtools - Enable Mozilla Developer Tools
 www-client/palemoon:gtk2 - Use x11-libs/gtk+:2
 www-client/palemoon:gtk3 - Use x11-libs/gtk+:3
