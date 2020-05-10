@@ -8,7 +8,7 @@ K_GENPATCHES_VER="15"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
-inherit kernel-2
+inherit kernel-2-src-prepare-overlay
 detect_version
 detect_arch
 

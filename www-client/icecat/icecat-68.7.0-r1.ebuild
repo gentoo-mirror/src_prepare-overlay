@@ -17,7 +17,7 @@ PYTHON_REQ_USE='ncurses,sqlite,ssl,threads(+)'
 #nb-NO nl nn-NO oc pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta te
 #th tr uk ur uz vi xh zh-CN zh-TW )
 MOZ_LANGS=()
-PROPERTIES+="live"
+PROPERTIES+=" live"
 
 # Convert the ebuild version to the upstream mozilla version, used by mozlinguas
 MOZ_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
@@ -49,11 +49,11 @@ KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="-bindist clang cpu_flags_x86_avx2 dbus debug geckodriver
+IUSE="amd64 -bindist clang cpu_flags_x86_avx2 dbus debug geckodriver
 	+gmp-autoupdate hardened hwaccel jack kernel_linux lto cpu_flags_arm_neon
 	pgo pulseaudio +screenshot selinux startup-notification +system-av1
 	+system-harfbuzz +system-icu +system-jpeg +system-libevent
-	+system-sqlite +system-libvpx +system-webp test wayland wifi"
+	+system-sqlite +system-libvpx +system-webp test wayland wifi x86"
 
 REQUIRED_USE="pgo? ( lto )
 	wifi? ( dbus )"
