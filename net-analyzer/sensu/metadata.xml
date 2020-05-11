@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <use>
+    <flag name="agent">
+      Installs Sensu agent
+    </flag>
+    <flag name="backend">
+      Install Sensu dashboard and backend server
+    </flag>
+    <flag name="gcc">
+      Compile with GCC's Go compiler instead of Google's reference Go compiler (NOT SUPPORTED)
+    </flag>
+    <flag name="systemd">
+      Install systemd service units rather than OpenRC init scripts (NOT SUPPORTED)
+    </flag>
+  </use>
+</pkgmetadata>
