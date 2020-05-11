@@ -28,6 +28,7 @@ media-fonts/fontawesome 9999: The iconic font
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
+media-video/olive 9999: Professional open-source non-linear video editor
 media-video/tartube 2.0.0 2.1.0 9999: A GUI front-end for youtube-dl
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
 net-analyzer/sensu 5.19.3: Simple. Scalable. Multi-cloud monitoring.

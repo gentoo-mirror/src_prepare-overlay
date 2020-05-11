@@ -30,6 +30,7 @@ games-util/lgogdownloader:portage - Enables headless operation required for Port
 media-fonts/fontawesome:otf - Install the OpenType version of the font
 media-fonts/fontawesome:ttf - Install the TrueType version of the font
 media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
+media-video/olive:doxygen - Build and install source code documentation
 media-video/tartube:atomicparsley - Use AtomicParsley for embedding thumbnails in audio files
 net-analyzer/sensu:agent - Installs Sensu agent
 net-analyzer/sensu:backend - Install Sensu dashboard and backend server
