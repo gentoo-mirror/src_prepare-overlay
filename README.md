@@ -1,6 +1,6 @@
 # src_prepare Gentoo overlay
 
-This is the overlay of our Telegram group where we talk about topics related to Gentoo (development, maintainance, mistakes, community).
+This is the overlay of our Matrix group where we talk about topics related to Gentoo (development, maintainance, support, communities and more).
 
 **WARNING: Do not expect high quality ebuilds!** While we do the best we can, most of us are still learning.
 
