@@ -5,9 +5,9 @@ EAPI=7
 HOMEPAGE=https://curl.haxx.se
 KEYWORDS=~amd64
 LICENSE=MIT
-RDEPEND=net-misc/curl[-curl_ssl_gnutls] app-arch/zstd
+RDEPEND=net-misc/curl[-curl_ssl_gnutls] net-libs/nghttp2 >=dev-libs/nettle-3.6
 RESTRICT=mirror strip
 SLOT=0
-SRC_URI=amd64? ( https://mirror.rackspace.com/archlinux/community/os/x86_64/libcurl-gnutls-7.69.1-1-x86_64.pkg.tar.zst )
+SRC_URI=amd64? ( https://mirror.rackspace.com/archlinux/community/os/x86_64/libcurl-gnutls-7.70.0-2-x86_64.pkg.tar.zst )
 _eclasses_=unpacker	b5891c9326ad2e7905c011d44c927c34
-_md5_=b0a8dbecca84e3cfda18ba5d2e0c3f4f
+_md5_=ec59c62aa9160ad27162ba77a11b260f
