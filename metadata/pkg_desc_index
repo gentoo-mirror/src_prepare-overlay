@@ -12,7 +12,7 @@ dev-libs/fuzzylite 6.0: A fuzzy logic control library in C++
 dev-libs/sdl-kitchensink 1.0.8-r1: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
 dev-perl/File-Rename 1.10: A filename renaming utility based on perl regular expression used by Debian
 dev-python/ffmpeg-python 0.2.0 9999: Python bindings for FFmpeg with complex filtering support
-dev-python/itunespy 1.5.3 9999: A simple library to fetch data from the iTunes Store API
+dev-python/itunespy 1.5.3 1.6 9999: A simple library to fetch data from the iTunes Store API
 dev-python/pyfiglet 0.8.0 9999: An implementation of figlet written in Python
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
