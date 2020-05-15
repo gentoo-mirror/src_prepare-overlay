@@ -21,7 +21,7 @@ KEYWORDS="~amd64 "
 
 src_prepare() {
 
-	kernel-2_src_prepare
+	kernel-2-src-prepare-overlay_src_prepare
 
 	rm "${S}"/.config || die
 

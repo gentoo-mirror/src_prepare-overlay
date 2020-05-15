@@ -56,7 +56,7 @@ pkg_setup() {
 
 src_prepare() {
 	default
-	kernel-2_src_prepare
+	kernel-2-src-prepare-overlay_src_prepare
 }
 
 pkg_postinst() {
