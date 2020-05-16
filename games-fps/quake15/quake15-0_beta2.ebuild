@@ -27,7 +27,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	elog "In order to play this mod run Quake with -file option:"
+	elog "In order to play this mod run Quake with -game option:"
 	elog "    darkplaces -game quake15"
 	echo
 }
