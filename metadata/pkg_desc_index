@@ -17,6 +17,8 @@ dev-python/pyfiglet 0.8.0 9999: An implementation of figlet written in Python
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
 games-emulation/melonds 0.8.3 9999: DS emulator, sorta
+games-fps/darkplaces 20170829_beta1: Enhanced engine for iD Software's Quake 1
+games-fps/quake15 0_beta2: A mod that makes Quake faster paced, harder, gorier and more violent.
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 games-rpg/fallout1 1.1: Post-apocalyptic GURPS-like role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
