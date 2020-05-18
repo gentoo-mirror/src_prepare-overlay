@@ -8,7 +8,6 @@ app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
 app-office/onlyoffice-bin 5.4.2 5.5.1: onlyoffice is an office productivity suite (binary version)
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
-dev-libs/fuzzylite 6.0: A fuzzy logic control library in C++
 dev-libs/sdl-kitchensink 1.0.8-r1: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
 dev-perl/File-Rename 1.10: A filename renaming utility based on perl regular expression used by Debian
 dev-python/ffmpeg-python 0.2.0 9999: Python bindings for FFmpeg with complex filtering support
@@ -22,7 +21,6 @@ games-fps/quake15 0_beta2: A mod that makes Quake faster paced, harder, gorier a
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 games-rpg/fallout1 1.1: Post-apocalyptic GURPS-like role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
-games-strategy/vcmi 0.99_p20200314: VCMI is work-in-progress attempt to recreate engine for Heroes III.
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader 3.7-r1: Unofficial downloader for GOG content.
 mail-client/freelook-bin 1.0.0: Freelook, an Electron-based client for Microsoft Outlook
