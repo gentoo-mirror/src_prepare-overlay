@@ -20,7 +20,7 @@ UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 KEYWORDS="~amd64"
 
 src_prepare() {
-    eapply "${FILESDIR}/Strong_Stack.patch" #add a temporary patch for failing  Strong Stack Protector for gcc-10
+  
 	kernel-2-src-prepare-overlay_src_prepare
 
 	rm "${S}"/.config || die
