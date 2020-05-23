@@ -10,5 +10,5 @@ RDEPEND=!build? ( dev-lang/perl sys-devel/bc sys-devel/make >=sys-libs/ncurses-5
 RESTRICT=binchecks strip
 SLOT=5.6.12
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.6.tar.xz https://github.com/xanmod/linux/releases/download/5.6.12-xanmod1/patch-5.6.12-xanmod1.xz
-_eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	estack	686eaab303305a908fd57b2fd7617800	kernel-2-src-prepare-overlay	6c802318c6bf5ac2b612f19b94bb3488	multilib	318e8ae683e57fd3ccd0d31a769d8ee8	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	estack	686eaab303305a908fd57b2fd7617800	kernel-2-src-prepare-overlay	6c802318c6bf5ac2b612f19b94bb3488	multilib	797cda3549becfe50afdfa35192ca137	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
 _md5_=06377d0d58e7cd3d1cdc30bca3f54d76
