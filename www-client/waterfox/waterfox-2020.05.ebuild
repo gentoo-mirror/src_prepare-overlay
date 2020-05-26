@@ -30,14 +30,15 @@ MY_PV="${PV}-classic"
 DESCRIPTION="Waterfox Web Browser"
 HOMEPAGE="http://www.waterfoxproject.org"
 
-KEYWORDS="~amd64"
-
-SLOT="0"
+RESTRICT="mirror"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
+SLOT="0"
+KEYWORDS="~amd64"
 IUSE="
 	+gmp-autoupdate
 	eme-free
-	hardened hwaccel
+	hardened
+	hwaccel
 	jack
 	nsplugin
 	pgo
@@ -46,6 +47,7 @@ IUSE="
 "
 
 PATCH_URIS=( https://dev.gentoo.org/~{anarchy,axs,polynomial-c}/mozilla/patchsets/${PATCH}.tar.xz )
+
 SRC_URI="
 	${MOZ_HTTP_URI}/${MY_PV}.tar.gz -> ${P}.tar.gz
 	${PATCH_URIS[@]}
@@ -55,16 +57,27 @@ ASM_DEPEND="
 	>=dev-lang/yasm-1.1
 "
 RDEPEND="
-	jack? ( virtual/jack )
 	>=dev-libs/nss-3.32.1
 	>=dev-libs/nspr-4.16
-	selinux? ( sec-policy/selinux-mozilla )
+	jack? (
+		virtual/jack
+	)
+	selinux? (
+		sec-policy/selinux-mozilla
+	)
 "
-DEPEND="${RDEPEND}
-	pgo? ( >=sys-devel/gcc-4.5 )
+DEPEND="
+	${RDEPEND}
 	virtual/rust
-	amd64? ( ${ASM_DEPEND} virtual/opengl )
-	x86? ( ${ASM_DEPEND} virtual/opengl )
+	pgo? (
+		>=sys-devel/gcc-4.5
+	)
+	amd64? (
+		${ASM_DEPEND} virtual/opengl
+	)
+	x86? (
+		${ASM_DEPEND} virtual/opengl
+	)
 "
 
 S="${WORKDIR}/${PN^}-${MY_PV}"

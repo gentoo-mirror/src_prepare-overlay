@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 #
 # @ECLASS: mozconfig-v6.55.eclass
@@ -97,29 +97,24 @@ IUSE="${IUSE} dbus debug neon pulseaudio selinux startup-notification system-har
 # gtk:2 minimum is technically 2.10 but gio support (enabled by default) needs 2.14
 # media-libs/mesa needs to be 10.2 or above due to a bug with flash+vdpau
 
-RDEPEND=">=app-text/hunspell-1.5.4:=
-	dev-libs/atk
-	dev-libs/expat
-	>=x11-libs/cairo-1.10[X]
-	>=x11-libs/gtk+-2.18:2
-	x11-libs/gdk-pixbuf
-	>=x11-libs/pango-1.22.0
+RDEPEND="
+	>=app-text/hunspell-1.5.4:=
+	>=dev-libs/glib-2.26:2
+	>=media-libs/freetype-2.4.10
 	>=media-libs/libpng-1.6.31:0=[apng]
 	>=media-libs/mesa-10.2:*
-	media-libs/fontconfig
-	>=media-libs/freetype-2.4.10
-	kernel_linux? ( !pulseaudio? ( media-libs/alsa-lib ) )
-	pulseaudio? ( || ( media-sound/pulseaudio
-		>=media-sound/apulse-0.1.9 ) )
-	virtual/freedesktop-icon-theme
-	dbus? ( >=sys-apps/dbus-0.60
-		>=dev-libs/dbus-glib-0.72 )
-	startup-notification? ( >=x11-libs/startup-notification-0.8 )
-	>=x11-libs/pixman-0.19.2
-	>=dev-libs/glib-2.26:2
 	>=sys-libs/zlib-1.2.3
-	>=virtual/libffi-3.0.10
+	>=x11-libs/cairo-1.10[X]
+	>=x11-libs/gtk+-2.18:2
+	>=x11-libs/pango-1.22.0
+	>=x11-libs/pixman-0.19.2
+	dev-libs/atk
+	dev-libs/expat
+	dev-libs/libffi
+	media-libs/fontconfig
 	virtual/ffmpeg
+	virtual/freedesktop-icon-theme
+	x11-libs/gdk-pixbuf
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
@@ -127,12 +122,44 @@ RDEPEND=">=app-text/hunspell-1.5.4:=
 	x11-libs/libXfixes
 	x11-libs/libXrender
 	x11-libs/libXt
-	system-icu? ( >=dev-libs/icu-59.1:= )
-	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
-	system-libevent? ( >=dev-libs/libevent-2.0:0= )
-	system-sqlite? ( >=dev-db/sqlite-3.19.3:3[secure-delete,debug=] )
-	system-libvpx? ( >=media-libs/libvpx-1.5.0:0=[postproc] )
-	system-harfbuzz? ( >=media-libs/harfbuzz-1.3.3:0= >=media-gfx/graphite2-1.3.9-r1 )
+	dbus? (
+		>=sys-apps/dbus-0.60
+		>=dev-libs/dbus-glib-0.72
+	)
+	kernel_linux? (
+		!pulseaudio? (
+			media-libs/alsa-lib
+		)
+	)
+	pulseaudio? (
+		|| (
+			media-sound/pulseaudio
+			>=media-sound/apulse-0.1.9
+		)
+	)
+	startup-notification? (
+		>=x11-libs/startup-notification-0.8
+	)
+
+	system-icu? (
+		>=dev-libs/icu-59.1:=
+	)
+	system-jpeg? (
+		>=media-libs/libjpeg-turbo-1.2.1
+	)
+	system-libevent? (
+		>=dev-libs/libevent-2.0:0=
+	)
+	system-sqlite? (
+		>=dev-db/sqlite-3.19.3:3[secure-delete,debug=]
+	)
+	system-libvpx? (
+		>=media-libs/libvpx-1.5.0:0=[postproc]
+	)
+	system-harfbuzz? (
+		>=media-libs/harfbuzz-1.3.3:0=
+		>=media-gfx/graphite2-1.3.9-r1
+	)
 "
 
 if [[ -n ${MOZCONFIG_OPTIONAL_GTK3} ]]; then
