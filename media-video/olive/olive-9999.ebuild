@@ -49,8 +49,6 @@ RDEPEND="
 	media-libs/harfbuzz[graphite]
 "
 
-PATCHES=( "${FILESDIR}/FindOpenEXRUndefinedbehavior.patch" )
-
 src_configure() {
 	local mycmakeargs=(
 		-DBUILD_DOXYGEN="$(usex doxygen)"
