@@ -9,6 +9,9 @@ app-misc/cli-visualizer 1.8: CLI based audio visualizer
 app-office/onlyoffice-bin 5.4.2 5.5.1: onlyoffice is an office productivity suite (binary version)
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
 dev-games/godot 3.2.1: Multi-platform 2D and 3D game engine
+dev-libs/libQtOlm 3.0.1 9999: A Qt wrapper for libolm
+dev-libs/libQuotient 0.6_beta1 9999: A Qt5 library to write cross-platform clients for Matrix
+dev-libs/olm 3.1.4: An implementation of the Double Ratchet cryptographic ratchet in C++
 dev-libs/sdl-kitchensink 1.0.8-r1: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
 dev-perl/File-Rename 1.10: A filename renaming utility based on perl regular expression used by Debian
 dev-python/ffmpeg-python 0.2.0 9999: Python bindings for FFmpeg with complex filtering support
@@ -34,6 +37,7 @@ media-video/tartube 2.0.0 2.1.0 9999: A GUI front-end for youtube-dl
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
 net-analyzer/sensu 5.19.3: Simple. Scalable. Multi-cloud monitoring.
 net-firewall/hblock 2.1.5 9999: Improve your security and privacy by blocking ads, tracking and malware domains
+net-im/spectral 854 9999: A glossy client for Matrix, written in QtQuick Controls 2 and C++.
 net-im/srain 1.0.2 9999: Modern IRC client written in GTK
 net-libs/libcurl-gnutls 7.70.0: libcurl libraries linked with gnutls
 net-misc/ddgr 1.7 1.8 9999: DuckDuckGo from the terminal
