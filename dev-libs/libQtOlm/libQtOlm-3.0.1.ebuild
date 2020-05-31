@@ -1,4 +1,3 @@
- 
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
@@ -18,8 +17,7 @@ then
 	inherit git-r3
 else
     SRC_URI="https://gitlab.com/b0/libqtolm/-/archive/v${PV}/libqtolm-v${PV}.tar.gz"
-
-	KEYWORDS="~amd64 ~x86"
+    KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="GPL-3"
@@ -32,9 +30,9 @@ DEPEND="${RDEPEND}
 	dev-libs/olm"
 	
 S="${WORKDIR}"/libqtolm-v3.0.1
-	
+
 src_configure() {
-	local mycmakeargs=(
+    local mycmakeargs=(
 		-DBUILD_SHARED_LIBS=ON
 	)
 	cmake-utils_src_configure
