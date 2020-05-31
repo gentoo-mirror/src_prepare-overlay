@@ -4,7 +4,7 @@ stages:
   - test
 
 before_script:
-  - apk update && apk add alpine-sdk bash git python py3-lxml py3-pip python3-dev rsync wget xz
+  - apk update && apk add alpine-sdk bash git py3-lxml py3-pip python3-dev rsync wget xz
   - pip3 install pkgcheck pyyaml
   - git clone https://anongit.gentoo.org/git/proj/portage.git
   - cd portage && python3 setup.py install
