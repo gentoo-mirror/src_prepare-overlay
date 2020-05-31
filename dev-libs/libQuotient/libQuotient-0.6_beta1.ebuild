@@ -14,7 +14,7 @@ then
 	EGIT_REPO_URI="https://github.com/quotient-im/${PN}.git"
 	inherit git-r3
 else
-     SRC_URI="https://github.com/quotient-im/libQuotient/archive/${PV/_/\-}.tar.gz -> ${P}.tar.gz"
+     SRC_URI="https://github.com/quotient-im/libQuotient/archive/0.6-beta1.tar.gz -> ${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
 fi
 
