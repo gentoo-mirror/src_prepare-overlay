@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Copyright 1999-2017 Gentoo Foundation
-=======
 # Copyright 2020 Gentoo Authors
->>>>>>> upstream/master
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -19,14 +15,9 @@ then
 	inherit git-r3
 	EGIT_REPO_URI="https://gitlab.com/b0/${PN}.git"
 else
-<<<<<<< HEAD
-    SRC_URI="https://gitlab.com/b0/libqtolm/-/archive/v${PV}/libqtolm-v${PV}.tar.gz"
-    KEYWORDS="~amd64 ~x86"
-=======
 	SRC_URI="https://gitlab.com/b0/libqtolm/-/archive/v${PV}/libqtolm-v${PV}.tar.gz"
 	KEYWORDS="~amd64"
 	S="${WORKDIR}/libqtolm-v${PV}"
->>>>>>> upstream/master
 fi
 
 LICENSE="GPL-3"
@@ -37,17 +28,11 @@ RDEPEND=""
 DEPEND="
 	${RDEPEND}
 	dev-qt/qtcore
-<<<<<<< HEAD
-	dev-libs/olm"
-	
-S="${WORKDIR}"/libqtolm-v3.0.1
-=======
 	dev-libs/olm
 "
->>>>>>> upstream/master
 
 src_configure() {
-    local mycmakeargs=(
+	local mycmakeargs=(
 		-DBUILD_SHARED_LIBS=ON
 	)
 	cmake-utils_src_configure
