@@ -8,7 +8,11 @@ HOMEPAGE="https://gitlab.com/spectral-im/spectral"
 
 inherit  cmake-utils
 
+<<<<<<< HEAD
 COMMON_URI="https://github.com/oKcerG/SortFilterProxyModel/archive/36befddf5d57faad990e72c88c5844794f274145.zip"
+=======
+COMMON_URI="https://github.com/oKcerG/SortFilterProxyModel/archive/36befddf5d57faad990e72c88c5844794f274145.tar.gz"
+>>>>>>> upstream/master
 
 if [[ ${PV} == 9999 ]]
 then
@@ -45,6 +49,7 @@ DEPEND="
 "
 
 src_prepare() {
+<<<<<<< HEAD
    move_lib() {
       local IN_DIR="${1}"
       local OUT_DIR
@@ -58,6 +63,23 @@ src_prepare() {
    done
 
    cmake-utils_src_prepare
+=======
+	if [[ ${PV} != 9999 ]]
+	then
+		move_lib() {
+			local IN_DIR="${1}"
+			local OUT_DIR[ -z "${2}" ] && OUT_DIR="${IN_DIR}" || OUT_DIR="${2%/}/${IN_DIR}"
+			mv "${WORKDIR}/${IN_DIR}"*/* "${S}/${OUT_DIR}" || die
+		}
+
+		local thirdparty_libs=" SortFilterProxyModel"
+		for thirdparty_lib in ${thirdparty_libs} ; do
+			move_lib "${thirdparty_lib}" include
+		done
+	fi
+
+	cmake-utils_src_prepare
+>>>>>>> upstream/master
 }
 
 pkg_postinst() {
