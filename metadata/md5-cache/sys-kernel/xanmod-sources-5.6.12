@@ -11,4 +11,4 @@ RESTRICT=binchecks strip
 SLOT=5.6.12
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.6.tar.xz https://github.com/xanmod/linux/releases/download/5.6.12-xanmod1/patch-5.6.12-xanmod1.xz
 _eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	estack	686eaab303305a908fd57b2fd7617800	kernel-2-src-prepare-overlay	6c802318c6bf5ac2b612f19b94bb3488	multilib	0914eab919f4f11dd9e0407b92af4726	toolchain-funcs	d3e75048a89c0445838d2f44e5c65d97
-_md5_=06377d0d58e7cd3d1cdc30bca3f54d76
+_md5_=a58d15e2f5b9388a034798abce1c2396
