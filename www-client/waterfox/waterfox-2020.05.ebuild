@@ -30,7 +30,10 @@ MY_PV="${PV}-classic"
 DESCRIPTION="Waterfox Web Browser"
 HOMEPAGE="http://www.waterfoxproject.org"
 
-RESTRICT="mirror"
+RESTRICT="
+	!test? ( test )
+	mirror
+"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
