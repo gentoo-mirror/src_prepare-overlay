@@ -21,6 +21,9 @@ dev-games/godot:lto - ...
 dev-libs/sdl-kitchensink:examples - Build examples. If static is also set, examples will be linked against static library
 dev-libs/sdl-kitchensink:sanitize - Use sanitizer functions (ASAN/TSAN/etc...)
 dev-libs/sdl-kitchensink:static - Build static libraries
+dev-scheme/racket:futures - Enable racket/future library for fine-grained hardware parallelism
+dev-scheme/racket:places - Enable racket/place library for share-nothing parallelism and message-passing communication. Compared to futures, places are heavyweight, but they have a simpler performance model.
+dev-scheme/racket:threads - Enable support for green threads
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
 games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
 games-fps/darkplaces:lights - Install and setup the updated light maps
