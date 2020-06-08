@@ -19,12 +19,12 @@ KEYWORDS="~amd64"
 
 IUSE="
 	+X
+	+doc
 	+futures
 	+jit
 	+places
 	+readline
 	+threads
-	doc
 	minimal
 "
 REQUIRED_USE="
