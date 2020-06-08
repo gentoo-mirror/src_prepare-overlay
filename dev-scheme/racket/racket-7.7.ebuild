@@ -18,27 +18,31 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 IUSE="
-	+X
 	+doc
 	+futures
+	+graphics
 	+jit
 	+places
 	+readline
 	+threads
+	X
 	minimal
 "
 REQUIRED_USE="
 	futures? ( jit )
+	X? ( graphics )
 "
 
 RDEPEND="
 	!dev-tex/slatex
 	dev-db/sqlite:3
 	dev-libs/libffi
-	media-libs/libpng:0
-	virtual/jpeg:0
-	x11-libs/cairo[X?]
-	x11-libs/pango[X?]
+	graphics? (
+		media-libs/libpng:0
+		virtual/jpeg:0
+		x11-libs/cairo[X?]
+		x11-libs/pango[X?]
+	)
 	readline? (
 		dev-libs/libedit
 	)
