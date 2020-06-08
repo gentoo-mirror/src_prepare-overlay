@@ -56,7 +56,7 @@ sys-kernel/xanmod-sources 5.6.10 5.6.12 5.6.14 5.7.0 5.7.1: A general-purpose ke
 sys-kernel/zen-sources 5.6.7 5.6.8 5.6.9 5.6.10 5.6.11 5.6.12 5.6.13 5.6.14 5.6.15: Zen sources including the Gentoo patchsets for the 5.6 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
-www-client/palemoon 28.9.1 9999: Pale Moon Web Browser
+www-client/palemoon 28.10.0 9999: Pale Moon Web Browser
 www-client/waterfox 2020.05: Waterfox Web Browser
 x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
