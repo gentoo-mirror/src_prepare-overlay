@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="A Qt5 library to write cross-platform clients for Matrix"
 HOMEPAGE="https://github.com/qmatrixclient/libqmatrixclient"
 
-inherit eutils cmake-utils
+inherit eutils cmake
 
 MY_PV="$(ver_rs 2 '-')"
 
@@ -36,5 +36,5 @@ src_configure() {
 	local mycmakeargs=(
 		-DBUILD_SHARED_LIBS=ON
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
