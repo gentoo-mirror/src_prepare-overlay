@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils
+inherit cmake
 
 DESCRIPTION="An implementation of the Double Ratchet cryptographic ratchet in C++"
 HOMEPAGE="https://git.matrix.org/git/olm/about/"
