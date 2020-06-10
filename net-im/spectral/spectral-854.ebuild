@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="A glossy client for Matrix, written in QtQuick Controls 2 and C++."
 HOMEPAGE="https://gitlab.com/spectral-im/spectral"
 
-inherit  cmake-utils
+inherit  cmake
 
 COMMON_URI="https://github.com/oKcerG/SortFilterProxyModel/archive/36befddf5d57faad990e72c88c5844794f274145.tar.gz"
 
@@ -59,7 +59,7 @@ src_prepare() {
 		done
 	fi
 
-	cmake-utils_src_prepare
+	cmake_src_prepare
 }
 
 pkg_postinst() {
