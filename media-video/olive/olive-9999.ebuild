@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit xdg-utils cmake-utils
+inherit xdg-utils cmake
 
 DESCRIPTION="Professional open-source non-linear video editor"
 HOMEPAGE="https://github.com/olive-editor/olive"
@@ -53,7 +53,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DBUILD_DOXYGEN="$(usex doxygen)"
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
@@ -61,7 +61,7 @@ src_install() {
 		docinto html
 		dodoc -r docs/html/.
 	fi
-	cmake-utils_src_install
+	cmake_src_install
 }
 
 pkg_postinst() {
