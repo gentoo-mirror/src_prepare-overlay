@@ -12,7 +12,7 @@ EGIT_REPO_URI="https://gitlab.com/NalaGinrut/${PN}.git"
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="
