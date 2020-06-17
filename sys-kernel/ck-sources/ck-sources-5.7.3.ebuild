@@ -4,9 +4,9 @@
 EAPI="6"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="10"
+K_GENPATCHES_VER="1"
 K_SECURITY_UNSUPPORTED="1"
-K_NOSETEXTRAVERSION="1"
+K_NOSETEXTRAVERSION="ck1"
 
 inherit kernel-2-src-prepare-overlay
 detect_version
