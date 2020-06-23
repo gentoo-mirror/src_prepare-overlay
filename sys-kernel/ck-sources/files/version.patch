@@ -1,0 +1,22 @@
+--- Makefile1	2020-06-23 22:09:58.010001390 +0200
++++ Makefile	2020-06-23 21:59:13.000000000 +0200
+@@ -2,7 +2,7 @@
+ VERSION = 5
+ PATCHLEVEL = 7
+ SUBLEVEL = 5
+-EXTRAVERSION =
++EXTRAVERSION =-ck1
+ NAME = Kleptomaniac Octopus
+ 
+ # *DOCUMENTATION*
+@@ -15,10 +15,6 @@
+ PHONY := _all
+ _all:
+ 
+-CKVERSION = -ck1
+-CKNAME = MuQSS Powered
+-EXTRAVERSION := $(EXTRAVERSION)$(CKVERSION)
+-
+ # We are using a recursive build, so we need to do a little thinking
+ # to get the ordering right.
+ #
