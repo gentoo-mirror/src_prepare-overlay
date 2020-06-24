@@ -20,5 +20,6 @@ DESCRIPTION="Con Kolivas sources including the Gentoo patchsets for the ${KV_MAJ
 CK_URI="http://ck.kolivas.org/patches/${KV_MAJOR}.0/${KV_MAJOR}.${KV_MINOR}/${KV_MAJOR}.${KV_MINOR}-ck1/patch-${KV_MAJOR}.${KV_MINOR}-ck1.xz"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CK_URI}"
 
-UNIPATCH_LIST="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}-ck1.xz"
+UNIPATCH_LIST="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}-ck1.xz
+	"${FILESDIR}"/version.patch"
 UNIPATCH_STRICTORDER="yes"
