@@ -52,7 +52,7 @@ sys-boot/rpi-imager 1.2 9999: Raspberry Pi Imaging Utility
 sys-devel/icecream 1.3.1: Distributed compiling of C(++) code across several machines; based on distcc
 sys-kernel/ck-sources 5.6.10 5.6.11 5.7.2 5.7.3 5.7.4 5.7.5: Con Kolivas sources including the Gentoo patchsets for the 5.7 kernel tree
 sys-kernel/liquorix-sources 5.6.15 5.6.16 5.6.18 5.7.1 5.7.4 5.7.5: Liquorix sources including the Gentoo patchsets for the 5.7 kernel tree
-sys-kernel/xanmod-sources 5.6.14 5.7.0 5.7.1 5.7.2 5.7.3 5.7.4: A general-purpose kernel with custom settings and new features
+sys-kernel/xanmod-sources 5.7.0 5.7.1 5.7.2 5.7.3 5.7.4 5.7.5: A general-purpose kernel with custom settings and new features
 sys-kernel/zen-sources 5.6.15 5.7.1 5.7.2 5.7.3 5.7.4 5.7.5: Zen sources including the Gentoo patchsets for the 5.7 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
