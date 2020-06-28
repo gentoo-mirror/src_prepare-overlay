@@ -32,7 +32,7 @@ RDEPEND="
 	dev-qt/qtmultimedia[qml]
 	dev-qt/qtwidgets
 	>=dev-qt/qtquickcontrols2-5.12
-	>=dev-libs/libQuotient-0.6_beta1
+	=dev-libs/libQuotient-0.6_beta1
 	dev-libs/libQtOlm
 	dev-libs/qtkeychain
 	|| ( media-fonts/roboto media-fonts/noto )
