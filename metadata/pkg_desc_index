@@ -55,6 +55,7 @@ sys-kernel/liquorix-sources 5.6.18 5.7.1 5.7.4 5.7.5 5.7.6 5.7.7: Liquorix sourc
 sys-kernel/xanmod-sources 5.7.2 5.7.3 5.7.4 5.7.5 5.7.6 5.7.7: A general-purpose kernel with custom settings and new features
 sys-kernel/zen-sources 5.7.2 5.7.3 5.7.4 5.7.5 5.7.6 5.7.7: Zen sources including the Gentoo patchsets for the 5.7 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
+www-client/brave-bin 1.12.70: Brave Web Browser
 www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
 www-client/palemoon 28.10.0 9999: Pale Moon Web Browser
 www-client/waterfox 2020.05: Waterfox Web Browser
