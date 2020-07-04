@@ -8,5 +8,5 @@ PROPERTIES=live
 RDEPEND=!games-misc/lolcat
 RESTRICT=mirror
 SLOT=0
-_eclasses_=git-r3	86a0188f2ad9eb3d65e4d031ab8a0422
+_eclasses_=git-r3	8ec5b53812bce105ae7943930e4660f8
 _md5_=778b6d03e40fcf856620f9902b83e814
