@@ -25,7 +25,6 @@ IUSE="gnome-keyring"
 
 DEPEND="
 	!www-client/brave
-	gnome-base/gconf:2
 "
 RDEPEND="
 	${DEPEND}
