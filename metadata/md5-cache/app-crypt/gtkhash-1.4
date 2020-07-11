@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure postinst postrm preinst prepare setup
+DEPEND=app-crypt/mhash dev-libs/glib:2 blake2? ( app-crypt/libb2 ) caja? ( mate-base/caja mate-extra/caja-extensions ) !gtk3? ( gtk2? ( x11-libs/gtk+:2 ) ) gtk3? ( x11-libs/gtk+:3 ) gcrypt? ( dev-libs/libgcrypt ) mbedtls? ( net-libs/mbedtls ) nautilus? ( gnome-base/nautilus ) nettle? ( dev-libs/nettle ) !libressl? ( openssl? ( >=dev-libs/openssl-1.1.1d ) ) libressl? ( dev-libs/libressl ) thunar? ( >=xfce-base/thunar-1.8.12 ) zlib? ( sys-libs/zlib ) dev-util/intltool gnome-base/librsvg nls? ( sys-devel/gettext )
+DESCRIPTION=A cross-platform desktop utility for computing message digests or checksums
+EAPI=7
+HOMEPAGE=https://github.com/tristanheaven/gtkhash
+IUSE=+blake2 caja debug -gtk2 +gtk3 +gcrypt +linux-crypto libressl mbedtls nautilus nettle nls +openssl thunar +zlib kernel_linux
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=app-crypt/mhash dev-libs/glib:2 blake2? ( app-crypt/libb2 ) caja? ( mate-base/caja mate-extra/caja-extensions ) !gtk3? ( gtk2? ( x11-libs/gtk+:2 ) ) gtk3? ( x11-libs/gtk+:3 ) gcrypt? ( dev-libs/libgcrypt ) mbedtls? ( net-libs/mbedtls ) nautilus? ( gnome-base/nautilus ) nettle? ( dev-libs/nettle ) !libressl? ( openssl? ( >=dev-libs/openssl-1.1.1d ) ) libressl? ( dev-libs/libressl ) thunar? ( >=xfce-base/thunar-1.8.12 ) zlib? ( sys-libs/zlib )
+REQUIRED_USE=gtk3? ( !gtk2 ) || ( gtk3 gtk2 ) openssl? ( !libressl ) || ( openssl libressl )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/tristanheaven/gtkhash/archive/v1.4.tar.gz -> gtkhash-1.4.tar.gz
+_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	eutils	fcb2aa98e1948b835b5ae66ca52868c5	gnome2-utils	893e828f0f25f070f0b38d20c83c7670	libtool	f143db5a74ccd9ca28c1234deffede96	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	2477ebe553d3e4d2c606191fe6c33602	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=1c6c7d7169c25d635a7e76f80c23fa70
