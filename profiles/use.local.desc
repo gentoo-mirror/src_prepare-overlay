@@ -34,8 +34,6 @@ games-rpg/fallout1:wine - Selects Wine as a runtime provider for Windows release
 games-strategy/warcraft3:tft - Installs The Frozen Throne expansion pack. (NOT SUPPORTED YET)
 games-util/lgogdownloader:gui - Graphical user interface
 games-util/lgogdownloader:portage - Enables headless operation required for Portage integration
-media-fonts/fontawesome:otf - Install the OpenType version of the font
-media-fonts/fontawesome:ttf - Install the TrueType version of the font
 media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
 media-video/olive:doxygen - Build and install source code documentation
 media-video/tartube:atomicparsley - Use AtomicParsley for embedding thumbnails in audio files

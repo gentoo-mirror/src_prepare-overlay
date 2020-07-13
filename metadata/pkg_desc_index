@@ -1,6 +1,5 @@
 acct-group/sensu 1: Sensu program group
 acct-user/sensu 0: Sensu Monitoring Framework
-app-admin/doas 6.6.1 9999: A portable fork of the OpenBSD doas command
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
 app-crypt/gtkhash 1.2 1.4 9999: A cross-platform desktop utility for computing message digests or checksums
 app-editors/vscodium-bin 1.42.0 1.42.1 1.43.0 1.43.2 1.44.0 1.44.1 1.44.2: Open Source Software Binaries of VSCode
@@ -30,7 +29,6 @@ games-simulation/clou2 2.0f-r1: Burglary simulator
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader 3.7-r1: Unofficial downloader for GOG content.
 mail-client/freelook-bin 1.0.0: Freelook, an Electron-based client for Microsoft Outlook
-media-fonts/fontawesome 9999: The iconic font
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
