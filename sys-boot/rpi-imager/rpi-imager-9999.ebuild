@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake
+inherit eutils xdg cmake
 
 DESCRIPTION="Raspberry Pi Imaging Utility"
 HOMEPAGE="https://github.com/raspberrypi/rpi-imager"
