@@ -10,7 +10,7 @@ HOMEPAGE="https://curl.haxx.se"
 MIRROR_URI="https://mirror.rackspace.com/archlinux"
 SRC_URI="
 	amd64? (
-		${MIRROR_URI}/community/os/x86_64/${PN}-${PV}-2-x86_64.pkg.tar.zst
+		${MIRROR_URI}/community/os/x86_64/${PN}-${PV}-1-x86_64.pkg.tar.zst
 	)
 "
 
