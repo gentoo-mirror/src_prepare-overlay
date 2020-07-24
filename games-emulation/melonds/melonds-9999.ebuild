@@ -6,7 +6,7 @@ EAPI=7
 MY_PN="melonDS"
 MY_P="${MY_PN}-${PV}"
 
-inherit cmake-utils desktop xdg-utils
+inherit eutils xdg cmake
 
 DESCRIPTION="DS emulator, sorta"
 HOMEPAGE="http://melonds.kuribo64.net/"
@@ -39,6 +39,7 @@ RDEPEND="
 
 pkg_postinst() {
 	xdg_desktop_database_update
+	xdg_icon_cache_update
 	elog "You need the following files in order to run melonDS:"
 	elog "- bios7.bin"
 	elog "- bios9.bin"
@@ -51,4 +52,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	xdg_desktop_database_update
+	xdg_icon_cache_update
 }

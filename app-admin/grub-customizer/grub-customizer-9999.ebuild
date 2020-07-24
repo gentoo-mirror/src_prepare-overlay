@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils xdg-utils
+inherit eutils xdg cmake
 
 DESCRIPTION="A graphical grub2 settings manager"
 HOMEPAGE="https://launchpad.net/grub-customizer"
@@ -35,9 +35,11 @@ RDEPEND="
 "
 
 pkg_postinst() {
-		xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_icon_cache_update
 }
 
 pkg_postrm() {
-		xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_icon_cache_update
 }

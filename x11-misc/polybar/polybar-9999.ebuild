@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_6 python3_7 python3_8 )
 
-inherit cmake-utils python-single-r1 git-r3
+inherit python-single-r1 git-r3 cmake
 
 DESCRIPTION="A fast and easy-to-use status bar"
 HOMEPAGE="https://github.com/polybar/polybar"
@@ -49,5 +49,5 @@ src_configure() {
 		-DENABLE_PULSEAUDIO="$(usex pulseaudio)"
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }
