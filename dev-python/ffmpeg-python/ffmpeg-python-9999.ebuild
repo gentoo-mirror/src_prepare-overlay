@@ -30,9 +30,8 @@ IUSE="doc test"
 DEPEND="
 	>=dev-python/future-0.18.2[${PYTHON_USEDEP}]
 	>=dev-python/numpy-1.16.5[${PYTHON_USEDEP}]
-	dev-python/pytest-runner[${PYTHON_USEDEP}]
+	dev-python/wheel
 	test? (
-		>=dev-python/pytest-4.6.9[${PYTHON_USEDEP}]
 		>=dev-python/pytest-mock-1.11.2[${PYTHON_USEDEP}]
 	)
 "
@@ -44,3 +43,8 @@ RDEPEND="
 distutils_enable_tests pytest
 
 distutils_enable_sphinx doc/src
+
+python_prepare_all() {
+	sed -i -e '/pytest-runner/d' setup.py || die
+	distutils-r1_python_prepare_all
+}
