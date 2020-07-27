@@ -8,7 +8,7 @@
         <a href="./LICENSE">
                 <img src="https://img.shields.io/badge/license-GPLv2-blue.svg">
     </a>
-    <a href="https://element.io/app/#/room/#src_prepare:matrix.org">
+    <a href="https://app.element.io/#/room/#src_prepare:matrix.org">
                 <img src="https://gitlab.com/src_prepare/badge/-/raw/master/chat-matrix-blue.svg">
     </a>
     <a href="https://gitlab.com/src_prepare/src_prepare-overlay/commits/master.atom">
