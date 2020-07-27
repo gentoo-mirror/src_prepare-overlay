@@ -1,3 +1,21 @@
+<p align="center">
+    <a href="https://gitlab.com/src_prepare/src_prepare-overlay/pipelines">
+            <img src="https://gitlab.com/src_prepare/src_prepare-overlay/badges/master/pipeline.svg">
+    </a>
+    <a href="https://gentoo.org/">
+            <img src="https://img.shields.io/badge/powered by-Gentoo Linux-blueviolet.svg">
+    </a>
+        <a href="./LICENSE">
+                        <img src="https://img.shields.io/badge/license-GPLv2-blue.svg">
+    </a>
+    <a href="https://riot.im/app/#/room/#src_prepare:matrix.org">
+            <img src="https://img.shields.io/badge/chat-[matrix]-blue.svg">
+    </a>
+    <a href="https://gitlab.com/src_prepare/src_prepare-overlay/commits/master.atom">
+        <img src="https://img.shields.io/badge/feed-atom-orange.svg">
+    </a>
+</p>
+
 # src_prepare Gentoo overlay
 
 This is the overlay of our Matrix group where we talk about topics related to Gentoo (development, maintainance, support, communities and more).
