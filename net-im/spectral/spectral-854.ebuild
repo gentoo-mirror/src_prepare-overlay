@@ -32,7 +32,7 @@ RDEPEND="
 	dev-qt/qtmultimedia[qml]
 	dev-qt/qtwidgets
 	>=dev-qt/qtquickcontrols2-5.12
-	=dev-libs/libQuotient-0.6_beta1
+	>=dev-libs/libQuotient-0.6.0
 	dev-libs/libQtOlm
 	dev-libs/qtkeychain
 	|| ( media-fonts/roboto media-fonts/noto )
@@ -43,6 +43,12 @@ DEPEND="
 	${RDEPEND}
 	>=dev-qt/qtcore-5.12
 "
+
+PATCHES=(
+	# patches for build with libQuotient-0.6.0
+	"${FILESDIR}/libQuotient-0.6.patch-1.patch"
+	"${FILESDIR}/libQuotient-0.6.patch-2.patch"
+)
 
 src_prepare() {
 	if [[ ${PV} != 9999 ]]
