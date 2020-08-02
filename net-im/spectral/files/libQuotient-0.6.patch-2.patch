@@ -1,0 +1,22 @@
+--- a/src/publicroomlistmodel.cpp	2020-04-16 04:44:53.000000000 +0200
++++ b/src/publicroomlistmodel.cpp	2020-07-29 05:33:32.000000000 +0200
+@@ -110,15 +110,14 @@
+     attempted = true;
+ 
+     if (job->status() == BaseJob::Success) {
+-      auto resp = job->data();
+-      nextBatch = resp.nextBatch;
++      nextBatch = job->nextBatch();
+ 
+       this->beginInsertRows({}, rooms.count(),
+-                            rooms.count() + resp.chunk.count() - 1);
+-      rooms.append(resp.chunk);
++                            rooms.count() + job->chunk().count() - 1);
++      rooms.append(job->chunk());
+       this->endInsertRows();
+ 
+-      if (resp.nextBatch.isEmpty()) {
++      if (job->nextBatch().isEmpty()) {
+         emit hasMoreChanged();
+       }
+     }
