@@ -5,6 +5,7 @@ DESCRIPTION=Pale Moon Web Browser
 EAPI=7
 HOMEPAGE=https://www.palemoon.org/
 IUSE=cpu_flags_x86_sse cpu_flags_x86_sse2 dbus +devtools debug gnome -gtk2 +gtk3 jemalloc pulseaudio -necko-wifi official-branding +optimize threads -valgrind
+KEYWORDS=~amd64
 LICENSE=MPL-2.0 GPL-2 LGPL-2.1
 PROPERTIES=live
 RDEPEND=app-arch/zip media-libs/alsa-lib media-libs/fontconfig media-libs/freetype virtual/ffmpeg[x264] x11-libs/libXt dbus? ( >=sys-apps/dbus-0.60 >=dev-libs/dbus-glib-0.60 ) gnome? ( gnome-base/gconf ) gtk2? ( >=x11-libs/gtk+-2.18.0:2 ) gtk3? ( >=x11-libs/gtk+-3.4.0:3 ) necko-wifi? ( net-wireless/wireless-tools ) pulseaudio? ( media-sound/pulseaudio ) valgrind? ( dev-util/valgrind ) optimize? ( sys-libs/glibc )
