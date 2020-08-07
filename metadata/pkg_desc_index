@@ -7,6 +7,7 @@ app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
 app-office/onlyoffice-bin 5.4.2 5.5.1: onlyoffice is an office productivity suite (binary version)
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
+app-text/pandoc-bin 2.10.1: Universal markup converter
 dev-games/godot 3.2.1 3.2.2: Multi-platform 2D and 3D game engine
 dev-libs/libQtOlm 3.0.1 9999: A Qt wrapper for libolm
 dev-libs/libQuotient 0.6_beta1 0.6.0 9999: A Qt5 library to write cross-platform clients for Matrix
