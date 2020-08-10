@@ -1,0 +1,13 @@
+diff --git a/usr/bin/onlyoffice-desktopeditors b/usr/bin/onlyoffice-desktopeditors
+index 6fa731f..16e7b41 100755
+--- a/usr/bin/onlyoffice-desktopeditors
++++ b/usr/bin/onlyoffice-desktopeditors
+@@ -68,7 +68,7 @@ set_names_ru() {
+ }
+ 
+ check_templates() {
+-  if [ $1 != "--new-document-templates" ]; then
++  if [ "$1" != "--new-document-templates" ]; then
+     return 0
+   fi
+ 
