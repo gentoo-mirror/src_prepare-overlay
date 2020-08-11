@@ -28,6 +28,24 @@ A quick guide on how to test ebuilds will follow.
 
 Mostly to have fun.
 
+## For whom?
+
+src_prepare overlay was based on a concept of [GURU](https://wiki.gentoo.org/wiki/Project:GURU) with the following exceptions:
+- easier to get access to the master branch
+- main contact with the src_prepare project is via [Matrix](https://matrix.to/#/#src_prepare:matrix.org)
+- main git repo is hosted on [Gitlab](https://gitlab.com/src_prepare/src_prepare-overlay) with [Github](https://github.com/xgqt/src_prepare-overlay) and [Codeberg](https://codeberg.org/src_prepare/src_prepare-overlay) mirrors
+- more freedom in creating ebuilds
+- no requirement for GPG keys
+- no requirement for private info
+
+src_prepare project doesn't want to overtake the GURU project, the course that the GURU project takes is more professional, src_prepare overlay is more open for ebuilds:
+- binary packages from upstream
+- from inexperienced users
+- from software created by the src_prepare project itself
+- live ebuilds
+- programs that run under WINE (or other emulators)
+
+
 ## Adding the overlay
 
 ### Official list
