@@ -1,18 +1,18 @@
 <p align="center">
     <a href="https://gitlab.com/src_prepare/src_prepare-overlay/pipelines">
-                <img src="https://gitlab.com/src_prepare/src_prepare-overlay/badges/master/pipeline.svg">
+        <img src="https://gitlab.com/src_prepare/src_prepare-overlay/badges/master/pipeline.svg">
     </a>
     <a href="https://gentoo.org/">
-                <img src="https://gitlab.com/src_prepare/badge/-/raw/master/powered-by-gentoo-linux-tyrian.svg">
+        <img src="https://gitlab.com/src_prepare/badge/-/raw/master/powered-by-gentoo-linux-tyrian.svg">
     </a>
-        <a href="./LICENSE">
-                <img src="https://img.shields.io/badge/license-GPLv2-blue.svg">
+    <a href="./LICENSE">
+        <img src="https://img.shields.io/badge/license-GPLv2-blue.svg">
     </a>
     <a href="https://app.element.io/#/room/#src_prepare:matrix.org">
-                <img src="https://gitlab.com/src_prepare/badge/-/raw/master/chat-matrix-blue.svg">
+        <img src="https://gitlab.com/src_prepare/badge/-/raw/master/chat-matrix-blue.svg">
     </a>
     <a href="https://gitlab.com/src_prepare/src_prepare-overlay/commits/master.atom">
-                <img src="https://gitlab.com/src_prepare/badge/-/raw/master/feed-atom-orange.svg">
+        <img src="https://gitlab.com/src_prepare/badge/-/raw/master/feed-atom-orange.svg">
     </a>
 </p>
 
@@ -27,6 +27,24 @@ A quick guide on how to test ebuilds will follow.
 ## Why create this overlay?
 
 Mostly to have fun.
+
+## For whom?
+
+src_prepare overlay was based on a concept of [GURU](https://wiki.gentoo.org/wiki/Project:GURU) with the following exceptions:
+- easier to get access to the master branch
+- main contact with the src_prepare project is via [Matrix](https://matrix.to/#/#src_prepare:matrix.org)
+- main git repo is hosted on [Gitlab](https://gitlab.com/src_prepare/src_prepare-overlay) with [Github](https://github.com/xgqt/src_prepare-overlay) and [Codeberg](https://codeberg.org/src_prepare/src_prepare-overlay) mirrors
+- more freedom in creating ebuilds
+- no requirement for GPG keys
+- no requirement for private info
+
+src_prepare project doesn't want to overtake the GURU project, the course that the GURU project takes is more professional, src_prepare overlay is more open for ebuilds:
+- binary packages from upstream
+- from inexperienced users
+- from software created by the src_prepare project itself
+- live ebuilds
+- programs that run under WINE (or other emulators)
+
 
 ## Adding the overlay
 
