@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8} )
 
-inherit distutils-r1 eutils xdg-utils
+inherit eutils xdg distutils-r1
 
 DESCRIPTION="A GUI front-end for youtube-dl"
 HOMEPAGE="https://tartube.sourceforge.io"
@@ -22,18 +22,19 @@ fi
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="+atomicparsley"
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+IUSE="+atomicparsley +ffmpeg"
 
-DEPEND="
-	${PYTHON_DEPS}
-"
 RDEPEND="
-	${DEPEND}
+	dev-python/pygobject[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	net-misc/youtube-dl
-	x11-libs/gtk+:3
-	atomicparsley? ( media-video/atomicparsley )
+	x11-themes/adwaita-icon-theme
+	atomicparsley? (
+		media-video/atomicparsley
+	)
+	ffmpeg? (
+		media-video/ffmpeg
+	)
 "
 
 DOCS=(
@@ -44,6 +45,7 @@ DOCS=(
 
 src_prepare() {
 	export TARTUBE_PKG_STRICT=1
+
 	distutils-r1_src_prepare
 }
 
@@ -54,6 +56,7 @@ src_install() {
 pkg_postinst() {
 	xdg_desktop_database_update
 	xdg_icon_cache_update
+
 	elog "You may need to set path to (system) youtube-dl"
 	elog "in Tartube's System preferences"
 }

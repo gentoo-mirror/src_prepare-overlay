@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <use>
-    <flag name="atomicparsley">Use AtomicParsley for embedding thumbnails in audio files</flag>
-  </use>
-  <upstream>
-    <remote-id type="github">axcore/tartube</remote-id>
-  </upstream>
+    <use>
+        <flag name="atomicparsley">Use AtomicParsley for embedding thumbnails in audio files</flag>
+        <flag name="ffmpeg">Required for various video post-processing tasks</flag>
+    </use>
+    <upstream>
+        <remote-id type="github">axcore/tartube</remote-id>
+    </upstream>
 </pkgmetadata>
