@@ -37,6 +37,7 @@ games-util/lgogdownloader:portage - Enables headless operation required for Port
 media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
 media-video/olive:doxygen - Build and install source code documentation
 media-video/tartube:atomicparsley - Use AtomicParsley for embedding thumbnails in audio files
+media-video/tartube:ffmpeg - Required for various video post-processing tasks
 net-analyzer/sensu:agent - Installs Sensu agent
 net-analyzer/sensu:backend - Install Sensu dashboard and backend server
 net-analyzer/sensu:gcc - Compile with GCC's Go compiler instead of Google's reference Go compiler (NOT SUPPORTED)
