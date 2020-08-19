@@ -19,6 +19,7 @@ dev-python/itunespy 1.5.3 1.6 9999: A simple library to fetch data from the iTun
 dev-python/pyfiglet 0.8.0 9999: An implementation of figlet written in Python
 dev-scheme/guile-colorized 9999: Colorized REPL for GNU Guile
 dev-scheme/racket 7.7: General purpose, multi-paradigm Lisp-Scheme programming language
+dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
 games-emulation/melonds 0.8.3 9999: DS emulator, sorta
