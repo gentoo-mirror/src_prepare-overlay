@@ -3,12 +3,12 @@ DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 sys-devel/bison 
 DESCRIPTION=A general-purpose kernel with custom settings and new features
 EAPI=6
 HOMEPAGE=https://xanmod.org
-IUSE=symlink build
+IUSE=cachy symlink build
 KEYWORDS=~amd64
 LICENSE=GPL-2 CDDL
 RDEPEND=!build? ( dev-lang/perl sys-devel/bc sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf )
 RESTRICT=binchecks strip
 SLOT=5.8.5
-SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.8.tar.xz https://github.com/xanmod/linux/releases/download/5.8.5-xanmod1/patch-5.8.5-xanmod1.xz
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.8.tar.xz https://github.com/xanmod/linux/releases/download/5.8.5-xanmod1/patch-5.8.5-xanmod1.xz ( https://dl.xanmod.org/experimental/cachy_cpu_sched/0001-sched-Introduce-the-Cachy-CPU-scheduler-v5.8.patch )
 _eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	estack	686eaab303305a908fd57b2fd7617800	kernel-2-src-prepare-overlay	6c802318c6bf5ac2b612f19b94bb3488	multilib	2477ebe553d3e4d2c606191fe6c33602	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
-_md5_=98d9907ec9c49f810b2e9836646e97d3
+_md5_=b4ea4445cd51ef8c3cd8ec566f9f170e
