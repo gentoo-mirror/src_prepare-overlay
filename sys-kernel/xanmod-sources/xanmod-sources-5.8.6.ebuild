@@ -13,7 +13,7 @@ DESCRIPTION="A general-purpose kernel with custom settings and new features"
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-CACHY_URI="https://dl.xanmod.org/experimental/cachy_cpu_sched/0001-sched-Introduce-the-Cachy-CPU-scheduler-v5.8.patch"
+CACHY_URI="https://raw.githubusercontent.com/hamadmarri/cachy-sched/master/patches/cachy/cachy-5.8.patch"
 IUSE="cachy"
 SRC_URI="${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz https://github.com/xanmod/linux/releases/download/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz
 ( ${CACHY_URI} )
