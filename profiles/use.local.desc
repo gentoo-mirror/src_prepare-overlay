@@ -45,7 +45,6 @@ net-analyzer/sensu:systemd - Install systemd service units rather than OpenRC in
 net-misc/ddgr:fish-completion - Enable fish completion support
 sys-apps/xbps:lto - Build with Link Time Optimization
 sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
-sys-kernel/xanmod-sources:cachy - Enable cachy as a new cpu scheduler experimental patch.
 www-client/icecat:amd64 - You should not be able to see this
 www-client/icecat:clang - Use Clang compiler instead of GCC
 www-client/icecat:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
