@@ -25,7 +25,7 @@ UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 src_prepare() {
 
 	if use cachy; then
-		eapply "${DISTDIR}/0001-sched-Introduce-the-Cachy-CPU-scheduler-v5.8.patch"
+		eapply "${DISTDIR}/cachy-5.8.patch"
 	fi
 
 	kernel-2-src-prepare-overlay_src_prepare
