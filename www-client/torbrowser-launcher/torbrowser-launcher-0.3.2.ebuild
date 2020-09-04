@@ -31,6 +31,10 @@ RDEPEND="
 	dev-python/requests[${PYTHON_USEDEP}]
 "
 
+PATCHES=(
+	"${FILESDIR}/${PN}-distro.patch"
+)
+
 python_install_all() {
 	distutils-r1_python_install_all
 
