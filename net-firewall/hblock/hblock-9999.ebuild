@@ -20,13 +20,10 @@ fi
 RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
-IUSE="systemd"
+IUSE=""
 
 COMMON_DEPEND="
 	sys-apps/baselayout
-	systemd? (
-		sys-apps/systemd
-	)
 "
 DEPEND="
 	${COMMON_DEPEND}
