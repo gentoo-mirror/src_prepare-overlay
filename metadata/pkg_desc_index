@@ -38,7 +38,7 @@ media-video/olive 9999: Professional open-source non-linear video editor
 media-video/tartube 2.0.0 2.1.0 9999: A GUI front-end for youtube-dl
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
 net-analyzer/sensu 5.19.3: Simple. Scalable. Multi-cloud monitoring.
-net-firewall/hblock 2.1.5 9999: Improve your security and privacy by blocking ads, tracking and malware domains
+net-firewall/hblock 2.1.5 2.1.7 9999: Improve your security and privacy by blocking ads, tracking and malware domains
 net-im/spectral 854 9999: A glossy client for Matrix, written in QtQuick Controls 2 and C++.
 net-im/srain 1.0.2 9999: Modern IRC client written in GTK
 net-libs/libcurl-gnutls 7.71.1: libcurl libraries linked with gnutls
