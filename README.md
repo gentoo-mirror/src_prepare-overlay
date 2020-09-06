@@ -39,7 +39,7 @@ Despite being based on the concept of the GURU project, src_prepare has differen
 - main contact with the src_prepare project is via [[matrix]](https://matrix.to/#/#src_prepare:matrix.org);
 - more freedom in creating ebuilds;
 - no requirement for GPG keys;
-- no requirement for private info;
+- no requirement for private info.
 
 The src_prepare project doesn't want to overtake or compete with the GURU project. The GURU project is aimed on professionalism and quality, whereas src_prepare is aimed on openness and ease of access.
 
