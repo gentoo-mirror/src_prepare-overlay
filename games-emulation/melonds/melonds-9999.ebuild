@@ -8,7 +8,7 @@ MY_P="${MY_PN}-${PV}"
 
 inherit eutils xdg cmake
 
-DESCRIPTION="DS emulator, sorta"
+DESCRIPTION="Nintendo DS emulator, sorta"
 HOMEPAGE="http://melonds.kuribo64.net/"
 
 if [[ "${PV}" == *9999* ]]; then
@@ -27,7 +27,12 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
+	dev-qt/qtcore:5
+	dev-qt/qtdeclarative:5
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
 	media-libs/libsdl2[sound,video]
+	net-libs/gnutls
 	net-libs/libpcap
 	net-libs/libslirp
 	net-misc/curl
@@ -41,6 +46,7 @@ RDEPEND="
 pkg_postinst() {
 	xdg_desktop_database_update
 	xdg_icon_cache_update
+
 	elog "You need the following files in order to run melonDS:"
 	elog "- bios7.bin"
 	elog "- bios9.bin"
