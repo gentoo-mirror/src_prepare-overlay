@@ -39,6 +39,7 @@ COMMON_DEPEND="
 
 DEPEND="
 	"${COMMON_DEPEND}"
+	>=dev-qt/qtconcurrent-5.6.0
 	dev-qt/linguist-tools
 	doxygen? ( app-doc/doxygen[dot] )
 "
