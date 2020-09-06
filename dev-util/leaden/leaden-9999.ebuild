@@ -36,4 +36,3 @@ src_prepare() {
 	rm leaden/ui.ui
 	default_src_prepare
 }
-
