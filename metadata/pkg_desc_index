@@ -22,7 +22,7 @@ dev-scheme/racket 7.7 7.8: General purpose, multi-paradigm Lisp-Scheme programmi
 dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
-games-emulation/melonds 0.8.3 9999: DS emulator, sorta
+games-emulation/melonds 0.8.3 0.9 9999: Nintendo DS emulator, sorta
 games-fps/darkplaces 20170829_beta1: Enhanced engine for iD Software's Quake 1
 games-fps/quake15 0_beta2: A mod that makes Quake faster paced, harder, gorier and more violent.
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
