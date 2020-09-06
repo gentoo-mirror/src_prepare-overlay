@@ -25,7 +25,6 @@ IUSE=""
 
 DEPEND="
 	dev-cpp/gtkmm:3.0
-	dev-libs/openssl
 	x11-themes/hicolor-icon-theme
 	sys-boot/grub:2
 	app-arch/libarchive
