@@ -53,8 +53,7 @@ pkg_postinst() {
 	elog "- firmware.bin"
 	elog "- romlist.bin"
 	elog "Place them in ~/.config/melonDS"
-	elog "The romlist.bin file can be found in the /usr/share/melonDS directory"
-	elog "The rest of those files can be found somewhere in the internet ;-)"
+	elog "Those files can be found somewhere on the Internet ;-)"
 }
 
 pkg_postrm() {
