@@ -34,9 +34,6 @@ src_prepare overlay is based on the concept of the [GURU](https://wiki.gentoo.or
 
 Despite being based on the concept of the GURU project, src_prepare has different goals in mind:
 
-- openness
-	- no requirement for GPG keys;
-	- no requirement for private info;
 - ease of access
 	- main git repository is hosted on [GitLab](https://gitlab.com/src_prepare/src_prepare-overlay), with mirrors set to [GitHub](https://github.com/xgqt/src_prepare-overlay) and [Codeberg](https://codeberg.org/src_prepare/src_prepare-overlay);
 	- easier for one to get access to the `master` branch;
