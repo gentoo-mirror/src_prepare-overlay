@@ -8,7 +8,7 @@ MY_P="${MY_PN}-${PV}"
 
 inherit eutils xdg cmake
 
-DESCRIPTION="DS emulator, sorta"
+DESCRIPTION="Nintendo DS emulator, sorta"
 HOMEPAGE="http://melonds.kuribo64.net/"
 
 if [[ "${PV}" == *9999* ]]; then
