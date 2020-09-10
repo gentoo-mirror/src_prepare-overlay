@@ -1,4 +1,4 @@
-# Bug Report
+# Ebuild Error
 
 <!--
 Provide the exact link of the category/package you have received the error. For example
@@ -30,3 +30,9 @@ If the error log is small, feel free to paste it in the comment, between the cod
 <!--
 OPTIONAL: more information are welcome, e.g. dependencies versions used, patches, etc.
 -->
+
+<!--
+DO NOT EDIT BELOW!
+-->
+
+~"Ebuild Error"
