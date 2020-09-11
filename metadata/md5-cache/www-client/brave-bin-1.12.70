@@ -10,5 +10,5 @@ RDEPEND=!www-client/brave >=media-libs/libpng-1.6.34 >=net-print/cups-2.0.0 app-
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/brave/brave-browser/releases/download/v1.12.70/brave-v1.12.70-linux-x64.zip -> brave-bin-1.12.70.zip
-_eclasses_=chromium-2	92ff174aa2b13d6ea0c4539533f0b2de	desktop	7fd20552ce4cc97e8acb132a499a7dd8	eutils	fcb2aa98e1948b835b5ae66ca52868c5	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	2477ebe553d3e4d2c606191fe6c33602	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_eclasses_=chromium-2	92ff174aa2b13d6ea0c4539533f0b2de	desktop	7fd20552ce4cc97e8acb132a499a7dd8	eutils	fcb2aa98e1948b835b5ae66ca52868c5	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
 _md5_=49a88c3eebfff29fe8eb25e00bbd0bd4

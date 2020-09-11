@@ -10,5 +10,5 @@ RDEPEND=!build? ( dev-lang/perl sys-devel/bc sys-devel/make >=sys-libs/ncurses-5
 RESTRICT=binchecks strip
 SLOT=5.7.17
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.7.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.7-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.7-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.7-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.7-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.7-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.7-1.extras.tar.xz https://github.com/zen-kernel/zen-kernel/releases/download/v5.7.17-lqx1/v5.7.17-lqx1.patch.xz
-_eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	estack	686eaab303305a908fd57b2fd7617800	kernel-2-src-prepare-overlay	6c802318c6bf5ac2b612f19b94bb3488	multilib	2477ebe553d3e4d2c606191fe6c33602	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
+_eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	estack	686eaab303305a908fd57b2fd7617800	kernel-2-src-prepare-overlay	6c802318c6bf5ac2b612f19b94bb3488	multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
 _md5_=83c0415ab30a1e5568cf7238697db9da
