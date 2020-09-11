@@ -31,7 +31,7 @@ first check if the package you are providing is not in [TODO.md](/TODO.md).**
 
 When submitting an issue you will have to provide:
 
-- [CATEGORY]/[PACKAGE_NAME] (e.g. `www-client/icecat`)
+- `category/package` (e.g. `www-client/icecat`)
 - the description of the package
 - the home page of the package 
 - OPTIONAL: the direct download link of the package 
@@ -61,7 +61,7 @@ so we can easily identify the changes:
 
 Each commit will have to be based on this layout:
 
-`[CATEGORY]/[PACKAGE_NAME]: [COMMIT_MESSAGE]`
+`category/package: [COMMIT_MESSAGE]`
 
 For example, if the package is called **mail-client/freelook-bin**,
 and you have added this package, the commit or merge request should look like this:
