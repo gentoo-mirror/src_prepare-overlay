@@ -8,6 +8,7 @@ app-misc/cli-visualizer 1.8: CLI based audio visualizer
 app-office/onlyoffice-bin 5.6.0 5.6.4: onlyoffice is an office productivity suite (binary version)
 app-portage/euscan-ng 9999: Check if a given package has new upstream versions
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
+app-portage/src_prepare-scripts 9999: Small scripts from src_prepare group
 app-text/pandoc-bin 2.10.1: Universal markup converter
 dev-games/godot 3.2.1 3.2.2: Multi-platform 2D and 3D game engine
 dev-libs/libQtOlm 3.0.1 9999: A Qt wrapper for libolm
