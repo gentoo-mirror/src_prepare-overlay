@@ -38,7 +38,10 @@ IUSE=""
 # 'python-ldap>=2.4.10',      dev-python/python-ldap      OK
 # )
 
+# Right now euscan-ng and euscan can't be both installed on the same system
+
 DEPEND="
+	!app-portage/euscan-ng
 	>=dev-python/beautifulsoup-4.8.2[${PYTHON_USEDEP}]
 "
 RDEPEND="
