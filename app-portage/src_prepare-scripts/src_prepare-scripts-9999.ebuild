@@ -25,6 +25,7 @@ RDEPEND="
 
 src_install() {
 	# Install the docs
+	local doc
 	for doc in *.md
 	do
 		dodoc "${doc}"
@@ -42,6 +43,6 @@ src_install() {
 		done
 		popd
 	else
-		die "There is no 'src' directory"
+		die "There is no ${S}/src directory"
 	fi
 }
