@@ -33,6 +33,7 @@ games-simulation/clou2 2.0f-r1: Burglary simulator
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader 3.7-r1: Unofficial downloader for GOG content.
 mail-client/freelook-bin 1.0.0: Freelook, an Electron-based client for Microsoft Outlook
+media-fonts/joypixels 6.0.0: Emoji as a Service (formerly EmojiOne)
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
