@@ -26,11 +26,8 @@ BDEPEND="
 	media-gfx/imagemagick
 "
 DEPEND="
-	dev-libs/libbsd
 	media-libs/libsdl2
-	media-libs/libsndfile
 	net-libs/libasyncns
-	sys-apps/util-linux
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
