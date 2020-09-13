@@ -2,7 +2,7 @@ acct-group/sensu 1: Sensu program group
 acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
 app-crypt/gtkhash 1.2 1.4 9999: A cross-platform desktop utility for computing message digests or checksums
-app-editors/lite 1.11 9999: A lightweight text editor written in Lua
+app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
 app-editors/vscodium-bin 1.42.0 1.42.1 1.43.0 1.43.2 1.44.0 1.44.1 1.44.2 1.49.0: Open Source Software Binaries of VSCode
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
