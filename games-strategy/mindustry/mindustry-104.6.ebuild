@@ -32,8 +32,8 @@ src_install() {
 	insinto "/opt/${MY_PN}"
 	doins "${MY_PN}.jar"
 
-	make_wrapper "mindustry" "java -jar /opt/${MY_PN}/${MY_PN}.jar"
-	make_desktop_entry "mindustry" "Mindustry" "mindustry" "Game;StrategyGame;"
+	make_wrapper "${PN}" "java -jar /opt/${MY_PN}/${MY_PN}.jar"
+	make_desktop_entry "${PN}" "${MY_PN}" "${PN}" "Game;StrategyGame;"
 }
 
 pkg_postinst() {
