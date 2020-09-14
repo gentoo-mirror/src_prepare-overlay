@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare
+DEPEND=!dev-tex/slatex dev-db/sqlite:3 dev-libs/libffi graphics? ( media-libs/libpng:0 virtual/jpeg:0 x11-libs/cairo[X?] x11-libs/pango[X?] ) readline? ( dev-libs/libedit ) X? ( x11-libs/gtk+[X] ) dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=General purpose, multi-paradigm Lisp-Scheme programming language
+EAPI=7
+HOMEPAGE=https://racket-lang.org/
+IUSE=+doc +futures +graphics +jit +places +readline +threads X minimal
+KEYWORDS=~amd64
+LICENSE=GPL-3+ LGPL-3
+RDEPEND=!dev-tex/slatex dev-db/sqlite:3 dev-libs/libffi graphics? ( media-libs/libpng:0 virtual/jpeg:0 x11-libs/cairo[X?] x11-libs/pango[X?] ) readline? ( dev-libs/libedit ) X? ( x11-libs/gtk+[X] )
+REQUIRED_USE=futures? ( jit ) X? ( graphics )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=minimal? ( https://download.racket-lang.org/installers/7.7/racket-minimal-7.7-src-builtpkgs.tgz ) !minimal? ( https://download.racket-lang.org/installers/7.7/racket-7.7-src-builtpkgs.tgz )
+_eclasses_=desktop	7fd20552ce4cc97e8acb132a499a7dd8	pax-utils	a41d1fd1c111289ffa04490de6ee79d7	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=548e10dcc795cbd717a1a7b690bbe7a4
