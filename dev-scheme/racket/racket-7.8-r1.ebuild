@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit pax-utils
+inherit desktop pax-utils xdg
 
 DESCRIPTION="General purpose, multi-paradigm Lisp-Scheme programming language"
 HOMEPAGE="https://racket-lang.org/"
@@ -47,7 +47,7 @@ RDEPEND="
 		dev-libs/libedit
 	)
 	X? (
-		x11-libs/gtk+[X?]
+		x11-libs/gtk+[X]
 	)
 "
 DEPEND="
@@ -85,7 +85,8 @@ src_configure() {
 }
 
 src_compile() {
-	if use jit; then
+	if use jit
+	then
 		# When the JIT is enabled, a few binaries need to be pax-marked
 		# on hardened systems (bug 613634). The trick is to pax-mark
 		# them before they're used later in the build system. The
@@ -108,11 +109,14 @@ src_compile() {
 src_install() {
 	default
 
-	if use jit; then
+	if use jit
+	then
 		# The final binaries need to be pax-marked, too, if you want to
 		# actually use them. The src_compile marking get lost somewhere
 		# in the install process.
-		for f in mred mzscheme racket; do
+		local f
+		for f in mred mzscheme racket
+		do
 			pax-mark m "${D}/usr/bin/${f}"
 		done
 
@@ -120,9 +124,28 @@ src_install() {
 	fi
 
 	# raco needs decompressed files for packages doc installation bug 662424
-	if use doc; then
+	if use doc
+	then
 		docompress -x /usr/share/doc/${PF}
 	fi
 
 	find "${ED}" \( -name "*.a" -o -name "*.la" \) -delete || die
+
+	if use X
+	then
+		make_desktop_entry "gracket" "GRacket" \
+						   "/usr/share/racket/drracket-exe-icon.png" \
+						   "Development;Education;"
+		make_desktop_entry "plt-games" "PLT Games" \
+						   "/usr/share/racket/drracket-exe-icon.png" \
+						   "Education;Game;"
+	fi
+}
+
+pkg_postinst() {
+	use X && xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	use X && xdg_desktop_database_update
 }
