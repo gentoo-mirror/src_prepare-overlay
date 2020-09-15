@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <upstream>
+        <remote-id type="github">howl-editor/howl</remote-id>
+    </upstream>
+    <longdescription>
+        Howl is a general purpose editor that aims to be both lightweight and fully customizable.
+        It is built on top of the very fast LuaJIT runtime, and can be extended in either Lua or Moonscript.
+        It has a minimalistic UI driven mainly by the keyboard.
+    </longdescription>
+</pkgmetadata>
