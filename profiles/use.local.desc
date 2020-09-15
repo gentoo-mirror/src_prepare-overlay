@@ -71,6 +71,7 @@ www-client/palemoon:necko-wifi - Enable the necko wifi scanner
 www-client/palemoon:official-branding - Enable official branding
 www-client/palemoon:optimize - Enable compiler optimization
 www-client/palemoon:valgrind - Enable Valgrind integration hooks
+www-client/torbrowser-launcher:apparmor - Enable AppArmor support
 www-client/waterfox:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 www-client/waterfox:eme-free - Disable EME (DRM plugin) cabability at build time
 www-client/waterfox:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
