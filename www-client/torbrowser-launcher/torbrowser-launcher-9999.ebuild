@@ -22,13 +22,14 @@ fi
 RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
+IUSE="apparmor"
 
 RDEPEND="
 	app-crypt/gpgme[python,${PYTHON_USEDEP}]
 	dev-python/PyQt5[${PYTHON_USEDEP},widgets]
 	dev-python/PySocks[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
+	apparmor? ( sys-libs/libapparmor )
 "
 
 PATCHES=(
@@ -39,8 +40,10 @@ python_install_all() {
 	distutils-r1_python_install_all
 
 	# delete apparmor profiles
-	rm -r "${D}/etc/apparmor.d" || die "Failed to remove apparmor profiles"
-	rmdir "${D}/etc" || die "Failed to remove empty directory"
+	if ! use apparmor; then
+		rm -r "${D}/etc/apparmor.d" || die "Failed to remove apparmor profiles"
+		rmdir "${D}/etc" || die "Failed to remove empty directory"
+	fi
 }
 
 pkg_postinst() {
