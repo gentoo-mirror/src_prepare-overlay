@@ -8,8 +8,8 @@ LPEG_V="lpeg-0.10.2"
 
 # What else should we do?
 BUNDLE_SRC="
-	http://luajit.org/download/${LUAJIT_V}.tar.gz -> ${P}-${LUAJIT_V}.tar.gz
-	http://nordman.org/mirror/lpeg/${LPEG_V}.tar.gz -> ${P}-${LPEG_V}.tar.gz
+	http://luajit.org/download/${LUAJIT_V}.tar.gz -> ${PN}-${LUAJIT_V}.tar.gz
+	http://nordman.org/mirror/lpeg/${LPEG_V}.tar.gz -> ${PN}-${LPEG_V}.tar.gz
 "
 
 inherit eutils desktop xdg
@@ -51,9 +51,9 @@ src_prepare() {
 	if [[ "${PV}" == *9999* ]]
 	then
 		# This is a little bit too much back-and-forth
-		unpack "${P}-${LUAJIT_V}.tar.gz"
+		unpack "${PN}-${LUAJIT_V}.tar.gz"
 		mv "${S}/${LUAJIT_V}" "${WORKDIR}"
-		unpack "${P}-${LPEG_V}.tar.gz"
+		unpack "${PN}-${LPEG_V}.tar.gz"
 		mv "${S}/${LPEG_V}" "${WORKDIR}"
 	fi
 
