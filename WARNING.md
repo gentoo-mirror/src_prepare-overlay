@@ -1,27 +1,23 @@
-# WARNING!!!
+# WARNING!
 
-Before you continue
-
-
-## Read the TODO
+Before you continue, **read [TODO.md](../TODO.md)!**
 
 
 ## Known bugs
 
-You still can file issues to let us and others know when stuff breaks
+You can still file issues to let us and others know when something breaks.
 
-- kernel pkgs may install a different version, check the version you got after installation
-- waterfox is broken, like 80% of the time, we know...
+- kernel packages may install a different version, check the version you got after installation
+- Waterfox is broken, like 80% of the time, we know...
 
 
-## Outdated
+## Outdated packages
 
-That's what we have euscan-ng for,
-if a pkg is not updated then it's possible that the new pkg is broken
+That's why we have [euscan-ng](https://gitlab.com/src_prepare/euscan-ng). If a package is not updated then it's possible that the new package is broken.
 
 
 ## Merge issues
 
-Don't file bugs for those pkgs here, ask upstream for a fix
+Don't file bugs for those packages here, ask upstream for a fix:
 
-- palemoon is a resource hog during build
+- Palemoon is a resource hog during build
