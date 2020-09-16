@@ -22,23 +22,20 @@ LICENSE="MIT"
 SLOT="0"
 IUSE=""
 
-COMMON_DEPEND="
+DEPEND="
 	sys-apps/baselayout
 "
-DEPEND="
-	${COMMON_DEPEND}
+BDEPEND="
+	${DEPEND}
 	sys-apps/coreutils
 "
 RDEPEND="
-	${COMMON_DEPEND}
+	${DEPEND}
 "
-
-DOCS=(
-	README.md
-)
 
 src_prepare() {
 	default
+
 	# Upstream provides shasums in the repo - let's use them
 	cd "${S}" || die
 	sha256sum -c "${S}"/SHA256SUMS || die "Shasum check failed"
@@ -51,9 +48,10 @@ src_compile() {
 }
 
 src_install() {
-	exeinto "/usr/bin"
-	doexe "${PN}"
+	einstalldocs
+
+	dobin "${PN}"
+
 	systemd_dounit "${S}"/resources/systemd/hblock.service
 	systemd_dounit "${S}"/resources/systemd/hblock.timer
-	einstalldocs
 }
