@@ -5,6 +5,10 @@
 		<email>themainone@mailu.io</email>
 		<name>TheMainOne</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>hedmoo@yahoo.com</email>
+		<name>Andreas Westman Dorcsak</name>
+	</maintainer>
 	<upstream>
 		<remote-id type="github">xanmod/linux</remote-id>
 	</upstream>
