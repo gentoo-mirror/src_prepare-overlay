@@ -20,9 +20,7 @@
 
 This is the overlay of our Matrix group where we talk about topics related to Gentoo (development, maintainance, support, communities and more).
 
-**WARNING: Do not expect high quality ebuilds!** While we do the best we can, most of us are still learning.
-
-A quick guide on how to test ebuilds will follow.
+**WARNING: Do not expect high quality ebuilds!** While we do the best we can, most of us are still learning. Read [WARNING.md](./WARNING.md) for more information.
 
 ## Why create this overlay?
 
