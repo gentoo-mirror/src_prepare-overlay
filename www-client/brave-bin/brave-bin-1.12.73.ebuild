@@ -23,6 +23,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="gnome-keyring"
 
+BDEPEND="
+	app-arch/unzip
+"
 DEPEND="
 	!www-client/brave
 "
