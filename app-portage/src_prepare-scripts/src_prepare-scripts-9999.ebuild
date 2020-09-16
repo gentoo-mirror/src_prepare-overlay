@@ -11,17 +11,32 @@ DESCRIPTION="Small scripts from src_prepare group"
 HOMEPAGE="https://gitlab.com/src_prepare/scripts"
 EGIT_REPO_URI="https://gitlab.com/src_prepare/${MY_PN}.git"
 
+RESTRICT="
+	mirror
+	!test? ( test )
+"
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="test"
 
-DEPEND="
+RDEPEND="
 	app-shells/bash:*
 "
-RDEPEND="
-	${DEPEND}
+DEPEND="
+	${RDEPEND}
+	test? (
+		  dev-python/pylint
+		  || (
+			 dev-util/shellcheck
+			 dev-util/shellcheck-bin
+		  )
+	)
 "
+
+src_test() {
+	bash ./test.sh || die "Tests failed"
+}
 
 src_install() {
 	# Install the docs
