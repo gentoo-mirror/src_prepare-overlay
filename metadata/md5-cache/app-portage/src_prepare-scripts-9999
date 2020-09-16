@@ -1,12 +1,14 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=install unpack
-DEPEND=app-shells/bash:*
+DEFINED_PHASES=install test unpack
+DEPEND=app-shells/bash:* test? ( dev-python/pylint || ( dev-util/shellcheck dev-util/shellcheck-bin ) )
 DESCRIPTION=Small scripts from src_prepare group
 EAPI=7
 HOMEPAGE=https://gitlab.com/src_prepare/scripts
+IUSE=test
 LICENSE=ISC
 PROPERTIES=live
 RDEPEND=app-shells/bash:*
+RESTRICT=mirror !test? ( test )
 SLOT=0
 _eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	git-r3	3e7ec3d6619213460c85e2aa48398441	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974
-_md5_=fd8a470bd68c9f0a62ba8be59762cbcf
+_md5_=88576cb7d907f60ae7f3ead0cf3d9ae4
