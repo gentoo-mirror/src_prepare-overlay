@@ -61,7 +61,7 @@ sys-kernel/liquorix-sources 5.7.12 5.7.17 5.7.18 5.7.19 5.8.6 5.8.7 5.8.8 5.8.9:
 sys-kernel/xanmod-sources 5.8.2 5.8.3 5.8.6 5.8.8 5.8.8-r1 5.8.9: Full XanMod sources including the Gentoo patchset for the 5.8 kernel tree
 sys-kernel/zen-sources 5.8.1 5.8.3 5.8.4 5.8.5 5.8.6 5.8.8 5.8.8-r1 5.8.8-r2 5.8.8-r3 5.8.9: Zen sources including the Gentoo patchsets for the 5.8 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
-www-client/brave-bin 1.12.70 1.12.72: Brave Web Browser
+www-client/brave-bin 1.12.73: Brave Web Browser
 www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
 www-client/palemoon 28.10.0 28.12.0 9999: Pale Moon Web Browser
 www-client/torbrowser-launcher 0.3.2 9999: A program to download, updated, and run the Tor Browser Bundle
