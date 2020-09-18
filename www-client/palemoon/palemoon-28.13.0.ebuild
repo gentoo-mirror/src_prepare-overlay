@@ -33,7 +33,7 @@ IUSE="
 	gnome
 	-gtk2
 	+gtk3
-	+jemalloc
+	jemalloc
 	pulseaudio
 	-necko-wifi
 	official-branding
