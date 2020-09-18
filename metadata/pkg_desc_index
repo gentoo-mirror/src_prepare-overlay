@@ -63,7 +63,7 @@ sys-kernel/zen-sources 5.8.1 5.8.3 5.8.4 5.8.5 5.8.6 5.8.8 5.8.8-r1 5.8.8-r2 5.8
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-client/brave-bin 1.12.73: Brave Web Browser
 www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
-www-client/palemoon 28.10.0 28.12.0 9999: Pale Moon Web Browser
+www-client/palemoon 28.12.0 28.13.0 9999: Pale Moon Web Browser
 www-client/torbrowser-launcher 0.3.2 9999: A program to download, updated, and run the Tor Browser Bundle
 www-client/waterfox 2020.05 2020.07.1 2020.07.2: Waterfox Web Browser
 x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur
