@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-   <upstream>
-     <remote-id type="github">zen-kernel/zen-kernel</remote-id>
-   </upstream>
- </pkgmetadata>
+	<maintainer type="person">
+		<email>themainone@mailu.io</email>
+		<name>TheMainOne</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>hedmoo@yahoo.com</email>
+		<name>Andreas Westman Dorcsak</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">zen-kernel/zen-kernel</remote-id>
+	</upstream>
+</pkgmetadata>
