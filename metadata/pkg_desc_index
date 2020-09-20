@@ -67,6 +67,7 @@ www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
 www-client/palemoon 28.12.0 28.13.0 9999: Pale Moon Web Browser
 www-client/torbrowser-launcher 0.3.2 9999: A program to download, updated, and run the Tor Browser Bundle
 www-client/waterfox 2020.05 2020.07.1 2020.07.2: Waterfox Web Browser
+www-servers/jellyfin-bin 10.6.4: The Free Software Media System
 x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
 x11-misc/polybar 9999: A fast and easy-to-use status bar
