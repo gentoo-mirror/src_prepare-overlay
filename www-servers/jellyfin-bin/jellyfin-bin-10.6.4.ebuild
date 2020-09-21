@@ -36,6 +36,7 @@ RDEPEND="
 	${DEPEND}
 	>=media-video/ffmpeg-4.2.2
 	dev-db/sqlite
+	dev-util/lttng-ust
 	media-libs/fontconfig
 	media-libs/freetype
 "
