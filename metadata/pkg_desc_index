@@ -1,4 +1,6 @@
+acct-group/jellyfin 0: Jelyfin program group
 acct-group/sensu 1: Sensu program group
+acct-user/jellyfin 0: Jellyfin user
 acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
 app-crypt/gtkhash 1.2 1.4 9999: A cross-platform desktop utility for computing message digests or checksums
