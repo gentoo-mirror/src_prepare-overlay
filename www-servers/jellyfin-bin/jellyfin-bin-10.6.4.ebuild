@@ -68,6 +68,13 @@ src_unpack() {
 	unpack_deb "${P}-web.deb"
 }
 
+src_prepare() {
+	default
+
+	# Comment JELLYFIN_FFMPEG_OPT as that path is wrong
+	sed -i "s/JELLYFIN_FFMPEG_OPT=/#JELLYFIN_FFMPEG_OPT=/" "etc/default/${MY_PN}"
+}
+
 src_install() {
 	# Install the Server part
 	insinto usr/lib/
@@ -76,7 +83,7 @@ src_install() {
 	doins -r "etc/${MY_PN}"
 
 	# Install the Web UI part
-	insinto "usr/lib/${MY_PN}/bin/${MY_PN}-web"
+	insinto "usr/share/${MY_PN}/web"
 	doins -r "usr/share/${MY_PN}/web"/*
 
 	# Install wrappers

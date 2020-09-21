@@ -9,7 +9,7 @@ name=jellyfin
 cfgfile="/etc/conf.d/${name}"
 
 command="/usr/lib/${name}/bin/${name}"
-command_user="${name}"
+command_user="${JELLYFIN_USER}"
 command_background="yes"
 
 pidfile="/run/${name}.pid"
@@ -32,4 +32,46 @@ start_pre() {
     echo "   JELLYFIN_SERVICE_OPT=${JELLYFIN_SERVICE_OPT}"
     echo "   JELLYFIN_USER=${JELLYFIN_USER}"
     echo "   JELLYFIN_WEB_OPT=${JELLYFIN_WEB_OPT}"
+
+    mkdir -p ${JELLYFIN_CACHE_DIR}
+    mkdir -p ${JELLYFIN_CONFIG_DIR}
+    mkdir -p ${JELLYFIN_DATA_DIR}
+    mkdir -p ${JELLYFIN_LOG_DIR}
+
+    chown -R ${command_user}:${command_user} ${JELLYFIN_CACHE_DIR}
+    chown -R ${command_user}:${command_user} ${JELLYFIN_CONFIG_DIR}
+    chown -R ${command_user}:${command_user} ${JELLYFIN_DATA_DIR}
+    chown -R ${command_user}:${command_user} ${JELLYFIN_LOG_DIR}
+}
+
+start() {
+    ebegin "Starting ${name}"
+
+    env JELLYFIN_CACHE_DIR=${JELLYFIN_CACHE_DIR} \
+        JELLYFIN_CONFIG_DIR=${JELLYFIN_CONFIG_DIR} \
+        JELLYFIN_DATA_DIR=${JELLYFIN_DATA_DIR} \
+        JELLYFIN_LOG_DIR=${JELLYFIN_LOG_DIR} \
+        start-stop-daemon --start --exec ${command} \
+                          --background \
+                          --pidfile ${pidfile} \
+                          --user ${command_user} \
+                          --make-pidfile \
+			  -- ${JELLYFIN_ARGS}
+
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping ${name}"
+
+    env JELLYFIN_CACHE_DIR=${JELLYFIN_CACHE_DIR} \
+        JELLYFIN_CONFIG_DIR=${JELLYFIN_CONFIG_DIR} \
+        JELLYFIN_DATA_DIR=${JELLYFIN_DATA_DIR} \
+        JELLYFIN_LOG_DIR=${JELLYFIN_LOG_DIR} \
+        start-stop-daemon --stop --exec ${command} \
+                          --pidfile ${pidfile} \
+                          --user ${command_user} \
+			  -- ${JELLYFIN_ARGS}
+
+    eend $?
 }
