@@ -56,7 +56,7 @@ start() {
                           --pidfile ${pidfile} \
                           --user ${command_user} \
                           --make-pidfile \
-			  -- ${JELLYFIN_ARGS}
+                          -- ${JELLYFIN_ARGS}
 
     eend $?
 }
@@ -71,7 +71,7 @@ stop() {
         start-stop-daemon --stop --exec ${command} \
                           --pidfile ${pidfile} \
                           --user ${command_user} \
-			  -- ${JELLYFIN_ARGS}
+                          -- ${JELLYFIN_ARGS}
 
     eend $?
 }
