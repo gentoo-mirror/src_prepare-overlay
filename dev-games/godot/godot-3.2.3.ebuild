@@ -140,12 +140,18 @@ src_compile() {
 }
 
 src_install() {
-	newicon icon.svg ${PN}.svg
-	dobin bin/godot.*
+	einstalldocs
 
-	if use llvm; then
-		make_desktop_entry godot.x11.opt.tools.64.llvm Godot
+	newicon icon.svg "${PN}.svg"
+
+	if use llvm
+	then
+		dobin "bin/${PN}.x11.opt.tools.64.llvm"
+		dosym "${EPREFIX}/usr/bin/${PN}.x11.opt.tools.64.llvm" "${EPREFIX}/usr/bin/${PN}"
 	else
-		make_desktop_entry godot.x11.opt.tools.64 Godot
+		dobin "bin/${PN}.x11.opt.tools.64"
+		dosym "${EPREFIX}/usr/bin/${PN}.x11.opt.tools.64" "${EPREFIX}/usr/bin/${PN}"
 	fi
+
+	make_desktop_entry godot Godot
 }

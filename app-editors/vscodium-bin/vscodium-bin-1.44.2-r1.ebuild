@@ -3,13 +3,13 @@
 
 EAPI=7
 
-inherit desktop pax-utils
+inherit desktop pax-utils xdg
 
 DESCRIPTION="Open Source Software Binaries of VSCode"
 HOMEPAGE="https://github.com/VSCodium/vscodium"
 SRC_URI="https://github.com/VSCodium/vscodium/releases/download/${PV}/VSCodium-linux-x64-${PV}.tar.gz -> ${P}.tar.gz"
-RESTRICT="mirror strip bindist"
 
+RESTRICT="mirror strip bindist"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -21,14 +21,15 @@ DEPEND="
 	x11-libs/cairo
 	x11-libs/libXtst
 "
-
 RDEPEND="
 	${DEPEND}
 	>=net-print/cups-2.0.0
-	x11-libs/libnotify
-	x11-libs/libXScrnSaver
 	dev-libs/nss
-	libsecret? ( app-crypt/libsecret[crypt] )
+	x11-libs/libXScrnSaver
+	x11-libs/libnotify
+	libsecret? (
+		app-crypt/libsecret[crypt]
+	)
 "
 
 QA_PRESTRIPPED="
@@ -42,6 +43,7 @@ src_install() {
 	insinto "/opt/${PN}"
 	doins -r *
 	dosym "../../opt/${PN}/bin/codium" "/usr/bin/codium-bin"
+	dosym "../../opt/${PN}/bin/codium" "/usr/bin/vscodium-bin"
 	make_desktop_entry "codium-bin" "Codium-bin" "codium-bin" "Development;IDE"
 	newicon "resources/app/resources/linux/code.png" codium-bin.png
 	fperms +x "/opt/${PN}/codium"
@@ -51,9 +53,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "You may install some additional utils, so check them in:"
-	elog "https://code.visualstudio.com/Docs/setup#_additional-tools"
-	elog ""
-	elog "Upstream renamed the binary from vscodium to codium."
-	elog "remember to update your aliases and shortcuts"
+	xdg_desktop_database_update
+	xdg_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
+	xdg_icon_cache_update
 }
