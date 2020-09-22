@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit xdg-utils cmake
+inherit xdg cmake
 
 DESCRIPTION="Professional open-source non-linear video editor"
 HOMEPAGE="https://github.com/olive-editor/olive"
@@ -63,16 +63,4 @@ src_install() {
 		dodoc -r docs/html/.
 	fi
 	cmake_src_install
-}
-
-pkg_postinst() {
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
-	xdg_icon_cache_update
 }
