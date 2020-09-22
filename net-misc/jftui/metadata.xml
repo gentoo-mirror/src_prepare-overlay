@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>xgqt@protonmail.com</email>
+        <name>Maciej Barć</name>
+    </maintainer>
+    <upstream>
+        <remote-id type="gitlab">Aanok/jftui</remote-id>
+    </upstream>
+    <longdescription>
+        jftui is a minimalistic, lightweight C99 command line client for the open source Jellyfin media server.
+        It is developed for the GNU/Linux OS only, although it may be possible to make it run on BSD's.
+        Run jftui. You will be prompted for a minimal interactive configuration on first run.
+        BEWARE: jftui fetches https://github.com/Aanok/jftui/releases/latest on startup to check for newer versions. You can avoid this by passing the --no-check-updates argument. There is also a settings file entry.
+        The interface should be intuitive enough: select one or more entries by entering the corresponding index number. See below for a full description of the command syntax.
+        jftui will drop into a command line instance of mpv when starting playback. It will use mpv.conf and input.conf files found in $XDG_CONFIG_HOME/jftui (this location can be overridden with the --config-dir argument). It will also try and load scripts found in the same folder, but no guarantees are made about them actually working correctly.
+        It is recommended to consult the wiki page on configuring mpv commands to use jftui: a few special ones are required in particular to manipulate the playback playlist.
+    </longdescription>
+</pkgmetadata>
