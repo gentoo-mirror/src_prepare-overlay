@@ -21,6 +21,7 @@ dev-games/godot:lto - ...
 dev-libs/sdl-kitchensink:examples - Build examples. If static is also set, examples will be linked against static library
 dev-libs/sdl-kitchensink:sanitize - Use sanitizer functions (ASAN/TSAN/etc...)
 dev-libs/sdl-kitchensink:static - Build static libraries
+dev-python/matrix-nio:e2e - Enable end to end encryption support
 dev-scheme/racket:futures - Enable racket/future library for fine-grained hardware parallelism
 dev-scheme/racket:graphics - Enable support for graphics
 dev-scheme/racket:places - Enable racket/place library for share-nothing parallelism and message-passing communication. Compared to futures, places are heavyweight, but they have a simpler performance model.
