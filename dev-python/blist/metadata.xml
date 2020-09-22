@@ -5,8 +5,7 @@
 		<email> parona@protonmail.com </email>
 		<name> Alfred Wingate </name>
 	</maintainer>
-	<maintainer type="person">
-		<email>hedmoo@yahoo.com</email>
-		<name>Andreas Westman Dorcsak</name>
-	</maintainer>
+	<longdescription lang="en">
+		A list-like type with better asymptotic performance and similar performance on small lists
+	</longdescription>
 </pkgmetadata>
