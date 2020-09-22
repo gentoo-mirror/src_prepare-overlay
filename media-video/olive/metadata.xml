@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<email> parona@protonmail.com </email>
-		<name> Parona </name>
+		<name> Alfred Wingate </name>
 	</maintainer>
 	<use>
 		<flag name="doxygen"> Build and install source code documentation </flag>
