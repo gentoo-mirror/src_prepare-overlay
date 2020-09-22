@@ -42,38 +42,35 @@ RDEPEND="
 "
 
 QA_PRESTRIPPED="
-	usr/lib/jellyfin/bin/System.Globalization.Native.so
-	usr/lib/jellyfin/bin/System.IO.Compression.Native.so
-	usr/lib/jellyfin/bin/System.Native.so
-	usr/lib/jellyfin/bin/System.Net.Http.Native.so
-	usr/lib/jellyfin/bin/System.Net.Security.Native.so
-	usr/lib/jellyfin/bin/System.Security.Cryptography.Native.OpenSsl.so
-	usr/lib/jellyfin/bin/createdump
-	usr/lib/jellyfin/bin/jellyfin
-	usr/lib/jellyfin/bin/libSkiaSharp.so
-	usr/lib/jellyfin/bin/libclrjit.so
-	usr/lib/jellyfin/bin/libcoreclr.so
-	usr/lib/jellyfin/bin/libcoreclrtraceptprovider.so
-	usr/lib/jellyfin/bin/libdbgshim.so
-	usr/lib/jellyfin/bin/libe_sqlite3.so
-	usr/lib/jellyfin/bin/libhostfxr.so
-	usr/lib/jellyfin/bin/libhostpolicy.so
-	usr/lib/jellyfin/bin/libmscordaccore.so
-	usr/lib/jellyfin/bin/libmscordbi.so
+	usr/lib/${MY_PN}/bin/System.Globalization.Native.so
+	usr/lib/${MY_PN}/bin/System.IO.Compression.Native.so
+	usr/lib/${MY_PN}/bin/System.Native.so
+	usr/lib/${MY_PN}/bin/System.Net.Http.Native.so
+	usr/lib/${MY_PN}/bin/System.Net.Security.Native.so
+	usr/lib/${MY_PN}/bin/System.Security.Cryptography.Native.OpenSsl.so
+	usr/lib/${MY_PN}/bin/createdump
+	usr/lib/${MY_PN}/bin/${MY_PN}
+	usr/lib/${MY_PN}/bin/libSkiaSharp.so
+	usr/lib/${MY_PN}/bin/libclrjit.so
+	usr/lib/${MY_PN}/bin/libcoreclr.so
+	usr/lib/${MY_PN}/bin/libcoreclrtraceptprovider.so
+	usr/lib/${MY_PN}/bin/libdbgshim.so
+	usr/lib/${MY_PN}/bin/libe_sqlite3.so
+	usr/lib/${MY_PN}/bin/libhostfxr.so
+	usr/lib/${MY_PN}/bin/libhostpolicy.so
+	usr/lib/${MY_PN}/bin/libmscordaccore.so
+	usr/lib/${MY_PN}/bin/libmscordbi.so
 "
 
 S="${WORKDIR}"
 
+PATCHES=(
+	"${FILESDIR}/${MY_PN}-default.patch"
+)
+
 src_unpack() {
 	unpack_deb "${P}-server-${ARCH}.deb"
 	unpack_deb "${P}-web.deb"
-}
-
-src_prepare() {
-	default
-
-	# Comment JELLYFIN_FFMPEG_OPT as that path is wrong
-	sed -i "s/JELLYFIN_FFMPEG_OPT=/#JELLYFIN_FFMPEG_OPT=/" "etc/default/${MY_PN}"
 }
 
 src_install() {
