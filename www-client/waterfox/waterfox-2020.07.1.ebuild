@@ -351,7 +351,7 @@ src_install() {
 	doins "${icon_path}/${icon}.png"
 	# Install a 48x48 icon into /usr/share/pixmaps for legacy DEs
 	newicon "${icon_path}/default48.png" "${icon}.png"
-	newmenu "${FILESDIR}/icon/${PN}.desktop" "${PN}.desktop"
+	newmenu "${FILESDIR}/${PN}.desktop" "${PN}.desktop"
 	sed -i -e "s:@NAME@:${name}:" -e "s:@ICON@:${icon}:" \
 		"${ED%/}/usr/share/applications/${PN}.desktop" \
 		|| die

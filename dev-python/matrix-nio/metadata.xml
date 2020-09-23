@@ -5,8 +5,7 @@
 		<email> parona@protonmail.com </email>
 		<name> Alfred Wingate </name>
 	</maintainer>
-	<maintainer type="person">
-		<email>hedmoo@yahoo.com</email>
-		<name>Andreas Westman Dorcsak</name>
-	</maintainer>
+	<use>
+		<flag name="e2e"> Enable end to end encryption support </flag>
+	</use>
 </pkgmetadata>
