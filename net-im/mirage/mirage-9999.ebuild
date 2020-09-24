@@ -27,6 +27,7 @@ if [[ "${PV}" == "9999" ]]
 then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/mirukana/mirage.git"
+	EGIT_BRANCH="dev"
 	EGIT_SUBMODULES=( '*' )
 else
 	SRC_URI="
@@ -74,6 +75,7 @@ RDEPEND="
 		>=dev-python/lxml-4.5.1[${PYTHON_USEDEP}]
 		>=dev-python/mistune-0.8.4[${PYTHON_USEDEP}]
 		>=dev-python/pillow-7.0.0[${PYTHON_USEDEP}]
+		>=dev-python/plyer-1.4.3[${PYTHON_USEDEP}]
 		>=dev-python/pymediainfo-4.2.1[${PYTHON_USEDEP}]
 		python_single_target_python3_6? ( >=dev-python/async_generator-1.10[python_targets_python3_6] )
 		python_single_target_python3_6? ( >=dev-python/dataclasses-0.6[python_targets_python3_6] )
