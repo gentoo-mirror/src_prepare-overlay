@@ -29,12 +29,12 @@ IUSE=""
 
 DEPEND="
 	!www-servers/jellyfin
-	acct-group/jellyfin
-	acct-user/jellyfin
 "
 RDEPEND="
 	${DEPEND}
 	>=media-video/ffmpeg-4.2.2
+	acct-group/jellyfin
+	acct-user/jellyfin
 	dev-db/sqlite
 	dev-util/lttng-ust
 	media-libs/fontconfig
