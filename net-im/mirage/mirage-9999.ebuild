@@ -60,6 +60,7 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	${PYTHON_DEPS}
+	>=dev-qt/qtgui-5.12[gif,png,jpeg]
 	>=dev-qt/qtimageformats-5.12
 	>=dev-qt/qtsvg-5.12
 	dev-libs/olm
