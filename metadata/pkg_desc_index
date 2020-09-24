@@ -25,6 +25,7 @@ dev-python/ffmpeg-python 0.2.0 9999: Python bindings for FFmpeg with complex fil
 dev-python/html_sanitizer 1.9.1: Allowlist-based HTML cleaner
 dev-python/itunespy 1.5.3 1.6 9999: A simple library to fetch data from the iTunes Store API
 dev-python/matrix-nio 0.15.1: A Python Matrix client library, designed according to sans I/O principles
+dev-python/plyer 1.4.3: Plyer is a platform-independent Python wrapper for platform-dependent APIs
 dev-python/pyfastcopy 1.0.3: Speed up Python's shutil.copyfile by using sendfile system call
 dev-python/pyfiglet 0.8.0 9999: An implementation of figlet written in Python
 dev-python/unpaddedbase64 1.1.0: Encode and decode Base64 without = padding.
@@ -39,7 +40,7 @@ games-fps/quake15 0_beta2: A mod that makes Quake faster paced, harder, gorier a
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 games-rpg/fallout1 1.1: Post-apocalyptic GURPS-like role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
-games-strategy/mindustry 104.6: A sandbox tower defense game
+games-strategy/mindustry 104.6 106: A sandbox tower defense game
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader 3.7-r1: Unofficial downloader for GOG content.
 mail-client/freelook-bin 1.0.0 1.0.1: Freelook, an Electron-based client for Microsoft Outlook
