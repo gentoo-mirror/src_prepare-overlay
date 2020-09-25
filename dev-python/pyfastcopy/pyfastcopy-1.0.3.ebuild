@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="Speed up Python's shutil.copyfile by using sendfile system call"
 HOMEPAGE="https://github.com/desbma/pyfastcopy"
-SRC_URI="https://github.com/desbma/pyfastcopy/archive/"${PV}".tar.gz -> "${PF}".tar.gz"
+SRC_URI="https://github.com/desbma/pyfastcopy/archive/"${PV}".tar.gz -> "${P}".tar.gz"
 
 LICENSE="PSF-2"
 SLOT="0"
