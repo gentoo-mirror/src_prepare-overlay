@@ -1,0 +1,12 @@
+diff --git a/python/olm_build.py b/python/olm_build.py
+index 0606337..1032da0 100644
+--- a/python/olm_build.py
++++ b/python/olm_build.py
+@@ -46,6 +46,7 @@ ffibuilder.set_source(
+         #include <olm/sas.h>
+     """,
+     libraries=["olm"],
++    library_dirs = ["../lib64"],
+     extra_compile_args=compile_args,
+     extra_link_args=link_args)
+ 
