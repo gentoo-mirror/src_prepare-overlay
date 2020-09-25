@@ -114,7 +114,3 @@ src_configure() {
 	fi
 	eqmake5 mirage.pro PREFIX="${D}"/usr ${myconf}
 }
-
-src_install() {
-	emake install
-}
