@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="A list-like type"
 HOMEPAGE="https://github.com/DanielStutzbach/blist http://stutzbachenterprises.com/blist/"
-SRC_URI="https://github.com/DanielStutzbach/blist/archive/v"${PV}".tar.gz -> "${PF}".tar.gz"
+SRC_URI="https://github.com/DanielStutzbach/blist/archive/v"${PV}".tar.gz -> "${P}".tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

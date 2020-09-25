@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="A Python Matrix client library, designed according to sans I/O principles"
 HOMEPAGE="https://github.com/poljar/matrix-nio"
-SRC_URI="https://github.com/poljar/matrix-nio/archive/${PV}.tar.gz -> ${PF}.tar.gz"
+SRC_URI="https://github.com/poljar/matrix-nio/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
