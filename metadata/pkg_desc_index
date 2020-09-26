@@ -48,6 +48,7 @@ media-fonts/joypixels 6.0.0: Emoji as a Service (formerly EmojiOne)
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
+media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
 media-video/tartube 2.0.0 2.1.0 9999: A GUI front-end for youtube-dl
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
@@ -60,6 +61,7 @@ net-libs/libcurl-gnutls 7.71.1: libcurl libraries linked with gnutls
 net-misc/ddgr 1.7 1.8 1.9 9999: DuckDuckGo from the terminal
 net-misc/downloader-cli 0.1.0 0.2.0 9999: A simple downloader written in Python with an awesome progressbar
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
+net-misc/meganz-sdk 3.7.1 9999: MEGA C++ SDK
 net-misc/ytmdl 2020.03.21 2020.05.14 2020.07.09 9999: A simple app to get songs from youtube in mp3 format
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-block/systemd-swap 4.4.0 9999: Script for creating swap space from zram swaps, swap files and swap partitions.
@@ -72,7 +74,7 @@ sys-kernel/liquorix-sources 5.8.6 5.8.7 5.8.8 5.8.9 5.8.10 5.8.11: Liquorix sour
 sys-kernel/xanmod-sources 5.8.6 5.8.8 5.8.8-r1 5.8.9 5.8.10 5.8.11: Full XanMod sources including the Gentoo patchset for the 5.8 kernel tree
 sys-kernel/zen-sources 5.8.5 5.8.6 5.8.8 5.8.8-r1 5.8.8-r2 5.8.8-r3 5.8.9 5.8.10 5.8.11: Zen sources including the Gentoo patchsets for the 5.8 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
-www-client/brave-bin 1.12.73 1.12.76: Brave Web Browser
+www-client/brave-bin 1.12.76 1.12.77: Brave Web Browser
 www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
 www-client/palemoon 28.12.0 28.13.0 9999: Pale Moon Web Browser
 www-client/torbrowser-launcher 0.3.2 9999: A program to download, updated, and run the Tor Browser Bundle
