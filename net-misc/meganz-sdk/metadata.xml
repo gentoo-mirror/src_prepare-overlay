@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>y0rune@aol.com</email>
+		<name>Marcin Woźniak</name>
+	</maintainer>
+	<use>
+		<flag name="freeimage">Enable support for image I/O via media-libs/freeimage</flag>
+		<flag name="fuse">Build FUSE-based example client</flag>
+		<flag name="libuv">Support asynchronous I/O via dev-libs/libuv</flag>
+		<flag name="mediainfo">Use media-libs/libmediainfo for media files</flag>
+		<flag name="qt">Install QT bindings</flag>
+	</use>
+</pkgmetadata>
