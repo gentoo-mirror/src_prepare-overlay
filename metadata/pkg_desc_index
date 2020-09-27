@@ -27,7 +27,6 @@ dev-python/itunespy 1.5.3 1.6 9999: A simple library to fetch data from the iTun
 dev-python/matrix-nio 0.15.1: A Python Matrix client library, designed according to sans I/O principles
 dev-python/plyer 1.4.3: Plyer is a platform-independent Python wrapper for platform-dependent APIs
 dev-python/pyfastcopy 1.0.3: Speed up Python's shutil.copyfile by using sendfile system call
-dev-python/pyfiglet 0.8.0 9999: An implementation of figlet written in Python
 dev-python/unpaddedbase64 1.1.0: Encode and decode Base64 without = padding.
 dev-scheme/guile-colorized 9999: Colorized REPL for GNU Guile
 dev-scheme/racket 7.7-r1 7.8-r1: General purpose, multi-paradigm Lisp-Scheme programming language
