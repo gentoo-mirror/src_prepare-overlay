@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="Encode and decode Base64 without "=" padding."
 HOMEPAGE="https://github.com/matrix-org/python-unpaddedbase64"
-SRC_URI="https://github.com/matrix-org/python-unpaddedbase64/archive/v"${PV}".tar.gz -> "${PF}".tar.gz"
+SRC_URI="https://github.com/matrix-org/python-unpaddedbase64/archive/v"${PV}".tar.gz -> "${P}".tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"

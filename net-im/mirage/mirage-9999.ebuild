@@ -60,6 +60,7 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	${PYTHON_DEPS}
+	>=dev-qt/qtgui-5.12[gif,png,jpeg]
 	>=dev-qt/qtimageformats-5.12
 	>=dev-qt/qtsvg-5.12
 	dev-libs/olm
@@ -112,8 +113,4 @@ src_configure() {
 		myconf="CONFIG+=no-x11"
 	fi
 	eqmake5 mirage.pro PREFIX="${D}"/usr ${myconf}
-}
-
-src_install() {
-	emake install
 }

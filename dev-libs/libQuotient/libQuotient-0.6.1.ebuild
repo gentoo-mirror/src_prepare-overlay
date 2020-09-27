@@ -10,9 +10,9 @@ inherit eutils cmake
 
 if [[ ${PV} == "9999" ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/quotient-im/${PN}.git"
+	EGIT_REPO_URI="https://github.com/quotient-im/"${PN}".git"
 else
-	SRC_URI="https://github.com/quotient-im/libQuotient/archive/${PV}.tar.gz "
+	SRC_URI="https://github.com/quotient-im/libQuotient/archive/"${PV}".tar.gz -> "${P}".tar.gz"
 	KEYWORDS="~amd64"
 fi
 
@@ -28,7 +28,7 @@ DEPEND="
 	!!dev-libs/libqmatrixclient
 "
 
-S="${WORKDIR}/${PN}-${PV}"
+S=""${WORKDIR}"/"${PN}"-"${PV}""
 
 src_configure() {
 	local mycmakeargs=(

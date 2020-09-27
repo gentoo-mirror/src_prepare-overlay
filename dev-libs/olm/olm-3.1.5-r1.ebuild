@@ -30,6 +30,10 @@ DEPEND="
 	)
 "
 
+CMAKE_IN_SOURCE_BUILD=1
+
+PATCHES=( "${FILESDIR}/olmlib.patch" )
+
 src_prepare() {
 	cmake_src_prepare
 	use python && (cd python; distutils-r1_src_prepare)
