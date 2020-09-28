@@ -74,3 +74,85 @@ and you have fixed an error, the commit or merge request should look like this:
 `mail-client/freelook-bin: fix QA - EROOT missing slash`
 
 **This system also applies on your metadata.xml and Manifest.**
+
+## Development workflow
+
+### Add the overlay to the system
+Edit /etc/portage/repos.conf/src_prepare-overlay.conf (as root)
+```toml
+[src_prepare-overlay]
+auto-sync = yes
+location = /var/db/repos/src_prepare-overlay
+sync-git-clone-extra-opts = --depth=999999999 --no-shallow-submodules --no-single-branch --verbose
+sync-git-pull-extra-opts = --depth=999999999 --verbose
+sync-type = git
+sync-uri = git@gitlab.com:src_prepare/src_prepare-overlay.git
+sync-user = <your_user_developer>:portage
+```
+If you dont have write access to the cloned branch yet use "sync-uri = https://gitlab.com/src_prepare/src_prepare-overlay.git" instead.
+
+### Sync the overlay
+As root
+```bash
+emaint sync -r src_prepare-overlay
+```
+
+### Add new package
+
+#### Basics
+As user
+```bash
+cd /var/db/repos/src_prepare-overlay
+mkdir -p category/package-name
+cd category/package-name
+touch metadata.xml
+touch package-name-package-version.ebuild
+```
+Now edit the ebuild and metadata files accordingly.
+[For ebuild developemnt details look here](https://devmanual.gentoo.org/)
+
+#### Tests
+If a package's upstream has tests don't forget to enable them.
+If they fail describe why in the comments inside the ebuild
+(but please make the descriptions reasonably short).
+
+##### Package testing
+Make sure you have FEATURES="test" enabled in the make.conf
+```bash
+echo 'FEATURES="${FEATURES} test"' >> make.conf
+```
+And then, as root
+```bash
+echo "category/package-name test" >> /etc/portage/package.use/development-tests
+```
+
+##### Ebuild testing
+repoman (app-portage/repoman) and pkgcheck (dev-util/pkgcheck)
+will give you a report of what should be fixed.
+```bash
+repoman -Idx full
+pkgcheck scan
+```
+
+#### Metadata
+metadata.xml should contain at least these lines:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <upstream>
+    <remote-id type="githosting">organization-or-user/package</remote-id>
+  </upstream>
+</pkgmetadata>
+```
+Adjust the "type" and "organization-or-user/package" accordingly.
+
+#### Installation
+If the (system wide) repository is set up correctly you should be able to just emerge the package you added right away
+```bash
+emegre --ask --verbose --jobs=1 --quiet-build=n category/package-name
+```
+
+#### Git
+Follow the rules described in ["Submitting Merge Requests"](#submitting-merge-requests-1) section.
+GPG signing is not required but encouraged. Gentoo Wiki provides a great example [how to create a strong key](https://wiki.gentoo.org/wiki/Project:Infrastructure/Generating_GLEP_63_based_OpenPGP_keys).
