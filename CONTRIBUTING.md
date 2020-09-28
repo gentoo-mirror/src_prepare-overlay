@@ -109,7 +109,7 @@ touch metadata.xml
 touch package-name-package-version.ebuild
 ```
 Now edit the ebuild and metadata files accordingly.
-[https://devmanual.gentoo.org/](For ebuild developemnt details look here)
+[For ebuild developemnt details look here](https://devmanual.gentoo.org/)
 
 #### Tests
 If a package's upstream has tests don't forget to enable them.
@@ -123,7 +123,7 @@ echo 'FEATURES="${FEATURES} test"' >> make.conf
 ```
 And then, as root
 ```bash
-echo "categroy/package-name test" >> /etc/portage/package.use/development-tests
+echo "category/package-name test" >> /etc/portage/package.use/development-tests
 ```
 
 ##### Ebuild testing
@@ -150,9 +150,9 @@ Adjust the "type" and "organization-or-user/package" accordingly.
 #### Installation
 If the (system wide) repository is set up correctly you should be able to just emerge the package you added right away
 ```bash
-emegre --ask --verbose --jobs=1 --quiet-build=n categroy/package-name
+emegre --ask --verbose --jobs=1 --quiet-build=n category/package-name
 ```
 
 #### Git
-Follow the rules described in "Submitting Merge Requests" section.
-GPG signing is not required but encouraged. Gentoo Wiki provides a great example [https://wiki.gentoo.org/wiki/Project:Infrastructure/Generating_GLEP_63_based_OpenPGP_keys](how to create a strong key).
+Follow the rules described in ["Submitting Merge Requests"](#submitting-merge-requests-1) section.
+GPG signing is not required but encouraged. Gentoo Wiki provides a great example [how to create a strong key](https://wiki.gentoo.org/wiki/Project:Infrastructure/Generating_GLEP_63_based_OpenPGP_keys).
