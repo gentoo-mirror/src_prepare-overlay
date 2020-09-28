@@ -112,7 +112,7 @@ RDEPEND="
 	dev-libs/expat
 	dev-libs/libffi
 	media-libs/fontconfig
-	virtual/ffmpeg
+	media-video/ffmpeg
 	virtual/freedesktop-icon-theme
 	x11-libs/gdk-pixbuf
 	x11-libs/libX11
@@ -140,7 +140,6 @@ RDEPEND="
 	startup-notification? (
 		>=x11-libs/startup-notification-0.8
 	)
-
 	system-icu? (
 		>=dev-libs/icu-59.1:=
 	)
