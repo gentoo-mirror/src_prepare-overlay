@@ -8,7 +8,7 @@ Before you continue, **read [TODO.md](../TODO.md)!**
 You can still file issues to let us and others know when something breaks.
 
 - kernel packages may install a different version, check the version you got after installation
-- Waterfox is broken, like 80% of the time, we know...
+- Icecat is broken, like 80% of the time, we know...
 
 
 ## Outdated packages
