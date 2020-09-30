@@ -33,8 +33,8 @@ When submitting an issue you will have to provide:
 
 - `category/package` (e.g. `www-client/icecat`)
 - the description of the package
-- the home page of the package 
-- OPTIONAL: the direct download link of the package 
+- the home page of the package
+- OPTIONAL: the direct download link of the package
 - the license of the package (e.g. GPLv2)
 
 by submitting the skeleton of the ebuild in quotes:
@@ -42,10 +42,10 @@ by submitting the skeleton of the ebuild in quotes:
 ```
 NAME=""
 
-DESCRIPTION=""     
-HOMEPAGE=""     
-SRC_URI=""     
-LICENSE=""     
+DESCRIPTION=""
+HOMEPAGE=""
+SRC_URI=""
+LICENSE=""
 ```
 
 After this, you can safely submit the issue, and we will take care of it.
@@ -119,7 +119,10 @@ If they fail describe why in the comments inside the ebuild
 ##### Package testing
 Make sure you have FEATURES="test" enabled in the make.conf
 ```bash
-echo 'FEATURES="${FEATURES} test"' >> make.conf
+if ! grep test /etc/portage/make.conf
+then
+    echo 'FEATURES="${FEATURES} test"' >> /etc/portage/make.conf
+fi
 ```
 And then, as root
 ```bash
@@ -150,9 +153,9 @@ Adjust the "type" and "organization-or-user/package" accordingly.
 #### Installation
 If the (system wide) repository is set up correctly you should be able to just emerge the package you added right away
 ```bash
-emegre --ask --verbose --jobs=1 --quiet-build=n category/package-name
+emegre --ask --jobs=1 --oneshot --quiet-build=n --verbose category/package-name
 ```
 
 #### Git
 Follow the rules described in ["Submitting Merge Requests"](#submitting-merge-requests-1) section.
-GPG signing is not required but encouraged. Gentoo Wiki provides a great example [how to create a strong key](https://wiki.gentoo.org/wiki/Project:Infrastructure/Generating_GLEP_63_based_OpenPGP_keys).
+GPG signing is not required but encouraged. Gentoo Wiki provides a great example [on creating a strong key](https://wiki.gentoo.org/wiki/Project:Infrastructure/Generating_GLEP_63_based_OpenPGP_keys).
