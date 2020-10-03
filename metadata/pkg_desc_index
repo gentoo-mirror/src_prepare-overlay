@@ -73,7 +73,7 @@ sys-boot/rpi-imager 1.2 1.4 9999: Raspberry Pi Imaging Utility
 sys-devel/icecream 1.3.1: Distributed compiling of C(++) code across several machines; based on distcc
 sys-kernel/ck-sources 5.6.11 5.7.2 5.7.3 5.7.4 5.7.5: Con Kolivas sources including the Gentoo patchsets for the 5.7 kernel tree
 sys-kernel/liquorix-sources 5.8.8 5.8.9 5.8.10 5.8.11 5.8.12 5.8.12-r1 5.8.13: Liquorix sources including the Gentoo patchsets for the 5.8 kernel tree
-sys-kernel/xanmod-sources 5.8.8 5.8.8-r1 5.8.9 5.8.10 5.8.11 5.8.12: Full XanMod sources including the Gentoo patchset for the 5.8 kernel tree
+sys-kernel/xanmod-sources 5.8.9 5.8.10 5.8.11 5.8.12 5.8.13: Full XanMod sources including the Gentoo patchset for the 5.8 kernel tree
 sys-kernel/zen-sources 5.8.8 5.8.8-r1 5.8.8-r2 5.8.8-r3 5.8.9 5.8.10 5.8.11 5.8.12 5.8.13: Zen sources including the Gentoo patchsets for the 5.8 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-client/brave-bin 1.12.76 1.12.77: Brave Web Browser
