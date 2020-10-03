@@ -47,6 +47,7 @@ mail-client/freelook-bin 1.0.0 1.0.1: Freelook, an Electron-based client for Mic
 media-fonts/joypixels 6.0.0: Emoji as a Service (formerly EmojiOne)
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
+media-gfx/drawing 0.6.1 9999: A drawing application for the GNOME desktop
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
