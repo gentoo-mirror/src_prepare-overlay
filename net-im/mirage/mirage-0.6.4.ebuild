@@ -9,33 +9,23 @@ inherit qmake-utils python-single-r1 xdg
 DESCRIPTION="A fancy, customizable, keyboard-operable Qt/QML+Python Matrix chat client."
 HOMEPAGE="https://github.com/mirukana/mirage"
 
+# Currently only one submodule needed for the build, but keeping the capacity to add more submodules for the future.
 SUBMODULE_COMMITS=(
-	"ec3af1a087a0c4c0c31709ed94b7e939d3e51400"
-	"36befddf5d57faad990e72c88c5844794f274145"
-	"0e796aacc16388a164bab0bb0ce9dabc885ed7fa"
 	"9e9be32d6010cad484a7b12b1a3d19c6cf4c1353"
-	"f5ca07b71cecda685d0dd4b3c74d2fb2ca71f711"
 )
 
-#[0] mirukana/RadialBarDemo
-#[1] oKcerG/SortFilterProxyModel
-#[2] Cutehacks/gel
-#[3] hsluv/hsluv-c
-#[4] benlau/qsyncable
+#[0] hsluv/hsluv-c
 
 if [[ "${PV}" == "9999" ]]
 then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/mirukana/mirage.git"
-	EGIT_SUBMODULES=( '*' )
+	EGIT_BRANCH="dev"
+	EGIT_SUBMODULES=( submodules/hsluv-c )
 else
 	SRC_URI="
 		https://github.com/mirukana/"${PN}"/archive/v"${PV}".tar.gz -> "${PN}"-v"${PV}".tar.gz
-		https://github.com/mirukana/RadialBarDemo/archive/"${SUBMODULE_COMMITS[0]}".tar.gz -> RadialBarDemo-"${SUBMODULE_COMMITS[0]}".tar.gz
-		https://github.com/oKcerG/SortFilterProxyModel/archive/"${SUBMODULE_COMMITS[1]}".tar.gz -> SortFilterProxyModel-"${SUBMODULE_COMMITS[1]}".tar.gz
-		https://github.com/Cutehacks/gel/archive/"${SUBMODULE_COMMITS[2]}".tar.gz -> gel-"${SUBMODULE_COMMITS[2]}".tar.gz
-		https://github.com/hsluv/hsluv-c/archive/"${SUBMODULE_COMMITS[3]}".tar.gz -> hsluv-c-"${SUBMODULE_COMMITS[3]}".tar.gz
-		https://github.com/benlau/qsyncable/archive/"${SUBMODULE_COMMITS[4]}".tar.gz -> qsyncable-"${SUBMODULE_COMMITS[4]}".tar.gz
+		https://github.com/hsluv/hsluv-c/archive/"${SUBMODULE_COMMITS[0]}".tar.gz -> hsluv-c-"${SUBMODULE_COMMITS[0]}".tar.gz
 	"
 	KEYWORDS="~amd64"
 fi
@@ -98,7 +88,7 @@ src_prepare() {
 		mv ""${WORKDIR}"/"${IN_DIR}""*/* ""${S}"/"${OUT_DIR}"" || die
 	}
 	if [ "${PV}" != "9999" ]; then
-		local submodules_libs="RadialBarDemo SortFilterProxyModel gel hsluv-c qsyncable"
+		local submodules_libs="hsluv-c"
 		for submodules_lib in ${submodules_libs} ; do
 			move_lib "${submodules_lib}" submodules
 		done
