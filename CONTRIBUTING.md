@@ -1,4 +1,4 @@
-# Contributing
+﻿# Contributing
 
 ## How to contribute
 
@@ -89,7 +89,11 @@ sync-type = git
 sync-uri = git@gitlab.com:src_prepare/src_prepare-overlay.git
 sync-user = <your_user_developer>:portage
 ```
-If you dont have write access to the cloned branch yet use "sync-uri = https://gitlab.com/src_prepare/src_prepare-overlay.git" instead.
+If you don't have write access to the cloned branch yet use "sync-uri = https://gitlab.com/src_prepare/src_prepare-overlay.git" instead.
+
+If you lock your SSH key with a password autosyncing may fail.
+To evade that use "auto-sync = no" and pull the changes manually (or using a different tool other than 'emerge --sync' or 'eix-sync').
+Either way, remember that if you pull with a user different than <your_user_developer> the sync will fail (because that user likely won't have the SSH keys).
 
 ### Sync the overlay
 As root
