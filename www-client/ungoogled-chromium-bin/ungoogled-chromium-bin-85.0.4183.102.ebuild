@@ -111,6 +111,9 @@ src_install() {
 pkg_postinst() {
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
+
+	elog "Some versions have cleaning cookies on browser exit enabled by default."
+	elog "This can be toggled in the browser settings."
 }
 
 pkg_postrm() {
