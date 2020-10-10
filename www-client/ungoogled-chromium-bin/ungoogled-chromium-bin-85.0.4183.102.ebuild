@@ -105,7 +105,7 @@ src_install() {
 	dosym "${UNGCH_HOME}/chrome" "${UNGCH_HOME}/${UNGCH_PN}"
 	dosym "${UNGCH_HOME}/${UNGCH_PN}" "/usr/bin/${PN}"
 
-	make_desktop_entry "${PN}" "${UNGCH_PN^}" "chromium" "Network;WebBrowser;"
+	make_desktop_entry "${PN}" "${UNGCH_PN^} (binary)" "chromium" "Network;WebBrowser;"
 }
 
 pkg_postinst() {
