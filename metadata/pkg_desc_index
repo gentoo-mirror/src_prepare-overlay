@@ -79,7 +79,7 @@ sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-client/brave-bin 1.12.77 1.12.78: Brave Web Browser
 www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
 www-client/palemoon 28.12.0 28.13.0 9999: Pale Moon Web Browser
-www-client/torbrowser-launcher 0.3.2 9999: A program to download, updated, and run the Tor Browser Bundle
+www-client/torbrowser-launcher 0.3.2 0.3.3 9999: A program to download, updated, and run the Tor Browser Bundle
 www-client/ungoogled-chromium-bin 85.0.4183.102: Google Chromium, sans integration with Google (binary package)
 www-client/waterfox 2020.07.1 2020.07.2 2020.09: Waterfox Web Browser
 www-servers/jellyfin-bin 10.6.4: The Free Software Media System
