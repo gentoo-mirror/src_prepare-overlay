@@ -13,7 +13,6 @@ HOMEPAGE="https://gitlab.com/src_prepare/leaden"
 if [[ "${PV}" == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://gitlab.com/src_prepare/leaden.git"
-	KEYWORDS=""
 else
 	# Modify SRC_URI to be suitable when first release is made
 	SRC_URI="https://gitlab.com/src_prepare/leaden/-/archive/${PV}/leaden-${PV}.tar.gz"
