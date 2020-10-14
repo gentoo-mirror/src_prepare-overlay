@@ -11,4 +11,4 @@ RDEPEND=>=dev-libs/glib-2.38:2 >=x11-libs/gtk+-3.20.0:3 net-libs/glib-networking
 RESTRICT=mirror
 SLOT=0
 _eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	git-r3	3e7ec3d6619213460c85e2aa48398441	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
-_md5_=8e333f0e3a39db8eb94ea9a27fe1dcfc
+_md5_=0bf1f7d06bd78588175eb1df51bc0556
