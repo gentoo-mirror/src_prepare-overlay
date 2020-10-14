@@ -13,7 +13,6 @@ HOMEPAGE="https://gitlab.gnome.org/ZanderBrown/kgx"
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://gitlab.gnome.org/ZanderBrown/${PN}.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://gitlab.gnome.org/ZanderBrown/${PN}/-/archive/${PV}/${P}.tar.gz"
 	KEYWORDS="~amd64"

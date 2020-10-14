@@ -11,7 +11,6 @@ HOMEPAGE="https://gitlab.com/mildlyparallel/pscircle"
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://gitlab.com/mildlyparallel/${PN}.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://gitlab.com/mildlyparallel/${PN}/-/archive/v${PV}/${PN}-v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"

@@ -14,7 +14,6 @@ HOMEPAGE="https://www.palemoon.org/"
 
 if [[ "${PV}" == *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/MoonchildProductions/Pale-Moon.git"
-	KEYWORDS=""
 else
 	EGIT_REPO_URI="https://github.com/MoonchildProductions/Pale-Moon.git"
 	EGIT_COMMIT="${PV}_Release"
