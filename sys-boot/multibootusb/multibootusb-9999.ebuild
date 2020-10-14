@@ -13,7 +13,6 @@ HOMEPAGE="http://multibootusb.org"
 if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/mbusb/multibootusb.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/mbusb/multibootusb/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"

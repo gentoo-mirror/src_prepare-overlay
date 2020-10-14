@@ -17,7 +17,6 @@ RESTRICT="
 "
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS=""
 IUSE="test"
 
 RDEPEND="

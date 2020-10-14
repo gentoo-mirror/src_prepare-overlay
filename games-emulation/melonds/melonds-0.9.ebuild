@@ -14,7 +14,6 @@ HOMEPAGE="http://melonds.kuribo64.net/"
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/Arisotura/${MY_PN}.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/Arisotura/${MY_PN}/archive/${PV}.tar.gz -> ${MY_P}.tar.gz"
 	KEYWORDS="~amd64"

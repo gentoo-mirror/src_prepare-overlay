@@ -28,6 +28,10 @@ src_unpack() {
 	cp "${DISTDIR}/${P}.jar" "${S}/${MY_PN}.jar" || die
 }
 
+# src_prepare() {
+# 	cp "${P}.jar" "${MY_PN}.jar"
+# }
+
 src_install() {
 	insinto "/opt/${MY_PN}"
 	doins "${MY_PN}.jar"

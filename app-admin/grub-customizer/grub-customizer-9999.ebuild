@@ -11,7 +11,6 @@ HOMEPAGE="https://launchpad.net/grub-customizer"
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://git.launchpad.net/${PN}"
-	KEYWORDS=""
 else
 	PB="$(ver_cut 1-2)"
 	SRC_URI="https://launchpad.net/${PN}/${PB}/${PV}/+download/${PN}_${PV}.tar.gz"
