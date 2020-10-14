@@ -11,7 +11,6 @@ HOMEPAGE="https://github.com/babluboy/nutty"
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/babluboy/${PN}.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/babluboy/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"

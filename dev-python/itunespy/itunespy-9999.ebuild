@@ -13,7 +13,6 @@ HOMEPAGE="https://github.com/sleepyfran/itunespy"
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/sleepyfran/${PN}.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/sleepyfran/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"

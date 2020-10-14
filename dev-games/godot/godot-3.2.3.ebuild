@@ -14,7 +14,6 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/godotengine/${PN}.git"
 	EGIT_BRANCH="master"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/godotengine/${PN}/archive/${PV}-stable.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/${P}-stable"

@@ -12,7 +12,6 @@ HOMEPAGE="https://github.com/jaseg/lolcat"
 if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/jaseg/${MY_PN}.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/jaseg/${MY_PN}/archive/v${PV}.tar.gz -> ${MY_P}.tar.gz"
 	KEYWORDS="~amd64"

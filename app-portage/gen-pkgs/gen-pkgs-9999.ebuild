@@ -11,7 +11,6 @@ HOMEPAGE="https://gitlab.com/src_prepare/gen-pkgs"
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://gitlab.com/src_prepare/${PN}.git"
-	KEYWORDS=""
 else
 	SRC_URI="https://gitlab.com/src_prepare/${PN}/-/archive/${PV}/${PN}-${PV}.tar.gz"
 	KEYWORDS="~amd64"
