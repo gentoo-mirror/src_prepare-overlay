@@ -16,6 +16,7 @@ app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
 app-portage/src_prepare-scripts 9999: Small scripts from src_prepare group
 app-text/pandoc-bin 2.10.1 2.11.0.2: Universal markup converter
 dev-games/godot 3.2.3: Multi-platform 2D and 3D game engine
+dev-lang/lci 0.11.2: LOLCODE interpreter written in C
 dev-libs/libQtOlm 3.0.1 9999: A Qt wrapper for libolm
 dev-libs/libQuotient 0.6.0 0.6.1 9999: A Qt5 library to write cross-platform clients for Matrix
 dev-libs/olm 3.1.5 3.1.5-r1: An implementation of the Double Ratchet cryptographic ratchet in C++
