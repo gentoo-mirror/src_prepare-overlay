@@ -9,7 +9,7 @@ DESCRIPTION="TETR.IO desktop client"
 HOMEPAGE="https://tetr.io/"
 SRC_URI="https://tetr.io/about/desktop/builds/TETR.IO%20Setup.tar.gz"
 
-LICENSE="non-free"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
