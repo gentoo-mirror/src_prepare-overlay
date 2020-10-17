@@ -11,12 +11,7 @@ SRC_URI="https://tetr.io/about/desktop/builds/TETR.IO%20Setup.tar.gz"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE=""
-
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
+KEYWORDS="~amd64"
 
 src_install(){
 	pax-mark m code
