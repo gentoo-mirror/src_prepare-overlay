@@ -5,7 +5,9 @@ EAPI=7
 
 MY_PN="scripts"
 
-inherit eutils git-r3
+PYTHON_COMPAT=( python3_{6..8} )
+
+inherit eutils git-r3 python-r1
 
 DESCRIPTION="Small scripts from src_prepare group"
 HOMEPAGE="https://gitlab.com/src_prepare/scripts"
@@ -18,14 +20,26 @@ RESTRICT="
 LICENSE="ISC"
 SLOT="0"
 IUSE="test"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
+	${PYTHON_DEPS}
+	app-admin/eselect
+	app-portage/eix
+	app-portage/repoman
 	app-shells/bash:*
+	dev-lang/perl
+	dev-util/pkgcheck
+	sys-apps/portage
+	|| (
+		app-portage/euscan
+		app-portage/euscan-ng
+	)
 "
 DEPEND="
 	${RDEPEND}
 	test? (
-		  dev-python/pylint
+		  dev-python/pylint[${PYTHON_USEDEP}]
 		  || (
 			 dev-util/shellcheck
 			 dev-util/shellcheck-bin
