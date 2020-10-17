@@ -7,28 +7,19 @@ inherit cmake
 
 DESCRIPTION="LOLCODE interpreter written in C"
 HOMEPAGE="http://www.lolcode.org/"
-SRC_URI="https://github.com/justinmeza/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/justinmeza/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="doc"
 
-DEPEND="app-doc/doxygen"
-
-src_prepare() {
-	cmake_src_prepare
-}
-
-src_configure(){
-	cmake_src_configure
-}
+DEPEND="doc? (
+	app-doc/doxygen
+)
+"
 
 src_compile() {
 	cmake_src_compile
 	use doc && cmake_src_compile docs
-}
-
-src_install() {
-	cmake_src_install
 }
