@@ -1,14 +1,15 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install test unpack
-DEPEND=app-shells/bash:* test? ( dev-python/pylint || ( dev-util/shellcheck dev-util/shellcheck-bin ) )
+DEPEND=python_targets_python3_6? ( dev-lang/python:3.6 ) python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_6(-)?,python_targets_python3_7(-)?,python_targets_python3_8(-)?,-python_single_target_python3_6(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-)] app-admin/eselect app-portage/eix app-portage/repoman app-shells/bash:* dev-lang/perl dev-util/pkgcheck sys-apps/portage || ( app-portage/euscan app-portage/euscan-ng ) test? ( dev-python/pylint[python_targets_python3_6(-)?,python_targets_python3_7(-)?,python_targets_python3_8(-)?,-python_single_target_python3_6(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-)] || ( dev-util/shellcheck dev-util/shellcheck-bin ) )
 DESCRIPTION=Small scripts from src_prepare group
 EAPI=7
 HOMEPAGE=https://gitlab.com/src_prepare/scripts
-IUSE=test
+IUSE=test python_targets_python3_6 python_targets_python3_7 python_targets_python3_8
 LICENSE=ISC
 PROPERTIES=live
-RDEPEND=app-shells/bash:*
+RDEPEND=python_targets_python3_6? ( dev-lang/python:3.6 ) python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_6(-)?,python_targets_python3_7(-)?,python_targets_python3_8(-)?,-python_single_target_python3_6(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-)] app-admin/eselect app-portage/eix app-portage/repoman app-shells/bash:* dev-lang/perl dev-util/pkgcheck sys-apps/portage || ( app-portage/euscan app-portage/euscan-ng )
+REQUIRED_USE=|| ( python_targets_python3_6 python_targets_python3_7 python_targets_python3_8 )
 RESTRICT=mirror !test? ( test )
 SLOT=0
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	git-r3	3e7ec3d6619213460c85e2aa48398441	l10n	8cdd85e169b835d518bc2fd59f780d8e	wrapper	4251d4c84c25f59094fd557e0063a974
-_md5_=d3d641c7f93b8a50657fd5ae3e580159
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	git-r3	3e7ec3d6619213460c85e2aa48398441	l10n	8cdd85e169b835d518bc2fd59f780d8e	multibuild	b2c915190b051f55a23b9354b9849847	multilib	98584e405e2b0264d37e8f728327fed1	python-r1	8d03325e7e3cf3e1465d9c32031e2517	python-utils-r1	e41e32d357e5bdd388b5be2ce24f3883	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	wrapper	4251d4c84c25f59094fd557e0063a974
+_md5_=71dd529c18c20cd2536b9d90ad91823c
