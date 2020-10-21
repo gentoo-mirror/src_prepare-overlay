@@ -78,6 +78,9 @@ RDEPEND="
 	x11-libs/libxshmfence
 	x11-libs/pango
 	x11-libs/pixman
+	gnome-keyring? (
+		gnome-base/gnome-keyring
+	)
 "
 
 QA_PREBUILT="*"
@@ -99,24 +102,21 @@ src_install() {
 	insinto "${UNGCH_HOME}"
 	doins -r *
 
+	newicon -s 48 product_logo_48.png "${PN}.png"
+
 	exeinto "${UNGCH_HOME}"
 	doexe chrome
 
 	dosym "${UNGCH_HOME}/chrome" "${UNGCH_HOME}/${UNGCH_PN}"
 	dosym "${UNGCH_HOME}/${UNGCH_PN}" "/usr/bin/${PN}"
 
-	make_desktop_entry "${PN}" "${UNGCH_PN^} (binary)" "chromium" "Network;WebBrowser;"
+	make_desktop_entry "/opt/ungoogled-chromium-bin/chrome %u" \
+				"${UNGCH_PN^} (binary)" "${PN}" "Network;WebBrowser;"
 }
 
 pkg_postinst() {
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
+	xdg_pkg_postinst
 
 	elog "Some versions have cleaning cookies on browser exit enabled by default."
 	elog "This can be toggled in the browser settings."
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
 }
