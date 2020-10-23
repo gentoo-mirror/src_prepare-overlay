@@ -64,7 +64,6 @@ net-im/srain 1.0.2 9999: Modern IRC client written in GTK
 net-libs/libcurl-gnutls 7.71.1 7.73.0: libcurl libraries linked with gnutls
 net-misc/ddgr 1.7 1.8 1.9 9999: DuckDuckGo from the terminal
 net-misc/downloader-cli 0.1.0 0.2.0 9999: A simple downloader written in Python with an awesome progressbar
-net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
 net-misc/megacmd 1.4.0 9999: Command Line Interactive and Scriptable Application to access MEGA
 net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
 net-misc/ytmdl 2020.03.21 2020.05.14 2020.07.09 9999: A simple app to get songs from youtube in mp3 format
