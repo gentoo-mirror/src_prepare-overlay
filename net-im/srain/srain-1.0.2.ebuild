@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils xdg-utils
+inherit xdg-utils
 
 DESCRIPTION="Modern IRC client written in GTK"
 HOMEPAGE="https://srain.im/"

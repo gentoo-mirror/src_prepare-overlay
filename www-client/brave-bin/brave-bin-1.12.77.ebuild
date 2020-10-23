@@ -11,7 +11,7 @@ CHROMIUM_LANGS="
 	sw ta te th tr uk vi zh-CN zh-TW
 "
 
-inherit chromium-2 desktop eutils xdg
+inherit chromium-2 desktop xdg
 
 DESCRIPTION="Brave Web Browser"
 HOMEPAGE="https://brave.com"

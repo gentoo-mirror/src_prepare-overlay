@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils
+inherit
 
 DESCRIPTION="minimalistic, lightweight command line client for Jellyfin"
 HOMEPAGE="https://github.com/Aanok/jftui"

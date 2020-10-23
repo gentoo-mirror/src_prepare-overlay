@@ -12,7 +12,7 @@ CHROMIUM_LANGS="
 	sw ta te th tr uk vi zh-CN zh-TW
 "
 
-inherit chromium-2 desktop eutils xdg
+inherit chromium-2 desktop xdg
 
 DESCRIPTION="Google Chromium, sans integration with Google (binary package)"
 HOMEPAGE="https://ungoogled-software.github.io/"

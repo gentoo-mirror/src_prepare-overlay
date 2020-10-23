@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils git-r3
+inherit git-r3
 
 DESCRIPTION="Colorized REPL for GNU Guile"
 HOMEPAGE="https://gitlab.com/NalaGinrut/guile-colorized/"

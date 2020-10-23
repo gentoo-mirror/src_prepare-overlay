@@ -12,7 +12,7 @@ BUNDLE_SRC="
 	http://nordman.org/mirror/lpeg/${LPEG_V}.tar.gz -> ${PN}-${LPEG_V}.tar.gz
 "
 
-inherit eutils desktop xdg
+inherit desktop xdg
 
 DESCRIPTION="Lightweight editor with keyboard-centric minimalistic interface"
 HOMEPAGE="https://howl.io"

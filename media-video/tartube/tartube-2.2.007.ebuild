@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8} )
 
-inherit eutils xdg distutils-r1
+inherit xdg distutils-r1
 
 DESCRIPTION="A GUI front-end for youtube-dl"
 HOMEPAGE="https://tartube.sourceforge.io"

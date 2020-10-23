@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils desktop xdg
+inherit desktop xdg
 
 DESCRIPTION="A lightweight text editor written in Lua"
 HOMEPAGE="https://github.com/rxi/lite"
