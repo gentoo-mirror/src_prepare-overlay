@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils systemd
+inherit systemd
 
 DESCRIPTION="Improve your security and privacy by blocking ads, tracking and malware domains"
 HOMEPAGE="https://hblock.molinero.dev/"
@@ -19,7 +19,6 @@ fi
 RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
 
 DEPEND="
 	sys-apps/baselayout
