@@ -1,12 +1,11 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=install unpack
+DEFINED_PHASES=install
 DESCRIPTION=Create HTML page based off of a given overlay URL
 EAPI=7
 HOMEPAGE=https://gitlab.com/src_prepare/gen-pkgs
+KEYWORDS=~amd64
 LICENSE=GPL-3
-PROPERTIES=live
 RDEPEND=app-portage/euscan-ng app-portage/gentoolkit app-portage/repoman sys-apps/busybox
 RESTRICT=mirror
 SLOT=0
-_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
+SRC_URI=https://gitlab.com/src_prepare/gen-pkgs/-/archive/1.0.0/gen-pkgs-1.0.0.tar.gz
 _md5_=281b76acc5632840882c1fbe6d533b89
