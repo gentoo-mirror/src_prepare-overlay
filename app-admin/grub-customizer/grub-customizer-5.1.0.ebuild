@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils xdg cmake
+inherit xdg cmake
 
 DESCRIPTION="A graphical grub2 settings manager"
 HOMEPAGE="https://launchpad.net/grub-customizer"

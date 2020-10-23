@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit eutils flag-o-matic unpacker desktop
+inherit flag-o-matic unpacker desktop
 
 # Latest versions are in http://icculus.org/twilight/darkplaces/files/
 MY_PV="${PV/_beta/beta}"

@@ -7,7 +7,7 @@ MY_PN="${PN//-bin}"
 BASE_URI="https://repo.jellyfin.org/releases/server/debian/versions/stable/"
 
 # No 'webapp' here because this is a server
-inherit eutils unpacker systemd
+inherit unpacker systemd
 
 DESCRIPTION="The Free Software Media System"
 HOMEPAGE="https://jellyfin.org"

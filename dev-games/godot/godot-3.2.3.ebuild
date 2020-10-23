@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{7,8} )
 
-inherit eutils python-any-r1 scons-utils flag-o-matic llvm desktop xdg
+inherit python-any-r1 scons-utils flag-o-matic llvm desktop xdg
 
 DESCRIPTION="Multi-platform 2D and 3D game engine"
 HOMEPAGE="http://godotengine.org"

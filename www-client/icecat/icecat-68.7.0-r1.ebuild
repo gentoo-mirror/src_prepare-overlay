@@ -37,7 +37,7 @@ MOZ_SRC_URI="https://git.savannah.gnu.org/cgit/gnuzilla.git/snapshot/gnuzilla-${
 
 LLVM_MAX_SLOT=10
 
-inherit check-reqs eapi7-ver flag-o-matic toolchain-funcs eutils vcs-snapshot \
+inherit check-reqs eapi7-ver flag-o-matic toolchain-funcs vcs-snapshot \
 		gnome2-utils llvm mozcoreconf-v6 oom-score-adj pax-utils xdg-utils \
 		autotools multiprocessing virtualx
 #mozlinguas-v2
