@@ -9,4 +9,4 @@ RDEPEND=app-portage/euscan-ng app-portage/gentoolkit app-portage/repoman sys-app
 RESTRICT=mirror
 SLOT=0
 _eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
-_md5_=281b76acc5632840882c1fbe6d533b89
+_md5_=7f76056fc25e55d539cf69a175dac62c

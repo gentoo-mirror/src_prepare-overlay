@@ -10,4 +10,4 @@ RDEPEND=>=dev-scheme/guile-2.0.9
 RESTRICT=mirror
 SLOT=0
 _eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
-_md5_=6750a63e9968c253fb0076af433f6503
+_md5_=82fadfdc41810f0c7cc9b0f3c57704e2
