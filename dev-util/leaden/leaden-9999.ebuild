@@ -21,7 +21,6 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
 
 BDEPEND="dev-python/PyQt5[${PYTHON_USEDEP}]"
 RDEPEND="

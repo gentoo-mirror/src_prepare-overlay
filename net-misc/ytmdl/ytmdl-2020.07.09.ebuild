@@ -21,7 +21,6 @@ fi
 RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
 
 src_prepare() {
 	# Excerpt from https://pypi.org/project/bs4

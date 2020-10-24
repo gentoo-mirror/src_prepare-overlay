@@ -17,7 +17,6 @@ fi
 RESTRICT="mirror"
 LICENSE="CC0-1.0"
 SLOT="0"
-IUSE=""
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install

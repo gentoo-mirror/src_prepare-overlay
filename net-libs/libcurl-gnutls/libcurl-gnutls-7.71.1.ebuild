@@ -17,7 +17,6 @@ SRC_URI="
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 RESTRICT="mirror strip"
 
 COMMON_DEPEND="net-misc/curl[-curl_ssl_gnutls]"

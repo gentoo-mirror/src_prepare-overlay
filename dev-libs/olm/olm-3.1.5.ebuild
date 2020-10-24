@@ -18,4 +18,3 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0/$(ver_cut 1)"
-IUSE=""

@@ -15,7 +15,6 @@ DESCRIPTION="A filename renaming utility based on perl regular expression used b
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 src_install() {
 	perl-module_src_install

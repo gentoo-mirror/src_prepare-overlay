@@ -13,7 +13,6 @@ SRC_URI="
 LICENSE="HPND"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
-IUSE=""
 
 RDEPEND=">=games-fps/darkplaces-20170829_beta1"
 DEPEND="app-arch/p7zip"

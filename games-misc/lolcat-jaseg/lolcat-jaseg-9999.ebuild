@@ -20,7 +20,6 @@ fi
 RESTRICT="mirror"
 LICENSE="WTFPL-2"
 SLOT="0"
-IUSE=""
 
 RDEPEND="
 	!games-misc/lolcat

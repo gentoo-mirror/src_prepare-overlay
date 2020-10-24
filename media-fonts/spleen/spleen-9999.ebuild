@@ -19,7 +19,6 @@ fi
 RESTRICT="mirror"
 LICENSE="BSD-2"
 SLOT="0"
-IUSE=""
 
 DOCS=(
 	AUTHORS
