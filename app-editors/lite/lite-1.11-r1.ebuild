@@ -19,7 +19,6 @@ fi
 RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
 
 BDEPEND="
 	media-gfx/imagemagick

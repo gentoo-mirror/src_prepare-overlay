@@ -12,7 +12,6 @@ EGIT_REPO_URI="https://gitlab.com/NalaGinrut/${PN}.git"
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
 
 RDEPEND="
 	>=dev-scheme/guile-2.0.9

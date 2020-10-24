@@ -43,7 +43,7 @@ RDEPEND="
 	libuv? ( dev-libs/libuv )
 	dev-libs/libsodium
 	mediainfo? ( media-libs/libmediainfo )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( media-video/ffmpeg )
 	raw? ( media-libs/libraw )
 "
 DEPEND="

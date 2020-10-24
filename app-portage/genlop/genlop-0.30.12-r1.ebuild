@@ -12,7 +12,6 @@ SRC_URI="https://github.com/Ociidii-Works/genlop/archive/genlop-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE=""
 
 DEPEND="dev-lang/perl
 	 dev-perl/Date-Manip

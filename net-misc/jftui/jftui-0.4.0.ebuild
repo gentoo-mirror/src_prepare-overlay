@@ -13,7 +13,6 @@ RESTRICT="mirror"
 LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 RDEPEND="
 	net-misc/curl

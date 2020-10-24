@@ -14,7 +14,6 @@ RESTRICT="mirror bindist"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64"
-IUSE=""
 
 RDEPEND="
 	!app-text/${MY_PN}

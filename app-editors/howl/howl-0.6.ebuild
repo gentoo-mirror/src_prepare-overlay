@@ -33,7 +33,6 @@ SRC_URI="
 RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
 
 DEPEND="
 	x11-libs/gtk+:3[X]

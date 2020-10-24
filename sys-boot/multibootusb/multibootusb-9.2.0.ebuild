@@ -21,7 +21,6 @@ fi
 RESTRICT="mirror"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 
 DEPEND="
 	dev-python/PyQt5[${PYTHON_USEDEP}]

@@ -11,7 +11,6 @@ EGIT_REPO_URI="https://github.com/Ociidii-Works/genlop.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 
 DEPEND="dev-lang/perl
 	 dev-perl/Date-Manip

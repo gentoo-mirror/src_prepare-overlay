@@ -21,7 +21,6 @@ fi
 RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
 
 RDEPEND="
 	>=dev-python/urllib3-1.25.7[${PYTHON_USEDEP}]

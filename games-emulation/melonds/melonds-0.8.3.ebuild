@@ -23,7 +23,6 @@ fi
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
 
 DEPEND="
 	media-libs/libsdl2[sound,video]

@@ -20,7 +20,6 @@ fi
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
 
 DEPEND="
 	dev-cpp/gtkmm:3.0
