@@ -13,9 +13,9 @@ DESCRIPTION="Pale Moon Web Browser"
 HOMEPAGE="https://www.palemoon.org/"
 
 if [[ "${PV}" == *9999* ]]; then
-	EGIT_REPO_URI="https://repo.palemoon.org/MCP/Pale-Moon.git"
+	EGIT_REPO_URI="https://repo.palemoon.org/MoonChildProductions/Pale-Moon.git"
 else
-	EGIT_REPO_URI="https://repo.palemoon.org/MCP/Pale-Moon.git"
+	EGIT_REPO_URI="https://repo.palemoon.org/MoonChildProductions/Pale-Moon.git"
 	EGIT_COMMIT="${PV}_Release"
 	KEYWORDS="~amd64"
 fi
