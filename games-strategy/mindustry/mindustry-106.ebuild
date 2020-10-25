@@ -5,7 +5,7 @@ EAPI=7
 
 MY_PN="${PN^}"
 
-inherit desktop xdg
+inherit desktop wrapper xdg
 
 DESCRIPTION="A sandbox tower defense game"
 HOMEPAGE="https://mindustrygame.github.io"
