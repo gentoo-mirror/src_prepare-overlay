@@ -74,6 +74,8 @@ DEPEND="
 	)
 "
 
+PATCHES=("${FILESDIR}/removesandboxviolation.patch")
+
 src_prepare() {
 	cmake_src_prepare
 }
