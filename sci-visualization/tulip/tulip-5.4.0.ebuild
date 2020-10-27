@@ -74,7 +74,10 @@ DEPEND="
 	)
 "
 
-PATCHES=("${FILESDIR}/removesandboxviolation.patch")
+# In live version this is likely to break
+PATCHES=(
+	"${FILESDIR}"/"${PN}-sandbox.patch"
+)
 
 src_prepare() {
 	cmake_src_prepare
