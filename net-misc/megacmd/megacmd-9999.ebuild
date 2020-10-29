@@ -21,7 +21,6 @@ HOMEPAGE="https://mega.nz/cmd"
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE=""
 DEPEND="
 	>=net-misc/meganz-sdk-3.7.3:=[sodium(+),sqlite]
 	dev-libs/libpcre:3[cxx]

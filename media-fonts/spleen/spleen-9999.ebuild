@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils font font-ebdftopcf
+inherit font font-ebdftopcf
 
 DESCRIPTION="Monospaced bitmap font"
 HOMEPAGE="https://www.cambus.net/spleen-monospaced-bitmap-fonts/"
@@ -19,7 +19,6 @@ fi
 RESTRICT="mirror"
 LICENSE="BSD-2"
 SLOT="0"
-IUSE=""
 
 DOCS=(
 	AUTHORS

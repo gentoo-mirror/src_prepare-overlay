@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="A Qt5 library to write cross-platform clients for Matrix"
 HOMEPAGE="https://github.com/qmatrixclient/libqmatrixclient"
 
-inherit eutils cmake
+inherit cmake
 
 if [[ ${PV} == "9999" ]]; then
 	inherit git-r3
@@ -18,7 +18,6 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
 
 RDEPEND=""
 DEPEND="

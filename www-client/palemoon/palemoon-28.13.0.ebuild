@@ -13,9 +13,9 @@ DESCRIPTION="Pale Moon Web Browser"
 HOMEPAGE="https://www.palemoon.org/"
 
 if [[ "${PV}" == *9999* ]]; then
-	EGIT_REPO_URI="https://github.com/MoonchildProductions/Pale-Moon.git"
+	EGIT_REPO_URI="https://repo.palemoon.org/MoonChildProductions/Pale-Moon.git"
 else
-	EGIT_REPO_URI="https://github.com/MoonchildProductions/Pale-Moon.git"
+	EGIT_REPO_URI="https://repo.palemoon.org/MoonChildProductions/Pale-Moon.git"
 	EGIT_COMMIT="${PV}_Release"
 	KEYWORDS="~amd64"
 fi
@@ -36,7 +36,7 @@ IUSE="
 	pulseaudio
 	-necko-wifi
 	official-branding
-	+optimize
+	optimize
 	threads
 	-valgrind
 "
@@ -67,7 +67,7 @@ RDEPEND="
 	media-libs/alsa-lib
 	media-libs/fontconfig
 	media-libs/freetype
-	virtual/ffmpeg[x264]
+	media-video/ffmpeg[x264]
 	x11-libs/libXt
 	dbus? (
 		>=sys-apps/dbus-0.60

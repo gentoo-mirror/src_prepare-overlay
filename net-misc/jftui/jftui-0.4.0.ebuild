@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils
+inherit
 
 DESCRIPTION="minimalistic, lightweight command line client for Jellyfin"
 HOMEPAGE="https://github.com/Aanok/jftui"
@@ -13,7 +13,6 @@ RESTRICT="mirror"
 LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 RDEPEND="
 	net-misc/curl

@@ -7,7 +7,7 @@ MY_PN="scripts"
 
 PYTHON_COMPAT=( python3_{6..8} )
 
-inherit eutils git-r3 python-r1
+inherit git-r3 python-r1
 
 DESCRIPTION="Small scripts from src_prepare group"
 HOMEPAGE="https://gitlab.com/src_prepare/scripts"

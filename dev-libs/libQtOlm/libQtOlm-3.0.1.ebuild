@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="A Qt wrapper for libolm"
 HOMEPAGE="https://gitlab.com/b0/libQtOlm"
 
-inherit eutils cmake
+inherit cmake
 
 SRC_URI="https://gitlab.com/b0/libqtolm/-/archive/v3.0.1/libqtolm-v3.0.1.tar.gz"
 
@@ -22,7 +22,6 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
 
 RDEPEND=""
 DEPEND="

@@ -20,7 +20,6 @@ fi
 RESTRICT="mirror"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 
 DEPEND="
 	x11-libs/cairo

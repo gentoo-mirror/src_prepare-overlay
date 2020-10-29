@@ -6,7 +6,7 @@ EAPI=7
 MY_PN="melonDS"
 MY_P="${MY_PN}-${PV}"
 
-inherit eutils xdg cmake
+inherit xdg cmake
 
 DESCRIPTION="Nintendo DS emulator, sorta"
 HOMEPAGE="http://melonds.kuribo64.net/"
@@ -23,7 +23,6 @@ fi
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
 
 DEPEND="
 	media-libs/libsdl2[sound,video]

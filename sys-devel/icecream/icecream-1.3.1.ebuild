@@ -13,7 +13,6 @@ SRC_URI="https://github.com/icecc/icecream/releases/download/${PV}/${MY_P}.tar.x
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
-IUSE=""
 
 DEPEND="
 	sys-libs/libcap-ng

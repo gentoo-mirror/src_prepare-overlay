@@ -22,7 +22,7 @@ MOZ_HTTP_URI="https://github.com/MrAlex94/Waterfox/archive"
 
 MOZCONFIG_OPTIONAL_WIFI=1
 
-inherit check-reqs eapi7-ver flag-o-matic toolchain-funcs eutils gnome2-utils \
+inherit check-reqs eapi7-ver flag-o-matic toolchain-funcs gnome2-utils \
 		mozconfig-v6.56 pax-utils xdg-utils autotools virtualx
 
 MY_PV="${PV}-classic"

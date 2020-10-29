@@ -5,7 +5,7 @@ EAPI=7
 
 MY_PN="${PN^}"
 
-inherit desktop eutils xdg
+inherit desktop wrapper xdg
 
 DESCRIPTION="A sandbox tower defense game"
 HOMEPAGE="https://mindustrygame.github.io"
@@ -15,7 +15,6 @@ RESTRICT="mirror strip"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 DEPEND=""
 RDEPEND="

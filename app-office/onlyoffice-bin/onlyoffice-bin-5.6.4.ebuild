@@ -22,7 +22,6 @@ SRC_URI="
 SLOT="0"
 RESTRICT="mirror strip"
 LICENSE="AGPL-3"
-IUSE=""
 
 DEPEND="
 	app-arch/bzip2

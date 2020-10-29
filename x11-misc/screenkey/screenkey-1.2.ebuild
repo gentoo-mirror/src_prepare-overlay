@@ -22,7 +22,6 @@ fi
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
 
 BDEPEND="
 	dev-python/python-distutils-extra[${PYTHON_USEDEP}]

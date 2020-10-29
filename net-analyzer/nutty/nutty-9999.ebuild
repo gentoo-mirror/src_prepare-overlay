@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils gnome2-utils meson vala xdg-utils
+inherit gnome2-utils meson vala xdg-utils
 
 DESCRIPTION="A simple application to provide essential information on network related aspects"
 HOMEPAGE="https://github.com/babluboy/nutty"
@@ -19,7 +19,6 @@ fi
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
 
 DEPEND="
 	dev-libs/granite

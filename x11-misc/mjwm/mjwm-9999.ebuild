@@ -19,7 +19,6 @@ fi
 RESTRICT="mirror"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 
 src_prepare() {
 	default
