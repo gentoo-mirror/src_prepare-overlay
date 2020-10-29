@@ -96,3 +96,4 @@ x11-misc/screenkey 1.2 9999: A screencast tool to display your keys inspired by 
 x11-misc/vala-panel 0.4.92 9999: Vala rewrite of SimplePanel
 x11-terms/kgx 0.2.1 9999: A minimal terminal for GNOME
 x11-terms/xst 9999: Simple terminal implementation for X with Xresources support and other patches
+x11-themes/src_prepare-artwork 9999: Miscellaneous logos, wallpapers and other artwork from src_prepare group

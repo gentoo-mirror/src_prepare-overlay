@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=Miscellaneous logos, wallpapers and other artwork from src_prepare group
+EAPI=7
+HOMEPAGE=https://gitlab.com/src_prepare/artwork
+LICENSE=CC0-1.0
+PROPERTIES=live
+RESTRICT=binchecks mirror strip test
+SLOT=0
+_eclasses_=desktop	7fd20552ce4cc97e8acb132a499a7dd8	git-r3	3e7ec3d6619213460c85e2aa48398441
+_md5_=7b61590849bbd355e84f9ac3f1aa0812
