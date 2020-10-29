@@ -49,11 +49,13 @@ KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="amd64 -bindist clang cpu_flags_x86_avx2 dbus debug geckodriver
+IUSE="
+	amd64 -bindist clang cpu_flags_x86_avx2 dbus debug geckodriver
 	+gmp-autoupdate hardened hwaccel jack kernel_linux lto cpu_flags_arm_neon
 	pgo pulseaudio +screenshot selinux startup-notification +system-av1
 	+system-harfbuzz +system-icu +system-jpeg +system-libevent
-	+system-sqlite +system-libvpx +system-webp test wayland wifi x86"
+	-system-sqlite -system-libvpx +system-webp test wayland wifi x86
+"
 
 REQUIRED_USE="pgo? ( lto )
 	wifi? ( dbus )"
@@ -63,38 +65,37 @@ RESTRICT="
 "
 
 PATCH_URIS=( https://dev.gentoo.org/~{anarchy,axs,polynomial-c,whissi}/mozilla/patchsets/${PATCH}.tar.xz )
-SRC_URI="${SRC_URI}
+SRC_URI="
+	${SRC_URI}
 	${MOZ_SRC_URI}
-	${PATCH_URIS[@]}"
-
-BDEPEND+="
-	dev-perl/File-Rename:0
+	${PATCH_URIS[@]}
 "
 
+# Mercurial for makeicecat (see "src_unpack" below)
+BDEPEND+="
+	dev-vcs/mercurial
+	dev-perl/File-Rename:0
+"
 CDEPEND="
-	>=dev-libs/nss-3.44.3
+	>=dev-libs/glib-2.26:2
+	>=dev-libs/libffi-3.0.10:=
 	>=dev-libs/nspr-4.21
-	dev-libs/atk
-	dev-libs/expat
+	>=dev-libs/nss-3.44.3
+	>=media-libs/freetype-2.4.10
+	>=media-libs/libpng-1.6.35:0=[apng]
+	>=media-libs/mesa-10.2:*
+	>=sys-libs/zlib-1.2.3
 	>=x11-libs/cairo-1.10[X]
 	>=x11-libs/gtk+-2.18:2
 	>=x11-libs/gtk+-3.4.0:3[X]
-	x11-libs/gdk-pixbuf
 	>=x11-libs/pango-1.22.0
-	>=media-libs/libpng-1.6.35:0=[apng]
-	>=media-libs/mesa-10.2:*
-	media-libs/fontconfig
-	>=media-libs/freetype-2.4.10
-	kernel_linux? ( !pulseaudio? ( media-libs/alsa-lib ) )
-	virtual/freedesktop-icon-theme
-	dbus? ( >=sys-apps/dbus-0.60
-		>=dev-libs/dbus-glib-0.72 )
-	startup-notification? ( >=x11-libs/startup-notification-0.8 )
 	>=x11-libs/pixman-0.19.2
-	>=dev-libs/glib-2.26:2
-	>=sys-libs/zlib-1.2.3
-	>=dev-libs/libffi-3.0.10:=
-	virtual/ffmpeg
+	dev-libs/atk
+	dev-libs/expat
+	media-libs/fontconfig
+	media-video/ffmpeg
+	virtual/freedesktop-icon-theme
+	x11-libs/gdk-pixbuf
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
@@ -102,10 +103,9 @@ CDEPEND="
 	x11-libs/libXfixes
 	x11-libs/libXrender
 	x11-libs/libXt
-	system-av1? (
-		>=media-libs/dav1d-0.3.0:=
-		>=media-libs/libaom-1.0.0:=
-	)
+	startup-notification? ( >=x11-libs/startup-notification-0.8 )
+	jack? ( virtual/jack )
+	selinux? ( sec-policy/selinux-mozilla )
 	system-harfbuzz? ( >=media-libs/harfbuzz-2.4.0:0= >=media-gfx/graphite2-1.3.13 )
 	system-icu? ( >=dev-libs/icu-63.1:= )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
@@ -113,19 +113,36 @@ CDEPEND="
 	system-libvpx? ( =media-libs/libvpx-1.7*:0=[postproc] )
 	system-sqlite? ( >=dev-db/sqlite-3.28.0:3[secure-delete,debug=] )
 	system-webp? ( >=media-libs/libwebp-1.0.2:0= )
-	wifi? ( kernel_linux? ( >=sys-apps/dbus-0.60
-			>=dev-libs/dbus-glib-0.72
-			net-misc/networkmanager ) )
-	jack? ( virtual/jack )
-	selinux? ( sec-policy/selinux-mozilla )"
-
-RDEPEND="${CDEPEND}
+	kernel_linux? (
+			!pulseaudio? (
+					media-libs/alsa-lib
+			)
+	)
+	dbus? (
+		  >=sys-apps/dbus-0.60
+		  >=dev-libs/dbus-glib-0.72
+	)
+	system-av1? (
+		>=media-libs/dav1d-0.3.0:=
+		>=media-libs/libaom-1.0.0:=
+	)
+	wifi? (
+		  kernel_linux? (
+					>=sys-apps/dbus-0.60
+					>=dev-libs/dbus-glib-0.72
+					net-misc/networkmanager
+		  )
+	)
+"
+RDEPEND="
+	${CDEPEND}
 	jack? ( virtual/jack )
 	pulseaudio? ( || ( media-sound/pulseaudio
 		>=media-sound/apulse-0.1.9 ) )
-	selinux? ( sec-policy/selinux-mozilla )"
-
-DEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-mozilla )
+"
+DEPEND="
+	${CDEPEND}
 	app-arch/zip
 	app-arch/unzip
 	>=dev-util/cbindgen-0.8.7
@@ -169,7 +186,8 @@ DEPEND="${CDEPEND}
 	!system-av1? (
 		amd64? ( >=dev-lang/nasm-2.13 )
 		x86? ( >=dev-lang/nasm-2.13 )
-	)"
+	)
+"
 
 #S="${WORKDIR}/icecat-${PV%_*}"
 S="${WORKDIR}/gnuzilla-${COMMIT_SHA}/output/icecat-${PV%_*}"
@@ -224,7 +242,7 @@ llvm_check_deps() {
 
 pkg_pretend() {
 	if use pgo ; then
-		if ! has usersandbox $FEATURES ; then
+		if ! has usersandbox ${FEATURES} ; then
 			die "You must enable usersandbox as X server can not run as root!"
 		fi
 	fi
@@ -286,6 +304,8 @@ src_unpack() {
 #	mozlinguas_src_unpack
 	cd "${WORKDIR}"/gnuzilla-"${COMMIT_SHA}"
 	"${FILESDIR}"/patch_without_repoman_knowing.sh
+
+	# G N U / M a g i c
 	./makeicecat
 }
 
