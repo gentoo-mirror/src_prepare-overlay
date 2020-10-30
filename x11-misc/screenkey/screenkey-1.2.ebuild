@@ -17,6 +17,7 @@ if [[ "${PV}" == *9999* ]]; then
 else
 	SRC_URI="https://gitlab.com/screenkey/${PN}/-/archive/v${PV}/${PN}-v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
+	S="${WORKDIR}"/"${PN}"-v"${PV}"
 fi
 
 RESTRICT="mirror"
