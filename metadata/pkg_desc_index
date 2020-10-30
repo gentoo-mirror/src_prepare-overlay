@@ -1,6 +1,8 @@
 acct-group/jellyfin 0: Jelyfin program group
+acct-group/miniflux 0: System group: miniflux
 acct-group/sensu 1: Sensu program group
 acct-user/jellyfin 0: Jellyfin user
+acct-user/miniflux 0: User for www-apps/miniflux
 acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
 app-crypt/gtkhash 1.2 1.4 9999: A cross-platform desktop utility for computing message digests or checksums
@@ -81,6 +83,7 @@ sys-kernel/liquorix-sources 5.8.11 5.8.12 5.8.12-r1 5.8.13 5.8.14 5.8.15 5.8.16 
 sys-kernel/xanmod-sources 5.8.13 5.8.13-r1 5.8.14 5.8.15 5.9.0 5.9.1 5.9.2: Full XanMod sources including the Gentoo patchset for the 5.9 kernel tree
 sys-kernel/zen-sources 5.8.12 5.8.13 5.8.14 5.9.0 5.9.1 5.9.2: Zen sources including the Gentoo patchsets for the 5.9 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
+www-apps/miniflux 2.0.24: Minimalist and opinionated feed reader
 www-client/brave-bin 1.12.77 1.12.78: Brave Web Browser
 www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
 www-client/palemoon 28.13.0 28.14.2 9999: Pale Moon Web Browser
