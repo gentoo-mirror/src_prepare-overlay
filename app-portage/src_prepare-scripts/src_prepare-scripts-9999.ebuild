@@ -3,18 +3,16 @@
 
 EAPI=7
 
-MY_PN="scripts"
-
 PYTHON_COMPAT=( python3_{6..8} )
 
 inherit git-r3 python-r1
 
 DESCRIPTION="Small scripts from src_prepare group"
 HOMEPAGE="https://gitlab.com/src_prepare/scripts"
-EGIT_REPO_URI="https://gitlab.com/src_prepare/${MY_PN}.git"
+EGIT_REPO_URI="https://gitlab.com/src_prepare/scripts.git"
 
 RESTRICT="
-	mirror
+	binchecks mirror strip
 	!test? ( test )
 "
 LICENSE="ISC"
@@ -37,9 +35,8 @@ RDEPEND="
 	)
 "
 DEPEND="
-	${RDEPEND}
 	test? (
-		  dev-python/pylint[${PYTHON_USEDEP}]
+		  dev-python/pylint
 		  || (
 			 dev-util/shellcheck
 			 dev-util/shellcheck-bin
@@ -60,14 +57,15 @@ src_install() {
 	done
 
 	# Install the scripts
+	local P_HOME="opt/${PN}"
 	if pushd src
 	then
 		local script
 		for script in *
 		do
-			exeinto "/opt/${PN}"
+			exeinto "${P_HOME}"
 			doexe "${script}"
-			dosym "../../opt/${PN}/${script}" "/usr/bin/src_prepare-${script}"
+			dosym "../../${P_HOME}/${script}" "/usr/bin/src_prepare-${script}"
 		done
 		popd
 	else
