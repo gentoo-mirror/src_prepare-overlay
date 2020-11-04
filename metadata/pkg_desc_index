@@ -42,6 +42,7 @@ games-emulation/melonds 0.8.3 0.9 9999: Nintendo DS emulator, sorta
 games-fps/darkplaces 20170829_beta1: Enhanced engine for iD Software's Quake 1
 games-fps/quake15 0_beta2: A mod that makes Quake faster paced, harder, gorier and more violent.
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
+games-puzzle/vvvvvv 2.2 9999: Retro-styled 2D puzzle platformer (source-available release)
 games-rpg/fallout1 1.1: Post-apocalyptic GURPS-like role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
 games-strategy/mindustry 106 107 108: A sandbox tower defense game
