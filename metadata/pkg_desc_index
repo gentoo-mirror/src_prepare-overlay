@@ -82,7 +82,7 @@ sys-devel/icecream 1.3.1: Distributed compiling of C(++) code across several mac
 sys-kernel/ck-sources 5.6.11 5.7.2 5.7.3 5.7.4 5.7.5: Con Kolivas sources including the Gentoo patchsets for the 5.7 kernel tree
 sys-kernel/liquorix-sources 5.8.11 5.8.12 5.8.12-r1 5.8.13 5.8.14 5.8.15 5.8.16 5.8.17: Liquorix sources including the Gentoo patchsets for the 5.8 kernel tree
 sys-kernel/xanmod-sources 5.8.14 5.8.15 5.9.0 5.9.1 5.9.2 5.9.3: Full XanMod sources including the Gentoo patchset for the 5.9 kernel tree
-sys-kernel/zen-sources 5.8.13 5.8.14 5.9.0 5.9.1 5.9.2 5.9.3: Zen sources including the Gentoo patchsets for the 5.9 kernel tree
+sys-kernel/zen-sources 5.8.14 5.9.0 5.9.1 5.9.2 5.9.3 5.9.4: Zen sources including the Gentoo patchsets for the 5.9 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-apps/miniflux 2.0.24: Minimalist and opinionated feed reader
 www-client/brave-bin 1.12.77 1.12.78: Brave Web Browser
