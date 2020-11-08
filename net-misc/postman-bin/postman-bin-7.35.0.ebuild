@@ -22,7 +22,7 @@ src_install() {
 	mkdir -p "${ED%/}/opt/${MY_PN}"
 	cp -r . "${ED%/}/opt/${MY_PN}"
 	newicon -s 128 resources/app/assets/icon.png ${MY_PN}.png
-	dobin "${FILESDIR}/${MY_PN}"
+	dosym /opt/${MY_PN}/Postman /usr/bin/${MY_PN}
 	make_desktop_entry "postman" \
 		"Postman" \
 		"postman" \
