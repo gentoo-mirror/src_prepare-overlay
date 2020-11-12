@@ -8,6 +8,7 @@ app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
 app-crypt/gtkhash 1.2 1.4 9999: A cross-platform desktop utility for computing message digests or checksums
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
 app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
+app-editors/rehex 0.3.0 9999: Reverse Engineers' Hex Editor
 app-editors/vscodium-bin 1.44.1-r1 1.44.2-r1 1.49.0 1.50.0: Open Source Software Binaries of VSCode
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
