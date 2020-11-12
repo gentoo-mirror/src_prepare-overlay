@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <use>
-    <flag name="blake2">
-      Enable Blake2 hash support via app-crypt/libb2
-    </flag>
-    <flag name="caja">
-      Build extension for mate-base/caja
-    </flag>
-    <flag name="gcrypt">
-      Use dev-libs/libgcrypt library
-    </flag>
-    <flag name="gtk2">
-      Support GTK+ 2.x instead of GTK+ 3.x
-    </flag>
-    <flag name="gtk3">
-      Support GTK+ 3.x instead of GTK+ 2.x
-    </flag>
-    <flag name="linux-crypto">
-      Use the Linux kernel hash algorithm interface (CONFIG_CRYPTO_USER_API_HASH)
-    </flag>
-    <flag name="mbedtls">
-      Use mbed TLS instead of OpenSSL
-    </flag>
-    <flag name="nautilus">
-      Build extension for gnome-base/nautilus
-    </flag>
-    <flag name="nettle">
-      Use the Nettle cryptographic library
-    </flag>
-    <flag name="openssl">
-      Enable the libcrypto (dev-libs/openssl library)
-    </flag>
-    <flag name="thunar">
-      Build extension for xfce-base/thunar
-    </flag>
-    <flag name="zlib">
-      Add support for zlib (de)compression
-    </flag>
-  </use>
-  <upstream>
-    <remote-id type="github">
-      app-crypt/gtkhash
-    </remote-id>
-  </upstream>
+    <maintainer type="person">
+        <email>xgqt@protonmail.com</email>
+        <name>Maciej Barć</name>
+    </maintainer>
+    <use>
+        <flag name="blake2">
+            Enable Blake2 hash support via app-crypt/libb2
+        </flag>
+        <flag name="caja">
+            Build extension for mate-base/caja
+        </flag>
+        <flag name="gcrypt">
+            Use dev-libs/libgcrypt library
+        </flag>
+        <flag name="gtk2">
+            Support GTK+ 2.x instead of GTK+ 3.x
+        </flag>
+        <flag name="gtk3">
+            Support GTK+ 3.x instead of GTK+ 2.x
+        </flag>
+        <flag name="linux-crypto">
+            Use the Linux kernel hash algorithm interface (CONFIG_CRYPTO_USER_API_HASH)
+        </flag>
+        <flag name="mbedtls">
+            Use mbed TLS instead of OpenSSL
+        </flag>
+        <flag name="nautilus">
+            Build extension for gnome-base/nautilus
+        </flag>
+        <flag name="nettle">
+            Use the Nettle cryptographic library
+        </flag>
+        <flag name="openssl">
+            Enable the libcrypto (dev-libs/openssl library)
+        </flag>
+        <flag name="thunar">
+            Build extension for xfce-base/thunar
+        </flag>
+        <flag name="zlib">
+            Add support for zlib (de)compression
+        </flag>
+    </use>
+    <upstream>
+        <remote-id type="github">
+            app-crypt/gtkhash
+        </remote-id>
+    </upstream>
 </pkgmetadata>

@@ -5,15 +5,7 @@
         <email>xgqt@protonmail.com</email>
         <name>Maciej Barć</name>
     </maintainer>
-    <use>
-        <flag name="llvm">
-            Build using LLVM
-        </flag>
-        <flag name="lto">
-            Build with link time optimization
-        </flag>
-    </use>
     <upstream>
-        <remote-id type="github">godot/godot</remote-id>
+        <remote-id type="github">solemnwarning/rehex</remote-id>
     </upstream>
 </pkgmetadata>
