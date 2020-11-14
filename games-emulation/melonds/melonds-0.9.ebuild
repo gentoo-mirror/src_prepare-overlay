@@ -35,7 +35,6 @@ DEPEND="
 	net-libs/libslirp
 	net-misc/curl
 	x11-libs/cairo
-	x11-libs/gtk+:3
 "
 RDEPEND="
 	${DEPEND}
