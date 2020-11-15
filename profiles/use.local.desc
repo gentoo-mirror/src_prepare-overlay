@@ -79,7 +79,6 @@ www-client/palemoon:necko-wifi - Enable the necko wifi scanner
 www-client/palemoon:official-branding - Enable official branding
 www-client/palemoon:optimize - Enable compiler optimization
 www-client/palemoon:valgrind - Enable Valgrind integration hooks
-www-client/torbrowser-launcher:apparmor - Enable AppArmor support
 x11-misc/compton-tryone:drm - Enable VSync with DRM_IOCTL_WAIT_VBLANK
 x11-misc/compton-tryone:opengl - Enable VSync with SGI_swap_control OpenGL extension
 x11-misc/polybar:i3wm - Add support for i3 window manager

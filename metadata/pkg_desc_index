@@ -39,7 +39,6 @@ dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
 games-arcade/tetrio-desktop 4.0.0: TETR.IO desktop client
-games-emulation/melonds 0.8.3 0.9 9999: Nintendo DS emulator, sorta
 games-fps/darkplaces 20170829_beta1: Enhanced engine for iD Software's Quake 1
 games-fps/quake15 0_beta2: A mod that makes Quake faster paced, harder, gorier and more violent.
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
@@ -90,7 +89,6 @@ www-apps/miniflux 2.0.24: Minimalist and opinionated feed reader
 www-client/brave-bin 1.12.77 1.12.78: Brave Web Browser
 www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
 www-client/palemoon 28.13.0 28.14.2 9999: Pale Moon Web Browser
-www-client/torbrowser-launcher 0.3.2 0.3.3 9999: A program to download, updated, and run the Tor Browser Bundle
 www-client/ungoogled-chromium-bin 85.0.4183.102: Google Chromium, sans integration with Google (binary package)
 www-servers/jellyfin-bin 10.6.4: The Free Software Media System
 x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur
