@@ -62,7 +62,7 @@ media-video/olive 9999: Professional open-source non-linear video editor
 media-video/tartube 2.0.0 2.1.0 2.2.007 9999: A GUI front-end for youtube-dl
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
 net-analyzer/sensu 5.19.3 5.21.3: Simple. Scalable. Multi-cloud monitoring.
-net-firewall/hblock 2.1.7 3.0.0 9999: Improve your security and privacy by blocking ads, tracking and malware domains
+net-firewall/hblock 3.0.0 3.1.0 9999: Improve your security and privacy by blocking ads, tracking and malware domains
 net-im/mirage 0.6.4 9999: A fancy, customizable, keyboard-operable Qt/QML+Python Matrix chat client.
 net-im/spectral 854 9999: A glossy client for Matrix, written in QtQuick Controls 2 and C++.
 net-im/srain 1.0.2 9999: Modern IRC client written in GTK

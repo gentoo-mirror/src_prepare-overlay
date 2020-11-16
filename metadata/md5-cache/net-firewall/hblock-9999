@@ -1,5 +1,5 @@
 BDEPEND=sys-apps/baselayout sys-apps/coreutils virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile install prepare unpack
+DEFINED_PHASES=compile install unpack
 DEPEND=sys-apps/baselayout
 DESCRIPTION=Improve your security and privacy by blocking ads, tracking and malware domains
 EAPI=7
@@ -7,7 +7,7 @@ HOMEPAGE=https://hblock.molinero.dev/
 LICENSE=MIT
 PROPERTIES=live
 RDEPEND=sys-apps/baselayout
-RESTRICT=mirror
+RESTRICT=binchecks mirror strip test
 SLOT=0
 _eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441	multilib	98584e405e2b0264d37e8f728327fed1	systemd	69be00334d73f9f50261554b94be0879	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
-_md5_=9ddd2f41282bf30760fda7135b41b0c6
+_md5_=89f4710f34cf44aa6111ea29f5d5eaa1
