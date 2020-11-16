@@ -16,7 +16,7 @@ else
 	KEYWORDS="~amd64"
 fi
 
-RESTRICT="mirror"
+RESTRICT="binchecks mirror strip test"
 LICENSE="MIT"
 SLOT="0"
 
@@ -30,16 +30,6 @@ BDEPEND="
 RDEPEND="
 	${DEPEND}
 "
-
-src_prepare() {
-	default
-
-	# Upstream provides shasums in the repo - let's use them
-	cd "${S}" || die
-	sha256sum -c "${S}"/SHA256SUMS || die "Shasum check failed"
-	cd "${S}"/resources/systemd || die
-	sha256sum -c "${S}"/resources/systemd/SHA256SUMS || die "Shasum check failed"
-}
 
 src_compile() {
 	:
