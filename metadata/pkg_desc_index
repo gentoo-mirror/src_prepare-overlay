@@ -12,7 +12,7 @@ app-editors/rehex 0.3.0 9999: Reverse Engineers' Hex Editor
 app-editors/vscodium-bin 1.44.1-r1 1.44.2-r1 1.49.0 1.50.0: Open Source Software Binaries of VSCode
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
-app-office/onlyoffice-bin 5.6.4 6.0.0 6.0.0-r1: Onlyoffice is an office productivity suite (binary version)
+app-office/onlyoffice-bin 6.0.0-r1 6.0.1: Onlyoffice is an office productivity suite (binary version)
 app-portage/euscan-ng 1.0.0 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.0.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
