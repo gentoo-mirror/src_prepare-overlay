@@ -43,15 +43,15 @@ KEYWORDS="~amd64"
 INSTALLDIR="/opt/${PN}"
 
 src_unpack() {
-	unpack "${DISTDIR}/golang.org%2Fx%2Fsys%2F@v%2Fv0.0.0-20200323222414-85ca7c5b95cd.zip"
+	unpack ${DISTDIR}/golang.org%2Fx%2Fsys%2F@v%2Fv0.0.0-20200323222414-85ca7c5b95cd.zip
 	go-module_src_unpack
 	default
 }
 
 src_prepare() {
 	# Have to do this as eclass has issues with this for reasons unknown to me
-	mkdir -p "${HOME}/go/pkg/mod/golang.org/x/"
-	cp -r "${WORKDIR}/golang.org/x/sys\@v0.0.0-20200323222414-85ca7c5b95cd/" "${HOME}/go/pkg/mod/golang.org/x/sys\@v0.0.0-20200323222414-85ca7c5b95cd"
+	mkdir -p ${HOME}/go/pkg/mod/golang.org/x/
+	cp -r ${WORKDIR}/golang.org/x/sys\@v0.0.0-20200323222414-85ca7c5b95cd/ ${HOME}/go/pkg/mod/golang.org/x/sys\@v0.0.0-20200323222414-85ca7c5b95cd
 	default
 }
 
