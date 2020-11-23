@@ -34,6 +34,7 @@ dev-python/matrix-nio 0.15.1: A Python Matrix client library, designed according
 dev-python/plyer 1.4.3: Plyer is a platform-independent Python wrapper for platform-dependent APIs
 dev-python/pyfastcopy 1.0.3: Speed up Python's shutil.copyfile by using sendfile system call
 dev-python/unpaddedbase64 1.1.0: Encode and decode Base64 without = padding.
+dev-scheme/chezscheme 9.5.4: Open-source Chez Scheme implementation from Cisco
 dev-scheme/guile-colorized 9999: Colorized REPL for GNU Guile
 dev-scheme/racket 7.7-r1 7.8-r1: General purpose, multi-paradigm Lisp-Scheme programming language
 dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
