@@ -8,5 +8,5 @@ RDEPEND=>=net-print/cups-2.0.0 dev-libs/libappindicator dev-libs/nss gnome-base/
 RESTRICT=bindist mirror
 SLOT=0
 SRC_URI=https://github.com/eNkru/freelook/releases/download/v1.0.0/electron-outlook_1.0.0_amd64.deb
-_eclasses_=multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	unpacker	8ee8c1a2f31437d1766aac890d07a7f4	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	unpacker	8ee8c1a2f31437d1766aac890d07a7f4	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
 _md5_=9c6d8b58e589b8d6d3a55fcd77e9adf3
