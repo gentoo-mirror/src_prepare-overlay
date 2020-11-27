@@ -41,7 +41,7 @@ src_install() {
 	arr_install doins "${wallpapers}"
 
 	# Logos
-	local logos="$(find . -not -path "./.git/*" | grep -i logo | grep -i -E 'jpg|png')"
+	local logos="$(find . -not -path "./.git/*" | grep -i logo | grep -i -E 'jpg|png|svg|xpm')"
 	arr_install doicon "${logos}"
 
 	# XCF sources
