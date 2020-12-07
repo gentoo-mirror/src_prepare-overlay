@@ -58,7 +58,7 @@ media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional gl
 media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-gfx/akira 0.0.13 9999: Native Linux App for UI and UX Design built in Vala and Gtk
 media-gfx/drawing 0.6.1 9999: A drawing application for the GNOME desktop
-media-gfx/fondo 1.3.10 9999: Wallpaper App for Linux
+media-gfx/fondo 1.3.10 1.5.0 9999: Wallpaper App for Linux
 media-gfx/koko 9999: Image gallery application by KDE designed for desktop and touch devices
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
 media-sound/ponymix 5: CLI volume control for PulseAudio
