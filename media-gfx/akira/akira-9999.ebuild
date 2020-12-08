@@ -34,6 +34,17 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	xdg_environment_reset
+	vala_src_prepare
+	default
+}
+
+src_install() {
+	meson_src_install
+	dosym "${EPREFIX}/usr/bin/com.github.akiraux.${PN}" "${EPREFIX}/usr/bin/${PN}"
+}
+
 pkg_preinst() {
 	xdg_pkg_preinst
 	gnome2_schemas_savelist
