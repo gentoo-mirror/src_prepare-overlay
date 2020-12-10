@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>xgqt@protonmail.com</email>
+        <name>Maciej Barć</name>
+    </maintainer>
+    <longdescription>
+        Font Labiryntowy-pl was created as a practical implementation
+        of the idea of the alphabet labyrinthine.
+        This font contains over 300 ligatures and most characters
+        needed for the performance of titles and monograms.
+    </longdescription>
+</pkgmetadata>
