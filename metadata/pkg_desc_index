@@ -54,6 +54,7 @@ games-util/lgogdownloader 3.7-r1: Unofficial downloader for GOG content.
 mail-client/freelook-bin 1.0.0 1.0.1: Freelook, an Electron-based client for Microsoft Outlook
 mail-client/heirloom-mailx 12.5: The mailx utility from CentOS
 media-fonts/joypixels 6.0.0: Emoji as a Service (formerly EmojiOne)
+media-fonts/labiryntowy 1.53: Practical font realization of the Labirynth Alphabet
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-gfx/akira 0.0.13 9999: Native Linux App for UI and UX Design built in Vala and Gtk
