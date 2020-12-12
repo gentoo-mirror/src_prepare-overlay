@@ -42,6 +42,7 @@ dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
 games-arcade/tetrio-desktop 4.0.0: TETR.IO desktop client
+games-emulation/corgi3ds 9999: An LLE dog-themed 3DS emulator
 games-fps/darkplaces 20170829_beta1: Enhanced engine for iD Software's Quake 1
 games-fps/quake15 0_beta2: A mod that makes Quake faster paced, harder, gorier and more violent.
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
