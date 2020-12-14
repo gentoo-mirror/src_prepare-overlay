@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DESCRIPTION=minimalistic, lightweight command line client for Jellyfin
+EAPI=7
+HOMEPAGE=https://github.com/Aanok/jftui
+KEYWORDS=~amd64
+LICENSE=Unlicense
+RDEPEND=net-misc/curl media-video/mpv dev-libs/yajl
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/Aanok/jftui/archive/v0.4.0.tar.gz -> jftui-0.4.0.tar.gz
+_md5_=0071b94f45c6cbffdadf377b417fd48b
