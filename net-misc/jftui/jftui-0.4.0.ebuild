@@ -3,8 +3,6 @@
 
 EAPI=7
 
-inherit
-
 DESCRIPTION="minimalistic, lightweight command line client for Jellyfin"
 HOMEPAGE="https://github.com/Aanok/jftui"
 SRC_URI="https://github.com/Aanok/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
