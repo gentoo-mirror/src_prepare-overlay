@@ -24,15 +24,12 @@ RDEPEND="
 	${PYTHON_DEPS}
 	app-admin/eselect
 	app-portage/eix
+	app-portage/euscan-ng
 	app-portage/repoman
 	app-shells/bash:*
 	dev-lang/perl
 	dev-util/pkgcheck
 	sys-apps/portage
-	|| (
-		app-portage/euscan
-		app-portage/euscan-ng
-	)
 "
 DEPEND="
 	test? (
