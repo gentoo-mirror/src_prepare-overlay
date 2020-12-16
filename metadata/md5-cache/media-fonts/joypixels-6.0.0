@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm ~arm64 ~x86
 LICENSE=JoyPixels
 SLOT=0
 SRC_URI=https://cdn.joypixels.com/arch-linux/font/6.0.0/joypixels-android.ttf -> joypixels-6.0.0.ttf
-_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_eclasses_=font	e052246186f22bd6a37797238374613b
 _md5_=510b74a787c427e42aa10a1cd3da978f
