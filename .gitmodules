@@ -1,0 +1,3 @@
+[submodule "3rd_party/scripts"]
+	path = 3rd_party/scripts
+	url = https://gitlab.com/src_prepare/scripts
