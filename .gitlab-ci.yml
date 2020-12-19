@@ -1,5 +1,12 @@
 image: gentoo/stage3-amd64:latest
 
+variables:
+  FEATURES: "getbinpkg"
+  GIT_SUBMODULE_STRATEGY: recursive
+  MAKEOPTS: "--jobs=10"
+  PORTAGE_BINHOST: "https://xgqt.gitlab.io/gentoo-mini-mirror/binpkgs"
+  USE: "-perl"
+
 stages:
   - test
 
@@ -7,15 +14,9 @@ before_script:
   - mkdir -p /var/cache/distfiles
   - mkdir -p /var/db/repos/gentoo
   - emerge-webrsync
-  - export PORTAGE_BINHOST="https://xgqt.gitlab.io/gentoo-mini-mirror/binpkgs"
-  - export FEATURES="getbinpkg"
-  - export MAKEOPTS="--jobs=10"
-  - export USE="-perl"
   - emerge -1nq --jobs=10 app-portage/repoman dev-vcs/git net-misc/wget
-  - wget "https://gitlab.com/src_prepare/scripts/-/raw/master/src/repomanci" -O /usr/bin/repomanci
-  - chmod 777 /usr/bin/repomanci
 
 test:
   stage: test
   script:
-    - repomanci
+    - bash scripts/repomanci
