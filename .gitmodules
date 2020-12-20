@@ -1,3 +1,6 @@
 [submodule "3rd_party/scripts"]
 	path = 3rd_party/scripts
 	url = https://gitlab.com/src_prepare/scripts
+[submodule "3rd_party/eclass-to-manpage"]
+	path = 3rd_party/eclass-to-manpage
+	url = https://github.com/mgorny/eclass-to-manpage
