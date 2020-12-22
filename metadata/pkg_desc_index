@@ -92,6 +92,7 @@ sys-kernel/liquorix-sources 5.9.8 5.9.9 5.9.10 5.9.11 5.9.12 5.9.13 5.9.15: Liqu
 sys-kernel/xanmod-sources 5.9.6 5.9.8 5.9.9 5.9.10 5.9.11 5.9.12 5.9.13 5.10.1: Full XanMod sources including the Gentoo patchset for the 5.10 kernel tree
 sys-kernel/zen-sources 5.9.7 5.9.9 5.9.10 5.9.11 5.9.12 5.9.13 5.10.1: Zen sources including the Gentoo patchsets for the 5.10 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
+www-apps/icecoder 8.0: Browser code editor awesomeness
 www-apps/miniflux 2.0.24: Minimalist and opinionated feed reader
 www-client/brave-bin 1.12.77 1.12.78: Brave Web Browser
 www-client/icecat 68.7.0-r1: GNU IceCat Web Browser
