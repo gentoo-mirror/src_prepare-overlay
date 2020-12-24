@@ -18,40 +18,36 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="doxygen"
-
-CMAKE_MIN_VERSION=3.13
-CMAKE_IN_SOURCE_BUILD=YES
+IUSE="doxygen otio"
 
 COMMON_DEPEND="
-	>=dev-qt/qtcore-5.6.0[icu]
-	>=dev-qt/qtgui-5.6.0[png]
+	>=dev-qt/qtcore-5.6.0
+	>=dev-qt/qtgui-5.6.0
 	>=dev-qt/qtmultimedia-5.6.0
 	>=dev-qt/qtopengl-5.6.0
 	>=dev-qt/qtsvg-5.6.0
 	>=dev-qt/qtwidgets-5.6.0
-	media-libs/opencolorio
+	>=media-libs/opencolorio-2.0.0
+	otio? ( media-video/opentimelineio )
 	media-libs/openexr
-	>=media-libs/openimageio-1.6.0[gif,ssl,truetype]
-	>=media-video/ffmpeg-3.0.0[bzip2]
+	>=media-libs/openimageio-2.1.12
+	>=media-video/ffmpeg-3.0.0
 	virtual/opengl
 "
-
 DEPEND="
 	"${COMMON_DEPEND}"
 	>=dev-qt/qtconcurrent-5.6.0
 	dev-qt/linguist-tools
 	doxygen? ( app-doc/doxygen[dot] )
 "
-
 RDEPEND="
 	"${COMMON_DEPEND}"
-	dev-qt/qtnetwork[ssl]
-	media-libs/harfbuzz[graphite]
+	dev-qt/qtnetwork
 "
 
 src_configure() {
 	local mycmakeargs=(
+#		-DUPDATE_TS=
 		-DBUILD_DOXYGEN="$(usex doxygen)"
 	)
 	cmake_src_configure
@@ -63,4 +59,10 @@ src_install() {
 		dodoc -r docs/html/.
 	fi
 	cmake_src_install
+}
+
+pkg_postinst() {
+	elog "Olive crashes at runtime when playing video"
+	elog "with ~ffmpeg-4.3. The current remedy is to"
+	elog "use ~ffmpeg-4.2 or ffmpeg-9999 instead."
 }
