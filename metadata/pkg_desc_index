@@ -33,6 +33,7 @@ dev-python/html_sanitizer 1.9.1: Allowlist-based HTML cleaner
 dev-python/itunespy 1.5.3 1.6 9999: A simple library to fetch data from the iTunes Store API
 dev-python/matrix-nio 0.15.1: A Python Matrix client library, designed according to sans I/O principles
 dev-python/plyer 1.4.3: Plyer is a platform-independent Python wrapper for platform-dependent APIs
+dev-python/posix-ipc 1.0.5: POSIX IPC primitives for Python
 dev-python/pyfastcopy 1.0.3: Speed up Python's shutil.copyfile by using sendfile system call
 dev-python/unpaddedbase64 1.1.0: Encode and decode Base64 without = padding.
 dev-scheme/chezscheme 9.5.4: Open-source Chez Scheme implementation from Cisco
