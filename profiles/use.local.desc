@@ -52,6 +52,7 @@ net-misc/meganz-sdk:qt - Install QT bindings
 sci-visualization/tulip:ccache - Use dev-util/ccache to speed up rebuilds
 sys-apps/xbps:lto - Build with Link Time Optimization
 sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
+sys-kernel/xanmod-sources:cacule - CacULE is a newer version of Cachy. The CacULE CPU scheduler is based on interactivity score mechanism. The interactivity score is inspired by the ULE scheduler (FreeBSD scheduler).
 www-apps/miniflux:acct - Create and use the miniflux user account to run the miniflux server
 www-client/icecat:amd64 - You should not be able to see this
 www-client/icecat:clang - Use Clang compiler instead of GCC
