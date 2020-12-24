@@ -9,6 +9,9 @@
 		<email>hedmoo@yahoo.com</email>
 		<name>Andreas Westman Dorcsak</name>
 	</maintainer>
+	<use>
+		<flag name="cacule"> CacULE is a newer version of Cachy. The CacULE CPU scheduler is based on interactivity score mechanism. The interactivity score is inspired by the ULE scheduler (FreeBSD scheduler). </flag>
+	</use>
 	<upstream>
 		<remote-id type="github">xanmod/linux</remote-id>
 	</upstream>
