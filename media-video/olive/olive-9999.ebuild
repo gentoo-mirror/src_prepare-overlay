@@ -18,7 +18,7 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="doxygen otio"
+IUSE="doxygen"
 
 COMMON_DEPEND="
 	>=dev-qt/qtcore-5.6.0
@@ -28,12 +28,12 @@ COMMON_DEPEND="
 	>=dev-qt/qtsvg-5.6.0
 	>=dev-qt/qtwidgets-5.6.0
 	>=media-libs/opencolorio-2.0.0
-	otio? ( media-video/opentimelineio )
 	media-libs/openexr
 	>=media-libs/openimageio-2.1.12
 	>=media-video/ffmpeg-3.0.0
 	virtual/opengl
 "
+#media-video/opentimelineio : The CMakeFile tries to find it, but doesnt do anything yet.
 DEPEND="
 	"${COMMON_DEPEND}"
 	>=dev-qt/qtconcurrent-5.6.0

@@ -10,6 +10,5 @@
   </upstream>  
   <use>
     <flag name="doxygen">Build and install source code documentation</flag>
-    <flag name="otio">Include dependency to OpenTimelineIO</flag>
   </use>
 </pkgmetadata>
