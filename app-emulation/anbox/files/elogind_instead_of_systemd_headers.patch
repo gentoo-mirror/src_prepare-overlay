@@ -1,0 +1,13 @@
+diff --git a/src/anbox/dbus/bus.h b/src/anbox/dbus/bus.h
+index 40b3d94..e798b4b 100644
+--- a/src/anbox/dbus/bus.h
++++ b/src/anbox/dbus/bus.h
+@@ -25,7 +25,7 @@
+ #include <mutex>
+ #include <thread>
+ 
+-#include <systemd/sd-bus.h>
++#include <elogind/systemd/sd-bus.h>
+ 
+ namespace anbox::dbus {
+ class Bus : public DoNotCopyOrMove {
