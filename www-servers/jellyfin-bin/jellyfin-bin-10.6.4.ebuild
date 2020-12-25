@@ -6,7 +6,6 @@ EAPI=7
 MY_PN="${PN//-bin}"
 BASE_URI="https://repo.jellyfin.org/releases/server/debian/versions/stable/"
 
-# No 'webapp' here because this is a server
 inherit unpacker systemd wrapper
 
 DESCRIPTION="The Free Software Media System"
