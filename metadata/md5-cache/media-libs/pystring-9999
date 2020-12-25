@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=C++ functions matching the interface and behavior of python string methods
+EAPI=7
+HOMEPAGE=https://github.com/imageworks/pystring
+KEYWORDS=~amd64
+LICENSE=all-rights-reserved
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
+_md5_=fd0559ee0300021d5b1c9802f146b1c6
