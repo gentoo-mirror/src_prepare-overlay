@@ -1,0 +1,22 @@
+diff --git a/tests/CMakeLists.txt b/tests/CMakeLists.txt
+index 180498f..ac5e66c 100644
+--- a/tests/CMakeLists.txt
++++ b/tests/CMakeLists.txt
+@@ -1,3 +1,11 @@
++option(
++  PROPERTIES_CPP_BUILD_TESTS
++  "Build tests"
++  ON
++)
++
++if (PROPERTIES_CPP_BUILD_TESTS)
++
+ set (OLD_CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS})
+ # Don't treat warnings as errors in 3rd_party/{gmock,cucumber-cpp}
+ string (REPLACE " -Werror " " " CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS})
+@@ -31,3 +39,5 @@ target_link_libraries(
+ 
+ add_test(properties_test ${CMAKE_CURRENT_BINARY_DIR}/properties_test)
+ add_test(signals_test ${CMAKE_CURRENT_BINARY_DIR}/signals_test)
++
++endif (PROPERTIES_CPP_BUILD_TESTS)
