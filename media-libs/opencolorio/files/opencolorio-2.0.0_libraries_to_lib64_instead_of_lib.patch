@@ -1,0 +1,14 @@
+diff --git a/src/OpenColorIO/CMakeLists.txt b/src/OpenColorIO/CMakeLists.txt
+index 107e494e..e014ac31 100755
+--- a/src/OpenColorIO/CMakeLists.txt
++++ b/src/OpenColorIO/CMakeLists.txt
+@@ -287,7 +287,7 @@ if(MSVC AND BUILD_SHARED_LIBS)
+ endif()
+ 
+ install(TARGETS OpenColorIO
+-	LIBRARY DESTINATION lib
++	LIBRARY DESTINATION lib64
+ 	RUNTIME DESTINATION bin
+-	ARCHIVE DESTINATION lib
++	ARCHIVE DESTINATION lib64
+ )
