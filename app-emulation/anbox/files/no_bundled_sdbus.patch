@@ -10,14 +10,6 @@ index 713df49..1e8b462 100644
  find_package(EGL REQUIRED)
  find_package(GLESv2 REQUIRED)
  find_package(Protobuf REQUIRED)
-@@ -68,7 +69,6 @@ pkg_check_modules(SDL2_IMAGE SDL2_image REQUIRED)
- pkg_check_modules(DBUS dbus-1 REQUIRED)
- pkg_check_modules(LXC lxc REQUIRED)
- pkg_check_modules(PROPERTIES_CPP properties-cpp REQUIRED)
--pkg_check_modules(LIBSYSTEMD libsystemd REQUIRED)
- pkg_check_modules(LIBCAP libcap REQUIRED)
- 
- message(STATUS "LXC version: ${LXC_VERSION}")
 diff --git a/external/CMakeLists.txt b/external/CMakeLists.txt
 index f677aa0..265a2eb 100644
 --- a/external/CMakeLists.txt
