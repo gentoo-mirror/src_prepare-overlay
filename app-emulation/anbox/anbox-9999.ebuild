@@ -32,18 +32,26 @@ DEPEND="
 	>=app-emulation/lxc-3.0.0
 	dev-libs/boost[threads]
 	dev-libs/expat
+	dev-libs/properties-cpp
 	dev-libs/protobuf
+	dev-libs/sdbus-cpp
 	media-libs/libsdl2
 	media-libs/glm
+	media-libs/mesa[egl,gles2]
+	media-libs/sdl2-image
 	sys-apps/dbus
 	sys-libs/libcap
 	|| ( sys-apps/systemd sys-auth/elogind )
 "
 RDEPEND="${DEPEND}"
+BDEPEND="virtual/pkgconfig"
+
 CONFIG_CHECK="
 	~ANDROID_BINDERFS
 	~ANDROID_BINDER_IPC
 	~ASHMEM
+	~BLK_DEV_LOOP
+	~FUSE
 	~SQUASHFS
 	~SQUASHFS_XZ
 	~SQUASHFS_XATTR
@@ -67,12 +75,13 @@ pkg_pretend() {
 
 src_prepare() {
 	[[ "${PV}" == "9999" ]] || mv "${WORKDIR}"/cpu_features-"${EXTCOMMIT}"/* "${S}"/external/cpu_features || die
-	use !systemd && eapply "${FILESDIR}"/elogind_instead_of_systemd_headers.patch
+	use !systemd && eapply "${FILESDIR}"/remove_systemd_dependency.patch
 	cmake_src_prepare
 }
 
 src_configure() {
 	local mycmakeargs=(
+		-DCMAKE_BUILD_TYPE=Release
 		-DENABLE_X11=$(usex X)
 		-DENABLE_WAYLAND=$(usex wayland)
 	)
