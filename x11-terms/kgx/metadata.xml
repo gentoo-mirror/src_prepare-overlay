@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <use>
-    <flag name="generic">
-      Present using the generic name "Terminal"
-    </flag>
-    <flag name="gir">
-      Whether to generate GObject Introspection Repository
-    </flag>
-    <flag name="gtop">
-      Use libgtop to track children processes
-    </flag>
-    <flag name="vapi">
-      Whether to generate VAPI
-    </flag>
-  </use>
+    <maintainer type="person">
+        <email>xgqt@protonmail.com</email>
+        <name>Maciej Barć</name>
+    </maintainer>
+    <use>
+        <flag name="generic">
+            Present using the generic name "Terminal"
+        </flag>
+        <flag name="gtop">
+            Use libgtop to track children processes
+        </flag>
+    </use>
 </pkgmetadata>

@@ -24,7 +24,7 @@ RESTRICT="
 "
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="doc generic -gir +gtop test -vapi"
+IUSE="doc generic +gtop test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="
@@ -36,7 +36,7 @@ DEPEND="
 	dev-util/desktop-file-utils
 	dev-util/meson
 	gnome-base/gsettings-desktop-schemas
-	gui-libs/libhandy
+	gui-libs/libhandy:0.0
 	x11-libs/gtk+:3
 	gtop? (
 		>=gnome-base/libgtop-2.38.0
@@ -48,12 +48,13 @@ RDEPEND="
 
 src_configure() {
 	local emesonargs=(
-		-Dgtk_doc=$(usex doc true false)
 		-Dgeneric=$(usex generic true false)
-		-Dgir=$(usex gir true false)
+		-Dgir=false
+		-Dgtk_doc=$(usex doc true false)
+		-Dgtk_doc=false
 		-Dgtop=$(usex gtop true false)
 		-Dtests=$(usex test true false)
-		-Dvapi=$(usex vapi true false)
+		-Dvapi=false
 	)
 	meson_src_configure
 }
