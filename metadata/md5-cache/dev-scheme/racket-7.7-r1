@@ -11,5 +11,5 @@ REQUIRED_USE=futures? ( jit ) X? ( graphics )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=minimal? ( https://download.racket-lang.org/installers/7.7/racket-minimal-7.7-src-builtpkgs.tgz ) !minimal? ( https://download.racket-lang.org/installers/7.7/racket-7.7-src-builtpkgs.tgz )
-_eclasses_=desktop	8f9bfcc33705104f56748d9dedb3177a	pax-utils	a41d1fd1c111289ffa04490de6ee79d7	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_eclasses_=desktop	7fd20552ce4cc97e8acb132a499a7dd8	pax-utils	a41d1fd1c111289ffa04490de6ee79d7	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
 _md5_=548e10dcc795cbd717a1a7b690bbe7a4
