@@ -20,19 +20,20 @@ fi
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="doc test"
+IUSE="doc"
 
 DEPEND="
 	doc? ( app-doc/doxygen )
-	test? ( dev-cpp/gtest )
 "
+#	test? ( dev-cpp/gtest )
+#"
 
 PATCHES=( "${FILESDIR}/optional_tests.patch" )
 
 src_configure() {
 	local mycmakeargs=(
 		-DPROPERTIES_CPP_ENABLE_DOC_GENERATION=$(usex doc)
-		-DPROPERTIES_CPP_BUILD_TESTS=$(usex test)
+		-DPROPERTIES_CPP_BUILD_TESTS=OFF
 	)
 	cmake_src_configure
 }
