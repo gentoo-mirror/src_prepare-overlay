@@ -3,7 +3,10 @@
 
 EAPI=7
 
-inherit cmake
+PYTHON_COMPAT=( python3_{6..9} )
+DISTUTILS_OPTIONAL=1
+
+inherit cmake distutils-r1
 
 DESCRIPTION="An implementation of the Double Ratchet cryptographic ratchet in C++"
 HOMEPAGE="https://git.matrix.org/git/olm/about/"
@@ -18,3 +21,28 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0/$(ver_cut 1)"
+IUSE="python"
+
+DEPEND="
+	python? (
+		dev-python/cffi[${PYTHON_USEDEP}]
+		dev-python/future[${PYTHON_USEDEP}]
+	)
+"
+
+CMAKE_IN_SOURCE_BUILD=1
+
+src_prepare() {
+	cmake_src_prepare
+	use python && (cd python; distutils-r1_src_prepare)
+}
+
+src_compile() {
+	cmake_src_compile
+	use python && (cd python; distutils-r1_src_compile)
+}
+
+src_install() {
+	cmake_src_install
+	use python && (cd python; distutils-r1_src_install)
+}

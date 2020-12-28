@@ -14,6 +14,8 @@ if [[ "${PV}" == 9999 ]]; then
 else
 	COMMIT="45863e849b39c4921d6553e6d27e267a96ac7d77" # 9.4.2018
 	SRC_URI="https://github.com/lib-cpp/properties-cpp/archive/"${COMMIT}".tar.gz -> ${P}.tar.gz"
+	S="${WORKDIR}/${PN}-${COMMIT}"
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="LGPL-3"
@@ -24,13 +26,14 @@ DEPEND="
 	doc? ( app-doc/doxygen )
 "
 #	test? ( dev-cpp/gtest )
+#"
 
-#PATCHES=( "${FILESDIR}/optional_tests.patch" )
+PATCHES=( "${FILESDIR}/optional_tests.patch" )
 
 src_configure() {
 	local mycmakeargs=(
 		-DPROPERTIES_CPP_ENABLE_DOC_GENERATION=$(usex doc)
-#		-DPROPERTIES_CPP_BUILD_TESTS=$(usex test)
+		-DPROPERTIES_CPP_BUILD_TESTS=OFF
 	)
 	cmake_src_configure
 }
