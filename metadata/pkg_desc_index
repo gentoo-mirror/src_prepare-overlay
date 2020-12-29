@@ -20,14 +20,15 @@ app-portage/gen-pkgs 1.0.0 9999: Create HTML page based off of a given overlay U
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
 app-portage/src_prepare-scripts 9999: Small scripts from src_prepare group
 app-text/pandoc-bin 2.10.1 2.11.0.2: Universal markup converter
+dev-cpp/properties-cpp 0_pre20180409 9999: A very simple convenience library for handling properties and signals in C++11
+dev-cpp/pystring 1.1.3 9999: C++ functions matching the interface and behavior of python string methods
+dev-cpp/sdbus-cpp 0.8.3: High-level C++ D-Bus library for Linux
 dev-games/godot 3.2.3: Multi-platform 2D and 3D game engine
 dev-lang/lci 0.11.2: LOLCODE interpreter written in C
 dev-libs/granite 5.3.0: Elementary OS library that extends GTK+
 dev-libs/libQtOlm 3.0.1 9999: A Qt wrapper for libolm
 dev-libs/libQuotient 0.6.0 0.6.1 9999: A Qt5 library to write cross-platform clients for Matrix
 dev-libs/olm 3.1.5-r1 3.2.1: An implementation of the Double Ratchet cryptographic ratchet in C++
-dev-libs/properties-cpp 0_pre20180409 9999: A very simple convenience library for handling properties and signals in C++11
-dev-libs/sdbus-cpp 0.8.3: High-level C++ D-Bus library for Linux
 dev-libs/sdl-kitchensink 1.0.8-r1: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
 dev-perl/File-Rename 1.10: A filename renaming utility based on perl regular expression used by Debian
 dev-python/blist 1.3.6: A list-like type
@@ -69,8 +70,7 @@ media-gfx/drawing 0.6.1 9999: A drawing application for the GNOME desktop
 media-gfx/fondo 1.3.10 1.5.0 9999: Wallpaper App for Linux
 media-gfx/koko 9999: Image gallery application by KDE designed for desktop and touch devices
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
-media-libs/opencolorio 2.0.0_pre20201211 9999: A color management framework for visual effects and animation
-media-libs/pystring 1.1.3 9999: C++ functions matching the interface and behavior of python string methods
+media-libs/opencolorio 2.0.0_beta2 2.0.0_pre20201211 9999: A color management framework for visual effects and animation
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
 media-video/tartube 2.1.0 2.3.0 9999: A GUI front-end for youtube-dl
@@ -80,7 +80,6 @@ net-firewall/hblock 3.0.0 3.1.0 9999: Improve your security and privacy by block
 net-im/mirage 0.6.4 9999: A fancy, customizable, keyboard-operable Qt/QML+Python Matrix chat client.
 net-im/spectral 854 9999: A glossy client for Matrix, written in QtQuick Controls 2 and C++.
 net-im/srain 1.0.2 9999: Modern IRC client written in GTK
-net-libs/libcurl-gnutls 7.71.1 7.73.0: libcurl libraries linked with gnutls
 net-misc/ddgr 1.7 1.8 1.9 9999: DuckDuckGo from the terminal
 net-misc/downloader-cli 0.1.0 0.2.0 9999: A simple downloader written in Python with an awesome progressbar
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
