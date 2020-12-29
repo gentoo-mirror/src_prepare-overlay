@@ -30,11 +30,11 @@ IUSE="X wayland systemd"
 
 DEPEND="
 	>=app-emulation/lxc-3.0.0
+	dev-cpp/properties-cpp
+	dev-cpp/sdbus-cpp
 	dev-libs/boost[threads]
 	dev-libs/expat
-	dev-libs/properties-cpp
 	dev-libs/protobuf
-	dev-libs/sdbus-cpp
 	media-libs/libsdl2
 	media-libs/glm
 	media-libs/mesa[egl,gles2]

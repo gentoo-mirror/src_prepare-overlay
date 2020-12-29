@@ -31,6 +31,7 @@ IUSE="cpu_flags_x86_sse2 opengl test"
 #	python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
+	dev-cpp/pystring
 	>=dev-cpp/yaml-cpp-0.5
 	dev-libs/tinyxml
 	dev-python/pybind11
@@ -41,7 +42,6 @@ RDEPEND="
 		media-libs/freeglut
 		virtual/opengl
 	)
-	media-libs/pystring
 "
 
 DEPEND="${RDEPEND}"
