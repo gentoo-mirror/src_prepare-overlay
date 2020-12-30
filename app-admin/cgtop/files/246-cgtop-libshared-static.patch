@@ -1,0 +1,13 @@
+index dbbddb6..3976888 100644
+--- a/meson.build
++++ b/meson.build
+@@ -2894,8 +2894,7 @@ public_programs += executable(
+         'systemd-cgtop',
+         'src/cgtop/cgtop.c',
+         include_directories : includes,
+-        link_with : [libshared],
+-        install_rpath : rootlibexecdir,
++        link_with : [libshared_static, libsystemd_static],
+         install : true)
+ 
+ executable(
