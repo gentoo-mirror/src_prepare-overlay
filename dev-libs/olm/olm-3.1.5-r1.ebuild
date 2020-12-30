@@ -19,7 +19,7 @@ else
 	KEYWORDS="~amd64"
 fi
 
-LICENSE="GPL-3"
+LICENSE="Apache-2.0"
 SLOT="0/$(ver_cut 1)"
 IUSE="python"
 
