@@ -20,20 +20,25 @@ fi
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="doc"
+IUSE="doc test"
 
 DEPEND="
 	doc? ( app-doc/doxygen )
+	test? ( dev-cpp/gtest )
 "
-#	test? ( dev-cpp/gtest )
-#"
 
 PATCHES=( "${FILESDIR}/optional_tests.patch" )
+
+src_prepare() {
+	# Provided FindGtest tries (and fails) to build its own version of gtest rather than actually search for it on the system
+	cp "${FILESDIR}"/FindGtest.cmake cmake/FindGtest.cmake || die
+	cmake_src_prepare
+}
 
 src_configure() {
 	local mycmakeargs=(
 		-DPROPERTIES_CPP_ENABLE_DOC_GENERATION=$(usex doc)
-		-DPROPERTIES_CPP_BUILD_TESTS=OFF
+		-DPROPERTIES_CPP_BUILD_TESTS=$(usex test)
 	)
 	cmake_src_configure
 }

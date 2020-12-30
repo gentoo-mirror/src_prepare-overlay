@@ -19,7 +19,7 @@ else
 	KEYWORDS="~amd64"
 fi
 
-LICENSE="GPL-3"
+LICENSE="Apache-2.0"
 SLOT="0/$(ver_cut 1)"
 IUSE="python"
 
@@ -37,6 +37,15 @@ src_prepare() {
 	use python && (cd python; distutils-r1_src_prepare)
 }
 
+src_configure() {
+	local mycmakeargs=(
+		-DOLM_TESTS=OFF
+		-DBUILD_SHARED_LIBS=ON
+	)
+	cmake_src_configure
+	use python && (cd python; distutils-r1_src_configure)
+}
+
 src_compile() {
 	cmake_src_compile
 	use python && (cd python; distutils-r1_src_compile)
@@ -45,4 +54,8 @@ src_compile() {
 src_install() {
 	cmake_src_install
 	use python && (cd python; distutils-r1_src_install)
+}
+
+src_test(){
+	emake test
 }
