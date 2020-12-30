@@ -1,0 +1,13 @@
+index dbbddb6..3f9b144 100644
+--- a/meson.build
++++ b/meson.build
+@@ -2886,8 +2886,7 @@ public_programs += executable(
+         'systemd-cgls',
+         'src/cgls/cgls.c',
+         include_directories : includes,
+-        link_with : [libshared],
+-        install_rpath : rootlibexecdir,
++        link_with : [libshared_static, libsystemd_static],
+         install : true)
+ 
+ public_programs += executable(

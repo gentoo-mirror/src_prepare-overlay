@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>xgqt@protonmail.com</email>
+        <name>Maciej Barć</name>
+    </maintainer>
+    <upstream>
+        <remote-id type="github">systemd/systemd</remote-id>
+    </upstream>
+    <longdescription>
+        systemd-cgtop shows the top control groups of the local Linux
+        control group hierarchy, ordered by their CPU, memory,
+        or disk I/O load. The display is refreshed in regular intervals
+        (by default every 1s), similar in style to top(1). If a control
+        group path is specified, shows only the services of the specified
+        control group.
+    </longdescription>
+</pkgmetadata>
