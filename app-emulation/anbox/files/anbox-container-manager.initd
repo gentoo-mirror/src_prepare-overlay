@@ -20,6 +20,11 @@ start_pre() {
 	modprobe loop
 	modprobe tun
 
+	if ! [[ -d /dev/binderfs ]]; then
+		mkdir /dev/binderfs
+		mount -t binder binder /dev/binderfs
+	fi
+
 	if ip link show anbox0 >/dev/null 2>&1; then
 		ewarn "anbox0 network interface already exists"
 	else
