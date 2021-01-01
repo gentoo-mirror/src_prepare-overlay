@@ -40,6 +40,7 @@ DEPEND="
 	media-libs/mesa[egl,gles2]
 	media-libs/sdl2-image
 	sys-apps/dbus
+	sys-fs/fuse:3
 	sys-libs/libcap
 	|| ( sys-apps/systemd sys-auth/elogind )
 "
@@ -51,7 +52,7 @@ CONFIG_CHECK="
 	~ANDROID_BINDER_IPC
 	~ASHMEM
 	~BLK_DEV_LOOP
-	~FUSE
+	~FUSE_FS
 	~SQUASHFS
 	~SQUASHFS_XZ
 	~SQUASHFS_XATTR
