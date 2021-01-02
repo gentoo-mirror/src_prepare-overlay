@@ -9,8 +9,5 @@
         <flag name="generic">
             Present using the generic name "Terminal"
         </flag>
-        <flag name="gtop">
-            Use libgtop to track children processes
-        </flag>
     </use>
 </pkgmetadata>
