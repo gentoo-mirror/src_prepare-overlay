@@ -1,11 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8} )
-
-inherit gnome2-utils meson python-single-r1 xdg-utils
+inherit gnome2-utils meson xdg
 
 DESCRIPTION="A minimal terminal for GNOME"
 HOMEPAGE="https://gitlab.gnome.org/ZanderBrown/kgx"
@@ -24,13 +22,13 @@ RESTRICT="
 "
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="doc generic +gtop test"
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+IUSE="doc generic test"
 
 DEPEND="
 	${PYTHON_DEPS}
 	>=dev-libs/glib-2.58.0
 	>=dev-libs/libpcre2-10.32
+	>=gnome-base/libgtop-2.38.0
 	>=x11-libs/vte-0.54.4
 	dev-libs/appstream-glib[introspection]
 	dev-util/desktop-file-utils
@@ -38,9 +36,6 @@ DEPEND="
 	gnome-base/gsettings-desktop-schemas
 	gui-libs/libhandy:0.0
 	x11-libs/gtk+:3
-	gtop? (
-		>=gnome-base/libgtop-2.38.0
-	)
 "
 RDEPEND="
 	${DEPEND}
@@ -52,7 +47,7 @@ src_configure() {
 		-Dgir=false
 		-Dgtk_doc=$(usex doc true false)
 		-Dgtk_doc=false
-		-Dgtop=$(usex gtop true false)
+		-Dgtop=true
 		-Dtests=$(usex test true false)
 		-Dvapi=false
 	)
@@ -61,7 +56,7 @@ src_configure() {
 
 src_install() {
 	meson_src_install
-	rm -rf "${ED}"/usr/share/appdata
+	rm -rf "${ED}/usr/share/appdata" || die
 }
 
 pkg_preinst() {
@@ -72,15 +67,11 @@ pkg_preinst() {
 pkg_postinst() {
 	gnome2_gconf_install
 	gnome2_schemas_update
-	xdg_icon_cache_update
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
+	xdg_pkg_postinst
 }
 
 pkg_postrm() {
 	gnome2_gconf_uninstall
 	gnome2_schemas_update
-	xdg_icon_cache_update
-	xdg_desktop_database_update
-	xdg_mimeinfo_database_update
+	xdg_pkg_postrm
 }
