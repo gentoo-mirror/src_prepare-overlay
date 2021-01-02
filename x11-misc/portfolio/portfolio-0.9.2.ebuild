@@ -28,7 +28,7 @@ SLOT="0"
 IUSE="test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-DEPEND="
+RDEPEND="
 	${PYTHON_DEPS}
 	dev-libs/appstream-glib[introspection]
 	x11-libs/gtk+:3[introspection]
@@ -36,9 +36,14 @@ DEPEND="
 		dev-python/pycairo[${PYTHON_MULTI_USEDEP}]
 		dev-python/pygobject:3[${PYTHON_MULTI_USEDEP}]
 	')
+	test? (
+		dev-python/black
+		dev-python/pyflakes
+		dev-python/pytest
+	)
 "
-RDEPEND="
-	${DEPEND}
+DEPEND="
+	${RDEPEND}
 "
 
 pkg_setup() {
