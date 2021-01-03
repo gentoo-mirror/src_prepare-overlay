@@ -9,15 +9,13 @@ MY_PN="${PN/-bin}"
 if [[ "${PV}" == *_rc* ]]; then
 	# _rc -> ~rc
 	MY_PV="${PV/_rc/~rc}"
-	ARM64_DEB="${MY_PN}-server_${MY_PV}_arm64.deb"
-	AMD64_DEB="${MY_PN}-server_${MY_PV}_amd64.deb"
-	WEB_DEB="${MY_PN}-web_${MY_PV}_all.deb"
+	SRV_SRC="${MY_PN}-server_${MY_PV}"
+	WEB_SRC="${MY_PN}-web_${MY_PV}"
 else
 	# Add "-1"
 	MY_PV="${PV}"
-	ARM64_DEB="${MY_PN}-server_${MY_PV}-1_arm64.deb"
-	AMD64_DEB="${MY_PN}-server_${MY_PV}-1_amd64.deb"
-	WEB_DEB="${MY_PN}-web_${MY_PV}-1_all.deb"
+	SRV_SRC="${MY_PN}-server_${MY_PV}-1"
+	WEB_SRC="${MY_PN}-web_${MY_PV}-1"
 fi
 
 inherit unpacker systemd wrapper
@@ -25,9 +23,13 @@ inherit unpacker systemd wrapper
 DESCRIPTION="The Free Software Media System"
 HOMEPAGE="https://jellyfin.org"
 SRC_URI="
-	${BASE_URI}/server/${MY_PV}/${ARM64_DEB} -> ${P}-server-arm64.deb
-	${BASE_URI}/server/${MY_PV}/${AMD64_DEB} -> ${P}-server-amd64.deb
-	${BASE_URI}/web/${MY_PV}/${WEB_DEB} -> ${P}-web.deb
+	amd64? (
+		${BASE_URI}/server/${MY_PV}/${SRV_SRC}_amd64.deb -> ${P}-server-amd64.deb
+	)
+	arm64? (
+		${BASE_URI}/server/${MY_PV}/${SRV_SRC}_arm64.deb -> ${P}-server-arm64.deb
+	)
+	${BASE_URI}/web/${MY_PV}/${WEB_SRC}_all.deb -> ${P}-web.deb
 "
 
 RESTRICT="mirror"
