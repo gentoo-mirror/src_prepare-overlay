@@ -9,12 +9,12 @@ MY_PN="${PN/-bin}"
 if [[ "${PV}" == *_rc* ]]; then
 	# _rc -> ~rc
 	MY_PV="${PV/_rc/~rc}"
-	SERVER_DEB="${MY_PN}-server_${MY_PV}_amd64.deb"
+	SERVER_DEB="${MY_PN}-server_${MY_PV}_${ARCH}.deb"
 	WEB_DEB="${MY_PN}-web_${MY_PV}_all.deb"
 else
 	# Add "-1"
 	MY_PV="${PV}"
-	SERVER_DEB="${MY_PN}-server_${MY_PV}-1_amd64.deb"
+	SERVER_DEB="${MY_PN}-server_${MY_PV}-1_${ARCH}.deb"
 	WEB_DEB="${MY_PN}-web_${MY_PV}-1_all.deb"
 fi
 
