@@ -9,12 +9,14 @@ MY_PN="${PN/-bin}"
 if [[ "${PV}" == *_rc* ]]; then
 	# _rc -> ~rc
 	MY_PV="${PV/_rc/~rc}"
-	SERVER_DEB="${MY_PN}-server_${MY_PV}_amd64.deb"
+	ARM64_DEB="${MY_PN}-server_${MY_PV}_arm64.deb"
+	AMD64_DEB="${MY_PN}-server_${MY_PV}_amd64.deb"
 	WEB_DEB="${MY_PN}-web_${MY_PV}_all.deb"
 else
 	# Add "-1"
 	MY_PV="${PV}"
-	SERVER_DEB="${MY_PN}-server_${MY_PV}-1_amd64.deb"
+	ARM64_DEB="${MY_PN}-server_${MY_PV}-1_arm64.deb"
+	AMD64_DEB="${MY_PN}-server_${MY_PV}-1_amd64.deb"
 	WEB_DEB="${MY_PN}-web_${MY_PV}-1_all.deb"
 fi
 
@@ -23,12 +25,8 @@ inherit unpacker systemd wrapper
 DESCRIPTION="The Free Software Media System"
 HOMEPAGE="https://jellyfin.org"
 SRC_URI="
-	amd64? (
-		${BASE_URI}/server/${MY_PV}/${SERVER_DEB} -> ${P}-server-${ARCH}.deb
-	)
-	arm64? (
-		${BASE_URI}/server/${MY_PV}/${SERVER_DEB} -> ${P}-server-${ARCH}.deb
-	)
+	${BASE_URI}/server/${MY_PV}/${ARM64_DEB} -> ${P}-server-arm64.deb
+	${BASE_URI}/server/${MY_PV}/${AMD64_DEB} -> ${P}-server-amd64.deb
 	${BASE_URI}/web/${MY_PV}/${WEB_DEB} -> ${P}-web.deb
 "
 
@@ -61,7 +59,16 @@ PATCHES=(
 )
 
 src_unpack() {
-	unpack_deb "${P}-server-${ARCH}.deb"
+	# https://gitlab.com/src_prepare/src_prepare-overlay/-/merge_requests/145
+	if use amd64
+	then
+		unpack_deb "${P}-server-amd64.deb"
+	elif use arm64
+	then
+		unpack_deb "${P}-server-arm64.deb"
+	else
+		die "Unsupported architecture"
+	fi
 	unpack_deb "${P}-web.deb"
 }
 
