@@ -1,4 +1,4 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -11,11 +11,11 @@ if [[ "${PV}" == "9999" ]];  then
 	EGIT_REPO_URI="https://github.com/imageworks/pystring.git"
 else
 	SRC_URI="https://github.com/imageworks/pystring/archive/v"${PV}".tar.gz -> "${P}".tar.gz"
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="~amd64"
 
 src_compile() {
 	emake LIBDIR="${S}" install
