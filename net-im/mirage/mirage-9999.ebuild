@@ -1,10 +1,10 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 # Python 3.9 is blocked due to dependencies pyotherside and aiofiles missing targets, otherwise python 3.9 should be supported.
-PYTHON_COMPAT=( python3_{6..8} )
+PYTHON_COMPAT=( python3_{7..8} )
 
 inherit qmake-utils python-single-r1 xdg
 
@@ -57,22 +57,20 @@ RDEPEND="
 	dev-libs/olm
 	dev-python/pyotherside[${PYTHON_SINGLE_USEDEP}]
 	$(python_gen_cond_dep '
-		dev-python/matrix-nio[e2e,${PYTHON_USEDEP}]
 		>=dev-python/aiofiles-0.4.0[${PYTHON_USEDEP}]
 		>=dev-python/appdirs-1.4.4[${PYTHON_USEDEP}]
 		>=dev-python/dbus-python-1.2.16[${PYTHON_USEDEP}]
 		>=dev-python/filetype-1.0.7[${PYTHON_USEDEP}]
+		dev-python/hsluv-python[${PYTHON_USEDEP}]
 		>=dev-python/html_sanitizer-1.9.1[${PYTHON_USEDEP}]
 		>=dev-python/lxml-4.5.1[${PYTHON_USEDEP}]
+		dev-python/matrix-nio[e2e,${PYTHON_USEDEP}]
 		>=dev-python/mistune-0.8.4[${PYTHON_USEDEP}]
 		>=dev-python/pillow-7.0.0[${PYTHON_USEDEP}]
 		>=dev-python/plyer-1.4.3[${PYTHON_USEDEP}]
 		>=dev-python/pymediainfo-4.2.1[${PYTHON_USEDEP}]
 		>=dev-python/sortedcontainers-2.2.2[${PYTHON_USEDEP}]
 		>=media-gfx/cairosvg-2.4.2[${PYTHON_USEDEP}]
-		python_single_target_python3_6? ( >=dev-python/async_generator-1.10[python_targets_python3_6] )
-		python_single_target_python3_6? ( >=dev-python/dataclasses-0.6[python_targets_python3_6] )
-		python_single_target_python3_6? ( >=dev-python/pyfastcopy-1.0.3[python_targets_python3_6] )
 		python_single_target_python3_7? ( >=dev-python/pyfastcopy-1.0.3[python_targets_python3_7] )
 
 	')
