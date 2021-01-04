@@ -1,4 +1,4 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -41,6 +41,7 @@ src_prepare() {
 
 src_compile() {
 	cmake_src_compile
+	export LIBRARY_PATH=""${S}"/lib64/" # Let python build find the already built libolm
 	use python && (cd python; distutils-r1_src_compile)
 }
 
