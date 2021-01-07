@@ -4,46 +4,40 @@
 EAPI=7
 
 PYTHON_COMPAT=( python3_{7,8,9} )
+inherit python-single-r1 meson gnome2-utils xdg
 
-inherit python-single-r1 gnome2-utils meson xdg
-
-DESCRIPTION="Minimalist file manager for those who want to use Linux mobile devices"
-HOMEPAGE="https://github.com/tchx84/Portfolio"
+DESCRIPTION="Easily manage WINE prefixes in a new way"
+HOMEPAGE="
+	https://usebottles.com/
+	https://github.com/bottlesdevs/Bottles
+"
 
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/tchx84/${PN^}.git"
+	EGIT_REPO_URI="https://github.com/bottlesdevs/${PN^}.git"
 else
-	SRC_URI="https://github.com/tchx84/${PN^}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/bottlesdevs/${PN^}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 	S="${WORKDIR}/${P^}"
 fi
 
-RESTRICT="
-	mirror
-	!test? ( test )
-"
+RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="
+DEPEND="
 	${PYTHON_DEPS}
+	>=x11-libs/gtk+-3.24.10[introspection]
 	dev-libs/appstream-glib[introspection]
-	x11-libs/gtk+:3[introspection]
+	dev-util/desktop-file-utils
 	$(python_gen_cond_dep '
 		dev-python/pycairo[${PYTHON_MULTI_USEDEP}]
 		dev-python/pygobject:3[${PYTHON_MULTI_USEDEP}]
 	')
 "
-DEPEND="
-	${RDEPEND}
-	test? (
-		dev-python/black
-		dev-python/pyflakes
-		dev-python/pytest
-	)
+RDEPEND="
+	${DEPEND}
 "
 
 pkg_setup() {
@@ -56,7 +50,7 @@ src_install() {
 
 	# TODO: find a better way to fix the python script
 	echo "#!/usr/bin/${EPYTHON}
-	$(cat ${D}/usr/bin/dev.tchx84.Portfolio)" > "${D}/usr/bin/dev.tchx84.Portfolio" || die
+	$(cat ${D}/usr/bin/${PN})" > "${D}/usr/bin/${PN}"
 }
 
 pkg_preinst() {

@@ -16,7 +16,7 @@ if [[ "${PV}" == *9999* ]]; then
 else
 	SRC_URI="https://github.com/tchx84/${PN^}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
-	S="${WORKDIR}/${PN^}-${PV}"
+	S="${WORKDIR}/${P^}"
 fi
 
 RESTRICT="
@@ -36,14 +36,14 @@ RDEPEND="
 		dev-python/pycairo[${PYTHON_MULTI_USEDEP}]
 		dev-python/pygobject:3[${PYTHON_MULTI_USEDEP}]
 	')
+"
+DEPEND="
+	${RDEPEND}
 	test? (
 		dev-python/black
 		dev-python/pyflakes
 		dev-python/pytest
 	)
-"
-DEPEND="
-	${RDEPEND}
 "
 
 pkg_setup() {
@@ -54,6 +54,7 @@ src_install() {
 	meson_src_install
 	python_optimize
 
+	# TODO: find a better way to fix the python script
 	echo "#!/usr/bin/${EPYTHON}
 	$(cat ${D}/usr/bin/dev.tchx84.Portfolio)" > "${D}/usr/bin/dev.tchx84.Portfolio" || die
 }

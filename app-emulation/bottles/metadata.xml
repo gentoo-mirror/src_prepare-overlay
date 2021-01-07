@@ -6,6 +6,6 @@
         <name>Maciej Barć</name>
     </maintainer>
     <upstream>
-        <remote-id type="github">tchx84/Portfolio</remote-id>
+        <remote-id type="github">bottlesdevs/Bottles</remote-id>
     </upstream>
 </pkgmetadata>
