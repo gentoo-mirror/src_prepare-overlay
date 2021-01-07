@@ -64,17 +64,26 @@ If you are using [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repos
 eselect repository enable src_prepare-overlay
 ```
 
-#### Manual
+### Manual
 
 If you want to manually add the overlay, see [examples/repos.conf/src_prepare-overlay.conf](https://gitlab.com/src_prepare/src_prepare-overlay/blob/master/examples/repos.conf/src_prepare-overlay.conf).
 
-##### Layman
+#### Layman
 
 If you are using [Layman](https://wiki.gentoo.org/wiki/Layman), execute:
 
 ``` sh
 layman -o 'https://gitlab.com/src_prepare/src_prepare-overlay/raw/master/repositories.xml' -f -a src_prepare-overlay
 ```
+
+#### eselect-repository
+
+If you are using [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository), execute:
+
+``` sh
+eselect repository add src_prepare-overlay git https://gitlab.com/src_prepare/src_prepare-overlay
+```
+
 
 ## How do I sync this?
 
