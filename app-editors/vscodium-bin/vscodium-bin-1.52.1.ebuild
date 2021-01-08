@@ -58,5 +58,5 @@ src_install() {
 	fperms +x "/opt/${PN}/chrome-sandbox"
 	fperms +x "/opt/${PN}/codium"
 
-	dosym "../../usr/bin/rg" "${EPREFIX}/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
+	dosym "../../../../../../../usr/bin/rg" "${EPREFIX}/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
 }
