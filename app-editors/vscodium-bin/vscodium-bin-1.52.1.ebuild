@@ -57,6 +57,9 @@ src_install() {
 	fperms +x "/opt/${PN}/bin/codium"
 	fperms +x "/opt/${PN}/chrome-sandbox"
 	fperms +x "/opt/${PN}/codium"
+	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/cpuUsage.sh"
+	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/ps.sh"
+	fperms +x "/opt/${PN}/resources/app/out/vs/base/node/terminateProcess.sh"
 
 	dosym "../../../../../../../usr/bin/rg" "${EPREFIX}/opt/${PN}/resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
 }
