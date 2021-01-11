@@ -62,7 +62,7 @@ games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 games-puzzle/vvvvvv 2.2 9999: Retro-styled 2D puzzle platformer (source-available release)
 games-rpg/fallout1 1.1: Post-apocalyptic GURPS-like role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
-games-strategy/mindustry 106 107 108: A sandbox tower defense game
+games-strategy/mindustry-bin 108 122.1: A sandbox tower defense game
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader 3.7-r1: Unofficial downloader for GOG content.
 mail-client/freelook-bin 1.0.0 1.0.1: Freelook, an Electron-based client for Microsoft Outlook
@@ -81,6 +81,7 @@ media-libs/opencolorio 2.0.0_beta2 9999: A color management framework for visual
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
 media-video/tartube 2.1.0 2.3.0 9999: A GUI front-end for youtube-dl
+net-analyzer/ipscan-bin 3.7.3: Angry IP Scanner - fast and friendly network scanner
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
 net-analyzer/sensu 5.19.3 5.21.3: Simple. Scalable. Multi-cloud monitoring.
 net-firewall/hblock 3.1.0 3.1.2 9999: Improve your security and privacy by blocking ads, tracking and malware domains
