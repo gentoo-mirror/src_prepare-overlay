@@ -1,4 +1,4 @@
-BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=configure postinst postrm preinst prepare setup unpack
 DEPEND=app-crypt/mhash dev-libs/glib:2 blake2? ( app-crypt/libb2 ) caja? ( mate-base/caja mate-extra/caja-extensions ) !gtk3? ( gtk2? ( x11-libs/gtk+:2 ) ) gtk3? ( x11-libs/gtk+:3 ) gcrypt? ( dev-libs/libgcrypt ) mbedtls? ( net-libs/mbedtls ) nautilus? ( gnome-base/nautilus ) nettle? ( dev-libs/nettle ) !libressl? ( openssl? ( >=dev-libs/openssl-1.1.1d ) ) libressl? ( dev-libs/libressl ) thunar? ( >=xfce-base/thunar-1.8.12 ) zlib? ( sys-libs/zlib ) dev-util/intltool gnome-base/librsvg nls? ( sys-devel/gettext )
 DESCRIPTION=A cross-platform desktop utility for computing message digests or checksums
@@ -11,5 +11,5 @@ RDEPEND=app-crypt/mhash dev-libs/glib:2 blake2? ( app-crypt/libb2 ) caja? ( mate
 REQUIRED_USE=gtk3? ( !gtk2 ) || ( gtk3 gtk2 ) openssl? ( !libressl ) || ( openssl libressl )
 RESTRICT=mirror
 SLOT=0
-_eclasses_=autotools	3ec5e49b810b2571ca9c6d76f55867bb	edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	git-r3	3e7ec3d6619213460c85e2aa48398441	gnome2-utils	c8e3fff820d850c0e003e22208d2eea3	l10n	8cdd85e169b835d518bc2fd59f780d8e	libtool	f143db5a74ccd9ca28c1234deffede96	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	1a94dc06d324bd0dab754e11abe6d27e	wrapper	4251d4c84c25f59094fd557e0063a974	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_eclasses_=autotools	9677fc170e6d375dc41c14871b33d28c	edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	git-r3	3e7ec3d6619213460c85e2aa48398441	gnome2-utils	c8e3fff820d850c0e003e22208d2eea3	l10n	8cdd85e169b835d518bc2fd59f780d8e	libtool	f143db5a74ccd9ca28c1234deffede96	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	1a94dc06d324bd0dab754e11abe6d27e	wrapper	4251d4c84c25f59094fd557e0063a974	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
 _md5_=c6211e68b88903f5838d2561bc7c232f
