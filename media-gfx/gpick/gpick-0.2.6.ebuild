@@ -23,7 +23,7 @@ IUSE="gtk2 nls"
 
 DEPEND="
 	>=dev-libs/boost-1.74.0
-	dev-lang/lua
+	dev-lang/lua:*
 	dev-libs/expat
 	gtk2? ( x11-libs/gtk+:2 )
 	!gtk2? ( x11-libs/gtk+:3 )
