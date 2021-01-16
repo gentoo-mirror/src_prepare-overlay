@@ -74,6 +74,7 @@ media-gfx/akira 0.0.13 9999: Native Linux App for UI and UX Design built in Vala
 media-gfx/czkawka 2.0.0: App to find duplicates, empty folders and similar images
 media-gfx/drawing 0.6.1 9999: A drawing application for the GNOME desktop
 media-gfx/fondo 1.3.10 1.5.0 9999: Wallpaper App for Linux
+media-gfx/gpick 0.2.6: Advanced color picker written in C++ using GTK+ toolkit
 media-gfx/koko 9999: Image gallery application by KDE designed for desktop and touch devices
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
 media-libs/opencolorio 2.0.0_beta2 9999: A color management framework for visual effects and animation
