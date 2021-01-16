@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>xgqt@protonmail.com</email>
+        <name>Maciej Barć</name>
+    </maintainer>
+    <use>
+        <flag name="gtk2">Enable support for GTK+2 instead of GTK+3</flag>
+    </use>
+    <upstream>
+        <remote-id type="github">thezbyg/gpick</remote-id>
+    </upstream>
+</pkgmetadata>
