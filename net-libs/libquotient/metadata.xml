@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <upstream>
+    <remote-id type="github">quotient-im/libQuotient</remote-id>
+  </upstream>
+  <use>
+    <flag name="e2e">Build with e2e encryption support</flag>
+  </use>
+</pkgmetadata>
