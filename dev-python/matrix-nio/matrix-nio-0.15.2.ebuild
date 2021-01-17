@@ -1,9 +1,9 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8,9})
+PYTHON_COMPAT=( python3_{7..9})
 inherit distutils-r1
 
 DESCRIPTION="A Python Matrix client library, designed according to sans I/O principles"
@@ -19,7 +19,6 @@ RDEPEND="
 	dev-python/future
 	dev-python/aiohttp
 	dev-python/aiofiles
-	python_targets_python3_6? ( dev-python/dataclasses )
 	dev-python/h11
 	dev-python/hyper-h2
 	dev-python/logbook
