@@ -21,6 +21,9 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="gtk2 nls"
 
+BDEPEND="
+	dev-util/ragel
+"
 DEPEND="
 	>=dev-libs/boost-1.74.0
 	dev-lang/lua:*
