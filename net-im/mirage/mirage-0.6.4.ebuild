@@ -1,9 +1,9 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6..8} )
+PYTHON_COMPAT=( python3_{7..8} )
 inherit qmake-utils python-single-r1 xdg
 
 DESCRIPTION="A fancy, customizable, keyboard-operable Qt/QML+Python Matrix chat client."
@@ -66,9 +66,6 @@ RDEPEND="
 		>=dev-python/mistune-0.8.4[${PYTHON_USEDEP}]
 		>=dev-python/pillow-7.0.0[${PYTHON_USEDEP}]
 		>=dev-python/pymediainfo-4.2.1[${PYTHON_USEDEP}]
-		python_single_target_python3_6? ( >=dev-python/async_generator-1.10[python_targets_python3_6] )
-		python_single_target_python3_6? ( >=dev-python/dataclasses-0.6[python_targets_python3_6] )
-		python_single_target_python3_6? ( >=dev-python/pyfastcopy-1.0.3[python_targets_python3_6] )
 		python_single_target_python3_7? ( >=dev-python/pyfastcopy-1.0.3[python_targets_python3_7] )
 
 	')
