@@ -16,8 +16,6 @@ app-crypt/gtkhash:thunar - Build extension for xfce-base/thunar
 app-crypt/gtkhash:zlib - Add support for zlib (de)compression
 app-editors/vscodium-bin:libsecret - Enable libsecret support
 app-emulation/dos32a:binary - Fetch binary release instead of compiling the package from source.
-dev-libs/libQuotient:e2e - Build with e2e encryption support
-dev-libs/libQuotient:extra - Install quotest tool
 dev-libs/sdl-kitchensink:examples - Build examples. If static is also set, examples will be linked against static library
 dev-libs/sdl-kitchensink:sanitize - Use sanitizer functions (ASAN/TSAN/etc...)
 dev-libs/sdl-kitchensink:static - Build static libraries
@@ -44,6 +42,7 @@ net-analyzer/sensu:agent - Installs Sensu agent
 net-analyzer/sensu:backend - Install Sensu dashboard and backend server
 net-analyzer/sensu:gcc - Compile with GCC's Go compiler instead of Google's reference Go compiler (NOT SUPPORTED)
 net-analyzer/sensu:systemd - Install systemd service units rather than OpenRC init scripts (NOT SUPPORTED)
+net-libs/libquotient:e2e - Build with e2e encryption support
 net-misc/ddgr:fish-completion - Enable fish completion support
 net-misc/meganz-sdk:freeimage - Enable support for image I/O via media-libs/freeimage
 net-misc/meganz-sdk:fuse - Build FUSE-based example client

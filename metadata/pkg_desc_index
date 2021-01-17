@@ -29,7 +29,6 @@ dev-cpp/sdbus-cpp 0.8.3: High-level C++ D-Bus library for Linux
 dev-lang/lci 0.11.2: LOLCODE interpreter written in C
 dev-libs/granite 5.3.0: Elementary OS library that extends GTK+
 dev-libs/libQtOlm 3.0.1 9999: A Qt wrapper for libolm
-dev-libs/libQuotient 0.6.1 0.6.3 9999: A Qt5 library to write cross-platform clients for Matrix
 dev-libs/olm 3.1.5-r1 3.2.1: An implementation of the Double Ratchet cryptographic ratchet in C++
 dev-libs/sdl-kitchensink 1.0.8-r1: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
 dev-perl/File-Rename 1.10: A filename renaming utility based on perl regular expression used by Debian
@@ -88,6 +87,7 @@ net-firewall/hblock 3.1.0 3.1.2 9999: Improve your security and privacy by block
 net-im/mirage 0.6.4 9999: A fancy, customizable, keyboard-operable Qt/QML+Python Matrix chat client.
 net-im/spectral 854 9999: A glossy client for Matrix, written in QtQuick Controls 2 and C++.
 net-im/srain 1.0.2 9999: Modern IRC client written in GTK
+net-libs/libquotient 0.6.3 0.6.4: A Qt5 library to write cross-platform clients for Matrix
 net-misc/ddgr 1.7 1.8 1.9 9999: DuckDuckGo from the terminal
 net-misc/downloader-cli 0.1.0 0.2.0 0.3.1 9999: A simple downloader written in Python with an awesome progressbar
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
