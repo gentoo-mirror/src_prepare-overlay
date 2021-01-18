@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <use>
-    <flag name="futures">
-      Enable racket/future library for fine-grained hardware parallelism
-    </flag>
-    <flag name="graphics">
-      Enable support for graphics
-    </flag>
-    <flag name="places">
-      Enable racket/place library for share-nothing parallelism and message-passing communication. Compared to futures, places are heavyweight, but they have a simpler performance model.
-    </flag>
-    <flag name="threads">
-      Enable support for green threads
-    </flag>
-  </use>
+    <maintainer type="person">
+        <email>xgqt@protonmail.com</email>
+        <name>Maciej Barć</name>
+    </maintainer>
+    <use>
+        <flag name="futures">
+            Enable racket/future library for fine-grained hardware parallelism
+        </flag>
+        <flag name="graphics">
+            Enable support for graphics
+        </flag>
+        <flag name="places">
+            Enable racket/place library for share-nothing parallelism and message-passing communication. Compared to futures, places are heavyweight, but they have a simpler performance model.
+        </flag>
+        <flag name="threads">
+            Enable support for green threads
+        </flag>
+    </use>
+    <upstream>
+        <remote-id type="github">racket/racket</remote-id>
+    </upstream>
 </pkgmetadata>
