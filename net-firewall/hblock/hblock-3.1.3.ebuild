@@ -20,16 +20,12 @@ RESTRICT="binchecks mirror strip test"
 LICENSE="MIT"
 SLOT="0"
 
-BDEPEND="
-	${DEPEND}
+RDEPEND="
 	|| (
 		net-misc/curl[http2,ssl]
 		net-misc/wget[ssl]
 		www-client/fetch
 	)
-"
-RDEPEND="
-	${DEPEND}
 "
 
 src_compile() {
