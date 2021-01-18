@@ -1,9 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit gnome2-utils meson vala xdg-utils
+inherit gnome2-utils meson vala xdg
 
 DESCRIPTION="A simple application to provide essential information on network related aspects"
 HOMEPAGE="https://github.com/babluboy/nutty"
@@ -38,13 +38,10 @@ RDEPEND="
 	sys-apps/pciutils
 "
 
-DOCS=(
-	AUTHORS
-	README.md
-)
+DOCS=( AUTHORS README.md )
 
 src_prepare() {
-	xdg_environment_reset
+	xdg_src_prepare
 	vala_src_prepare
 	default
 }
@@ -62,11 +59,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	xdg_icon_cache_update
+	xdg_pkg_preinst
 	gnome2_schemas_update
 }
 
 pkg_postrm() {
-	xdg_icon_cache_update
+	xdg_pkg_postrm
 	gnome2_schemas_update
 }
