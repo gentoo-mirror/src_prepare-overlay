@@ -6,6 +6,6 @@
         <name>Maciej Barć</name>
     </maintainer>
     <upstream>
-        <remote-id type="github">deepjyoti30/ytmdl</remote-id>
+        <remote-id type="github">deepjyoti30/simber</remote-id>
     </upstream>
 </pkgmetadata>

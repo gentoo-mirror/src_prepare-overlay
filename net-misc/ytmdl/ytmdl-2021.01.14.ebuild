@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7} )
+PYTHON_COMPAT=( python3_{7..8} )
 
 inherit distutils-r1
 
@@ -22,15 +22,6 @@ RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
 
-src_prepare() {
-	# Excerpt from https://pypi.org/project/bs4
-	# "The official name of PyPI’s Beautiful Soup Python package is beautifulsoup4.
-	#  This package ensures that if you type pip install bs4 by mistake you will end up with Beautiful Soup."
-	# ;-)
-	sed -i 's/bs4/beautifulsoup4/' setup.py
-	distutils-r1_src_prepare
-}
-
 RDEPEND="
 	>=dev-python/requests-2.22.0[${PYTHON_USEDEP}]
 	dev-python/PySocks[${PYTHON_USEDEP}]
@@ -39,8 +30,23 @@ RDEPEND="
 	dev-python/ffmpeg-python[${PYTHON_USEDEP}]
 	dev-python/itunespy[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/pycountry[${PYTHON_USEDEP}]
+	dev-python/pydes[${PYTHON_USEDEP}]
+	dev-python/python-musicbrainz-ngs[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
+	dev-python/rich[${PYTHON_USEDEP}]
+	dev-python/simber[${PYTHON_USEDEP}]
+	dev-python/unidecode[${PYTHON_USEDEP}]
+	dev-python/urllib3[${PYTHON_USEDEP}]
+	dev-python/youtube-search[${PYTHON_USEDEP}]
 	media-libs/mutagen[${PYTHON_USEDEP}]
 	net-misc/downloader-cli[${PYTHON_USEDEP}]
 	net-misc/youtube-dl[${PYTHON_USEDEP}]
 "
+
+src_prepare() {
+	# https://pypi.org/project/bs4
+	sed -i 's/bs4/beautifulsoup4/' setup.py
+
+	distutils-r1_src_prepare
+}
