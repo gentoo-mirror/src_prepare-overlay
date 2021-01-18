@@ -3,7 +3,7 @@
 
 EAPI=7
 
-DISTUTILS_USE_SETUPTOOLS=pyproject.toml
+DISTUTILS_USE_SETUPTOOLS="pyproject.toml"
 PYTHON_COMPAT=( python3_{7..9} )
 
 inherit distutils-r1 eutils
@@ -23,3 +23,10 @@ RDEPEND="
 	>=dev-python/pygments-2.6.0[${PYTHON_USEDEP}]
 	>=dev-python/typing-extensions-3.7.4[${PYTHON_USEDEP}]
 "
+
+python_prepare_all() {
+	# Build is done with poetry (dev-python/pyproject2setuppy)
+	rm setup.py || die "rm failed"
+
+	distutils-r1_python_prepare_all
+}
