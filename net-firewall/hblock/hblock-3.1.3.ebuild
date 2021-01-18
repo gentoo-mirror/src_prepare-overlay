@@ -20,12 +20,13 @@ RESTRICT="binchecks mirror strip test"
 LICENSE="MIT"
 SLOT="0"
 
-DEPEND="
-	sys-apps/baselayout
-"
 BDEPEND="
 	${DEPEND}
-	sys-apps/coreutils
+	|| (
+		net-misc/curl[http2,ssl]
+		net-misc/wget[ssl]
+		www-client/fetch
+	)
 "
 RDEPEND="
 	${DEPEND}
