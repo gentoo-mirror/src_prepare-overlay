@@ -1,4 +1,4 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -32,6 +32,7 @@ DEPEND="
 	>=app-emulation/lxc-3.0.0
 	dev-cpp/properties-cpp
 	dev-cpp/sdbus-cpp
+	dev-cpp/gtest
 	dev-libs/boost[threads]
 	dev-libs/expat
 	dev-libs/protobuf
