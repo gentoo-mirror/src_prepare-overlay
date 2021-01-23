@@ -1,4 +1,38 @@
+# -*- conf -*-
+
+
+# This file is part of src_prepare-overlay.
+
+# src_prepare-overlay is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# src_prepare-overlay is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with src_prepare-overlay.  If not, see <https://www.gnu.org/licenses/>.
+
+# Original author: Maciej Barć (xgqt@protonmail.com)
+# Copyright (c) 2021, src_prepare group
+# Licensed under the GNU GPL v2 License
+
+
+*.log
 *.swp
+*~
+,*
 .idea/
+.vs/
 .vscode/
-metadata/md5-cache/
+.~lock.*
+/.ebuild.x
+/distfiles/
+/eclass/*.5
+/local/
+/metadata/md5-cache
+/packages/
+/profiles/use.local.desc
