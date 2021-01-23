@@ -3,7 +3,6 @@
 
 EAPI=7
 
-BASE_URI="https://repo.jellyfin.org/releases/server/debian/versions/stable"
 MY_PN="${PN/-bin}"
 
 if [[ "${PV}" == *_rc* ]]; then
@@ -11,12 +10,16 @@ if [[ "${PV}" == *_rc* ]]; then
 	MY_PV="${PV/_rc/~rc}"
 	SRV_SRC="${MY_PN}-server_${MY_PV}"
 	WEB_SRC="${MY_PN}-web_${MY_PV}"
+	RELEASE="stable-rc"
 else
 	# Add "-1"
 	MY_PV="${PV}"
 	SRV_SRC="${MY_PN}-server_${MY_PV}-1"
 	WEB_SRC="${MY_PN}-web_${MY_PV}-1"
+	RELEASE="stable"
 fi
+
+BASE_URI="https://repo.jellyfin.org/releases/server/debian/versions/${RELEASE}"
 
 inherit unpacker systemd wrapper
 
