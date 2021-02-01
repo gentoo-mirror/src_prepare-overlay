@@ -50,7 +50,6 @@ dev-python/unpaddedbase64 1.1.0: Encode and decode Base64 without = padding.
 dev-python/watchgod 0.6: Simple, modern file watching and code reload in python.
 dev-python/youtube-search 1.1.1: Simple, minimal and powerful logging library for Python
 dev-scheme/chezscheme 9.5.4: Open-source Chez Scheme implementation from Cisco
-dev-scheme/guile-colorized 9999: Colorized REPL for GNU Guile
 dev-scheme/racket 7.7-r1 7.8-r1: General purpose, multi-paradigm Lisp-Scheme programming language
 dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
 games-action/gta2 9.6-r2: And remember - respect is everything!
