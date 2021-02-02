@@ -15,7 +15,7 @@ if [[ "${PV}" == *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/rvirding/${PN}.git"
 else
 	COMMIT_SHA="e5f20c459a13b35ed1e71b1d2667363af168e958"
-	SRC_URI="https://github.com/rvirding/${PN}/archive/${COMMIT_SHA}.zip -> ${P}.zip"
+	SRC_URI="https://github.com/rvirding/${PN}/archive/${COMMIT_SHA}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 	S="${WORKDIR}/${PN}-${COMMIT_SHA}"
 fi
@@ -25,13 +25,14 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="doc emacs"
 
-RDEPEND="
-	dev-lang/erlang
-"
-DEPEND="
-	${RDEPEND}
+BDEPEND="
 	doc? ( app-text/pandoc )
 "
+RDEPEND="
+	dev-lang/erlang
+	emacs? ( >=app-editors/emacs-23.1:* )
+"
+DEPEND="${RDEPEND}"
 
 SITEFILE="70${PN}-gentoo.el"
 
