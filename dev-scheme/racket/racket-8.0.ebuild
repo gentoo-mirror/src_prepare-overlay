@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit desktop pax-utils xdg
+inherit desktop pax-utils xdg-utils
 
 DESCRIPTION="General purpose, multi-paradigm Lisp-Scheme programming language"
 HOMEPAGE="https://racket-lang.org/"
@@ -16,62 +16,60 @@ RESTRICT="mirror"
 LICENSE="GPL-3+ LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-
-IUSE="
-	+doc
-	+futures
-	+graphics
-	+jit
-	+places
-	+readline
-	+threads
-	X
-	minimal
-"
+IUSE="X	+doc +futures +graphics +jit minimal +places +readline +threads"
 REQUIRED_USE="
-	futures? ( jit )
 	X? ( graphics )
+	futures? ( jit )
 "
 
 RDEPEND="
 	!dev-tex/slatex
 	dev-db/sqlite:3
 	dev-libs/libffi
+	X? (
+	   dev-util/desktop-file-utils
+	   x11-libs/gtk+:3[X]
+	   x11-misc/shared-mime-info
+	)
 	graphics? (
 		media-libs/libpng:0
 		virtual/jpeg:0
 		x11-libs/cairo[X?]
 		x11-libs/pango[X?]
 	)
-	readline? (
-		dev-libs/libedit
-	)
-	X? ( x11-libs/gtk+:3[X]	)
+	readline? (	dev-libs/libedit )
 "
-DEPEND="
-	${RDEPEND}
-"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${P}/src"
+
+X_xdg_update() {
+	if use X; then
+		xdg_desktop_database_update
+		xdg_icon_cache_update
+	fi
+}
 
 src_prepare() {
 	default
 
-	rm -r foreign/libffi || die 'failed to remove bundled libffi'
+	rm -r ./bc/foreign/libffi || die "failed to remove bundled libffi"
 }
 
 src_configure() {
 	# According to vapier, we should use the bundled libtool
-	# such that we don't preclude cross-compile. Thus don't use
-	# --enable-lt=/usr/bin/libtool
+	#   such that we don't preclude cross-compile.
+	#   Thus don't use --enable-lt=/usr/bin/libtool
+	# --enable-bc builds Racket w/o chez backend
 	local myconf=(
-		--docdir="${EPREFIX}"/usr/share/doc/${PF}
-		--enable-shared
-		--enable-float
-		--enable-libffi
-		--enable-foreign
 		--disable-libs
 		--disable-strip
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		--enable-bc
+		--enable-float
+		--enable-foreign
+		--enable-libffi
+		--enable-shared
 		$(use_enable X gracket)
 		$(use_enable doc docs)
 		$(use_enable jit)
@@ -83,18 +81,17 @@ src_configure() {
 }
 
 src_compile() {
-	if use jit
-	then
+	if use jit; then
 		# When the JIT is enabled, a few binaries need to be pax-marked
 		# on hardened systems (bug 613634). The trick is to pax-mark
 		# them before they're used later in the build system. The
 		# following order for racketcgc and racket3m was determined by
 		# digging through the Makefile in src/racket to find out which
 		# targets would build those binaries but not use them.
-		pushd racket
+		pushd ./bc
 		emake cgc-core
 		pax-mark m .libs/racketcgc
-		pushd gc2
+		pushd ./gc2
 		emake all
 		popd
 		pax-mark m .libs/racket3m
@@ -107,14 +104,20 @@ src_compile() {
 src_install() {
 	default
 
+	# bin -> binbc ; remove this when we use Chez
+	pushd "${D}/usr/bin"
+	for b in *bc; do
+		ln -s "${b}" "${b%bc*}"
+	done
+	popd
+
 	if use jit
 	then
 		# The final binaries need to be pax-marked, too, if you want to
 		# actually use them. The src_compile marking get lost somewhere
 		# in the install process.
 		local f
-		for f in mred mzscheme racket
-		do
+		for f in mred mzscheme racket; do
 			pax-mark m "${D}/usr/bin/${f}"
 		done
 
@@ -122,29 +125,24 @@ src_install() {
 	fi
 
 	# raco needs decompressed files for packages doc installation bug 662424
-	if use doc
-	then
-		docompress -x /usr/share/doc/${PF}
+	if use doc; then
+		docompress -x "/usr/share/doc/${PF}"
 	fi
 
 	find "${ED}" \( -name "*.a" -o -name "*.la" \) -delete || die
 
 	# Create missing desktop files
-	if use X
-	then
-		make_desktop_entry "gracket" "GRacket" \
-						   "/usr/share/racket/drracket-exe-icon.png" \
-						   "Development;Education;"
-		make_desktop_entry "plt-games" "PLT Games" \
-						   "/usr/share/racket/drracket-exe-icon.png" \
-						   "Education;Game;"
+	if use X; then
+		newicon "${D}/usr/share/racket/drracket-exe-icon.png" "racket.png"
+		make_desktop_entry "gracket" "GRacket" "racket" "Development;Education;"
+		make_desktop_entry "plt-games" "PLT Games" "racket" "Education;Game;"
 	fi
 }
 
 pkg_postinst() {
-	use X && xdg_pkg_postinst
+	X_xdg_update
 }
 
 pkg_postrm() {
-	use X && xdg_pkg_postrm
+	X_xdg_update
 }
