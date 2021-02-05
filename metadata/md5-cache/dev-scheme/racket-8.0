@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare
+DEPEND=!dev-tex/slatex dev-db/sqlite:3 dev-libs/libffi X? ( dev-util/desktop-file-utils x11-libs/gtk+:3[X] x11-misc/shared-mime-info ) graphics? ( media-libs/libpng:0 virtual/jpeg:0 x11-libs/cairo[X?] x11-libs/pango[X?] ) readline? ( dev-libs/libedit )
+DESCRIPTION=General purpose, multi-paradigm Lisp-Scheme programming language
+EAPI=7
+HOMEPAGE=https://racket-lang.org/
+IUSE=X +doc +futures +graphics +jit minimal +places +readline +threads
+KEYWORDS=~amd64
+LICENSE=GPL-3+ LGPL-3
+RDEPEND=!dev-tex/slatex dev-db/sqlite:3 dev-libs/libffi X? ( dev-util/desktop-file-utils x11-libs/gtk+:3[X] x11-misc/shared-mime-info ) graphics? ( media-libs/libpng:0 virtual/jpeg:0 x11-libs/cairo[X?] x11-libs/pango[X?] ) readline? ( dev-libs/libedit )
+REQUIRED_USE=X? ( graphics ) futures? ( jit )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=minimal? ( https://download.racket-lang.org/installers/8.0/racket-minimal-8.0-src-builtpkgs.tgz ) !minimal? ( https://download.racket-lang.org/installers/8.0/racket-8.0-src-builtpkgs.tgz )
+_eclasses_=desktop	7fd20552ce4cc97e8acb132a499a7dd8	pax-utils	a41d1fd1c111289ffa04490de6ee79d7	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=92f082d09d3519dcc6dcb6e84ca2b2a8
