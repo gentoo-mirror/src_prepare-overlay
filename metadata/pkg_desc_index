@@ -5,7 +5,7 @@ acct-user/jellyfin 0: Jellyfin user
 acct-user/miniflux 0: User for www-apps/miniflux
 acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/cgls 246 247: cgls from systemd
-app-admin/cgtop 246: cgtop from systemd
+app-admin/cgtop 246 247: cgtop from systemd
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
 app-crypt/gtkhash 1.2 1.4 9999: A cross-platform desktop utility for computing message digests or checksums
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
