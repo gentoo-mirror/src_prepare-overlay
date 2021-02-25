@@ -18,10 +18,10 @@ IUSE=""
 
 DESCRIPTION="Zen sources including the Gentoo patchsets for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 
-ZEN_URI="https://github.com/zen-kernel/zen-kernel/releases/download/v${PV}-zen${ZEN_VERSION}/v${PV}-zen${ZEN_VERSION}.patch.xz"
+ZEN_URI="https://github.com/zen-kernel/zen-kernel/releases/download/v5.11-zen${ZEN_VERSION}/v5.11-zen${ZEN_VERSION}.patch.xz"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${ZEN_URI}"
 
-UNIPATCH_LIST="${DISTDIR}/v${PV}-zen${ZEN_VERSION}.patch.xz"
+UNIPATCH_LIST="${DISTDIR}/v5.11-zen${ZEN_VERSION}.patch.xz"
 UNIPATCH_STRICTORDER="yes"
 
 K_EXTRAEINFO="For more info on zen-sources, and for how to report problems, see: \
