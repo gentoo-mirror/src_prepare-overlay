@@ -17,6 +17,7 @@ if [[ "${PV}" == *9999* ]]; then
 else
 	SRC_URI="https://gitlab.com/src_prepare/scripts/-/archive/${PV}/scripts-${PV}.tar.gz"
 	KEYWORDS="~amd64"
+	S="${WORKDIR}/scripts-${PV}"
 fi
 
 RESTRICT="
