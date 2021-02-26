@@ -1,17 +1,15 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=install test unpack
+DEFINED_PHASES=install test
 DEPEND=test? ( dev-python/pylint || ( dev-util/shellcheck dev-util/shellcheck-bin ) )
 DESCRIPTION=Small scripts from src_prepare group
 EAPI=7
 HOMEPAGE=https://gitlab.com/src_prepare/scripts
-IUSE=test python_targets_python3_7 python_targets_python3_8
+IUSE=test python_targets_python3_7 python_targets_python3_8 python_targets_python3_9
 KEYWORDS=~amd64
 LICENSE=GPL-3
-PROPERTIES=live
-RDEPEND=python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python3_8(-)?,-python_single_target_python3_7(-),-python_single_target_python3_8(-)] app-admin/eselect app-portage/eix app-portage/euscan-ng app-portage/repoman app-shells/bash:* dev-lang/perl dev-util/pkgcheck sys-apps/portage
-REQUIRED_USE=|| ( python_targets_python3_7 python_targets_python3_8 )
+RDEPEND=python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] app-admin/eselect app-portage/eix app-portage/euscan-ng app-portage/repoman app-shells/bash:* dev-lang/perl dev-util/pkgcheck sys-apps/portage
+REQUIRED_USE=|| ( python_targets_python3_7 python_targets_python3_8 python_targets_python3_9 )
 RESTRICT=mirror !test? ( test )
 SLOT=0
 SRC_URI=https://gitlab.com/src_prepare/scripts/-/archive/1.0.0/scripts-1.0.0.tar.gz
-_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441	multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	multilib	d410501a125f99ffb560b0c523cd3d1e	python-r1	4c65b35c1895b82c0f44e44166a3464f	python-utils-r1	69861348186337fa4b269de5826004b3	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=86262619d0181f9f71a0f420155c0848
+_eclasses_=multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	multilib	d410501a125f99ffb560b0c523cd3d1e	python-r1	4c65b35c1895b82c0f44e44166a3464f	python-utils-r1	69861348186337fa4b269de5826004b3	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=d9b4aad3dc41a8325e8d09a95e01327c
