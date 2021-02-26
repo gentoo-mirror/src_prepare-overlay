@@ -3,9 +3,9 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7..8} )
+PYTHON_COMPAT=( python3_{7..9} )
 
-inherit git-r3 python-r1
+inherit python-r1
 
 DESCRIPTION="Small scripts from src_prepare group"
 HOMEPAGE="https://gitlab.com/src_prepare/scripts"
