@@ -82,7 +82,7 @@ media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
 media-libs/opencolorio 2.0.0_beta2 9999: A color management framework for visual effects and animation
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
-media-video/tartube 2.1.0 2.3.0 9999: A GUI front-end for youtube-dl
+media-video/tartube 2.3.0 2.3.110 9999: A GUI front-end for youtube-dl
 net-analyzer/ipscan-bin 3.7.3 3.7.4: Angry IP Scanner - fast and friendly network scanner
 net-analyzer/nutty 1.1.1 9999: A simple application to provide essential information on network related aspects
 net-analyzer/sensu 5.19.3 5.21.3: Simple. Scalable. Multi-cloud monitoring.
