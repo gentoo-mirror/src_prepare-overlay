@@ -4,6 +4,8 @@
 EAPI=7
 
 PYTHON_COMPAT=( python3_{7..9})
+DISTUTILS_USE_SETUPTOOLS="pyproject.toml"
+
 inherit distutils-r1
 
 DESCRIPTION="A Python Matrix client library, designed according to sans I/O principles"
@@ -14,6 +16,7 @@ LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="e2e"
+
 
 RDEPEND="
 	dev-python/future
