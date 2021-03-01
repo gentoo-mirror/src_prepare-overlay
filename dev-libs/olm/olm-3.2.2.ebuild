@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7,8,9} )
+PYTHON_COMPAT=( python3_{7..9} )
 DISTUTILS_OPTIONAL=1
 
 inherit cmake distutils-r1
@@ -32,11 +32,18 @@ DEPEND="
 
 CMAKE_IN_SOURCE_BUILD=1
 
-PATCHES=( "${FILESDIR}/olmlib.patch" )
-
 src_prepare() {
 	cmake_src_prepare
 	use python && (cd python; distutils-r1_src_prepare)
+}
+
+src_configure() {
+	local mycmakeargs=(
+		-DOLM_TESTS=OFF
+		-DBUILD_SHARED_LIBS=ON
+	)
+	cmake_src_configure
+	use python && (cd python; distutils-r1_src_configure)
 }
 
 src_compile() {
@@ -48,4 +55,8 @@ src_compile() {
 src_install() {
 	cmake_src_install
 	use python && (cd python; distutils-r1_src_install)
+}
+
+src_test(){
+	emake test
 }
