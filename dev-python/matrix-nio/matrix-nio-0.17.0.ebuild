@@ -4,6 +4,8 @@
 EAPI=7
 
 PYTHON_COMPAT=( python3_{7..9})
+DISTUTILS_USE_SETUPTOOLS="pyproject.toml"
+
 inherit distutils-r1
 
 DESCRIPTION="A Python Matrix client library, designed according to sans I/O principles"
@@ -18,6 +20,7 @@ IUSE="e2e"
 RDEPEND="
 	dev-python/future
 	dev-python/aiohttp
+	dev-python/aiohttp-socks
 	dev-python/aiofiles
 	dev-python/h11
 	dev-python/hyper-h2
