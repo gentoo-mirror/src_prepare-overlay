@@ -76,6 +76,7 @@ pkg_pretend() {
 }
 
 src_prepare() {
+	cp "${FILESDIR}"/FindGMock.cmake "${S}"/cmake
 	[[ "${PV}" == "9999" ]] || mv "${WORKDIR}"/cpu_features-"${EXTCOMMIT}"/* "${S}"/external/cpu_features || die
 	use !systemd && eapply "${FILESDIR}"/remove_systemd_dependency.patch
 	cmake_src_prepare
