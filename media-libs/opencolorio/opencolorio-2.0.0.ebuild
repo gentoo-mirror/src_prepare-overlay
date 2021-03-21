@@ -12,12 +12,12 @@ if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/AcademySoftwareFoundation/OpenColorIO.git"
 else
-	MY_P=$(ver_rs 3 '-')
+#	MY_P=$(ver_rs 3 '-')
 	SRC_URI="
-		https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/v"${MY_P}".tar.gz -> "${P}".tar.gz
+		https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/v"${PV}".tar.gz -> "${P}".tar.gz
 	"
 	KEYWORDS="~amd64"
-	S="${WORKDIR}/OpenColorIO-"${MY_P}""
+	S="${WORKDIR}/OpenColorIO-"${PV}""
 fi
 
 # TODO
