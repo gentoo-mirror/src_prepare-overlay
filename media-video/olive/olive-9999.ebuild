@@ -27,14 +27,13 @@ COMMON_DEPEND="
 	>=dev-qt/qtopengl-5.6.0
 	>=dev-qt/qtsvg-5.6.0
 	>=dev-qt/qtwidgets-5.6.0
-	>media-libs/opencolorio-1.9.9
+	>=media-libs/opencolorio-2.0.0
 	media-libs/openexr
 	>=media-libs/openimageio-2.1.12
 	>=media-video/ffmpeg-3.0.0
 	virtual/opengl
 "
 #media-video/opentimelineio : The CMakeFile tries to find it, but doesnt do anything yet.
-# Wants opecolorio-2.0.0, but have to do >1.9.9 due to no proper release and portage not seeing prereleases and betas as being >=2.0.0
 
 DEPEND="
 	"${COMMON_DEPEND}"
@@ -61,11 +60,4 @@ src_install() {
 		dodoc -r docs/html/.
 	fi
 	cmake_src_install
-}
-
-pkg_postinst() {
-	einfo "Olive crashes at runtime when playing video"
-	einfo "with ~ffmpeg-4.3. The current remedy is to"
-	einfo "use ~ffmpeg-4.2 or ffmpeg-9999 instead."
-	xdg_pkg_postinst
 }
