@@ -60,7 +60,7 @@ CONFIG_CHECK="
 	~TMPFS_XATTR
 "
 
-PATCHES=( ""${FILESDIR}"/no_bundled_sdbus.patch" )
+PATCHES=( ""${FILESDIR}"/no_bundled_sdbus-r1.patch" )
 
 pkg_pretend() {
 	if use !systemd; then
