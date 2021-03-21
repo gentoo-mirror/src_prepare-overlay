@@ -1,4 +1,4 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -11,7 +11,7 @@ DESCRIPTION="Onlyoffice is an office productivity suite (binary version)"
 HOMEPAGE="https://www.onlyoffice.com/"
 SRC_URI="
 	amd64? (
-		https://github.com/ONLYOFFICE/DesktopEditors/releases/download/ONLYOFFICE-DesktopEditors-"${PV}"/onlyoffice-desktopeditors_amd64.deb -> "${P}"_amd64.deb
+		https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v"${PV}"/onlyoffice-desktopeditors_amd64.deb -> "${P}"_amd64.deb
 	)
 "
 
@@ -89,7 +89,6 @@ S="${WORKDIR}"
 QA_PREBUILT="
 	opt/onlyoffice/desktopeditors/DesktopEditors
 	opt/onlyoffice/desktopeditors/editors_helper
-	opt/onlyoffice/desktopeditors/HtmlFileInternal
 	opt/onlyoffice/desktopeditors/libascdocumentscore.so
 	opt/onlyoffice/desktopeditors/libcef.so
 	opt/onlyoffice/desktopeditors/libEGL.so
@@ -173,5 +172,5 @@ src_install() {
 	domenu usr/share/applications/onlyoffice-desktopeditors.desktop
 	dobin usr/bin/desktopeditors usr/bin/onlyoffice-desktopeditors
 	doins -r opt
-	fperms +x /opt/onlyoffice/desktopeditors/{DesktopEditors,editors_helper,HtmlFileInternal,converter/x2t}
+	fperms +x /opt/onlyoffice/desktopeditors/{DesktopEditors,editors_helper,converter/x2t}
 }
