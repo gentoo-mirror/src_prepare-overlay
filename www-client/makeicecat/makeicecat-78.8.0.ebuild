@@ -33,11 +33,11 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/share/makeicecat-"${PV}"
+	insinto /usr/src/makeicecat-"${PV}"
 	doins -r "${S}"/{artwork,CHANGELOG,COPYING,data,makeicecat,README,tools}
-	fperms +x /usr/share/makeicecat-"${PV}"/{makeicecat,tools/{AddonsScraper.py,buildbinaries,createdebsrcrepo,gnupload}}
+	fperms +x /usr/src/makeicecat-"${PV}"/{makeicecat,tools/{AddonsScraper.py,buildbinaries,createdebsrcrepo,gnupload}}
 	if use buildtarball; then
-		insinto /usr/share/makeicecat-"${PV}"/output
+		insinto /usr/src/makeicecat-"${PV}"/output
 		doins "${S}"/output/icecat-"${PV}"-gnu1.tar.bz2
 	fi
 }
