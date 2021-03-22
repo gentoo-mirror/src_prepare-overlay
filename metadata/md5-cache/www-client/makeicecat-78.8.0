@@ -9,4 +9,4 @@ LICENSE=GPL-3
 RESTRICT=buildtarball? ( network-sandbox )
 SLOT=0
 SRC_URI=https://git.savannah.gnu.org/cgit/gnuzilla.git/snapshot/gnuzilla-d5df5618fbf6f6ea0c49b6bfdcb098846d2cd777.tar.gz -> makeicecat-78.8.0.tar.gz
-_md5_=1f32af22cc666a0d736146d5b9850465
+_md5_=6c5aceee300225c43eff95e6fd410aa8
