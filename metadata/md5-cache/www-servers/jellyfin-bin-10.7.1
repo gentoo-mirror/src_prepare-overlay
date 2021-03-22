@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=install unpack
+DEPEND=!www-servers/jellyfin
+DESCRIPTION=The Free Software Media System
+EAPI=7
+HOMEPAGE=https://jellyfin.org
+INHERIT=unpacker systemd wrapper
+KEYWORDS=-* ~amd64 ~arm64
+LICENSE=GPL-2
+RDEPEND=!www-servers/jellyfin >=media-video/ffmpeg-4.2.2 acct-group/jellyfin acct-user/jellyfin app-crypt/mit-krb5 dev-db/sqlite dev-util/lttng-ust media-libs/fontconfig media-libs/freetype
+RESTRICT=mirror
+SLOT=0
+SRC_URI=amd64? ( https://repo.jellyfin.org/releases/server/debian/versions/stable/server/10.7.1/jellyfin-server_10.7.1-1_amd64.deb -> jellyfin-bin-10.7.1-server-amd64.deb ) arm64? ( https://repo.jellyfin.org/releases/server/debian/versions/stable/server/10.7.1/jellyfin-server_10.7.1-1_arm64.deb -> jellyfin-bin-10.7.1-server-arm64.deb ) https://repo.jellyfin.org/releases/server/debian/versions/stable/web/10.7.1/jellyfin-web_10.7.1-1_all.deb -> jellyfin-bin-10.7.1-web.deb
+_eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	unpacker	45b49db67094fdafbb6a16a2299e894b	systemd	74b223e42834adf09a2d21fe5fe13741	wrapper	4251d4c84c25f59094fd557e0063a974
+_md5_=618d0b2a79ef8352ff15c1326e186ac1
