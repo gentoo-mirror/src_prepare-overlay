@@ -52,24 +52,21 @@ sci-visualization/tulip:ccache - Use dev-util/ccache to speed up rebuilds
 sys-apps/xbps:lto - Build with Link Time Optimization
 sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 www-apps/miniflux:acct - Create and use the miniflux user account to run the miniflux server
-www-client/icecat:amd64 - You should not be able to see this
 www-client/icecat:clang - Use Clang compiler instead of GCC
-www-client/icecat:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 www-client/icecat:geckodriver - Enable WebDriver support
-www-client/icecat:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/icecat:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
 www-client/icecat:lto - Enable Link Time Optimization (LTO). Requires Gold linker when using GCC or LDD linker when using Clang
+www-client/icecat:openh264 - Use media-libs/openh264 for H.264 support instead of downloading binary blob from Mozilla at runtime
 www-client/icecat:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
-www-client/icecat:screenshot - Allow to disable screenshot extension in global profile
+www-client/icecat:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 www-client/icecat:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled.
 www-client/icecat:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
 www-client/icecat:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 www-client/icecat:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
 www-client/icecat:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
 www-client/icecat:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
-www-client/icecat:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 www-client/icecat:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
-www-client/icecat:x86 - You should not be able to see this
+www-client/makeicecat:buildtarball - Build GNU IceCat tarball with makeicecat script
 x11-misc/compton-tryone:drm - Enable VSync with DRM_IOCTL_WAIT_VBLANK
 x11-misc/compton-tryone:opengl - Enable VSync with SGI_swap_control OpenGL extension
 x11-terms/kgx:generic - Present using the generic name "Terminal"
