@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <use>
+	<flag name="buildtarball">Build tarball with makeicecat</flag>
 	<flag name="clang">Use Clang compiler instead of GCC</flag>
 	<flag name="geckodriver">Enable WebDriver support</flag>
 	<flag name="hwaccel">Force-enable hardware-accelerated rendering (Mozilla bug 594876)</flag>

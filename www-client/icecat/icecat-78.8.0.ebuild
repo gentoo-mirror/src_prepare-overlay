@@ -34,7 +34,7 @@ KEYWORDS="~amd64"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+clang cpu_flags_arm_neon dbus debug geckodriver
+IUSE="+clang cpu_flags_arm_neon dbus debug +buildtarball geckodriver
 	hardened hwaccel jack lto +openh264 pgo pulseaudio screencast selinux
 	+system-av1 +system-harfbuzz +system-icu +system-jpeg +system-libevent
 	+system-libvpx +system-webp wayland wifi"
@@ -87,6 +87,7 @@ BDEPEND="${PYTHON_DEPS}
 	)"
 
 CDEPEND="
+	buildtarball? ( ~www-client/makeicecat-"${PV}"[buildtarball] )
 	>=dev-libs/nss-3.53.1
 	>=dev-libs/nspr-4.25
 	dev-libs/atk
@@ -352,7 +353,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack /usr/share/makeicecat-"${PV}"/output/icecat-"${PV}"-gnu1.tar.bz2 || eerror "Tarball missing, check www-client/makeicecat is correct"
+	use buildtarball && unpack /usr/src/makeicecat-"${PV}"/output/icecat-"${PV}"-gnu1.tar.bz2 || eerror "Tarball missing, check www-client/makeicecat is correct"
 	unpack "${FIREFOX_PATCHSET}"
 }
 
