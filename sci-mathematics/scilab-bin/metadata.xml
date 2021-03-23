@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>xgqt@riseup.net</email>
+		<name>Maciej Barć</name>
+	</maintainer>
+	<longdescription lang="en">
+		Open source, cross-platform numerical computational package and
+		a high-level, numerically oriented programming language.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">scilab/scilab</remote-id>
+	</upstream>
+</pkgmetadata>
