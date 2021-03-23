@@ -5,6 +5,8 @@
 
 EAPI=7
 
+inherit xdg
+
 DESCRIPTION="Scientific software package for numerical computations"
 HOMEPAGE="https://www.scilab.org/"
 SRC_URI="https://www.scilab.org/download/${PV}/scilab-${PV}.bin.linux-x86_64.tar.gz -> ${P}.tar.gz"
@@ -14,7 +16,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
-RDEPEND=""
+RDEPEND="
+	sci-mathematics/scilab-bin
+"
 
 S="${WORKDIR}/scilab-${PV}"
 
@@ -28,7 +32,11 @@ src_install() {
 	done
 
 	mkdir -p "${D}/usr/bin" || die
+	mkdir -p "${D}/usr/share" || die
 	mkdir -p "${D}/opt/${PN}" || die
+
+	cp -R ./share/applications "${D}/usr/share" || die
+	cp -R ./share/icons "${D}/usr/share" || die
 
 	mv * "${D}/opt/${PN}" || die
 
