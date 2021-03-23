@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Scientific software package for numerical computations
+EAPI=7
+HOMEPAGE=https://www.scilab.org/
+KEYWORDS=-* ~amd64
+LICENSE=GPL-2
+RESTRICT=mirror test
+SLOT=0
+SRC_URI=https://www.scilab.org/download/6.1.0/scilab-6.1.0.bin.linux-x86_64.tar.gz -> scilab-bin-6.1.0.tar.gz
+_md5_=e915c07419c41db33b86929a34e91745

@@ -100,6 +100,7 @@ net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
 net-misc/postman-bin 7.35.0: Supercharge your API workflow
 net-misc/ytmdl 2021.01.14 9999: A simple app to get songs from youtube in mp3 format
 net-wireless/mdk4 4.1 9999: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
+sci-mathematics/scilab-bin 6.1.0: Scientific software package for numerical computations
 sci-visualization/tulip 5.4.0 9999: Large graphs analysis, drawing and visualization framework
 sys-apps/fchroot 0.1.2: Funtoo's franken-chroot tool - chroot from AMD64 to ARM system
 sys-apps/xbps 0.58 9999: The X Binary Package System
