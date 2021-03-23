@@ -26,7 +26,8 @@ QA_PREBUILT="*"
 QA_PRESTRIPPED="${QA_PREBUILT}"
 
 src_install() {
-	for d in ACKNOWLEDGEMENTS  CHANGES.md  COPYING  README.md
+	local d
+	for d in ACKNOWLEDGEMENTS COPYING *.md
 	do
 		dodoc "${d}" && rm "${d}"
 	done
@@ -41,6 +42,6 @@ src_install() {
 	mv * "${D}/opt/${PN}" || die
 
 	pushd "${D}/usr/bin" >/dev/null || die
-	ln -s ../../opt/"${PN}"/bin/?* . || die
+	ln -s ../../opt/"${PN}"/bin/* . || die
 	popd || die
 }
