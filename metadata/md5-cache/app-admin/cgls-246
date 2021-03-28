@@ -4,6 +4,7 @@ DEPEND=>=sys-apps/util-linux-2.30:0= >=sys-kernel/linux-headers-3.11 sys-apps/ac
 DESCRIPTION=cgls from systemd
 EAPI=7
 HOMEPAGE=https://www.freedesktop.org/wiki/Software/systemd
+INHERIT=meson
 IUSE=selinux
 KEYWORDS=~amd64
 LICENSE=BSD-2 GPL-2 LGPL-2.1 MIT public-domain
@@ -11,5 +12,5 @@ RDEPEND=>=sys-apps/util-linux-2.30:0= >=sys-kernel/linux-headers-3.11 sys-apps/a
 RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/systemd/systemd/archive/v246.tar.gz -> systemd-246.tar.gz
-_eclasses_=meson	e43eef9331f54965a573ed380854ff47	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	2dc8e06a3429719b43e9140f7292a425	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	python-utils-r1	543b53e4d003ebd889082f4673e52af5	meson	e43eef9331f54965a573ed380854ff47
 _md5_=47e2aca7ca014f2011051c9ef7f13d6e
