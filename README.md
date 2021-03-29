@@ -1,3 +1,5 @@
+# src_prepare Gentoo overlay
+
 <p align="center">
     <a href="https://gitlab.com/src_prepare/src_prepare-overlay/pipelines">
         <img src="https://gitlab.com/src_prepare/src_prepare-overlay/badges/master/pipeline.svg">
@@ -19,7 +21,8 @@
     </a>
 </p>
 
-# src_prepare Gentoo overlay
+
+# About
 
 This is the overlay of our Matrix group where we talk about topics related to Gentoo (development, maintainance, support, communities and more).
 
@@ -97,12 +100,14 @@ emaint sync -r src_prepare-overlay
 
 See [examples/package.accept_keywords/src_prepare-overlay](https://gitlab.com/src_prepare/src_prepare-overlay/blob/master/examples/package.accept_keywords/src_prepare-overlay).
 
-## Submitting an Issue
+
+# Submitting an Issue
 
 ### Ebuild error
 
 [Our issue tracker is located in our **GitLab** repository.](https://gitlab.com/src_prepare/src_prepare-overlay/-/issues) If an ebuild appears to produce an error, please report it in our GitLab repository.
 
-## Contributing
+
+# Contributing
 
 We appreciate and encourage for contribution. If you want a specific package or want to create a package for us to maintain, see [CONTRIBUTING.md](/CONTRIBUTING.md).
