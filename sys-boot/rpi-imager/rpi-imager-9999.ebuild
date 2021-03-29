@@ -21,17 +21,15 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="debug"
 
-BDEPEND="
-	app-arch/libarchive
-	net-misc/curl
-"
 RDEPEND="
+	app-arch/libarchive
 	dev-qt/qtcore:5
 	dev-qt/qtdeclarative:5
 	dev-qt/qtgui:5
 	dev-qt/qtquickcontrols2:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtxml:5
+	net-misc/curl
 	sys-fs/udisks:2
 "
 DEPEND="
