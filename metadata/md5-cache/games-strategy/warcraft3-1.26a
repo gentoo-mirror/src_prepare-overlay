@@ -4,6 +4,7 @@ DEPEND=app-emulation/wine-vanilla:=[abi_x86_32,gstreamer] media-plugins/gst-plug
 DESCRIPTION=Third installment of Warcraft from Blizzard.
 EAPI=7
 HOMEPAGE=https://www.blizzard.com/games/war3/
+INHERIT=run-wine
 IUSE=tft video_cards_nouveau
 KEYWORDS=~amd64 ~x86
 LICENSE=Warcraft3_EULA

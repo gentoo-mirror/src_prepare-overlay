@@ -4,6 +4,7 @@ DEPEND=acct? ( acct-group/miniflux acct-user/miniflux )
 DESCRIPTION=Minimalist and opinionated feed reader
 EAPI=7
 HOMEPAGE=https://miniflux.app
+INHERIT=fcaps go-module
 IUSE=+acct +filecaps
 KEYWORDS=~amd64 ~x86
 LICENSE=Apache-2.0

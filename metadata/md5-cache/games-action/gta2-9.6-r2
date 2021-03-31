@@ -4,6 +4,7 @@ DEPEND=app-emulation/winetricks app-shells/bash:0
 DESCRIPTION=And remember - respect is everything!
 EAPI=7
 HOMEPAGE=https://www.rockstargames.com/gta2/homepage.html
+INHERIT=run-wine windows-helper
 IUSE=+abi_x86_32
 KEYWORDS=~amd64 ~x86
 LICENSE=Rockstar_freeware_GTA2
