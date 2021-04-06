@@ -21,27 +21,14 @@
 # Licensed under the GNU GPL v2 License
 
 
-image: gentoo/stage3:amd64
+image: registry.gitlab.com/src_prepare/gentoo-repoman-container:latest
 
 
 variables:
-  FEATURES: "getbinpkg"
   GIT_SUBMODULE_STRATEGY: recursive
-  MAKEOPTS: "--jobs=10"
-  PORTAGE_BINHOST: "https://xgqt.gitlab.io/gentoo-mini-mirror/binpkgs"
-  USE: "-perl"
-
 
 stages:
   - test
-
-
-before_script:
-  - mkdir -p /var/cache/distfiles
-  - mkdir -p /var/db/repos/gentoo
-  - emerge-webrsync
-  - emerge -1nq --jobs=10 app-portage/repoman dev-vcs/git net-misc/wget
-
 
 test:
   stage: test
