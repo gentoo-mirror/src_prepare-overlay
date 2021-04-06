@@ -21,7 +21,7 @@
 # Licensed under the GNU GPL v2 License
 
 
-image: gentoo/stage3-amd64:latest
+image: gentoo/stage3:amd64
 
 
 variables:
