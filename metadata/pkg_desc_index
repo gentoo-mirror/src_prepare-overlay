@@ -27,6 +27,7 @@ dev-cpp/pystring 1.1.3 9999: C++ functions matching the interface and behavior o
 dev-cpp/sdbus-cpp 0.8.3: High-level C++ D-Bus library for Linux
 dev-lang/lci 0.11.2: LOLCODE interpreter written in C
 dev-lang/lfe 1.3.0_p20210112: Lisp-flavoured Erlang
+dev-lang/neko 2.3.0 9999: Neko is a high-level dynamically typed programming language
 dev-libs/libQtOlm 3.0.1 9999: A Qt wrapper for libolm
 dev-libs/olm 3.2.1 3.2.2: An implementation of the Double Ratchet cryptographic ratchet in C++
 dev-libs/sdl-kitchensink 1.0.8-r1: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
