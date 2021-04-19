@@ -25,6 +25,7 @@ app-text/pandoc-bin 2.10.1 2.11.0.2: Universal markup converter
 dev-cpp/properties-cpp 0_pre20180409 9999: A very simple convenience library for handling properties and signals in C++11
 dev-cpp/pystring 1.1.3 9999: C++ functions matching the interface and behavior of python string methods
 dev-cpp/sdbus-cpp 0.8.3: High-level C++ D-Bus library for Linux
+dev-lang/hy 1.0_alpha1 9999: A LISP dialect running in python
 dev-lang/lci 0.11.2: LOLCODE interpreter written in C
 dev-lang/lfe 1.3.0_p20210112: Lisp-flavoured Erlang
 dev-lang/neko 2.3.0 9999: Neko is a high-level dynamically typed programming language
