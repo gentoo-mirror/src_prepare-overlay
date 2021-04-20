@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="Script for creating GNU Icecat tarball"
 HOMEPAGE="https://www.gnu.org/software/gnuzilla/"
 
-COMMIT="d5df5618fbf6f6ea0c49b6bfdcb098846d2cd777"
+COMMIT="b72c22186cf381d7b1f93be550c9da30865d03b4"
 
 SRC_URI="https://git.savannah.gnu.org/cgit/gnuzilla.git/snapshot/gnuzilla-"${COMMIT}".tar.gz -> "${P}".tar.gz"
 
