@@ -25,7 +25,10 @@ PATCH_URIS=(
 	https://dev.gentoo.org/~{axs,polynomial-c,whissi}/mozilla/patchsets/${FIREFOX_PATCHSET}
 )
 
-SRC_URI="${PATCH_URIS[@]}"
+SRC_URI="
+	!buildtarball? ( icecat-"${PV}"-gnu1.tar.bz2 )
+	${PATCH_URIS[@]}
+"
 
 DESCRIPTION="GNU IceCat Web Browser"
 HOMEPAGE="https://www.gnu.org/software/gnuzilla/"
@@ -65,14 +68,6 @@ BDEPEND="${PYTHON_DEPS}
 			clang? (
 				=sys-devel/lld-10*
 				pgo? ( =sys-libs/compiler-rt-sanitizers-10*[profile] )
-			)
-		)
-		(
-			sys-devel/clang:9
-			sys-devel/llvm:9
-			clang? (
-				=sys-devel/lld-9*
-				pgo? ( =sys-libs/compiler-rt-sanitizers-9*[profile] )
 			)
 		)
 	)
@@ -190,6 +185,42 @@ llvm_check_deps() {
 	einfo "Using LLVM slot ${LLVM_SLOT} to build" >&2
 }
 
+MOZ_LANGS=(
+	ach af an ar ast az be bg bn br bs ca-valencia ca cak cs cy
+	da de dsb el en-CA en-GB en-US eo es-AR es-CL es-ES es-MX et eu
+	fa ff fi fr fy-NL ga-IE gd gl gn gu-IN he hi-IN hr hsb hu hy-AM
+	ia id is it ja ka kab kk km kn ko lij lt lv mk mr ms my
+	nb-NO ne-NP nl nn-NO oc pa-IN pl pt-BR pt-PT rm ro ru
+	si sk sl son sq sr sv-SE ta te th tl tr trs uk ur uz vi
+	xh zh-CN zh-TW
+)
+
+mozilla_set_globals() {
+	# https://bugs.gentoo.org/587334
+	local MOZ_TOO_REGIONALIZED_FOR_L10N=(
+		fy-NL ga-IE gu-IN hi-IN hy-AM nb-NO ne-NP nn-NO pa-IN sv-SE
+	)
+
+	local lang xflag
+	for lang in "${MOZ_LANGS[@]}" ; do
+		# en and en_US are handled internally
+		if [[ ${lang} == en ]] || [[ ${lang} == en-US ]] ; then
+			continue
+		fi
+
+		# strip region subtag if $lang is in the list
+		if has ${lang} "${MOZ_TOO_REGIONALIZED_FOR_L10N[@]}" ; then
+			xflag=${lang%%-*}
+		else
+			xflag=${lang}
+		fi
+
+		IUSE+=" l10n_${xflag/[_@]/-}"
+	done
+
+}
+mozilla_set_globals
+
 moz_clear_vendor_checksums() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -204,6 +235,71 @@ moz_clear_vendor_checksums() {
 		"${S}"/third_party/rust/${1}/.cargo-checksum.json \
 		|| die
 }
+
+moz_build_xpi() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	local MOZ_TOO_REGIONALIZED_FOR_L10N=(
+		fy-NL ga-IE gu-IN hi-IN hy-AM nb-NO ne-NP nn-NO pa-IN sv-SE
+	)
+
+	cd "${BUILD_DIR}"/browser/locales || die
+	local lang xflag
+	for lang in "${MOZ_LANGS[@]}"; do
+		# en and en_US are handled internally
+		if [[ ${lang} == en ]] || [[ ${lang} == en-US ]] ; then
+			continue
+		fi
+
+		# strip region subtag if $lang is in the list
+		if has ${lang} "${MOZ_TOO_REGIONALIZED_FOR_L10N[@]}" ; then
+			xflag=${lang%%-*}
+		else
+			xflag=${lang}
+		fi
+
+		if use l10n_"${xflag}"; then
+			emake langpack-"${lang}" LOCALE_MERGEDIR=.
+		fi
+	done
+}
+
+moz_install_xpi() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	if [[ ${#} -lt 2 ]] ; then
+		die "${FUNCNAME} requires at least two arguments"
+	fi
+
+	local DESTDIR=${1}
+	shift
+
+	insinto "${DESTDIR}"
+
+	local emid xpi_file xpi_tmp_dir
+	for xpi_file in "${@}" ; do
+		emid=
+		xpi_tmp_dir=$(mktemp -d --tmpdir="${T}")
+
+		# Unpack XPI
+		unzip -qq "${xpi_file}" -d "${xpi_tmp_dir}" || die
+
+		# Determine extension ID
+		if [[ -f "${xpi_tmp_dir}/install.rdf" ]] ; then
+			emid=$(sed -n -e '/install-manifest/,$ { /em:id/!d; s/.*[\">]\([^\"<>]*\)[\"<].*/\1/; p; q }' "${xpi_tmp_dir}/install.rdf")
+			[[ -z "${emid}" ]] && die "failed to determine extension id from install.rdf"
+		elif [[ -f "${xpi_tmp_dir}/manifest.json" ]] ; then
+			emid=$(sed -n -e 's/.*"id": "\([^"]*\)".*/\1/p' "${xpi_tmp_dir}/manifest.json")
+			[[ -z "${emid}" ]] && die "failed to determine extension id from manifest.json"
+		else
+			die "failed to determine extension id"
+		fi
+
+		einfo "Installing ${emid}.xpi into ${ED}${DESTDIR} ..."
+		newins "${xpi_file}" "${emid}.xpi"
+	done
+}
+
 mozconfig_add_options_ac() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -274,6 +370,17 @@ pkg_pretend() {
 		fi
 
 		check-reqs_pkg_pretend
+	fi
+}
+
+pkg_nofetch() {
+	if ! use buildtarball; then
+		einfo "You have not enabled buildtarball use flag, therefore you will have to"
+		einfo "build the tarball manually and place it in your distfiles directory."
+		einfo "You may find the script for building the tarball here"
+		einfo "https://git.savannah.gnu.org/cgit/gnuzilla.git/, but make sure it is the"
+		einfo "right version."
+		einfo "The output of the script should be icecat-"${PV}"-gnu1.tar.bz2"
 	fi
 }
 
@@ -353,7 +460,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	use buildtarball && unpack /usr/src/makeicecat-"${PV}"/output/icecat-"${PV}"-gnu1.tar.bz2 || eerror "Tarball missing, check www-client/makeicecat is correct"
+	if use buildtarball; then
+		unpack /usr/src/makeicecat-"${PV}"/output/icecat-"${PV}"-gnu1.tar.bz2 || eerror "Tarball is missing, check that www-client/makeicecat has use flag buildtarball enabled."
+	else
+		unpack icecat-"${PV}"-gnu1.tar.bz2
+	fi
 	unpack "${FIREFOX_PATCHSET}"
 }
 
@@ -457,9 +568,6 @@ src_configure() {
 	# Initialize MOZCONFIG
 	mozconfig_add_options_ac '' --enable-application=browser
 
-	# Set Gentoo defaults
-	#export MOZILLA_OFFICIAL=1
-
 	mozconfig_add_options_ac 'Gentoo default' \
 		--allow-addon-sideload \
 		--disable-cargo-incremental \
@@ -477,6 +585,7 @@ src_configure() {
 		--target="${CHOST}" \
 		--without-ccache \
 		--with-intl-api \
+		--with-l10n-base="${S}"/l10n \
 		--with-libclang-path="$(llvm-config --libdir)" \
 		--with-system-nspr \
 		--with-system-nss \
@@ -734,6 +843,9 @@ src_compile() {
 
 	${virtx_cmd} ./mach build --verbose \
 		|| die
+
+	# Build language packs
+	moz_build_xpi
 }
 
 src_install() {
@@ -770,6 +882,11 @@ src_install() {
 	pref("spellchecker.dictionary_path",       "${EPREFIX}/usr/share/myspell");
 	EOF
 
+	# Set installDistroAddons to true so that language packs work
+	cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to set extensions.installDistroAddons pref"
+	pref("extensions.installDistroAddons",     true);
+	EOF
+
 	# Force hwaccel prefs if USE=hwaccel is enabled
 	if use hwaccel ; then
 		cat "${FILESDIR}"/gentoo-hwaccel-prefs.js \
@@ -782,6 +899,12 @@ src_install() {
 		cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to set gfx.font_rendering.graphite.enabled pref"
 		sticky_pref("gfx.font_rendering.graphite.enabled", true);
 		EOF
+	fi
+
+	# Install language packs
+	local langpacks=( $(find "${BUILD_DIR}"/dist/linux-x86_64/xpi -type f -name '*.xpi') )
+	if [[ -n "${langpacks}" ]] ; then
+		moz_install_xpi "${MOZILLA_FIVE_HOME}/distribution/extensions" "${langpacks[@]}"
 	fi
 
 	# Install geckodriver
