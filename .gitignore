@@ -16,11 +16,12 @@
 # You should have received a copy of the GNU General Public License
 # along with src_prepare-overlay.  If not, see <https://www.gnu.org/licenses/>.
 
-# Original author: Maciej Barć (xgqt@protonmail.com)
+# Original author: Maciej Barć <xgqt@riseup.net>
 # Copyright (c) 2021, src_prepare group
 # Licensed under the GNU GPL v2 License
 
 
+# General
 *.log
 *.swp
 *~
@@ -29,6 +30,8 @@
 .vs/
 .vscode/
 .~lock.*
+
+# Portage
 /.ebuild.x
 /distfiles/
 /eclass/*.5
