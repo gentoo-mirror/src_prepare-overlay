@@ -69,7 +69,7 @@ eselect repository enable src_prepare-overlay
 
 ### Manual
 
-If you want to manually add the overlay, see [examples/repos.conf/src_prepare-overlay.conf](https://gitlab.com/src_prepare/src_prepare-overlay/blob/master/examples/repos.conf/src_prepare-overlay.conf).
+If you want to manually add the overlay, see [examples/repos.conf/src_prepare-overlay.conf](examples/repos.conf/src_prepare-overlay.conf).
 
 #### Layman
 
@@ -98,7 +98,7 @@ emaint sync -r src_prepare-overlay
 
 ## It says the ebuild is masked, what do I do?
 
-See [examples/package.accept_keywords/src_prepare-overlay](https://gitlab.com/src_prepare/src_prepare-overlay/blob/master/examples/package.accept_keywords/src_prepare-overlay).
+See [examples/package.accept_keywords/src_prepare-overlay.conf](examples/package.accept_keywords/src_prepare-overlay.conf).
 
 
 # Submitting an Issue
