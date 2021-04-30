@@ -9,4 +9,7 @@
   <upstream>
     <remote-id type="github">AcademySoftwareFoundation/OpenColorIO</remote-id>
   </upstream>
+  <use>
+    <flag name="apps">Build helper programs</flag>
+  </use>
 </pkgmetadata>
