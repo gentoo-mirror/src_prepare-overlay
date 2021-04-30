@@ -85,7 +85,7 @@ media-gfx/fondo 1.3.10 1.5.0 9999: Wallpaper App for Linux
 media-gfx/gpick 0.2.6: Advanced color picker written in C++ using GTK+ toolkit
 media-gfx/koko 9999: Image gallery application by KDE designed for desktop and touch devices
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
-media-libs/opencolorio 2.0.0-r1 9999: A color management framework for visual effects and animation
+media-libs/opencolorio 2.0.0-r1 2.0.0-r2 9999: A color management framework for visual effects and animation
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
 media-video/tartube 2.3.0 2.3.110 9999: A GUI front-end for youtube-dl
