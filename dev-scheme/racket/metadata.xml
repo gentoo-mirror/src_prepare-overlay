@@ -26,9 +26,6 @@
 		<flag name="futures">
 			Enable racket/future library for fine-grained hardware parallelism
 		</flag>
-		<flag name="graphics">
-			Enable support for graphics
-		</flag>
 		<flag name="places">
 			Enable racket/place library for share-nothing parallelism and message-passing communication. Compared to futures, places are heavyweight, but they have a simpler performance model.
 		</flag>
