@@ -9,11 +9,7 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Universal markup converter"
 HOMEPAGE="https://pandoc.org"
 
-BASE_URI="https://github.com/jgm/${MY_PN}/releases/download/"
-
-SRC_URI="amd64? ( ${BASE_URI/${PV}/${MY_P}-linux-amd64.tar.gz} )
-	arm64? ( ${BASE_URI${PV}/${MY_P}-linux-arm64.tar.gz} )"
-	#https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-linux-arm64.tar.gz
+SRC_URI="https://github.com/jgm/${MY_PN}/releases/download/${PV}/${MY_P}-linux-amd64.tar.gz"
 
 RESTRICT="mirror bindist"
 LICENSE="GPL-2"
