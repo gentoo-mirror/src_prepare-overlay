@@ -8,6 +8,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Universal markup converter"
 HOMEPAGE="https://pandoc.org"
+
 SRC_URI="https://github.com/jgm/${MY_PN}/releases/download/${PV}/${MY_P}-linux-amd64.tar.gz"
 
 RESTRICT="mirror bindist"
