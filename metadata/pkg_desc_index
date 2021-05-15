@@ -48,7 +48,7 @@ dev-python/pydes 2.0.1: Python implementation of DES and TRIPLE DES
 dev-python/pyfastcopy 1.0.3: Speed up Python's shutil.copyfile by using sendfile system call
 dev-python/redbaron 0.9.2: FST for python to make writing refactoring code a realistic task
 dev-python/rich 9.8.2: Validate configuration and produce human-readable messages
-dev-python/simber 0.2.1: Simple, minimal and powerful logging library for Python
+dev-python/simber 0.2.1 0.2.2: Simple, minimal and powerful logging library for Python
 dev-python/simpleaudio 1.0.4: A simple audio playback Python extension
 dev-python/sphinx-tabs 2.1.0: Tabbed views for Sphinx
 dev-python/sphinx_press_theme 0.5.1: A Sphinx-doc theme based on Vuepress
