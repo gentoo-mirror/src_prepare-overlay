@@ -48,7 +48,7 @@ src_configure() {
 
 src_compile() {
 	cmake_src_compile
-	export LIBRARY_PATH="${S}/$(get_libdir)/" # Let python build find the already built libolm
+	export LIBRARY_PATH="${S}" # Let python build find the already built libolm
 	use python && (cd python; distutils-r1_src_compile)
 }
 
