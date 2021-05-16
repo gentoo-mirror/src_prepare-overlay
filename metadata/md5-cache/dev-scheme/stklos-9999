@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=configure install prepare unpack
+DEPEND=dev-libs/gmp:= dev-libs/libpcre dev-libs/libffi dev-libs/boehm-gc[threads?]
+DESCRIPTION=Fast and light R7RS Scheme implementation
+EAPI=7
+HOMEPAGE=https://stklos.net/
+INHERIT=git-r3
+IUSE=threads
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=dev-libs/gmp:= dev-libs/libpcre dev-libs/libffi dev-libs/boehm-gc[threads?]
+SLOT=0
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
+_md5_=513202c32748914aff34d32755d13986

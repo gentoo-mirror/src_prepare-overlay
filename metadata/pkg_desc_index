@@ -57,6 +57,7 @@ dev-python/watchgod 0.6: Simple, modern file watching and code reload in python.
 dev-python/youtube-search 1.1.1: Simple, minimal and powerful logging library for Python
 dev-scheme/chezscheme 9.5.4: Open-source Chez Scheme implementation from Cisco
 dev-scheme/racket 8.0 8.1: General purpose, multi-paradigm Lisp-Scheme programming language
+dev-scheme/stklos 1.60 9999: Fast and light R7RS Scheme implementation
 dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
