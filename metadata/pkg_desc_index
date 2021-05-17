@@ -56,6 +56,7 @@ dev-python/unpaddedbase64 1.1.0: Encode and decode Base64 without = padding.
 dev-python/watchgod 0.6: Simple, modern file watching and code reload in python.
 dev-python/youtube-search 1.1.1: Simple, minimal and powerful logging library for Python
 dev-scheme/chezscheme 9.5.4: Open-source Chez Scheme implementation from Cisco
+dev-scheme/chicken 5.2.0: Scheme interpreter and native Scheme to C compiler
 dev-scheme/racket 8.0 8.1: General purpose, multi-paradigm Lisp-Scheme programming language
 dev-scheme/stklos 1.60 9999: Fast and light R7RS Scheme implementation
 dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
