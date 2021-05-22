@@ -15,7 +15,7 @@ SRC_URI="https://github.com/poljar/matrix-nio/archive/${PV}.tar.gz -> ${P}.tar.g
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="doc e2e test"
+IUSE="e2e test"
 
 RDEPEND="
 	>=dev-python/future-0.18.2[${PYTHON_USEDEP}]
@@ -55,21 +55,11 @@ DEPEND="
 		  dev-python/mypy_extensions[${PYTHON_USEDEP}]
 	)
 "
-BDEPEND="
-	doc? ( dev-python/sphinx )
-"
 
 distutils_enable_tests pytest
+distutils_enable_sphinx doc dev-python/sphinx_rtd_theme dev-python/m2r2
 
-# Tests dont parallelize happily
-
-python_compile_all() {
-	if use doc; then
-		emacs -C docs html || die
-	fi
-}
-
-python_install_all() {
-	use doc && HTML_DOCS=( docs/build/html/. )
-	distutils-r1_python_install_all
+python_test() {
+	# Former requires internet access, latter fails randomly
+	epytest --deselect tests/async_client_test.py::TestClass::test_connect_wrapper[pyloop] --deselect tests/async_client_test.py::TestClass::test_transfer_monitor_callbacks
 }
