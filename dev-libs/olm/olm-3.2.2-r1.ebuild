@@ -21,7 +21,7 @@ fi
 
 LICENSE="Apache-2.0"
 SLOT="0/$(ver_cut 1)"
-IUSE="doc python test"
+IUSE="python test"
 REQUIRED_USE="doc? ( python )"
 
 DEPEND="
@@ -37,11 +37,9 @@ DEPEND="
 		)
 	)
 "
-BDEPEND="
-	doc? ( dev-python/sphinx )
-"
 
 distutils_enable_tests pytest
+distutils_enable_sphinx "${S}"/python/docs
 
 DOCS=( "${S}/docs/" )
 
@@ -67,14 +65,6 @@ src_configure() {
 	fi
 }
 
-python_compile_all() {
-	if use doc; then
-		pushd "${S}/python/docs" || die
-		emake html || die
-		popd || die
-	fi
-}
-
 src_compile() {
 	cmake_src_compile
 	if use python; then
@@ -91,9 +81,6 @@ src_install() {
 	if use python; then
 		pushd python || die
 		distutils-r1_src_install
-		if use doc; then
-		   HTML_DOCS=( "${S}/python/docs/html/." )
-		fi
 		popd || die
 	fi
 	einstalldocs
