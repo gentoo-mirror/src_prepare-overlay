@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email> parona@protonmail.com </email>
-		<name> Alfred Wingate </name>
-	</maintainer>
-	<use>
-		<flag name="e2e"> Enable end to end encryption support </flag>
-	</use>
+  <maintainer type="person">
+    <email>parona@protonmail.com</email>
+    <name>Alfred Wingate</name>
+  </maintainer>
+  <upstream>
+    <remote-id type="github">poljar/matrix-nio</remote-id>
+  </upstream>
+  <use>
+    <flag name="e2e">Enable end to end encryption support</flag>
+  </use>
 </pkgmetadata>
