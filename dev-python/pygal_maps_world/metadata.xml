@@ -2,10 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer type="person">
-    <email> parona@protonmail.com </email>
-    <name> Alfred Wingate </name>
+    <email>parona@protonmail.com</email>
+    <name>Alfred Wingate</name>
   </maintainer>
   <upstream>
-    <remote-id type="github">matrix-org/python-unpaddedbase64</remote-id>
+    <remote-id type="pypi">pygal_maps_world</remote-id>
   </upstream>
 </pkgmetadata>
