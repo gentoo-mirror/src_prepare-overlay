@@ -34,6 +34,8 @@ DOCS=(
 )
 
 src_prepare() {
+	unset STKLOS_CONFDIR
+
 	# remove bundled libs
 	rm -rf "${S}"/{ffi,gc,gmp,pcre} || die
 
