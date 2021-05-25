@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/gmp:= dev-libs/libpcre dev-libs/libffi dev-libs/boehm-gc[threads?]
 SLOT=0
 SRC_URI=https://github.com/egallesio/STklos/archive/refs/tags/stklos-1.60.tar.gz
-_md5_=513202c32748914aff34d32755d13986
+_md5_=571d255a71efdd3055554d0500bb120a
