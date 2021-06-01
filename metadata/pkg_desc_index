@@ -47,7 +47,6 @@ dev-python/plyer 1.4.3 2.0.0: Plyer is a platform-independent Python wrapper for
 dev-python/posix-ipc 1.0.5: POSIX IPC primitives for Python
 dev-python/pyaaf2 1.4.0: Read and write Advanced Authoring Format (AAF) files
 dev-python/pydes 2.0.1: Python implementation of DES and TRIPLE DES
-dev-python/pyfastcopy 1.0.3: Speed up Python's shutil.copyfile by using sendfile system call
 dev-python/pygal 3.0.0_pre1: PYthon svg GrAph plotting Library
 dev-python/pygal_maps_ch 1.0.1: Swiss canton map for pygal
 dev-python/pygal_maps_fr 1.1.0: French maps for pygal
