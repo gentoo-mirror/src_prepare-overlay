@@ -7,7 +7,6 @@ acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/cgls 246 247: cgls from systemd
 app-admin/cgtop 246 247: cgtop from systemd
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
-app-crypt/gtkhash 1.2 1.4 9999: A cross-platform desktop utility for computing message digests or checksums
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
 app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
 app-editors/rehex 0.3.0 9999: Reverse Engineers' Hex Editor
