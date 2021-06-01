@@ -6,7 +6,7 @@ EAPI=7
 inherit wise
 
 DESCRIPTION="Freeware release of Counter-Strike 1.5"
-HOMEPAGE="web.archive.org/web/20031231214931/http://www.counter-strike.net/"
+HOMEPAGE="https://web.archive.org/web/20031231214931/http://www.counter-strike.net/"
 WISE_INSTALLER="csv15full.exe"
 SRC_URI+="
 	https://archive.org/download/counter-strike-1.5/${WISE_INSTALLER}
