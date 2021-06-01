@@ -9,7 +9,6 @@ inherit perl-module
 DESCRIPTION="Perl extension for renaming multiple files"
 SLOT="0"
 KEYWORDS="~amd64"
-
 # No virtuals for
 #   Pod::Usage
 #   File::Basename
@@ -40,5 +39,8 @@ src_prepare() {
 		-e '/\=head1 DESCRIPTION/,/C<rename>/ s/C<rename>/C<prename>/' \
 		-e '/\=head2 Examples/,/\=head1 OPTIONS/ s/\(^\s\)rename/\1prename/' \
 		rename.PL || die
+	# Also modify tests so that they work with the above changes
+	sed -i '/sub script_name/,/;/ s/\([^-]\)rename/\1prename/' t/testlib.pl || die
+	sed -i "s/my \$generic = 'rename';/my \$generic = 'prename';/" t/rename-examples.t || die
 	default
 }
