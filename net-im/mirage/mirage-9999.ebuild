@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..9} )
 
 inherit qmake-utils python-single-r1 xdg
 
@@ -73,8 +73,6 @@ RDEPEND="
 		>=dev-python/sortedcontainers-2.2.2[${PYTHON_USEDEP}]
 		>=dev-python/watchgod-0.6[${PYTHON_USEDEP}]
 		>=media-gfx/cairosvg-2.4.2[${PYTHON_USEDEP}]
-		python_single_target_python3_7? ( >=dev-python/pyfastcopy-1.0.3[python_targets_python3_7] )
-
 	')
 	media-libs/alsa-lib
 	media-libs/libjpeg-turbo
@@ -105,5 +103,9 @@ src_configure() {
 	if use !X; then
 		myconf="CONFIG+=no-x11"
 	fi
-	eqmake5 mirage.pro PREFIX="${D}"/usr ${myconf}
+	eqmake5 mirage.pro PREFIX="${EPREFIX}/usr" ${myconf}
+}
+
+src_install() {
+	emake INSTALL_ROOT="${D}" install
 }

@@ -55,9 +55,9 @@ src_configure() {
 }
 
 src_install() {
+	cmake_src_install
 	if use doxygen; then
 		docinto html
-		dodoc -r docs/html/.
+		dodoc -r "${BUILD_DIR}"/docs/html/*
 	fi
-	cmake_src_install
 }
