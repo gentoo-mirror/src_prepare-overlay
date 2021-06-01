@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_7 )
+PYTHON_COMPAT=( python3_{8,9} )
 inherit distutils-r1
 
 DESCRIPTION="Speed up Python's shutil.copyfile by using sendfile system call"
