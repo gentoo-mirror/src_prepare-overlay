@@ -5,4 +5,7 @@
     <email>parona@protonmail.com</email>
     <name>Alfred Wingate</name>
   </maintainer>
+  <upstream>
+    <remote-id type="github">schettino72/sphinx_press_theme</remote-id>
+  </upstream>
 </pkgmetadata>
