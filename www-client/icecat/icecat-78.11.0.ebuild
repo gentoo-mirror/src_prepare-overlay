@@ -6,7 +6,7 @@
 EAPI="7"
 
 # Using Gentoos firefox patches as system libraries and lto are quite nice
-FIREFOX_PATCHSET="firefox-78esr-patches-10.tar.xz"
+FIREFOX_PATCHSET="firefox-78esr-patches-14.tar.xz"
 
 LLVM_MAX_SLOT=11
 
@@ -26,7 +26,7 @@ PATCH_URIS=(
 )
 
 SRC_URI="
-	!buildtarball? ( icecat-"${PV}"-gnu1.tar.bz2 )
+	!buildtarball? ( icecat-${PV}-gnu1.tar.bz2 )
 	${PATCH_URIS[@]}
 "
 
@@ -55,6 +55,14 @@ BDEPEND="${PYTHON_DEPS}
 	>=virtual/rust-1.41.0
 	|| (
 		(
+			sys-devel/clang:12
+			sys-devel/llvm:12
+			clang? (
+				=sys-devel/lld-12*
+				pgo? ( =sys-libs/compiler-rt-sanitizers-12*[profile] )
+			)
+		)
+		(
 			sys-devel/clang:11
 			sys-devel/llvm:11
 			clang? (
@@ -79,10 +87,10 @@ BDEPEND="${PYTHON_DEPS}
 	!system-av1? (
 		amd64? ( >=dev-lang/nasm-2.13 )
 		x86? ( >=dev-lang/nasm-2.13 )
-	)"
+	)
+	buildtarball? ( ~www-client/makeicecat-"${PV}"[buildtarball] )"
 
 CDEPEND="
-	buildtarball? ( ~www-client/makeicecat-"${PV}"[buildtarball] )
 	>=dev-libs/nss-3.53.1
 	>=dev-libs/nspr-4.25
 	dev-libs/atk
@@ -568,6 +576,9 @@ src_configure() {
 	# Initialize MOZCONFIG
 	mozconfig_add_options_ac '' --enable-application=browser
 
+	# Set Gentoo defaults
+	export MOZILLA_OFFICIAL=1
+
 	mozconfig_add_options_ac 'Gentoo default' \
 		--allow-addon-sideload \
 		--disable-cargo-incremental \
@@ -885,6 +896,12 @@ src_install() {
 	# Set installDistroAddons to true so that language packs work
 	cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to set extensions.installDistroAddons pref"
 	pref("extensions.installDistroAddons",     true);
+	pref("extensions.langpacks.signatures.required",	false);
+	EOF
+
+	# Disable signatures for language packs so that unsigned just built language packs work
+	cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to disable langpacks signatures"
+	pref("extensions.langpacks.signatures.required",	false);
 	EOF
 
 	# Force hwaccel prefs if USE=hwaccel is enabled
@@ -904,7 +921,7 @@ src_install() {
 	# Install language packs
 	local langpacks=( $(find "${BUILD_DIR}"/dist/linux-x86_64/xpi -type f -name '*.xpi') )
 	if [[ -n "${langpacks}" ]] ; then
-		moz_install_xpi "${MOZILLA_FIVE_HOME}/distribution/extensions" "${langpacks[@]}"
+		moz_install_xpi "${MOZILLA_FIVE_HOME}/browser/extensions" "${langpacks[@]}"
 	fi
 
 	# Install geckodriver
@@ -1036,6 +1053,12 @@ pkg_preinst() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
+
+	elog "Cloudflare browser checks are broken with GNU IceCats anti fingerprinting measures."
+	elog "You can fix cloudflare browser checks by undoing them in about:config like below:"
+	elog "   general.appversion.override: 78.0 (X11)"
+	elog "   general.oscpu.override: Linux x86_64"
+	elog "   general.platform.override: Linux x86_64"
 
 	if use pulseaudio && has_version ">=media-sound/apulse-0.1.12-r4" ; then
 		elog "Apulse was detected at merge time on this system and so it will always be"

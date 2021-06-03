@@ -245,20 +245,18 @@ RESTRICT="mirror"
 LICENSE="0BSD all-rights-reserved Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD Boost-1.0 ISC MIT MPL-2.0 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
-#IUSE="doc"
+IUSE="doc"
 
 DEPEND="
 	dev-libs/icu
 	dev-libs/openssl
 	media-libs/fontconfig
 	media-gfx/graphite2
-	media-libs/harfbuzz
+	media-libs/harfbuzz[graphite,icu]
 	sys-libs/zlib
 "
 RDEPEND="${DEPEND}"
-
-# TODO:
-# Add mdbook and then enable documentation
+BDEPEND="doc? ( app-text/mdbook )"
 
 src_configure() {
 	# Test fails with -ftree-slp-vectorize, therefore disable
@@ -270,17 +268,17 @@ src_configure() {
 
 src_compile() {
 	cargo_src_compile
-	#if use doc; then
-	#   pushd docs
-	#	mdbook build
-	#	HTML_DOCS="${S}/docs"
-	#   popd
-	#fi
+	if use doc; then
+	   pushd docs || die
+		mdbook build || die
+		HTML_DOCS="${S}/docs/book"
+	   popd || die
+	fi
 }
 
 src_install() {
 	cargo_src_install
-	#einstalldocs
+	einstalldocs
 }
 
 # There is feature called serialization that is enabled by default,
