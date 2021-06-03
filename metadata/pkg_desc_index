@@ -69,6 +69,7 @@ dev-scheme/chezscheme 9.5.4: Open-source Chez Scheme implementation from Cisco
 dev-scheme/chicken 5.2.0: Scheme interpreter and native Scheme to C compiler
 dev-scheme/racket 8.0 8.1: General purpose, multi-paradigm Lisp-Scheme programming language
 dev-scheme/stklos 1.60 9999: Fast and light R7RS Scheme implementation
+dev-tex/tectonic 0.4.1: A modernized, complete, self-contained TeX/LaTeX engine.
 dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
