@@ -20,6 +20,7 @@ app-portage/euscan-ng 1.0.0 9999: Check if a given package has new upstream vers
 app-portage/gen-pkgs 1.0.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
 app-portage/src_prepare-scripts 1.0.0 9999: Small scripts from src_prepare group
+app-text/mdbook 0.4.9: Create book from markdown files. Like Gitbook but implemented in Rust.
 app-text/pandoc-bin 2.11.0.2 2.13: Universal markup converter
 dev-cpp/properties-cpp 0_pre20180409 9999: A very simple convenience library for handling properties and signals in C++11
 dev-cpp/pystring 1.1.3 9999: C++ functions matching the interface and behavior of python string methods
@@ -132,8 +133,8 @@ sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-apps/icecoder 8.0: Browser code editor awesomeness
 www-apps/miniflux 2.0.24: Minimalist and opinionated feed reader
 www-client/brave-bin 1.12.77 1.12.78: Brave Web Browser
-www-client/icecat 78.9.0 78.9.0-r1 78.10.0: GNU IceCat Web Browser
-www-client/makeicecat 78.9.0 78.10.0: Script for creating GNU Icecat tarball
+www-client/icecat 78.10.0 78.11.0: GNU IceCat Web Browser
+www-client/makeicecat 78.10.0 78.11.0: Script for creating GNU Icecat tarball
 www-client/ungoogled-chromium-bin 85.0.4183.102: Google Chromium, sans integration with Google (binary package)
 www-servers/jellyfin-bin 10.7.1 10.7.2 10.7.5: The Free Software Media System
 x11-misc/compton-tryone 0.1_beta2 9999: A compositor for X, branch with dual kawase blur

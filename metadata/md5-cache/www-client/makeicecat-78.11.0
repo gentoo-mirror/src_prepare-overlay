@@ -1,0 +1,12 @@
+BDEPEND=app-crypt/gnupg dev-vcs/mercurial dev-perl/File-Rename
+DEFINED_PHASES=compile install postinst prepare
+DESCRIPTION=Script for creating GNU Icecat tarball
+EAPI=7
+HOMEPAGE=https://www.gnu.org/software/gnuzilla/
+IUSE=+buildtarball
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RESTRICT=buildtarball? ( network-sandbox )
+SLOT=78.11.0
+SRC_URI=https://git.savannah.gnu.org/cgit/gnuzilla.git/snapshot/gnuzilla-27c91a14d6c389ebbbaeed6191207bfbf8f97c75.tar.gz -> makeicecat-78.11.0.tar.gz https://archive.mozilla.org/pub/firefox/releases/89.0/KEY -> Mozilla_pgp_key-20210507.pgp
+_md5_=6bc454cc4b2b8d65cb7d45450aa6cd21
