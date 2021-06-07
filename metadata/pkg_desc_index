@@ -68,7 +68,7 @@ dev-python/watchgod 0.6 0.7: Simple, modern file watching and code reload in pyt
 dev-python/youtube-search 1.1.1: Simple, minimal and powerful logging library for Python
 dev-scheme/chezscheme 9.5.4: Open-source Chez Scheme implementation from Cisco
 dev-scheme/chicken 5.2.0: Scheme interpreter and native Scheme to C compiler
-dev-scheme/racket 8.0 8.1: General purpose, multi-paradigm Lisp-Scheme programming language
+dev-scheme/racket 8.1: General purpose, multi-paradigm Lisp-Scheme programming language
 dev-scheme/stklos 1.60 9999: Fast and light R7RS Scheme implementation
 dev-tex/tectonic 0.4.1: A modernized, complete, self-contained TeX/LaTeX engine.
 dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
