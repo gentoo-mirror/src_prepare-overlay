@@ -14,3 +14,29 @@ SRC_URI="https://github.com/markreidvfx/pyaaf2/archive/v"${PV}".tar.gz -> "${P}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="doc test"
+
+DEPEND="
+	test? (
+		  dev-python/matplotlib[${PYTHON_USEDEP}]
+		  dev-python/numpy[${PYTHON_USEDEP}]
+	)
+"
+BDEPEND="doc? ( app-misc/sphinx )"
+
+distutils_enable_tests setup.py
+
+python_compile_all() {
+	use doc && emake -C docs html
+}
+
+python_install_all() {
+	use doc && HTML_DOCS=( docs/build/html/. )
+	distutils-r1_python_install_all
+}
+
+python_test() {
+	# Tests import from tests/common.py which is breaks unless the dir is added to PYTHONPATH
+	PYTHONPATH="${S}/tests"
+	epytest
+}
