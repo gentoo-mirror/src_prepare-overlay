@@ -14,13 +14,23 @@ else
 	KEYWORDS="~amd64"
 fi
 
-LICENSE="all-rights-reserved"
+LICENSE="BSD"
 SLOT="0"
+
+BDEPEND="
+	sys-devel/gcc[cxx]
+	sys-devel/libtool
+"
+
+src_prepare() {
+	sed -i "s/\(CXXFLAGS =\) -g -O3 \(.*\)/\1 ${CXXFLAGS} \2/" Makefile || die
+	default
+}
 
 src_compile() {
 	emake LIBDIR="${S}" install
 	mkdir pystring || die
-	mv pystring.h pystring || die
+	cp pystring.h pystring || die
 }
 
 src_install() {
