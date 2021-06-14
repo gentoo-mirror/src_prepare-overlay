@@ -121,7 +121,6 @@ net-misc/ytmdl 2021.03.04 2021.05.26 9999: A simple app to get songs from youtub
 net-wireless/mdk4 4.1 9999: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
 sci-mathematics/scilab-bin 6.1.0: Scientific software package for numerical computations
 sci-visualization/tulip 5.4.0 9999: Large graphs analysis, drawing and visualization framework
-sys-apps/fchroot 0.1.2: Funtoo's franken-chroot tool - chroot from AMD64 to ARM system
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.5.77 1.5.109: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
