@@ -12,5 +12,5 @@ RDEPEND=!www-client/brave >=media-libs/libpng-1.6.34 >=net-print/cups-2.0.0 app-
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/brave/brave-browser/releases/download/v1.12.77/brave-v1.12.77-linux-x64.zip -> brave-bin-1.12.77.zip
-_eclasses_=toolchain-funcs	2545dc6f0aaecb2dea61424911e82674	multilib	ba7da83f763a749a2870c28785c6dc0b	linux-info	7e8ed4c6a1d136fb291c52386f996c2c	chromium-2	d93dbbcc2be0a4d844cda32597c6ba63	desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
+_eclasses_=toolchain-funcs	7a9551c9a6680454019664620505375a	multilib	6f710a580aea2e8c7f5be70f8912ad43	linux-info	7e8ed4c6a1d136fb291c52386f996c2c	chromium-2	5c8f27044b5401cdbf32dbf6c6cdfbea	desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07
 _md5_=8303ab0d57309a676349ea7cab7a06cc
