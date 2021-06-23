@@ -10,5 +10,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=media-gfx/imagemagick[jpeg,png,svg,xml] net-im/pidgin dev-vcs/git dev-libs/json-glib
 SLOT=0
-_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
 _md5_=752867d449719cd2ea3e74d1e4e72a5f

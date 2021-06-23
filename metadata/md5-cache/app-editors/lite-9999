@@ -10,5 +10,5 @@ PROPERTIES=live
 RDEPEND=media-libs/libsdl2 net-libs/libasyncns x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libX11 x11-libs/libXau x11-libs/libXcursor x11-libs/libXdmcp x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXrandr x11-libs/libXrender x11-libs/libXtst x11-libs/libXxf86vm x11-libs/libxcb
 RESTRICT=mirror
 SLOT=0
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	git-r3	b8e8c92aa5fe8df7187e466138eb4e52
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
 _md5_=19d95d4a7b366c21a9ecd9cea281477f
