@@ -32,8 +32,6 @@ src_prepare() {
 
 	kernel-2-src-prepare-overlay_src_prepare
 
-	rm "${S}"/.config || die
-
 }
 
 pkg_postinst() {
