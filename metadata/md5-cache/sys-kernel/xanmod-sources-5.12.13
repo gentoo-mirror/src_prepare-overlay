@@ -9,7 +9,7 @@ KEYWORDS=~amd64
 LICENSE=GPL-2 CDDL
 RDEPEND=!build? ( dev-lang/perl sys-devel/bc sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf )
 RESTRICT=binchecks strip
-SLOT=5.12.5
-SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.12.tar.xz https://github.com/xanmod/linux/releases/download//5.12.5-xanmod1/patch-5.12.5-xanmod1.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.extras.tar.xz
+SLOT=5.12.13
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.12.tar.xz https://github.com/xanmod/linux/releases/download//5.12.13-xanmod1/patch-5.12.13-xanmod1.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.extras.tar.xz
 _eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	estack	055c42df72f76a4f45ec92b35e83cd56	eapi7-ver	f9ec87e93172b25ce65a85303dc06964	kernel-2-src-prepare-overlay	578c2e6dd65bd74989dee980b8f6803d
-_md5_=7cae6af143aad12699a96b9ce7e47f14
+_md5_=c466dce7dd8378c4168cbde6f5e59263
