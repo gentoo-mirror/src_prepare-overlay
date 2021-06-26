@@ -1,4 +1,4 @@
-BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings ) >=app-arch/rpm2targz-9.0.0.3g
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings ) app-arch/rpm2targz
 DEFINED_PHASES=install postinst postrm setup unpack
 DESCRIPTION=Practical font realization of the Labirynth Alphabet
 EAPI=7
@@ -10,5 +10,5 @@ LICENSE=OFL
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://fedora.osuosl.org/linux/releases/33/Everything/x86_64/os/Packages/l/labiryntowy-fonts-1.53-12.fc33.noarch.rpm -> labiryntowy-1.53.rpm
-_eclasses_=font	0667878c2b594871023dd1833d05996f	edos2unix	33e347e171066657f91f8b0c72ec8773	l10n	3c7381c56a184f0dd5ba3fb824808f30	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	9a53f21c753d823ba20a22f857c25cb4	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	17ff2249b50738c17c3824b58c813a5b
+_eclasses_=font	0667878c2b594871023dd1833d05996f	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	142025d51eac82f782a2dcb4f04a4b12
 _md5_=05337b67414b50010cf9cbd5acafe515
