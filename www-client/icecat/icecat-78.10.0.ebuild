@@ -572,6 +572,7 @@ src_configure() {
 		--allow-addon-sideload \
 		--disable-cargo-incremental \
 		--disable-crashreporter \
+		--disable-eme \
 		--disable-install-strip \
 		--disable-strip \
 		--disable-updater \
