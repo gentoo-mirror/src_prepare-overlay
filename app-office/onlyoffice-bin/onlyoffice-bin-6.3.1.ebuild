@@ -1,4 +1,4 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -11,7 +11,7 @@ DESCRIPTION="Onlyoffice is an office productivity suite (binary version)"
 HOMEPAGE="https://www.onlyoffice.com/"
 SRC_URI="
 	amd64? (
-		https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v"${PV}"/onlyoffice-desktopeditors_"${PV}"-90_amd64.deb -> "${P}"_amd64.deb
+		https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v"${PV}"/onlyoffice-desktopeditors_amd64.deb -> "${P}"_amd64.deb
 	)
 "
 
