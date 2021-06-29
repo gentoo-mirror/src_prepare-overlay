@@ -1,8 +1,9 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
+# 29.6.2021: 3.10 blocked by aiohttps and pbr
 PYTHON_COMPAT=( python3_{8..9} )
 inherit distutils-r1
 
@@ -14,26 +15,30 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="doc"
-# Tests hard depend on internet access
-RESTRICT="test"
-#RESTRICT="!test? ( test )"
+
+# All tests require internet access
+PROPERTIES="test_network"
+RESTRICT="
+	test
+	!test? ( test )
+"
 
 RDEPEND="
 	dev-python/aiohttp[${PYTHON_USEDEP}]
 "
-#DEPEND="
-#	test? (
-#		  ${RDEPEND}
-#		  dev-python/ddt[${PYTHON_USEDEP}]
-#		  dev-python/pytest-cov[${PYTHON_USEDEP}]
-#	)
-#"
+DEPEND="
+	test? (
+		  ${RDEPEND}
+		  dev-python/ddt[${PYTHON_USEDEP}]
+		  dev-python/pytest-cov[${PYTHON_USEDEP}]
+	)
+"
 BDEPEND="
 	dev-python/pbr[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx )
 "
 
-#distutils_enable_tests pytest
+distutils_enable_tests pytest
 
 python_compile_all() {
 	use doc && emake -C docs -j1 html
