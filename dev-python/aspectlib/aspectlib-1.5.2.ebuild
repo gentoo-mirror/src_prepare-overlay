@@ -1,9 +1,9 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_{8..9} )
+PYTHON_COMPAT=( python3_{8..10} )
 inherit distutils-r1
 
 DESCRIPTION="An aspect-oriented programming, monkey-patch and decorators library."
@@ -31,7 +31,10 @@ BDEPEND="
 
 distutils_enable_tests pytest
 
-PATCHES=( "${FILESDIR}/Remove-tornado-6-test-constraint.patch" )
+PATCHES=(
+	"${FILESDIR}/Fix-tests-for-python3_10.patch"
+	"${FILESDIR}/Remove-tornado-6-test-constraint.patch"
+)
 
 python_compile_all() {
 	if use doc; then
