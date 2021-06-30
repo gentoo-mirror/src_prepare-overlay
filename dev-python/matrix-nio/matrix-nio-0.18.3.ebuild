@@ -1,7 +1,7 @@
 # Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 PYTHON_COMPAT=( python3_{8..9})
 DISTUTILS_USE_SETUPTOOLS="pyproject.toml"
@@ -17,11 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="e2e test"
 
+# 30.6.2021: 3.10 blocked by aiohttp{,-socks}, future, logbook, olm, aioresponses, pytest-{aiohttp,benchmark,flake8,isort}
 RDEPEND="
-	>=dev-python/future-0.18.2[${PYTHON_USEDEP}]
 	>=dev-python/aiohttp-3.7.4[${PYTHON_USEDEP}]
 	>=dev-python/aiohttp-socks-0.6.0[${PYTHON_USEDEP}]
 	>=dev-python/aiofiles-0.6.0[${PYTHON_USEDEP}]
+	>=dev-python/future-0.18.2[${PYTHON_USEDEP}]
 	>=dev-python/h11-0.12.0[${PYTHON_USEDEP}]
 	>=dev-python/hyper-h2-4.0.0[${PYTHON_USEDEP}]
 	>=dev-python/logbook-1.5.3[${PYTHON_USEDEP}]
@@ -44,10 +45,10 @@ DEPEND="
 		  dev-python/Faker[${PYTHON_USEDEP}]
 		  dev-python/peewee[${PYTHON_USEDEP}]
 		  dev-python/pytest-aiohttp[${PYTHON_USEDEP}]
+		  dev-python/pytest-benchmark[${PYTHON_USEDEP}]
 		  dev-python/pytest-flake8[${PYTHON_USEDEP}]
 		  dev-python/pytest-isort[${PYTHON_USEDEP}]
 		  dev-python/pytest-cov[${PYTHON_USEDEP}]
-		  dev-python/pytest-benchmark[${PYTHON_USEDEP}]
 		  dev-python/hpack[${PYTHON_USEDEP}]
 		  dev-python/hyperframe[${PYTHON_USEDEP}]
 		  dev-python/hypothesis[${PYTHON_USEDEP}]
