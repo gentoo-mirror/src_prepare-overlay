@@ -11,5 +11,5 @@ RDEPEND=x11-libs/gtk+:3[X]
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://luajit.org/download/LuaJIT-2.1.0-beta3.tar.gz -> howl-LuaJIT-2.1.0-beta3.tar.gz http://nordman.org/mirror/lpeg/lpeg-0.10.2.tar.gz -> howl-lpeg-0.10.2.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	ff2ff954e6b17929574eee4efc5152ba	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg-utils	27f9a2f19502b925ac117bd657aa2979	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
 _md5_=c96a4a0d40aa28caeb439ffd9df8c00f
