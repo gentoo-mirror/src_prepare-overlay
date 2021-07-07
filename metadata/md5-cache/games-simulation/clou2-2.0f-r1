@@ -8,4 +8,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=neoSoftware
 RDEPEND=app-emulation/wine-vanilla:=[abi_x86_32] app-arch/unshield
 SLOT=0
-_md5_=30383977add08c73f8f146fb19173cf8
+_md5_=5104e6e002ad3ad298acff4af5ff284d

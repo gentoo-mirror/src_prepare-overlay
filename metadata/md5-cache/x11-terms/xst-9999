@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=>=sys-libs/ncurses-6.0:0= media-libs/fontconfig x11-libs/libX11 x11-libs/libXft
 SLOT=0
 _eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	portability	d1186f1e621de7b27ddcae82e6253259	savedconfig	0bc45cb0429003c9abc73bae24a0d5bd
-_md5_=f22fd3a685b073764a2df8e307bd41db
+_md5_=37a7071a60953904ba7bf760dfcc9012

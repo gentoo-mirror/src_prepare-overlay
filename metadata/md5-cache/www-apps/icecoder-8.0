@@ -12,4 +12,4 @@ RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/icecoder/ICEcoder/archive/8.0.tar.gz -> icecoder-8.0.tar.gz
 _eclasses_=webapp	cd327e73cdb307ceb80dcca6b8ad8b52
-_md5_=97bbeba4be90a10be287a6e8cf86f710
+_md5_=c3f7800226f8551d7727a0cfac983ba6

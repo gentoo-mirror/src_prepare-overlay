@@ -12,4 +12,4 @@ RDEPEND=x11-apps/bdftopcf
 RESTRICT=mirror
 SLOT=0
 _eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	font	0667878c2b594871023dd1833d05996f
-_md5_=15005cfa035d779be4181517b624fa02
+_md5_=6265db7668daa1c6d50bfdc95fc5255d

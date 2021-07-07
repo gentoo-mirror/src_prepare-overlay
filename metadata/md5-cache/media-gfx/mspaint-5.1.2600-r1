@@ -11,4 +11,4 @@ RDEPEND=app-shells/bash:0 virtual/wine[abi_x86_32] app-emulation/winetricks sys-
 REQUIRED_USE=abi_x86_32
 SLOT=0
 SRC_URI=https://archive.org/download/mspaint_xp_version/mspaint.exe
-_md5_=eb29b6405e1e5a510a5cc3588aac1143
+_md5_=11c409d692c6c974380cc8ee7c74f3f2

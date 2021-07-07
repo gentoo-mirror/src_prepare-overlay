@@ -12,4 +12,4 @@ RDEPEND=app-emulation/wine-vanilla:=[abi_x86_32,gstreamer] media-plugins/gst-plu
 SLOT=0
 SRC_URI=!tft? ( https://archive.org/download/wc3_patches/Windows/ROC/English/War3ROC_126a_English.exe ) tft? ( https://archive.org/download/wc3_patches/Windows/TFT/English/War3TFT_126a_English.exe )
 _eclasses_=run-wine	9f389002a2c57ddceb5b9005ccda8e2e
-_md5_=ea75ccc3fcb2cbb7e94fb3cf10d948cf
+_md5_=e7c0b101f4dde23c4c19f1c4e472e67d

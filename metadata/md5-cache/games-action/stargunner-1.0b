@@ -9,4 +9,4 @@ LICENSE=Stargunner_freeware
 RDEPEND=games-emulation/dosbox
 SLOT=0
 SRC_URI=https://image.dosgamesarchive.com/games/stargunnerfreeware.zip
-_md5_=e70173a9b7dbe5d88f638781207ed9f9
+_md5_=e1af7801f86c4f3f394a462e4a29424b

@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=dev-lang/perl dev-perl/Date-Manip dev-perl/libwww-perl
 SLOT=0
 _eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	bash-completion-r1	8e7c071081c68c2c398b77fe3a1d6908
-_md5_=f70c48ef8eda77fd194df2b52f1dbf84
+_md5_=e5d284c796dd4b4076cc89fac4cb3291

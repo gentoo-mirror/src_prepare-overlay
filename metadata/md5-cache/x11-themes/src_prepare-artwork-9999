@@ -9,4 +9,4 @@ PROPERTIES=live
 RESTRICT=binchecks mirror strip test
 SLOT=0
 _eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=c86ea1e2dd9d644fd51af41e3dc71593
+_md5_=922a4092c8d8e5a11ac290a22faa107a

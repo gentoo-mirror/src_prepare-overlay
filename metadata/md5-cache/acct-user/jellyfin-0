@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~arm64
 RDEPEND=acct-group/jellyfin
 SLOT=0
 _eclasses_=user-info	2e75eaea3582b052ec16d9d5aa74ced3	user	1033b6bed7cf367c4507ea9a3ff503d0	acct-user	b3a6f9d710c598ea09935e86d45fbc36
-_md5_=7a7cecf0b2fcd67f10825d6b58955fd1
+_md5_=b030005d17a75582414893c8aaa5cd3e
