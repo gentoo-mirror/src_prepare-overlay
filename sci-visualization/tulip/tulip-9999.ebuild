@@ -6,7 +6,7 @@ EAPI=7
 # 5.4.0 -> tulip_5_4_0
 TULIP_P="${PN}_${PV//./_}"
 
-PYTHON_COMPAT=( python3_{6..8} )
+PYTHON_COMPAT=( python3_{8..9} )
 
 inherit cmake python-r1 xdg
 
@@ -59,7 +59,7 @@ RDEPEND="
 		media-libs/glew:0
 		python? (
 			${PYTHON_DEPS}
-			dev-python/sip[${PYTHON_USEDEP}]
+			dev-python/sip:*[${PYTHON_USEDEP}]
 		)
 	)
 "
