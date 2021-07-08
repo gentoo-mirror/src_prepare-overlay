@@ -9,7 +9,7 @@ KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x
 LICENSE=GPL-2
 RDEPEND=!build? ( dev-lang/perl sys-devel/bc sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf )
 RESTRICT=binchecks strip
-SLOT=5.12.8
-SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.12.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://github.com/zen-kernel/zen-kernel/releases/download/v5.12.8-lqx4/v5.12.8-lqx4.patch.xz
+SLOT=5.12.15
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.12.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.12-1.extras.tar.xz https://github.com/zen-kernel/zen-kernel/releases/download/v5.12.15-lqx1/v5.12.15-lqx1.patch.xz
 _eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	estack	055c42df72f76a4f45ec92b35e83cd56	eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	kernel-2-src-prepare-overlay	578c2e6dd65bd74989dee980b8f6803d
-_md5_=783aad7b4c87ce91372879105980dc81
+_md5_=b1ece8a9f022a0afbfc9bf0ad2ec0ab2
