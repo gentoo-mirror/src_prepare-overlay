@@ -26,7 +26,7 @@ REQUIRED_USE="futures? ( jit )"
 DEPEND="
 	!dev-tex/slatex
 	dev-db/sqlite:3
-	dev-libs/libffi
+	dev-libs/libffi:=
 	X? (
 	   dev-util/desktop-file-utils
 	   media-libs/libpng:0
