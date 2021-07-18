@@ -66,7 +66,7 @@ dev-python/unpaddedbase64 1.1.0 2.1.0: Encode and decode Base64 without = paddin
 dev-python/watchgod 0.6 0.7: Simple, modern file watching and code reload in python.
 dev-python/youtube-search 1.1.1: Simple, minimal and powerful logging library for Python
 dev-scheme/chicken 5.2.0: Scheme interpreter and native Scheme to C compiler
-dev-scheme/racket 8.1: General purpose, multi-paradigm Lisp-Scheme programming language
+dev-scheme/racket 8.1 8.2: General purpose, multi-paradigm Lisp-Scheme programming language
 dev-scheme/stklos 1.60 9999: Fast and light R7RS Scheme implementation
 dev-tex/tectonic 0.4.1 0.7.0: A modernized, complete, self-contained TeX/LaTeX engine.
 dev-tex/texlab 3.1.0 3.2.0: An implementation of the Language Server Protocol for LaTeX
