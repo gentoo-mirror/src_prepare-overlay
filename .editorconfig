@@ -23,20 +23,18 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-indent_style = space
 insert_final_newline = true
-tab_width = 4
 trim_trailing_whitespace = true
 
-[.gitmodules]
-indent_style = tab
+[{*.xml,*.yml}]
+indent_style = space
+indent_size = 2
+tab_width = 2
 
 [*.ebuild]
 indent_style = tab
+indent_size = 4
+tab_width = 4
 
-[metadata.xml]
+[.gitmodules]
 indent_style = tab
-
-[repositories.xml]
-indent_style = space
-tab_width = 2
