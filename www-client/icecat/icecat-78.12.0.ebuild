@@ -6,9 +6,9 @@
 EAPI="7"
 
 # Using Gentoos firefox patches as system libraries and lto are quite nice
-FIREFOX_PATCHSET="firefox-78esr-patches-12.tar.xz"
+FIREFOX_PATCHSET="firefox-78esr-patches-15.tar.xz"
 
-LLVM_MAX_SLOT=11
+LLVM_MAX_SLOT=12
 
 PYTHON_COMPAT=( python3_{7..9} )
 PYTHON_REQ_USE="ncurses,sqlite,ssl"
@@ -17,8 +17,8 @@ WANT_AUTOCONF="2.1"
 
 VIRTUALX_REQUIRED="pgo"
 
-inherit autotools check-reqs desktop flag-o-matic gnome2-utils llvm \
-	multiprocessing pax-utils python-any-r1 toolchain-funcs \
+inherit autotools check-reqs desktop flag-o-matic gnome2-utils linux-info \
+	llvm multiprocessing pax-utils python-any-r1 toolchain-funcs \
 	virtualx xdg
 
 PATCH_URIS=(
@@ -26,7 +26,7 @@ PATCH_URIS=(
 )
 
 SRC_URI="
-	!buildtarball? ( icecat-"${PV}"-gnu1.tar.bz2 )
+	!buildtarball? ( icecat-${PV}-gnu1.tar.bz2 )
 	${PATCH_URIS[@]}
 "
 
@@ -55,6 +55,14 @@ BDEPEND="${PYTHON_DEPS}
 	>=virtual/rust-1.41.0
 	|| (
 		(
+			sys-devel/clang:12
+			sys-devel/llvm:12
+			clang? (
+				=sys-devel/lld-12*
+				pgo? ( =sys-libs/compiler-rt-sanitizers-12*[profile] )
+			)
+		)
+		(
 			sys-devel/clang:11
 			sys-devel/llvm:11
 			clang? (
@@ -79,10 +87,10 @@ BDEPEND="${PYTHON_DEPS}
 	!system-av1? (
 		amd64? ( >=dev-lang/nasm-2.13 )
 		x86? ( >=dev-lang/nasm-2.13 )
-	)"
+	)
+	buildtarball? ( ~www-client/makeicecat-"${PV}"[buildtarball] )"
 
 CDEPEND="
-	buildtarball? ( ~www-client/makeicecat-"${PV}"[buildtarball] )
 	>=dev-libs/nss-3.53.1
 	>=dev-libs/nspr-4.25
 	dev-libs/atk
@@ -164,19 +172,19 @@ S="${WORKDIR}/${PN}-${PV%_*}"
 
 llvm_check_deps() {
 	if ! has_version -b "sys-devel/clang:${LLVM_SLOT}" ; then
-		ewarn "sys-devel/clang:${LLVM_SLOT} is missing! Cannot use LLVM slot ${LLVM_SLOT} ..." >&2
+		einfo "sys-devel/clang:${LLVM_SLOT} is missing! Cannot use LLVM slot ${LLVM_SLOT} ..." >&2
 		return 1
 	fi
 
 	if use clang ; then
 		if ! has_version -b "=sys-devel/lld-${LLVM_SLOT}*" ; then
-			ewarn "=sys-devel/lld-${LLVM_SLOT}* is missing! Cannot use LLVM slot ${LLVM_SLOT} ..." >&2
+			einfo "=sys-devel/lld-${LLVM_SLOT}* is missing! Cannot use LLVM slot ${LLVM_SLOT} ..." >&2
 			return 1
 		fi
 
 		if use pgo ; then
 			if ! has_version -b "=sys-libs/compiler-rt-sanitizers-${LLVM_SLOT}*" ; then
-				ewarn "=sys-libs/compiler-rt-sanitizers-${LLVM_SLOT}* is missing! Cannot use LLVM slot ${LLVM_SLOT} ..." >&2
+				einfo "=sys-libs/compiler-rt-sanitizers-${LLVM_SLOT}* is missing! Cannot use LLVM slot ${LLVM_SLOT} ..." >&2
 				return 1
 			fi
 		fi
@@ -457,6 +465,7 @@ pkg_setup() {
 		# Ensure we use C locale when building, bug #746215
 		export LC_ALL=C
 	fi
+	linux-info_pkg_setup
 }
 
 src_unpack() {
@@ -567,6 +576,9 @@ src_configure() {
 
 	# Initialize MOZCONFIG
 	mozconfig_add_options_ac '' --enable-application=browser
+
+	# Set Gentoo defaults
+	export MOZILLA_OFFICIAL=1
 
 	mozconfig_add_options_ac 'Gentoo default' \
 		--allow-addon-sideload \
@@ -886,6 +898,12 @@ src_install() {
 	# Set installDistroAddons to true so that language packs work
 	cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to set extensions.installDistroAddons pref"
 	pref("extensions.installDistroAddons",     true);
+	pref("extensions.langpacks.signatures.required",	false);
+	EOF
+
+	# Disable signatures for language packs so that unsigned just built language packs work
+	cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to disable langpacks signatures"
+	pref("extensions.langpacks.signatures.required",	false);
 	EOF
 
 	# Force hwaccel prefs if USE=hwaccel is enabled
@@ -905,7 +923,7 @@ src_install() {
 	# Install language packs
 	local langpacks=( $(find "${BUILD_DIR}"/dist/linux-x86_64/xpi -type f -name '*.xpi') )
 	if [[ -n "${langpacks}" ]] ; then
-		moz_install_xpi "${MOZILLA_FIVE_HOME}/distribution/extensions" "${langpacks[@]}"
+		moz_install_xpi "${MOZILLA_FIVE_HOME}/browser/extensions" "${langpacks[@]}"
 	fi
 
 	# Install geckodriver
@@ -1037,6 +1055,12 @@ pkg_preinst() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
+
+	elog "Cloudflare browser checks are broken with GNU IceCats anti fingerprinting measures."
+	elog "You can fix cloudflare browser checks by undoing them in about:config like below:"
+	elog "   general.appversion.override: 78.0 (X11)"
+	elog "   general.oscpu.override: Linux x86_64"
+	elog "   general.platform.override: Linux x86_64"
 
 	if use pulseaudio && has_version ">=media-sound/apulse-0.1.12-r4" ; then
 		elog "Apulse was detected at merge time on this system and so it will always be"
