@@ -1,7 +1,7 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 PYTHON_COMPAT=( python3_{8..9} )
 inherit distutils-r1 multiprocessing
@@ -20,6 +20,7 @@ KEYWORDS="~amd64"
 IUSE="man test"
 RESTRICT="!test? ( test )"
 
+# 30.6.2021: 3.10 blocked by cairosvg, pygal_{sphinx_directives,maps_{ch,fr,world}}, pytest-{flake8,isort}
 RDEPEND="
 	dev-python/lxml[${PYTHON_USEDEP}]
 	media-gfx/cairosvg[${PYTHON_USEDEP}]
