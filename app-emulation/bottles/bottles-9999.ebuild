@@ -53,7 +53,12 @@ src_prepare() {
 	fi
 	sed -i \
 		"s:^\(conf.set('PYTHON',\).*$:\1 '/usr/bin/${EPYTHON}'):" \
-		"${S}/src/meson.build"
+		"${S}/src/meson.build" || die
+
+	# Hard skip network dependant test
+	sed -i \
+		"s:\(if appstream\_util\.found()\):\1 and false:" \
+		"${S}/data/meson.build" || die
 }
 
 src_install() {
