@@ -6,9 +6,12 @@ EAPI=7
 DESCRIPTION="Script for creating GNU Icecat tarball"
 HOMEPAGE="https://www.gnu.org/software/gnuzilla/"
 
-COMMIT="b72c22186cf381d7b1f93be550c9da30865d03b4"
+COMMIT="b1cddc13149014362a984902cc0cbe4fba28cf05"
 
-SRC_URI="https://git.savannah.gnu.org/cgit/gnuzilla.git/snapshot/gnuzilla-"${COMMIT}".tar.gz -> "${P}".tar.gz"
+SRC_URI="
+	https://git.savannah.gnu.org/cgit/gnuzilla.git/snapshot/gnuzilla-"${COMMIT}".tar.gz -> "${P}".tar.gz
+	https://archive.mozilla.org/pub/firefox/releases/89.0/KEY -> Mozilla_pgp_key-20210507.pgp
+"
 
 LICENSE="GPL-3"
 SLOT="${PV}"
@@ -20,11 +23,18 @@ RESTRICT="buildtarball? ( network-sandbox )"
 
 RDEPEND="${BDEPEND}"
 BDEPEND="
+	app-crypt/gnupg
 	dev-vcs/mercurial
 	dev-perl/File-Rename
 "
 
 S=""${WORKDIR}"/gnuzilla-"${COMMIT}""
+
+src_prepare() {
+	default_src_prepare
+	# Making sure that latest Mozilla public key is available for verying the firefox tarball
+	gpg --import "${DISTDIR}/Mozilla_pgp_key-20210507.pgp" || die
+}
 
 src_compile() {
 	if use buildtarball; then
