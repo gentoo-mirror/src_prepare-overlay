@@ -40,7 +40,7 @@ dev-python/hsluv-python 5.0.2: Python implementation of HSLuv
 dev-python/html_sanitizer 1.9.1: Allowlist-based HTML cleaner
 dev-python/itunespy 1.6 9999: A simple library to fetch data from the iTunes Store API
 dev-python/m2r2 0.2.7 0.2.8: Markdown to reStructuredText converter
-dev-python/matrix-nio 0.18.2 0.18.3: A Python Matrix client library, designed according to sans I/O principles
+dev-python/matrix-nio 0.18.2 0.18.3 0.18.5: A Python Matrix client library, designed according to sans I/O principles
 dev-python/plyer 1.4.3 2.0.0: Plyer is a platform-independent Python wrapper for platform-dependent APIs
 dev-python/posix-ipc 1.0.5: POSIX IPC primitives for Python
 dev-python/pyaaf2 1.4.0: Read and write Advanced Authoring Format (AAF) files
