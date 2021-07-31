@@ -1,0 +1,22 @@
+--- Makefile	2021-07-27 01:04:03.426240485 +0200
++++ Makefile1	2021-07-27 01:05:52.471071116 +0200
+@@ -2,7 +2,7 @@
+ VERSION = 5
+ PATCHLEVEL = 12
+ SUBLEVEL = 19
+-EXTRAVERSION =
++EXTRAVERSION =-ck1
+ NAME = Frozen Wasteland
+
+ # *DOCUMENTATION*
+@@ -18,10 +18,6 @@
+ PHONY := __all
+ __all:
+
+-CKVERSION = -ck1
+-CKNAME = MuQSS Powered
+-EXTRAVERSION := $(EXTRAVERSION)$(CKVERSION)
+-
+ # We are using a recursive build, so we need to do a little thinking
+ # to get the ordering right.
+ #
