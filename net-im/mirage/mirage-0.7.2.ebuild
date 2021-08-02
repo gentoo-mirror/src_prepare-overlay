@@ -63,7 +63,7 @@ RDEPEND="
 		>=dev-python/hsluv-python-5.0.0[${PYTHON_USEDEP}]
 		>=dev-python/html_sanitizer-1.9.1[${PYTHON_USEDEP}]
 		>=dev-python/lxml-4.5.1[${PYTHON_USEDEP}]
-		>=dev-python/matrix-nio-0.17.0[e2e,${PYTHON_USEDEP}]
+		>=dev-python/matrix-nio-0.18.0[e2e,${PYTHON_USEDEP}]
 		>=dev-python/mistune-0.8.4[${PYTHON_USEDEP}]
 		>=dev-python/pillow-7.0.0[${PYTHON_USEDEP}]
 		>=dev-python/plyer-1.4.3[${PYTHON_USEDEP}]
@@ -71,7 +71,7 @@ RDEPEND="
 		>=dev-python/redbaron-0.9.2[${PYTHON_USEDEP}]
 		>=dev-python/simpleaudio-1.0.4[${PYTHON_USEDEP}]
 		>=dev-python/sortedcontainers-2.2.2[${PYTHON_USEDEP}]
-		>=dev-python/watchgod-0.6[${PYTHON_USEDEP}]
+		>=dev-python/watchgod-0.7[${PYTHON_USEDEP}]
 		>=media-gfx/cairosvg-2.4.2[${PYTHON_USEDEP}]
 	')
 	media-libs/alsa-lib
