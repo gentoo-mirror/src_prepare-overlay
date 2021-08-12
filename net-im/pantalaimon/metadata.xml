@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>nuclearspace@gmail.com</email>
+    <name>Dima Akater</name>
+  </maintainer>
+  <longdescription>Pantalaimon is an end-to-end encryption aware Matrix reverse proxy daemon that handles the encryption.  Messages are transparently encrypted and decrypted for clients inside of pantalaimon.
+  </longdescription>
+  <use>
+    <flag name="dbus">Support additional features that require dbus</flag>
+    <flag name="panctl">Install a CLI utility to control pantalaimon</flag>
+    <flag name="systemd">Install systemd .service script</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">matrix-org/pantalaimon</remote-id>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>nuclearspace@gmail.com</email>
+    <name>Dima Akater</name>
+  </maintainer>
+  <longdescription>Additional features for Ement.el: - password search with auth-source - convenience functions to run pantalaimon daemon from within Emacs, including a single-command zero-config entry point to run ement via pantalaimon, and a config generator.
+  </longdescription>
+  <upstream>
+    <remote-id type="gitlab">akater/emacs-ement-extras</remote-id>
+  </upstream>
+</pkgmetadata>
