@@ -123,7 +123,7 @@ sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
 sys-boot/rpi-imager 1.5 1.6.1 9999: Raspberry Pi Imaging Utility
 sys-kernel/ck-sources 5.7.2 5.7.3 5.7.4 5.7.5 5.12.19: Con Kolivas sources including the Gentoo patchsets for the 5.12 kernel tree
 sys-kernel/liquorix-sources 5.12.15 5.12.17 5.12.19 5.13.9 5.13.10 5.13.12: Liquorix sources including the Gentoo patchsets for the 5.13 kernel tree
-sys-kernel/xanmod-sources 5.13.7 5.13.8 5.13.9 5.13.10 5.13.11 5.13.12: Full XanMod sources with cacule option and including the Gentoo patchset
+sys-kernel/xanmod-sources 5.13.8 5.13.9 5.13.10 5.13.11 5.13.12 5.14.0: Full XanMod sources with cacule option and including the Gentoo patchset
 sys-kernel/zen-sources 5.12.14 5.12.15 5.13.1 5.13.9 5.13.10 5.13.12: Zen sources including the Gentoo patchsets for the 5.13 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-apps/icecoder 8.0: Browser code editor awesomeness
