@@ -32,7 +32,7 @@ RDEPEND="
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/pycountry[${PYTHON_USEDEP}]
 	dev-python/pydes[${PYTHON_USEDEP}]
-	dev-python/python-musicbrainz-ngs[${PYTHON_USEDEP}]
+	dev-python/python-musicbrainzngs[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
 	dev-python/rich[${PYTHON_USEDEP}]
 	dev-python/simber[${PYTHON_USEDEP}]
