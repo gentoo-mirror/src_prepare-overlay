@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 
 DEPEND="
 	>=dev-python/lxml-3.6.1
-	dev-python/beautifulsoup:4
+	dev-python/beautifulsoup4
 "
 
 S="${WORKDIR}/html-sanitizer-${PV}"

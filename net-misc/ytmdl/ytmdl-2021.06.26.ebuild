@@ -25,7 +25,7 @@ SLOT="0"
 RDEPEND="
 	>=dev-python/requests-2.22.0[${PYTHON_USEDEP}]
 	dev-python/PySocks[${PYTHON_USEDEP}]
-	dev-python/beautifulsoup:4[${PYTHON_USEDEP}]
+	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
 	dev-python/colorama[${PYTHON_USEDEP}]
 	dev-python/ffmpeg-python[${PYTHON_USEDEP}]
 	dev-python/itunespy[${PYTHON_USEDEP}]
