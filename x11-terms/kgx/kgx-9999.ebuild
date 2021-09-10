@@ -34,7 +34,7 @@ DEPEND="
 	dev-util/desktop-file-utils
 	dev-util/meson
 	gnome-base/gsettings-desktop-schemas
-	gui-libs/libhandy:0.0
+	gui-libs/libhandy:1
 	x11-libs/gtk+:3
 "
 RDEPEND="
