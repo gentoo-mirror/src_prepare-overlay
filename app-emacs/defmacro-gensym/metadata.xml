@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>nuclearspace@gmail.com</email>
+    <name>Dima Akater</name>
+  </maintainer>
+  <longdescription>An extension of defmacro that provides more convenient
+declaration/initialization of gensyms, covering both with-gensyms
+and once-only functionality.
+  </longdescription>
+  <upstream>
+    <remote-id type="gitlab">akater/defmacro-gensym</remote-id>
+  </upstream>
+</pkgmetadata>

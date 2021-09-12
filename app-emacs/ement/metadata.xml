@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>nuclearspace@gmail.com</email>
+    <name>Dima Akater</name>
+  </maintainer>
+  <longdescription>Ement.el is a Matrix client for GNU Emacs.  Currently in development but already useful.
+  </longdescription>
+  <upstream>
+    <remote-id type="github">alphapapa/ement.el</remote-id>
+  </upstream>
+  <use>
+    <flag name="e2e">Enable end to end encryption support via pantalaimon</flag>
+    <flag name="extras">Install extra features (auth-source and proxy support)</flag>
+  </use>
+</pkgmetadata>

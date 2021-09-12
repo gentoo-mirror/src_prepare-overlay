@@ -1,0 +1,21 @@
+#+title: Quick start with E2E encryption in Ement.el
+
+* User config
+
+You may
+#+begin_src sh
+ln -s /etc/ement/pantalaimon.conf ~/.config/pantalaimon/pantalaimon.conf
+#+end_src
+
+or do something equivalent.  See [[/etc/ement/pantalaimon.conf][the config]], it's annotated.
+
+* Starting the server
+
+Start the server with e.g.
+#+begin_src sh
+pantalaimon --config ~/.config/pantalaimon/pantalaimon.conf
+#+end_src
+
+* Starting Ement with Pantalaimon
+
+Follow [[file:README.org.bz2::*Encrypted room support through Pantalaimon][Ement's instructions]].
