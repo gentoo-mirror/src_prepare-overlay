@@ -1,0 +1,13 @@
+BDEPEND=>=app-emacs/dash-2.14.1 >=app-emacs/s-1.12.0 >=app-editors/emacs-26.1:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=Timestamp and date/time library
+EAPI=8
+HOMEPAGE=https://github.com/alphapapa/ts.el
+INHERIT=elisp git-r3
+KEYWORDS=~amd64
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=>=app-emacs/dash-2.14.1 >=app-emacs/s-1.12.0 >=app-editors/emacs-26.1:*
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=52e83bbf24b8718974b6d86cf9b9ffe6

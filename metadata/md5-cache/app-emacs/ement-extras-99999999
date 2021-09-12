@@ -1,0 +1,13 @@
+BDEPEND=app-emacs/defmacro-gensym app-emacs/ement app-emacs/plz >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=postinst postrm unpack
+DESCRIPTION=Extra features for Ement, Matrix client for GNU Emacs
+EAPI=8
+HOMEPAGE=https://gitlab.com/akater/emacs-ement-extras/-/blob/master/emacs-ement-extras.org
+INHERIT=elisp-common git-r3
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+PROPERTIES=live
+RDEPEND=app-emacs/ement
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=e6eeae0b5d1725eaca358a0c4a4e5c17

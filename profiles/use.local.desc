@@ -2,6 +2,8 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-emacs/ement:e2e - Enable end to end encryption support via pantalaimon
+app-emacs/ement:extras - Install extra features (auth-source and proxy support)
 app-emulation/dos32a:binary - Fetch binary release instead of compiling the package from source.
 dev-lang/neko:apache - Build Apache modules
 dev-lang/neko:gtk2 - Build GTK-2 UI support
@@ -27,6 +29,9 @@ net-analyzer/sensu:agent - Installs Sensu agent
 net-analyzer/sensu:backend - Install Sensu dashboard and backend server
 net-analyzer/sensu:gcc - Compile with GCC's Go compiler instead of Google's reference Go compiler (NOT SUPPORTED)
 net-analyzer/sensu:systemd - Install systemd service units rather than OpenRC init scripts (NOT SUPPORTED)
+net-im/pantalaimon:dbus - Support additional features that require dbus
+net-im/pantalaimon:panctl - Install a CLI utility to control pantalaimon
+net-im/pantalaimon:systemd - Install systemd .service script
 net-libs/libquotient:e2e - Build with e2e encryption support
 net-misc/ddgr:fish-completion - Enable fish completion support
 net-misc/meganz-sdk:freeimage - Enable support for image I/O via media-libs/freeimage
