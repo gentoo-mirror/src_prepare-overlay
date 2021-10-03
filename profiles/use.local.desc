@@ -11,6 +11,13 @@ dev-libs/sdl-kitchensink:examples - Build examples. If static is also set, examp
 dev-libs/sdl-kitchensink:sanitize - Use sanitizer functions (ASAN/TSAN/etc...)
 dev-libs/sdl-kitchensink:static - Build static libraries
 dev-python/matrix-nio:e2e - Enable end to end encryption support
+dev-scheme/kawa:awt - Enable AWT support
+dev-scheme/kawa:frontend - Enable "front-end" using sys-libs/readline
+dev-scheme/kawa:jemacs - Build JEmacs
+dev-scheme/kawa:krl - Build BRL emulation and KRL
+dev-scheme/kawa:sax - Enable SAX2 with dev-java/sax
+dev-scheme/kawa:servlets - Enable support for generating servlets
+dev-scheme/kawa:swing - Enable Swing support
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
 games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
 games-fps/darkplaces:lights - Install and setup the updated light maps
