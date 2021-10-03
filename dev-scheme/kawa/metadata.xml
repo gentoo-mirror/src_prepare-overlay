@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <maintainer type="person">
+    <email>xgqt@riseup.net</email>
+    <name>Maciej Barć</name>
+  </maintainer>
+  <longdescription lang="en">
+    Kawa is a full Scheme implementation. It implements almost all of R5RS,
+    plus some extensions. By default, symbols are case sensitive. It is
+    completely written in Java. Scheme functions and files are automatically
+    compiled into Java byte-codes. Kawa does some optimizations, and the
+    compiled code runs at reasonable speed.
+  </longdescription>
+  <use>
+    <flag name="awt">Enable AWT support</flag>
+    <flag name="frontend">Enable "front-end" using <pkg>sys-libs/readline</pkg></flag>
+    <flag name="jemacs">Build JEmacs</flag>
+    <flag name="krl">Build BRL emulation and KRL</flag>
+    <flag name="sax">Enable SAX2 with <pkg>dev-java/sax</pkg></flag>
+    <flag name="servlets">Enable support for generating servlets</flag>
+    <flag name="swing">Enable Swing support</flag>
+  </use>
+</pkgmetadata>
