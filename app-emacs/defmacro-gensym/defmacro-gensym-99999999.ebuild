@@ -14,7 +14,7 @@ EGIT_BRANCH="master"
 LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64"
-DOCS="README.org"
+DOCS="" # README.org is a relative symlink
 
 export ORG_IMMUTABLE_SOURCES_DIRECTORY="${SITEETC}/${PN}"
 
