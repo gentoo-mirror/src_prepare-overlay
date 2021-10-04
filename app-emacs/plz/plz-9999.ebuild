@@ -18,6 +18,8 @@ KEYWORDS="~amd64"
 LICENSE="GPL-3"
 SLOT="0"
 
+SITEFILE="50${PN}-gentoo.el"
+
 RDEPEND="net-misc/curl"
 
 src_test() {
