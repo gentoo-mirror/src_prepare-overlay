@@ -3,6 +3,8 @@
 
 EAPI=7
 
+JAVA_PKG_IUSE="source"
+
 inherit autotools java-pkg-2
 
 DESCRIPTION=" Java-based Scheme system & Language Framework"
@@ -67,4 +69,22 @@ src_configure() {
 
 src_compile() {
 	emake -j1
+}
+
+src_install() {
+	use source && java-pkg_dosrc ./kawa/* ./gnu/*
+	java-pkg_newjar ./lib/kawa.jar
+
+	java-pkg_dolauncher "kawa" --main kawa.repl
+	java-pkg_dolauncher "qexo" --main kawa.repl --pkg_args \ "--xquery"
+	use servlets &&
+		java-pkg_dolauncher "kawa-cgi-servlet" --main gnu.kawa.servlet.CGIServletWrapper
+	use jemacs &&
+		java-pkg_dolauncher "jemacs" --main gnu.jemacs.lang.ELisp
+
+	einstalldocs
+	doinfo doc/kawa.info*
+	cp doc/kawa.man doc/kawa.1 || die
+	cp doc/qexo.man doc/qexo.1 || die
+	doman doc/*.1
 }
