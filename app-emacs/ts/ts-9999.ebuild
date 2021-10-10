@@ -17,6 +17,8 @@ KEYWORDS="~amd64"
 LICENSE="GPL-3"
 SLOT="0"
 
+SITEFILE="50${PN}-gentoo.el"
+
 BDEPEND="
 	>=app-emacs/dash-2.14.1
 	>=app-emacs/s-1.12.0
