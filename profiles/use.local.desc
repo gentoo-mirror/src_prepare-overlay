@@ -18,6 +18,7 @@ dev-scheme/kawa:krl - Build BRL emulation and KRL
 dev-scheme/kawa:sax - Enable SAX2 with dev-java/sax
 dev-scheme/kawa:servlets - Enable support for generating servlets
 dev-scheme/kawa:swing - Enable Swing support
+dev-util/plan9port:freefonts - Don't install BigelowHolmes fonts
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
 games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
 games-fps/darkplaces:lights - Install and setup the updated light maps
