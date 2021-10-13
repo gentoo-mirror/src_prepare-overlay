@@ -41,23 +41,22 @@ PATCHES=(
 	"${FILESDIR}/${PN}-builderr.patch"
 )
 
-DIR9="/opt/plan9/"
-EDIR9="${EPREFIX}/${DIR9}"
+# 9port calls the installation directory "PLAN9"
+PLAN9="/opt/plan9/"
+EPLAN9="${EPREFIX}/${PLAN9}"
 
 DOC_CONTENTS="Plan 9 from User Space has been successfully installed into
-${DIR9}. Your PATH environment variables have also been
-appropriately set, please use env-update and source
-/etc/profile to bring that into immediate effect.
+${PLAN9}. Your PLAN9 and PATH environment variables have
+also been appropriately set, please use env-update and
+source /etc/profile to bring that into immediate effect.
 
-Please note that ${DIR9}/bin has been appended to the
+Please note that ${PLAN9}/bin has been appended to the
 *end* or your PATH to prevent conflicts. To use the Plan9
 versions of common UNIX tools, use the absolute path:
-${DIR9}/bin or the 9 command (eg: 9 troff)
-
-Please report any bugs to bugs.gentoo.org, NOT Plan9Port."
+${PLAN9}/bin or the 9 command (eg: 9 troff)."
 DISABLE_AUTOFORMATTING="yes"
 
-QA_MULTILIB_PATHS="${DIR9}/.*/.*"
+QA_MULTILIB_PATHS="${PLAN9}/.*/.*"
 
 src_prepare() {
 	default
@@ -91,7 +90,7 @@ src_prepare() {
 
 	# Fix paths, done in place of ./INSTALL -c
 	einfo "Fixing hard-coded /usr/local/plan9 paths"
-	sed -i "s,/usr/local/plan9,${EDIR9},g" $(grep -lr "/usr/local/plan9") ||
+	sed -i "s,/usr/local/plan9,${EPLAN9},g" $(grep -lr "/usr/local/plan9") ||
 		die "sed failed"
 }
 
@@ -130,7 +129,7 @@ src_configure() {
 
 src_compile() {
 	# The INSTALL script builds mk then [re]builds everything using that
-	NPROC="$(makeopts_jobs)" ./INSTALL -b || die
+	NPROC="$(makeopts_jobs)" sh ./INSTALL -b || die
 }
 
 src_install() {
@@ -141,15 +140,15 @@ src_install() {
 	rm -rf src || die
 
 	# do* plays with the executable bit, and we should not modify them
-	dodir "${DIR9}"
-	cp -a ./* "${ED}/${DIR9}/" || die
+	dodir "${PLAN9}"
+	cp -a ./* "${ED}/${PLAN9}/" || die
 
 	# Build the environment variables and install them in env.d
 	newenvd - 60plan9 <<-EOF
-		PLAN9="${EDIR9}"
-		PATH="${EDIR9}/bin"
-		ROOTPATH="${EDIR9}/bin"
-		MANPATH="${EDIR9}/man"
+		PLAN9="${EPLAN9}"
+		PATH="${EPLAN9}/bin"
+		ROOTPATH="${EPLAN9}/bin"
+		MANPATH="${EPLAN9}/man"
 	EOF
 }
 
