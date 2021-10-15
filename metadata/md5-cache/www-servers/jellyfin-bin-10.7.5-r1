@@ -7,9 +7,9 @@ HOMEPAGE=https://jellyfin.org
 INHERIT=unpacker systemd wrapper
 KEYWORDS=-* ~amd64 ~arm64
 LICENSE=GPL-2
-RDEPEND=!www-servers/jellyfin >=media-video/ffmpeg-4.2.2 acct-group/jellyfin acct-user/jellyfin app-crypt/mit-krb5 dev-db/sqlite dev-util/lttng-ust media-libs/fontconfig media-libs/freetype
+RDEPEND=!www-servers/jellyfin <=dev-util/lttng-ust-2.12.1 >=media-video/ffmpeg-4.2.2 acct-group/jellyfin acct-user/jellyfin app-crypt/mit-krb5 dev-db/sqlite media-libs/fontconfig media-libs/freetype
 RESTRICT=mirror
 SLOT=0
 SRC_URI=amd64? ( https://repo.jellyfin.org/releases/server/debian/versions/stable/server/10.7.5/jellyfin-server_10.7.5-1_amd64.deb -> jellyfin-bin-10.7.5-server-amd64.deb ) arm64? ( https://repo.jellyfin.org/releases/server/debian/versions/stable/server/10.7.5/jellyfin-server_10.7.5-1_arm64.deb -> jellyfin-bin-10.7.5-server-arm64.deb ) https://repo.jellyfin.org/releases/server/debian/versions/stable/web/10.7.5/jellyfin-web_10.7.5-1_all.deb -> jellyfin-bin-10.7.5-web.deb
 _eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	unpacker	928e1f35ef78ba9fc2b214e29c2b55a4	systemd	2736b403a83f194b59b767f3b344c2c1	wrapper	4251d4c84c25f59094fd557e0063a974
-_md5_=becd682237ef0c2ce3ab3fea661675e6
+_md5_=0992f30e52e3efb15fde88d1016d90bc
