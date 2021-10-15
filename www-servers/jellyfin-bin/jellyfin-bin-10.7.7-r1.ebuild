@@ -45,12 +45,12 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
+	<dev-util/lttng-ust-2.12.1
 	>=media-video/ffmpeg-4.2.2
 	acct-group/jellyfin
 	acct-user/jellyfin
 	app-crypt/mit-krb5
 	dev-db/sqlite
-	dev-util/lttng-ust
 	media-libs/fontconfig
 	media-libs/freetype
 "
