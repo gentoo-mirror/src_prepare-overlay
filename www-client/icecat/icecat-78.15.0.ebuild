@@ -6,7 +6,7 @@
 EAPI="7"
 
 # Using Gentoos firefox patches as system libraries and lto are quite nice
-FIREFOX_PATCHSET="firefox-78esr-patches-16.tar.xz"
+FIREFOX_PATCHSET="firefox-78esr-patches-18.tar.xz"
 
 LLVM_MAX_SLOT=12
 
