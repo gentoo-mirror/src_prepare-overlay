@@ -58,6 +58,8 @@ _BINTRON_LANGS="
 : ${BINTRON_LANGS:=${_BINTRON_LANGS}}
 
 
+# Adapted from chromium-2.eclass
+
 # @FUNCTION: _bintron_set_l10n_IUSE
 # @USAGE:
 # @INTERNAL
