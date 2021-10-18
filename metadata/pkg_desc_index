@@ -7,9 +7,11 @@ acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/cgls 246 247: cgls from systemd
 app-admin/cgtop 246 247: cgtop from systemd
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
+app-editors/atom 1.58.0: A hackable text editor for the 21st Century
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
 app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
 app-editors/rehex 0.3.0 9999: Reverse Engineers' Hex Editor
+app-editors/vscode 1.61.1: Multiplatform Visual Studio Code from Microsoft
 app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
 app-emacs/ement 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
@@ -75,6 +77,7 @@ dev-scheme/kawa 3.1.1: Java-based Scheme system & Language Framework
 dev-scheme/stklos 1.60 9999: Fast and light R7RS Scheme implementation
 dev-tex/tectonic 0.4.1 0.7.0: A modernized, complete, self-contained TeX/LaTeX engine.
 dev-tex/texlab 3.1.0 3.2.0: An implementation of the Language Server Protocol for LaTeX
+dev-util/github-desktop 2.9.3: GitHub Desktop for Linux
 dev-util/leaden 9999: Light Ebuild Automated Development Environment Notebook
 dev-util/plan9port 2021.03.21 2021.10.05: Port of many Plan 9 programs and libraries
 games-action/gta2 9.6-r2: And remember - respect is everything!
@@ -91,7 +94,6 @@ games-simulation/clou2 2.0f-r1: Burglary simulator
 games-strategy/mindustry-bin 108 122.1: A sandbox tower defense game
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader 3.7-r1: Unofficial downloader for GOG content.
-mail-client/freelook-bin 1.0.0 1.0.1: Freelook, an Electron-based client for Microsoft Outlook
 mail-client/heirloom-mailx 12.5: The mailx utility from CentOS
 media-fonts/joypixels 6.0.0 6.5.0: Emoji as a Service (formerly EmojiOne)
 media-fonts/labiryntowy 1.53: Practical font realization of the Labirynth Alphabet
