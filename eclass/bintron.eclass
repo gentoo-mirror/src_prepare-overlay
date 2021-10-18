@@ -55,7 +55,6 @@ _BINTRON_LANGS="
 # @ECLASS-VARIABLE: BINTRON_LANGS
 # @DESCRIPTION:
 # List of language packs available for this package.
-
 : ${BINTRON_LANGS:=${_BINTRON_LANGS}}
 
 
@@ -65,7 +64,6 @@ _BINTRON_LANGS="
 # @DESCRIPTION:
 # Converts and adds BINTRON_LANGS to IUSE. Called automatically if
 # BINTRON_LANGS is defined.
-
 _bintron_set_l10n_IUSE() {
 	local lang
 	for lang in ${BINTRON_LANGS}; do
@@ -124,7 +122,6 @@ QA_PRESTRIPPED='*'
 # @ECLASS-VARIABLE: BINTRON_HOME
 # @DESCRIPTION:
 # Path where the package contents will we installed.
-
 : ${BINTRON_HOME:="/usr/share/${PN}/"}
 
 
@@ -136,7 +133,6 @@ QA_PRESTRIPPED='*'
 # Removes pak files from the current directory for languages that the user has
 # not selected via the L10N variable.
 # Also performs QA checks to ensure BINTRON_LANGS has been set correctly.
-
 function bintron_remove_language_paks() {
 	pushd ./locales >/dev/null || die
 
@@ -172,7 +168,6 @@ function bintron_remove_language_paks() {
 # @FUNCTION: bintron_src_prepare
 # @DESCRIPTION:
 # Default src_prepare.
-
 function bintron_src_prepare() {
 	xdg_src_prepare
 	bintron_remove_language_paks
@@ -182,7 +177,6 @@ function bintron_src_prepare() {
 # @FUNCTION: bintron_src_compile
 # @DESCRIPTION:
 # Default src_compile.
-
 function bintron_src_compile() {
 	true
 }
@@ -191,7 +185,6 @@ function bintron_src_compile() {
 # @FUNCTION: bintron_install_copy
 # @DESCRIPTION:
 # Install all the files in a given directory, or current directory.
-
 function bintron_install_copy() {
 	mkdir -p "${ED}/${BINTRON_HOME}" || die "Failed: mkdir"
 	cp -r ./"${1}"/* "${ED}/${BINTRON_HOME}" || die "Failed: copy $(pwd)"
@@ -201,7 +194,6 @@ function bintron_install_copy() {
 # @FUNCTION: bintron_link_bin
 # @DESCRIPTION:
 # Link launchers in "bin" directory.
-
 function bintron_link_bin() {
 	if [[ -d "${ED}/${BINTRON_HOME}"/bin ]]; then
 		local bin
@@ -230,7 +222,6 @@ function bintron_src_install() {
 # @FUNCTION: bintron_pkg_postinst
 # @DESCRIPTION:
 # Default pkg_postinst.
-
 function bintron_pkg_postinst() {
 	xdg_pkg_postinst
 	optfeature "password storage" app-crypt/libsecret kde-frameworks/kwallet
