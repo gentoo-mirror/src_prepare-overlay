@@ -22,7 +22,5 @@ src_install() {
 	done
 	make_desktop_entry ${PN} "Beekeeper Studio" ${PN} "Development;"
 
-	mkdir ./bin || die
-	ln -s ../${PN} ./bin/${PN} || die
 	bintron_src_install
 }

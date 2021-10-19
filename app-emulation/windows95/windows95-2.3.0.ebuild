@@ -18,8 +18,5 @@ src_install() {
 	domenu ../../share/applications/${PN}.desktop
 	doicon ../../share/pixmaps/${PN}.png
 
-	mkdir ./bin || die
-	ln -s ../${PN} ./bin/${PN} || die
-
 	bintron_src_install
 }

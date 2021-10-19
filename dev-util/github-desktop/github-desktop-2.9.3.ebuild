@@ -23,8 +23,5 @@ src_install() {
 			../../share/icons/hicolor/${size}x${size}/apps/github-desktop.png
 	done
 
-	mkdir ./bin || die
-	ln -s ../github-desktop ./bin/github-desktop || die
-
 	bintron_src_install
 }

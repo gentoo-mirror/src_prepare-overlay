@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="-* ~amd64"
 
 src_install() {
-	dosym ${BINTRON_HOME}/atom /usr/bin/atom
 	doicon "${S}"/atom.png
 	make_desktop_entry atom Atom atom "TextEditor;Development;IDE;"
 
