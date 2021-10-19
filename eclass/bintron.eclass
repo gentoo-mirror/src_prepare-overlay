@@ -177,6 +177,7 @@ function bintron_remove_language_paks() {
 function bintron_system_replace() {
 	if use system-ffmpeg; then
 		echo "Replacing bundled libffmpeg"
+
 		rm ./libffmpeg.so ||
 			die "Failed: remove bundled libffmpeg"
 		ln -s "${EROOT}"/usr/lib64/chromium/libffmpeg.so . ||
@@ -184,10 +185,18 @@ function bintron_system_replace() {
 	fi
 	if use system-vulkan; then
 		echo "Replacing bundled libvulkan"
-		rm ./libvulkan.so.1 ||
-			die "Failed: remove bundled libvulkan"
-		ln -s "${EROOT}"/usr/lib64/libvulkan.so.1 . ||
-			die "Failed: link libvulkan"
+
+		if [[ -f ./libvulkan.so ]]; then
+			rm ./libvulkan.so ||
+				die "Failed: remove bundled libvulkan"
+			ln -s "${EROOT}"/usr/lib64/libvulkan.so . ||
+				die "Failed: link libvulkan"
+		elif [[ -f ./libvulkan.so.1 ]]; then
+			rm ./libvulkan.so.1 ||
+				die "Failed: remove bundled libvulkan"
+			ln -s "${EROOT}"/usr/lib64/libvulkan.so.1 . ||
+				die "Failed: link libvulkan"
+		fi
 	fi
 }
 
@@ -214,8 +223,23 @@ function bintron_src_compile() {
 # @DESCRIPTION:
 # Install all the files in a given directory, or current directory.
 function bintron_install_copy() {
+	local dir="${1:=.}"
+
 	mkdir -p "${ED}/${BINTRON_HOME}" || die "Failed: mkdir"
-	cp -r ./"${1}"/* "${ED}/${BINTRON_HOME}" || die "Failed: copy $(pwd)"
+	cp -r "${dir}"/* "${ED}/${BINTRON_HOME}" || die "Failed: copy $(pwd)"
+}
+
+
+# @FUNCTION: bintron_prepare_bin
+# @DESCRIPTION:
+# Preparation for bintron_link_bin.
+# If there is no "bin" directory and a file named "${PN}" exists,
+# then create a link from from "bin/${PN}" to "${PN}".
+function bintron_prepare_bin() {
+	local dir="${1:=.}"
+
+	mkdir -p "${dir}"/bin || die
+	ln -s "${dir}"/../${PN} "${dir}"/bin/${PN} || die
 }
 
 
@@ -223,9 +247,11 @@ function bintron_install_copy() {
 # @DESCRIPTION:
 # Link launchers in "bin" directory.
 function bintron_link_bin() {
-	if [[ -d "${ED}/${BINTRON_HOME}"/bin ]]; then
+	local dir="${1:=.}"
+
+	if [[ -d "${dir}"/bin ]]; then
 		local bin
-		for bin in "${ED}/${BINTRON_HOME}"/bin/*; do
+		for bin in "${dir}"/bin/*; do
 			mkdir -p "${ED}/usr/bin/" || die "Failed: mkdir"
 			chmod +x "${bin}" || die "Failed: make ${bin} executable"
 
@@ -242,8 +268,12 @@ function bintron_link_bin() {
 # @DESCRIPTION:
 # Default src_install.
 function bintron_src_install() {
+	if [[ ! -d ./bin ]] && [[ -f ./${PN} ]]; then
+		bintron_prepare_bin .
+	fi
+	bintron_link_bin .
+
 	bintron_install_copy .
-	bintron_link_bin
 }
 
 
