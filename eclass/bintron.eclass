@@ -111,8 +111,12 @@ BINTRON_DEPEND="
 	x11-libs/gtk+:3[X]
 	x11-libs/libxkbcommon
 	x11-libs/pango
+	system-ffmpeg? ( >=media-video/ffmpeg-4.3[chromium] )
+	system-vulkan? ( media-libs/vulkan-loader )
 "
 RDEPEND+="${BINTRON_DEPEND}"
+
+IUSE+=" +system-ffmpeg +system-vulkan "
 
 
 # The package will be already compiled,
@@ -167,12 +171,34 @@ function bintron_remove_language_paks() {
 }
 
 
+# @FUNCTION: bintron_system_replace
+# @DESCRIPTION:
+# Replace bundled libraries with system libraries.
+function bintron_system_replace() {
+	if use system-ffmpeg; then
+		echo "Replacing bundled libffmpeg"
+		rm ./libffmpeg.so ||
+			die "Failed: remove bundled libffmpeg"
+		ln -s "${EROOT}"/usr/lib64/chromium/libffmpeg.so . ||
+			die "Failed: link libffmpeg"
+	fi
+	if use system-vulkan; then
+		echo "Replacing bundled libvulkan"
+		rm ./libvulkan.so.1 ||
+			die "Failed: remove bundled libvulkan"
+		ln -s "${EROOT}"/usr/lib64/libvulkan.so.1 . ||
+			die "Failed: link libvulkan"
+	fi
+}
+
+
 # @FUNCTION: bintron_src_prepare
 # @DESCRIPTION:
 # Default src_prepare.
 function bintron_src_prepare() {
 	xdg_src_prepare
 	bintron_remove_language_paks
+	bintron_system_replace
 }
 
 
