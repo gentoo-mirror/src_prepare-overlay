@@ -140,7 +140,7 @@ QA_PRESTRIPPED='*'
 # not selected via the L10N variable.
 # Also performs QA checks to ensure BINTRON_LANGS has been set correctly.
 function bintron_remove_language_paks() {
-	pushd ./locales >/dev/null || die
+	pushd "${1:=.}" >/dev/null || die
 
 	# Look for missing pak files.
 	local lang
@@ -175,6 +175,8 @@ function bintron_remove_language_paks() {
 # @DESCRIPTION:
 # Replace bundled libraries with system libraries.
 function bintron_system_replace() {
+	pushd "${1:=.}" >/dev/null || die
+
 	if use system-ffmpeg; then
 		echo "Replacing bundled libffmpeg"
 
@@ -198,6 +200,8 @@ function bintron_system_replace() {
 				die "Failed: link libvulkan"
 		fi
 	fi
+
+	popd >/dev/null || die
 }
 
 
@@ -206,8 +210,8 @@ function bintron_system_replace() {
 # Default src_prepare.
 function bintron_src_prepare() {
 	xdg_src_prepare
-	bintron_remove_language_paks
-	bintron_system_replace
+	bintron_remove_language_paks .
+	bintron_system_replace .
 }
 
 
