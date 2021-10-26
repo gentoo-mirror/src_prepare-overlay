@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <maintainer type="person">
+    <email>xgqt@riseup.net</email>
+    <name>Maciej Barć</name>
+  </maintainer>
+  <longdescription lang="en">
+    Dafny is a programming language with a program verifier.
+    As you type in your program, the verifier constantly
+    looks over your shoulders and flags any errors.
+  </longdescription>
+  <upstream>
+    <bugs-to>https://github.com/dafny-lang/dafny</bugs-to>
+    <remote-id type="github">dafny-lang/dafny</remote-id>
+  </upstream>
+</pkgmetadata>
