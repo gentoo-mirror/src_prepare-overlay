@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DOTNET="5.0"
+DOTNET_FRAMEWORK="5.0"
 
 DESCRIPTION="Verification-aware programming language"
 HOMEPAGE="https://dafny-lang.github.io/dafny/"
@@ -22,13 +22,12 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="debug"
 
-# TODO: add dev-java/gradle when available
 BDEPEND="
-	dev-java/gradle-bin
+	|| ( dev-java/gradle-bin dev-java/gradle )
 "
 DEPEND="
 	>=virtual/jdk-1.8.0:*
-	virtual/dotnet-sdk:${DOTNET}
+	virtual/dotnet-sdk:${DOTNET_FRAMEWORK}
 "
 RDEPEND="
 	${DEPEND}
@@ -43,21 +42,31 @@ DAFNY_EXES="
 
 QA_PREBUILT="${DAFNY_EXES}"
 
-src_compile() {
-	local configuration
+src_prepare() {
 	if use debug; then
-		configuration="Debug"
+		DOTNET_CONFIGURATION="Debug"
 	else
-		configuration="Release"
+		DOTNET_CONFIGURATION="Release"
 	fi
+	export DOTNET_CONFIGURATION
+	einfo "DOTNET_CONFIGURATION=${DOTNET_CONFIGURATION}"
 
-	dotnet build --configuration "${configuration}" ./Source/Dafny.sln ||
+	default
+}
+
+src_configure() {
+	dotnet restore --no-cache ./Source/Dafny.sln ||
+		die "dotnet restore filed"
+}
+
+src_compile() {
+	dotnet build --configuration "${DOTNET_CONFIGURATION}" ./Source/Dafny.sln ||
 		die "dotnet build failed"
 }
 
 src_install() {
 	insinto /usr/share/${PN}
-	doins -r ./Binaries/net${DOTNET}/*
+	doins -r ./Binaries/net${DOTNET_FRAMEWORK}/*
 
 	local exe
 	for exe in ${DAFNY_EXES}; do
