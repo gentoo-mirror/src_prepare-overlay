@@ -1,5 +1,5 @@
-BDEPEND=dev-java/gradle-bin
-DEFINED_PHASES=compile install
+BDEPEND=|| ( dev-java/gradle-bin dev-java/gradle )
+DEFINED_PHASES=compile configure install prepare
 DEPEND=>=virtual/jdk-1.8.0:* virtual/dotnet-sdk:5.0
 DESCRIPTION=Verification-aware programming language
 EAPI=8
@@ -11,4 +11,4 @@ RDEPEND=>=virtual/jdk-1.8.0:* virtual/dotnet-sdk:5.0 sci-mathematics/z3
 RESTRICT=network-sandbox test
 SLOT=0
 SRC_URI=https://github.com/dafny-lang/dafny/archive/refs/tags/v3.3.0.tar.gz -> dafny-3.3.0.tar.gz
-_md5_=edcdd5d225e2b1a91105cc4362daf75e
+_md5_=175ad7797be9c2632f3cd1bb4a224f24
