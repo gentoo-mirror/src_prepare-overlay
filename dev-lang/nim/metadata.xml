@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <maintainer type="person">
+    <email>xgqt@riseup.net</email>
+    <name>Maciej Barć</name>
+  </maintainer>
+  <longdescription lang="en">
+    Nim is a statically typed compiled systems programming language.
+    It combines successful concepts from mature languages like Python,
+    Ada and Modula. Its design focuses on efficiency, expressiveness
+    and elegance (in that order of priority).
+  </longdescription>
+  <upstream>
+    <bugs-to>https://github.com/nim-lang/Nim/issues</bugs-to>
+    <remote-id type="github">nim-lang/Nim</remote-id>
+  </upstream>
+</pkgmetadata>
