@@ -28,7 +28,6 @@ games-rpg/fallout1:wine - Selects Wine as a runtime provider for Windows release
 games-strategy/warcraft3:tft - Installs The Frozen Throne expansion pack. (NOT SUPPORTED YET)
 media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
 media-gfx/gpick:gtk2 - Enable support for GTK+2 instead of GTK+3
-media-video/olive:doxygen - Build and install source code documentation
 media-video/tartube:atomicparsley - Use AtomicParsley for embedding thumbnails in audio files
 media-video/tartube:ffmpeg - Required for various video post-processing tasks
 net-analyzer/sensu:agent - Installs Sensu agent
