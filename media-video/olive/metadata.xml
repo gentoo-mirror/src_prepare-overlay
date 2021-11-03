@@ -8,7 +8,4 @@
   <upstream>
     <remote-id type="github">olive-editor/olive</remote-id>
   </upstream>  
-  <use>
-    <flag name="doxygen">Build and install source code documentation</flag>
-  </use>
 </pkgmetadata>
