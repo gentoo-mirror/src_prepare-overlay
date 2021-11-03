@@ -98,7 +98,7 @@ games-rpg/fallout1 1.1: Post-apocalyptic GURPS-like role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
 games-strategy/mindustry-bin 108 122.1: A sandbox tower defense game
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
-games-util/lgogdownloader 3.7-r1: Unofficial downloader for GOG content.
+games-util/lgogdownloader-export-credentials 1: Helper script for src_prepare-overlay GOG eclass that exports credentials.
 mail-client/heirloom-mailx 12.5: The mailx utility from CentOS
 media-fonts/joypixels 6.0.0 6.5.0: Emoji as a Service (formerly EmojiOne)
 media-fonts/labiryntowy 1.53: Practical font realization of the Labirynth Alphabet

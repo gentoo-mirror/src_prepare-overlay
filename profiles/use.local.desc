@@ -26,8 +26,6 @@ games-fps/darkplaces:textures - Install and setup the updated textures
 games-rpg/fallout1:dos - Selects DOSBox as a runtime provider for DOS release
 games-rpg/fallout1:wine - Selects Wine as a runtime provider for Windows release
 games-strategy/warcraft3:tft - Installs The Frozen Throne expansion pack. (NOT SUPPORTED YET)
-games-util/lgogdownloader:gui - Graphical user interface
-games-util/lgogdownloader:portage - Enables headless operation required for Portage integration
 media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
 media-gfx/gpick:gtk2 - Enable support for GTK+2 instead of GTK+3
 media-video/olive:doxygen - Build and install source code documentation
