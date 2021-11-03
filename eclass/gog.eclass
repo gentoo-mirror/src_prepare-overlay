@@ -44,14 +44,14 @@ PROPERTIES+="live"
 
 LICENSE+="GOG_EULA"
 BDEPEND+="
-	games-util/lgogdownloader[portage]
+	games-util/lgogdownloader-export-credentials
 	app-arch/innoextract
 "
 
 gog_sanity_check() {
 	portageq envvar GOG_CONFIG >/dev/null 2>/dev/null
 	if [ $? -ne 0 ]; then
-		die "Please define GOG_CONFIG in /etc/portage/make.conf as the output of export_gog_to_portage."
+		die "Please define GOG_CONFIG in /etc/portage/make.conf as the output of lgogdownloader-export-credentials."
 	fi
 }
 
