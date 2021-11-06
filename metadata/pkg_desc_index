@@ -131,6 +131,7 @@ net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
 net-misc/postman-bin 7.35.0: Supercharge your API workflow
 net-misc/ytmdl 2021.05.26 2021.06.26 9999: A simple app to get songs from youtube in mp3 format
 net-wireless/mdk4 4.1 9999: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
+sci-mathematics/isabelle-bin 2021: Generic proof assistant with higher-order logic
 sci-mathematics/scilab-bin 6.1.0: Scientific software package for numerical computations
 sci-visualization/tulip 5.4.0 9999: Large graphs analysis, drawing and visualization framework
 sys-apps/xbps 0.58 9999: The X Binary Package System
