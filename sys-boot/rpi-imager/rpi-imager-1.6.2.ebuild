@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit xdg cmake
 
@@ -23,6 +23,7 @@ IUSE="debug"
 
 RDEPEND="
 	app-arch/libarchive
+	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
 	dev-qt/qtdeclarative:5
 	dev-qt/qtgui:5
@@ -37,9 +38,12 @@ DEPEND="
 "
 
 src_configure() {
-	local mycmakeargs=(
-		-DCMAKE_BUILD_TYPE=$(usex debug Debug Release)
-	)
+	local CMAKE_BUILD_TYPE
+	if use debug; then
+		CMAKE_BUILD_TYPE="Debug"
+	else
+		CMAKE_BUILD_TYPE="Release"
+	fi
 
 	cmake_src_configure
 }
