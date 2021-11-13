@@ -1,8 +1,8 @@
 DEFINED_PHASES=compile install postinst postrm preinst prepare
-DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=Multiplatform Visual Studio Code from Microsoft
-EAPI=7
+EAPI=8
 HOMEPAGE=https://code.visualstudio.com
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=bintron desktop
 IUSE=l10n_am l10n_ar l10n_bg l10n_bn l10n_ca l10n_cs l10n_da l10n_de l10n_el l10n_en-GB l10n_es l10n_es-419 l10n_et l10n_fa l10n_fi l10n_fil l10n_fr l10n_gu l10n_he l10n_hi l10n_hr l10n_hu l10n_id l10n_it l10n_ja l10n_kn l10n_ko l10n_lt l10n_lv l10n_ml l10n_mr l10n_ms l10n_nb l10n_nl l10n_pl l10n_pt-BR l10n_pt-PT l10n_ro l10n_ru l10n_sk l10n_sl l10n_sr l10n_sv l10n_sw l10n_ta l10n_te l10n_th l10n_tr l10n_uk l10n_vi l10n_zh-CN l10n_zh-TW +system-ffmpeg +system-vulkan
 KEYWORDS=-* ~amd64 ~arm ~arm64
@@ -11,5 +11,5 @@ RDEPEND=>=app-accessibility/at-spi2-atk-2.26:2 >=app-accessibility/at-spi2-core-
 RESTRICT=bindist mirror
 SLOT=0
 SRC_URI=amd64? ( https://update.code.visualstudio.com/1.61.1/linux-x64/stable -> vscode-1.61.1-amd64.tar.gz ) arm? ( https://update.code.visualstudio.com/1.61.1/linux-armhf/stable -> vscode-1.61.1-arm.tar.gz ) arm64? ( https://update.code.visualstudio.com/1.61.1/linux-arm64/stable -> vscode-1.61.1-arm64.tar.gz )
-_eclasses_=optfeature	30ce9dec2b8943338c9b015bd32bac6a	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857	bintron	8ef487bd6fdfad6cd538117a627a651b	desktop	c0d27bf73aa08ca05b663dbd31fbef28
-_md5_=a29cd83dab7dbeea91cea4aa5c1b0633
+_eclasses_=optfeature	30ce9dec2b8943338c9b015bd32bac6a	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857	bintron	f89e1c232bbc5f3af5f6ad80c6c3b830	desktop	c0d27bf73aa08ca05b663dbd31fbef28
+_md5_=e9425fba3b17360a3fe0e5078976609f
