@@ -1,7 +1,6 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-
 # @ECLASS: bintron.eclass
 # @MAINTAINER:
 # src_prepare group
@@ -14,16 +13,10 @@
 
 # shellcheck shell=bash disable=2034
 
-
-# Inherits
 inherit optfeature xdg
-
 
 case "${EAPI}"
 in
-	[0-6] )
-		die "EAPI: ${EAPI} too old"
-		;;
 	[7-8] )
 		true
 		;;
@@ -32,19 +25,9 @@ in
 		;;
 esac
 
-
-# Exported functions
-export_functions=(
-	src_prepare
-	src_compile
-	src_install
-	pkg_postinst
-)
-EXPORT_FUNCTIONS "${export_functions[@]}"
-
+EXPORT_FUNCTIONS src_prepare src_compile src_install pkg_postinst
 
 RESTRICT+=" bindist mirror "
-
 
 _BINTRON_LANGS="
 	am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu he
@@ -56,7 +39,6 @@ _BINTRON_LANGS="
 # @DESCRIPTION:
 # List of language packs available for this package.
 : ${BINTRON_LANGS:=${_BINTRON_LANGS}}
-
 
 # Adapted from chromium-2.eclass
 
@@ -79,7 +61,6 @@ _bintron_set_l10n_IUSE() {
 if [[ ${BINTRON_LANGS} ]]; then
 	_bintron_set_l10n_IUSE
 fi
-
 
 BINTRON_DEPEND="
 	>=app-accessibility/at-spi2-atk-2.26:2
@@ -118,18 +99,15 @@ RDEPEND+="${BINTRON_DEPEND}"
 
 IUSE+=" +system-ffmpeg +system-vulkan "
 
-
 # The package will be already compiled,
 # also most likely the package will be pre-stripped too.
 QA_PREBUILT='*'
 QA_PRESTRIPPED='*'
 
-
 # @ECLASS-VARIABLE: BINTRON_HOME
 # @DESCRIPTION:
 # Path where the package contents will we installed.
 : ${BINTRON_HOME:="/usr/share/${PN}/"}
-
 
 # Adapted from chromium-2.eclass
 
@@ -139,7 +117,7 @@ QA_PRESTRIPPED='*'
 # Removes pak files from the current directory for languages that the user has
 # not selected via the L10N variable.
 # Also performs QA checks to ensure BINTRON_LANGS has been set correctly.
-function bintron_remove_language_paks() {
+bintron_remove_language_paks() {
 	pushd "${1:=.}" >/dev/null || die
 
 	# Look for missing pak files.
@@ -170,11 +148,10 @@ function bintron_remove_language_paks() {
 	popd >/dev/null || die
 }
 
-
 # @FUNCTION: bintron_system_replace
 # @DESCRIPTION:
 # Replace bundled libraries with system libraries.
-function bintron_system_replace() {
+bintron_system_replace() {
 	pushd "${1:=.}" >/dev/null || die
 
 	if use system-ffmpeg; then
@@ -204,53 +181,50 @@ function bintron_system_replace() {
 	popd >/dev/null || die
 }
 
-
 # @FUNCTION: bintron_src_prepare
 # @DESCRIPTION:
 # Default src_prepare.
-function bintron_src_prepare() {
-	xdg_src_prepare
+bintron_src_prepare() {
+	xdg_environment_reset
+	default
+
 	bintron_remove_language_paks .
 	bintron_system_replace .
 }
 
-
 # @FUNCTION: bintron_src_compile
 # @DESCRIPTION:
 # Default src_compile.
-function bintron_src_compile() {
+bintron_src_compile() {
 	true
 }
-
 
 # @FUNCTION: bintron_install_copy
 # @DESCRIPTION:
 # Install all the files in a given directory, or current directory.
-function bintron_install_copy() {
+bintron_install_copy() {
 	local dir="${1:=.}"
 
 	mkdir -p "${ED}/${BINTRON_HOME}" || die "Failed: mkdir"
 	cp -r "${dir}"/* "${ED}/${BINTRON_HOME}" || die "Failed: copy $(pwd)"
 }
 
-
 # @FUNCTION: bintron_prepare_bin
 # @DESCRIPTION:
 # Preparation for bintron_link_bin.
 # If there is no "bin" directory and a file named "${PN}" exists,
 # then create a link from from "bin/${PN}" to "${PN}".
-function bintron_prepare_bin() {
+bintron_prepare_bin() {
 	local dir="${1:=.}"
 
 	mkdir -p "${dir}"/bin || die
 	ln -s "${dir}"/../${PN} "${dir}"/bin/${PN} || die
 }
 
-
 # @FUNCTION: bintron_link_bin
 # @DESCRIPTION:
 # Link launchers in "bin" directory.
-function bintron_link_bin() {
+bintron_link_bin() {
 	local dir="${1:=.}"
 
 	if [[ -d "${dir}"/bin ]]; then
@@ -267,11 +241,10 @@ function bintron_link_bin() {
 	fi
 }
 
-
 # @FUNCTION: bintron_src_install
 # @DESCRIPTION:
 # Default src_install.
-function bintron_src_install() {
+bintron_src_install() {
 	if [[ ! -d ./bin ]] && [[ -f ./${PN} ]]; then
 		bintron_prepare_bin .
 	fi
@@ -280,11 +253,10 @@ function bintron_src_install() {
 	bintron_install_copy .
 }
 
-
 # @FUNCTION: bintron_pkg_postinst
 # @DESCRIPTION:
 # Default pkg_postinst.
-function bintron_pkg_postinst() {
+bintron_pkg_postinst() {
 	xdg_pkg_postinst
 	optfeature "password storage" app-crypt/libsecret kde-frameworks/kwallet
 }
