@@ -95,7 +95,8 @@ src_install() {
 	cmake_src_install
 	newbin "${FILESDIR}"/anbox-launch.sh anbox-launch
 	if use systemd; then
-		systemd_dounit "${FILESDIR}"/anbox-{{container,session}-manager.service,bridge.net{dev,work}}
+		systemd_dounit "${FILESDIR}"/anbox-{container-manager.service,bridge.net{dev,work}}
+		systemd_douserunit "${FILESDIR}"/anbox-session-manager.service
 	else
 		exeinto /usr/share/anbox
 		doexe "scripts/anbox-bridge.sh"
