@@ -1,0 +1,4 @@
+# /etc/conf.d/anbox-container-manager: config file for /etc/init.d/anbox-container-manager
+
+DATA_PATH="/var/lib/anbox"
+ANDROID_IMAGE="/usr/share/anbox/android.img"
