@@ -1,0 +1,38 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 713df49..8ef4633 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -68,7 +68,6 @@ pkg_check_modules(SDL2_IMAGE SDL2_image REQUIRED)
+ pkg_check_modules(DBUS dbus-1 REQUIRED)
+ pkg_check_modules(LXC lxc REQUIRED)
+ pkg_check_modules(PROPERTIES_CPP properties-cpp REQUIRED)
+-pkg_check_modules(LIBSYSTEMD libsystemd REQUIRED)
+ pkg_check_modules(LIBCAP libcap REQUIRED)
+ 
+ message(STATUS "LXC version: ${LXC_VERSION}")
+diff --git a/src/anbox/cmds/launch.h b/src/anbox/cmds/launch.h
+index 5238982..2d388f5 100644
+--- a/src/anbox/cmds/launch.h
++++ b/src/anbox/cmds/launch.h
+@@ -21,7 +21,7 @@
+ #include <functional>
+ #include <iostream>
+ #include <memory>
+-#include <systemd/sd-bus.h>
++#include <elogind/systemd/sd-bus.h>
+ 
+ #include "anbox/android/intent.h"
+ #include "anbox/wm/stack.h"
+diff --git a/src/anbox/dbus/bus.h b/src/anbox/dbus/bus.h
+index 40b3d94..e798b4b 100644
+--- a/src/anbox/dbus/bus.h
++++ b/src/anbox/dbus/bus.h
+@@ -25,7 +25,7 @@
+ #include <mutex>
+ #include <thread>
+ 
+-#include <systemd/sd-bus.h>
++#include <elogind/systemd/sd-bus.h>
+ 
+ namespace anbox::dbus {
+ class Bus : public DoNotCopyOrMove {
