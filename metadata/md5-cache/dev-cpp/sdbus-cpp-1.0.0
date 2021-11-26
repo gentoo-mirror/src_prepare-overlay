@@ -1,0 +1,15 @@
+BDEPEND=dev-util/ninja >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=systemd? ( sys-apps/systemd ) virtual/pkgconfig
+DESCRIPTION=High-level C++ D-Bus library for Linux
+EAPI=8
+HOMEPAGE=https://github.com/Kistler-Group/sdbus-cpp/
+INHERIT=cmake
+IUSE=systemd
+KEYWORDS=~amd64
+LICENSE=LGPL-2.1
+RDEPEND=systemd? ( sys-apps/systemd )
+SLOT=0
+SRC_URI=https://github.com/Kistler-Group/sdbus-cpp/archive/v1.0.0.tar.gz -> sdbus-cpp-1.0.0.tar.gz !systemd? ( https://github.com/systemd/systemd-stable/archive/v242.tar.gz -> systemd-stable-242.tar.gz )
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	flag-o-matic	4134b5c0fb719b9161d10bdaba9e09e5	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	cmake	11fee991ab428a3370e5c20fa8231fb6
+_md5_=f91bd023212a68d19482bd3b76bb1288

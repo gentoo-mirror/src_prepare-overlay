@@ -17,7 +17,7 @@ app-emacs/ement 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
 app-emacs/plz 9999: An HTTP library that uses curl as a backend
 app-emacs/ts 9999: Timestamp and date/time library
-app-emulation/anbox 0_pre20201129 0_pre20210320 9999: Container-based approach to boot a full Android system
+app-emulation/anbox 0_pre20210320 20211020 99999999: Container-based approach to boot a full Android system
 app-emulation/bottles 2.0.9.7 3.1.15 9999: Easily manage WINE prefixes in a new way
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
@@ -31,7 +31,7 @@ app-portage/src_prepare-scripts 1.0.0 9999: Small scripts from src_prepare group
 app-text/mdbook 0.4.9: Create book from markdown files. Like Gitbook but implemented in Rust.
 app-text/pandoc-bin 2.11.0.2 2.13: Universal markup converter
 dev-cpp/properties-cpp 0_pre20180409 9999: A very simple convenience library for handling properties and signals in C++11
-dev-cpp/sdbus-cpp 0.8.3: High-level C++ D-Bus library for Linux
+dev-cpp/sdbus-cpp 0.8.3 1.0.0: High-level C++ D-Bus library for Linux
 dev-lang/boogie 2.9.6: Intermediate verification language built on .NET
 dev-lang/dafny 3.3.0: Verification-aware programming language
 dev-lang/hy 1.0_alpha1 9999: A LISP dialect running in python
