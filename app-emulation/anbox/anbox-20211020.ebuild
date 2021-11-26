@@ -1,26 +1,25 @@
 # Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit linux-info systemd cmake
 
 DESCRIPTION="Container-based approach to boot a full Android system"
 HOMEPAGE="https://anbox.io/"
 
-if [[ "${PV}" == "9999" ]]; then
+if [[ "${PV}" == "99999999" ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/anbox/anbox.git"
 	EGIT_SUBMODULES=( 'external/cpu_features' )
-	EGIT_COMMIT_DATE="${PV}"
 else
-	COMMIT="9de4e87cdd05135e1c71e6eadb68bf82719cebdf" # 20.03.2021
+	COMMIT="84f0268012cbe322ad858d76613f4182074510ac" # 20.10.2021
 	EXTCOMMIT="b9593c8b395318bb2bc42683a94f962564cc4664"
 	SRC_URI="
-		https://github.com/anbox/anbox/archive/"${COMMIT}".tar.gz -> "${P}".tar.gz
-		https://github.com/google/cpu_features/archive/"${EXTCOMMIT}".tar.gz -> cpu_features-"${EXTCOMMIT}".tar.gz
+		https://github.com/anbox/anbox/archive/${COMMIT}.tar.gz -> ${P}.tar.gz
+		https://github.com/google/cpu_features/archive/${EXTCOMMIT}.tar.gz -> cpu_features-${EXTCOMMIT}.tar.gz
 	"
-	S=""${WORKDIR}"/"${PN}"-"${COMMIT}""
+	S="${WORKDIR}/${PN}-${COMMIT}"
 	KEYWORDS="~amd64"
 fi
 
@@ -33,17 +32,20 @@ DEPEND="
 	dev-cpp/properties-cpp
 	dev-cpp/sdbus-cpp
 	dev-cpp/gtest
-	dev-libs/boost[threads]
+	dev-libs/boost[threads(+)]
 	dev-libs/expat
 	dev-libs/protobuf
 	media-libs/libsdl2
 	media-libs/glm
-	media-libs/mesa[egl,gles2]
+	media-libs/mesa[egl(+),gles2]
 	media-libs/sdl2-image
 	sys-apps/dbus
 	sys-fs/fuse:3
 	sys-libs/libcap
-	|| ( sys-apps/systemd sys-auth/elogind )
+	|| (
+		sys-apps/systemd
+		sys-auth/elogind
+	)
 "
 RDEPEND="${DEPEND}"
 BDEPEND="virtual/pkgconfig"
@@ -60,7 +62,10 @@ CONFIG_CHECK="
 	~TMPFS_XATTR
 "
 
-PATCHES=( ""${FILESDIR}"/no_bundled_sdbus-r1.patch" ""${FILESDIR}"/lxc.patch" )
+PATCHES=(
+	"${FILESDIR}/lxc.patch"
+	"${FILESDIR}/no_bundled_sdbus-r1.patch"
+)
 
 pkg_pretend() {
 	if use !systemd; then
@@ -72,13 +77,22 @@ pkg_pretend() {
 		check_extra_config
 	fi
 	# Check if ANDROID_BINDER_DEVICES has binder string specicied in it
-	linux_config_exists && grep -qE '(CONFIG_ANDROID_BINDER_DEVICES=*[^h][^w]binder)' "${KERNEL_DIR}"/.config || eerror "  CONFIG_ANDROID_BINDER_DEVICES does not contain string 'binder'"
+	if ! linux_config_exists && grep -qE '(CONFIG_ANDROID_BINDER_DEVICES=*[^h][^w]binder)' "${KERNEL_DIR}"/.config; then
+		eerror "  CONFIG_ANDROID_BINDER_DEVICES does not contain string 'binder'"
+	fi
 }
 
 src_prepare() {
-	cp "${FILESDIR}"/FindGMock.cmake "${S}"/cmake
-	[[ "${PV}" == "9999" ]] || mv "${WORKDIR}"/cpu_features-"${EXTCOMMIT}"/* "${S}"/external/cpu_features || die
-	use !systemd && eapply "${FILESDIR}"/remove_systemd_dependency.patch
+	cp "${FILESDIR}/FindGMock.cmake" "${S}/cmake" || die
+
+	if [[ "${PV}" != "99999999" ]]; then
+		mv "${WORKDIR}"/cpu_features-"${EXTCOMMIT}"/* "${S}"/external/cpu_features || die
+	fi
+
+	if use !systemd; then
+		eapply "${FILESDIR}"/remove_systemd_dependency-r1.patch
+	fi
+
 	cmake_src_prepare
 }
 
@@ -89,21 +103,26 @@ src_configure() {
 		-DENABLE_WAYLAND=$(usex wayland)
 		-DBUILD_SHARED_LIBS=OFF
 	)
-	[[ "${PV}" == "9999" ]] || mycmakeargs+=(-DANBOX_VERSION="${PV}")
+	if [[ "${PV}" != "99999999" ]]; then
+		mycmakeargs+=(-DANBOX_VERSION="${PV} (${COMMIT})")
+	fi
+
 	cmake_src_configure
 }
 
 src_install() {
 	cmake_src_install
+
 	newbin "${FILESDIR}"/anbox-launch.sh anbox-launch
+
 	if use systemd; then
 		systemd_dounit "${FILESDIR}"/anbox-{container-manager.service,bridge.net{dev,work}}
 		systemd_douserunit "${FILESDIR}"/anbox-session-manager.service
 	else
 		exeinto /usr/share/anbox
-		doexe "scripts/anbox-bridge.sh"
-		newinitd "${FILESDIR}"/anbox-container-manager.initd anbox-container-manager
-		newconfd "${FILESDIR}"/anbox.confd anbox
+		doexe scripts/anbox-bridge.sh
+		newinitd "${FILESDIR}"/anbox-container-manager-r1.initd anbox-container-manager
+		newconfd "${FILESDIR}"/anbox-container-manager.confd anbox-container-manager
 	fi
 }
 
