@@ -6,11 +6,11 @@
 EAPI="7"
 
 # Using Gentoos firefox patches as system libraries and lto are quite nice
-FIREFOX_PATCHSET="firefox-78esr-patches-17.tar.xz"
+FIREFOX_PATCHSET="firefox-91esr-patches-01.tar.xz"
 
-LLVM_MAX_SLOT=12
+LLVM_MAX_SLOT=13
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{7..10} )
 PYTHON_REQ_USE="ncurses,sqlite,ssl"
 
 WANT_AUTOCONF="2.1"
@@ -22,7 +22,7 @@ inherit autotools check-reqs desktop flag-o-matic gnome2-utils linux-info \
 	virtualx xdg
 
 PATCH_URIS=(
-	https://dev.gentoo.org/~{axs,polynomial-c,whissi}/mozilla/patchsets/${FIREFOX_PATCHSET}
+	https://dev.gentoo.org/~{polynomial-c,whissi}/mozilla/patchsets/${FIREFOX_PATCHSET}
 )
 
 SRC_URI="
@@ -42,18 +42,37 @@ IUSE="+clang cpu_flags_arm_neon dbus debug +buildtarball geckodriver
 	+system-av1 +system-harfbuzz +system-icu +system-jpeg +system-libevent
 	+system-libvpx +system-webp wayland wifi"
 
+IUSE="+clang cpu_flags_arm_neon dbus debug +buildtarball hardened hwaccel"
+IUSE+=" jack lto +openh264 pgo pulseaudio sndio selinux"
+IUSE+=" +system-av1 +system-harfbuzz +system-icu +system-jpeg +system-libevent +system-libvpx +system-webp"
+IUSE+=" wayland wifi"
+
+# Firefox-only IUSE
+IUSE+=" geckodriver"
+IUSE+=" screencast"
+
 REQUIRED_USE="debug? ( !system-av1 )
-	screencast? ( wayland )
 	wifi? ( dbus )"
+
+# Firefox-only REQUIRED_USE flags
+REQUIRED_USE+=" screencast? ( wayland )"
 
 BDEPEND="${PYTHON_DEPS}
 	app-arch/unzip
 	app-arch/zip
-	>=dev-util/cbindgen-0.14.3
-	>=net-libs/nodejs-10.21.0
+	>=dev-util/cbindgen-0.19.0
+	>=net-libs/nodejs-10.23.1
 	virtual/pkgconfig
-	>=virtual/rust-1.41.0
+	>=virtual/rust-1.51.0
 	|| (
+		(
+			sys-devel/clang:13
+			sys-devel/llvm:13
+			clang? (
+				=sys-devel/lld-13*
+				pgo? ( =sys-libs/compiler-rt-sanitizers-13*[profile] )
+			)
+		)
 		(
 			sys-devel/clang:12
 			sys-devel/llvm:12
@@ -79,24 +98,16 @@ BDEPEND="${PYTHON_DEPS}
 			)
 		)
 	)
-	lto? (
-		!clang? ( sys-devel/binutils[gold] )
-	)
-	amd64? ( >=dev-lang/yasm-1.1 )
-	x86? ( >=dev-lang/yasm-1.1 )
-	!system-av1? (
-		amd64? ( >=dev-lang/nasm-2.13 )
-		x86? ( >=dev-lang/nasm-2.13 )
-	)
+	amd64? ( >=dev-lang/nasm-2.13 )
+	x86? ( >=dev-lang/nasm-2.13 )
 	buildtarball? ( ~www-client/makeicecat-"${PV}"[buildtarball] )"
 
 CDEPEND="
-	>=dev-libs/nss-3.53.1
-	>=dev-libs/nspr-4.25
+	>=dev-libs/nss-3.68
+	>=dev-libs/nspr-4.32
 	dev-libs/atk
 	dev-libs/expat
 	>=x11-libs/cairo-1.10[X]
-	>=x11-libs/gtk+-2.18:2
 	>=x11-libs/gtk+-3.4.0:3[X]
 	x11-libs/gdk-pixbuf
 	>=x11-libs/pango-1.22.0
@@ -112,6 +123,7 @@ CDEPEND="
 	>=dev-libs/libffi-3.0.10:=
 	media-video/ffmpeg
 	x11-libs/libX11
+	x11-libs/libxcb
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
 	x11-libs/libXext
@@ -124,14 +136,14 @@ CDEPEND="
 	)
 	screencast? ( media-video/pipewire:0/0.3 )
 	system-av1? (
-		>=media-libs/dav1d-0.3.0:=
+		>=media-libs/dav1d-0.8.1:=
 		>=media-libs/libaom-1.0.0:=
 	)
 	system-harfbuzz? (
-		>=media-libs/harfbuzz-2.6.8:0=
+		>=media-libs/harfbuzz-2.8.1:0=
 		>=media-gfx/graphite2-1.3.13
 	)
-	system-icu? ( >=dev-libs/icu-67.1:= )
+	system-icu? ( >=dev-libs/icu-69.1:= )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-libevent? ( >=dev-libs/libevent-2.0:0=[threads] )
 	system-libvpx? ( >=media-libs/libvpx-1.8.2:0=[postproc] )
@@ -144,7 +156,8 @@ CDEPEND="
 		)
 	)
 	jack? ( virtual/jack )
-	selinux? ( sec-policy/selinux-mozilla )"
+	selinux? ( sec-policy/selinux-mozilla )
+	sndio? ( media-sound/sndio )"
 
 RDEPEND="${CDEPEND}
 	jack? ( virtual/jack )
@@ -158,6 +171,8 @@ RDEPEND="${CDEPEND}
 	selinux? ( sec-policy/selinux-mozilla )"
 
 DEPEND="${CDEPEND}
+	x11-libs/libICE
+	x11-libs/libSM
 	pulseaudio? (
 		|| (
 			media-sound/pulseaudio
@@ -194,14 +209,49 @@ llvm_check_deps() {
 }
 
 MOZ_LANGS=(
-	ach af an ar ast az be bg bn br bs ca-valencia ca cak cs cy
-	da de dsb el en-CA en-GB en-US eo es-AR es-CL es-ES es-MX et eu
-	fa ff fi fr fy-NL ga-IE gd gl gn gu-IN he hi-IN hr hsb hu hy-AM
-	ia id is it ja ka kab kk km kn ko lij lt lv mk mr ms my
-	nb-NO ne-NP nl nn-NO oc pa-IN pl pt-BR pt-PT rm ro ru
-	si sk sl son sq sr sv-SE ta te th tl tr trs uk ur uz vi
-	xh zh-CN zh-TW
+	af ar ast be bg br ca cak cs cy da de dsb
+	el en-CA en-GB en-US es-AR es-ES et eu
+	fi fr fy-NL ga-IE gd gl he hr hsb hu
+	id is it ja ka kab kk ko lt lv ms nb-NO nl nn-NO
+	pa-IN pl pt-BR pt-PT rm ro ru
+	sk sl sq sr sv-SE th tr uk uz vi zh-CN zh-TW
 )
+
+# Firefox-only LANGS
+MOZ_LANGS+=( ach )
+MOZ_LANGS+=( an )
+MOZ_LANGS+=( az )
+MOZ_LANGS+=( bn )
+MOZ_LANGS+=( bs )
+MOZ_LANGS+=( ca-valencia )
+MOZ_LANGS+=( eo )
+MOZ_LANGS+=( es-CL )
+MOZ_LANGS+=( es-MX )
+MOZ_LANGS+=( fa )
+MOZ_LANGS+=( ff )
+MOZ_LANGS+=( gn )
+MOZ_LANGS+=( gu-IN )
+MOZ_LANGS+=( hi-IN )
+MOZ_LANGS+=( hy-AM )
+MOZ_LANGS+=( ia )
+MOZ_LANGS+=( km )
+MOZ_LANGS+=( kn )
+MOZ_LANGS+=( lij )
+MOZ_LANGS+=( mk )
+MOZ_LANGS+=( mr )
+MOZ_LANGS+=( my )
+MOZ_LANGS+=( ne-NP )
+MOZ_LANGS+=( oc )
+MOZ_LANGS+=( sco )
+MOZ_LANGS+=( si )
+MOZ_LANGS+=( son )
+MOZ_LANGS+=( szl )
+MOZ_LANGS+=( ta )
+MOZ_LANGS+=( te )
+MOZ_LANGS+=( tl )
+MOZ_LANGS+=( trs )
+MOZ_LANGS+=( ur )
+MOZ_LANGS+=( xh )
 
 mozilla_set_globals() {
 	# https://bugs.gentoo.org/587334
@@ -440,6 +490,13 @@ pkg_setup() {
 			fi
 		fi
 
+		if ! use clang && [[ $(gcc-major-version) -eq 11 ]] \
+			&& ! has_version -b ">sys-devel/gcc-11.1.0:11" ; then
+			# bug 792705
+			eerror "Using GCC 11 to compile firefox is currently known to be broken (see bug #792705)."
+			die "Set USE=clang or select <gcc-11 to build ${CATEGORY}/${P}."
+		fi
+
 		python-any-r1_pkg_setup
 
 		# Avoid PGO profiling problems due to enviroment leakage
@@ -455,6 +512,34 @@ pkg_setup() {
 
 		# Build system is using /proc/self/oom_score_adj, bug #604394
 		addpredict /proc/self/oom_score_adj
+
+		if use pgo ; then
+			# Allow access to GPU during PGO run
+			local ati_cards mesa_cards nvidia_cards render_cards
+			shopt -s nullglob
+
+			ati_cards=$(echo -n /dev/ati/card* | sed 's/ /:/g')
+			if [[ -n "${ati_cards}" ]] ; then
+				addpredict "${ati_cards}"
+			fi
+
+			mesa_cards=$(echo -n /dev/dri/card* | sed 's/ /:/g')
+			if [[ -n "${mesa_cards}" ]] ; then
+				addpredict "${mesa_cards}"
+			fi
+
+			nvidia_cards=$(echo -n /dev/nvidia* | sed 's/ /:/g')
+			if [[ -n "${nvidia_cards}" ]] ; then
+				addpredict "${nvidia_cards}"
+			fi
+
+			render_cards=$(echo -n /dev/dri/renderD128* | sed 's/ /:/g')
+			if [[ -n "${render_cards}" ]] ; then
+				addpredict "${render_cards}"
+			fi
+
+			shopt -u nullglob
+		fi
 
 		if ! mountpoint -q /dev/shm ; then
 			# If /dev/shm is not available, configure is known to fail with
@@ -639,7 +724,7 @@ src_configure() {
 		mozconfig_add_options_ac '-pulseaudio' --enable-alsa
 	fi
 
-	mozconfig_use_enable screencast pipewire
+	mozconfig_use_enable sndio
 
 	mozconfig_use_enable wifi necko-wifi
 
@@ -656,9 +741,6 @@ src_configure() {
 
 			mozconfig_add_options_ac '+lto' --enable-lto=cross
 		else
-			# Linking only works when using ld.gold when LTO is enabled
-			mozconfig_add_options_ac "forcing ld=gold due to USE=lto" --enable-linker=gold
-
 			# ThinLTO is currently broken, see bmo#1644409
 			mozconfig_add_options_ac '+lto' --enable-lto=full
 		fi
@@ -676,8 +758,6 @@ src_configure() {
 		if use clang ; then
 			# This is upstream's default
 			mozconfig_add_options_ac "forcing ld=lld due to USE=clang" --enable-linker=lld
-		elif tc-ld-is-gold ; then
-			mozconfig_add_options_ac "linker is set to gold" --enable-linker=gold
 		else
 			mozconfig_add_options_ac "linker is set to bfd" --enable-linker=bfd
 		fi
@@ -802,8 +882,9 @@ src_configure() {
 	# Disable notification when build system has finished
 	export MOZ_NOSPAM=1
 
-	# Build system requires xargs but is unable to find it
-	mozconfig_add_options_mk 'Gentoo default' "XARGS=${EPREFIX}/usr/bin/xargs"
+	# Portage sets XARGS environment variable to "xargs -r" by default which
+	# breaks build system's check_prog() function which doesn't support arguments
+	mozconfig_add_options_ac 'Gentoo default' "XARGS=${EPREFIX}/usr/bin/xargs"
 
 	# Set build dir
 	mozconfig_add_options_mk 'Gentoo default' "MOZ_OBJDIR=${BUILD_DIR}"
@@ -886,9 +967,9 @@ src_install() {
 	# Install system-wide preferences
 	local PREFS_DIR="${MOZILLA_FIVE_HOME}/browser/defaults/preferences"
 	insinto "${PREFS_DIR}"
-	newins "${FILESDIR}"/gentoo-default-prefs.js all-gentoo.js
+	newins "${FILESDIR}"/gentoo-default-prefs.js gentoo-prefs.js
 
-	local GENTOO_PREFS="${ED}${PREFS_DIR}/all-gentoo.js"
+	local GENTOO_PREFS="${ED}${PREFS_DIR}/gentoo-prefs.js"
 
 	# Set dictionary path to use system hunspell
 	cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to set spellchecker.dictionary_path pref"
@@ -955,82 +1036,43 @@ src_install() {
 		newicon -s ${size} "${icon}" ${PN}.png
 	done
 
-	# Install menus
-	local wrapper_wayland="${PN}-wayland.sh"
-	local wrapper_x11="${PN}-x11.sh"
-	local desktop_file="${FILESDIR}/icon/${PN}-r2.desktop"
-	local display_protocols="auto X11"
+	# Install menu
+	local app_name="GNU IceCat"
+	local desktop_file="${FILESDIR}/icon/${PN}-r3.desktop"
+	local desktop_filename="${PN}.desktop"
+	local exec_command="${PN}"
 	local icon="${PN}"
-	local name="GNU IceCat"
 	local use_wayland="false"
 
 	if use wayland ; then
-		display_protocols+=" Wayland"
 		use_wayland="true"
 	fi
 
-	local app_name desktop_filename display_protocol exec_command
-	for display_protocol in ${display_protocols} ; do
-		app_name="${name} on ${display_protocol}"
-		desktop_filename="${PN}-${display_protocol,,}.desktop"
+	cp "${desktop_file}" "${WORKDIR}/${PN}.desktop-template" || die
 
-		case ${display_protocol} in
-			Wayland)
-				exec_command="${PN}-wayland --name ${PN}-wayland"
-				newbin "${FILESDIR}/${wrapper_wayland}" ${PN}-wayland
-				;;
-			X11)
-				if ! use wayland ; then
-					# Exit loop here because there's no choice so
-					# we don't need wrapper/.desktop file for X11.
-					continue
-				fi
+	sed -i \
+		-e "s:@NAME@:${app_name}:" \
+		-e "s:@EXEC@:${exec_command}:" \
+		-e "s:@ICON@:${icon}:" \
+		"${WORKDIR}/${PN}.desktop-template" \
+		|| die
 
-				exec_command="${PN}-x11 --name ${PN}-x11"
-				newbin "${FILESDIR}/${wrapper_x11}" ${PN}-x11
-				;;
-			*)
-				app_name="${name}"
-				desktop_filename="${PN}.desktop"
-				exec_command="${PN}"
-				;;
-		esac
+	newmenu "${WORKDIR}/${PN}.desktop-template" "${desktop_filename}"
 
-		cp "${desktop_file}" "${WORKDIR}/${PN}.desktop-template" || die
+	rm "${WORKDIR}/${PN}.desktop-template" || die
 
-		sed -i \
-			-e "s:@NAME@:${app_name}:" \
-			-e "s:@EXEC@:${exec_command}:" \
-			-e "s:@ICON@:${icon}:" \
-			"${WORKDIR}/${PN}.desktop-template" \
-			|| die
-
-		newmenu "${WORKDIR}/${PN}.desktop-template" "${desktop_filename}"
-
-		rm "${WORKDIR}/${PN}.desktop-template" || die
-	done
-
-	# Install generic wrapper script
+	# Install wrapper script
 	[[ -f "${ED}/usr/bin/${PN}" ]] && rm "${ED}/usr/bin/${PN}"
-	newbin "${FILESDIR}/${PN}.sh" ${PN}
+	newbin "${FILESDIR}/${PN}-r1.sh" ${PN}
 
 	# Update wrapper
-	local wrapper
-	for wrapper in \
+	sed -i \
+		-e "s:@PREFIX@:${EPREFIX}/usr:" \
+		-e "s:@MOZ_FIVE_HOME@:${MOZILLA_FIVE_HOME}:" \
+		-e "s:@APULSELIB_DIR@:${apulselib}:" \
+		-e "s:@DEFAULT_WAYLAND@:${use_wayland}:" \
 		"${ED}/usr/bin/${PN}" \
-		"${ED}/usr/bin/${PN}-x11" \
-		"${ED}/usr/bin/${PN}-wayland" \
-	; do
-		[[ ! -f "${wrapper}" ]] && continue
-
-		sed -i \
-			-e "s:@PREFIX@:${EPREFIX}/usr:" \
-			-e "s:@MOZ_FIVE_HOME@:${MOZILLA_FIVE_HOME}:" \
-			-e "s:@APULSELIB_DIR@:${apulselib}:" \
-			-e "s:@DEFAULT_WAYLAND@:${use_wayland}:" \
-			"${wrapper}" \
-			|| die
-	done
+		|| die
 }
 
 pkg_preinst() {
@@ -1058,7 +1100,8 @@ pkg_postinst() {
 
 	elog "Cloudflare browser checks are broken with GNU IceCats anti fingerprinting measures."
 	elog "You can fix cloudflare browser checks by undoing them in about:config like below:"
-	elog "   general.appversion.override: 78.0 (X11)"
+	# Specifying (X11) is necessary for it to work, even in a Wayland session
+	elog "   general.appversion.override: 91.0 (X11)"
 	elog "   general.oscpu.override: Linux x86_64"
 	elog "   general.platform.override: Linux x86_64"
 
@@ -1067,5 +1110,13 @@ pkg_postinst() {
 		elog "used for sound.  If you wish to use pulseaudio instead please unmerge"
 		elog "media-sound/apulse."
 		elog
+	fi
+	if [[ -n "${show_shortcut_information}" ]] ; then
+		elog
+		elog "Since ${PN}-91.0 we no longer install multiple shortcuts for"
+		elog "each supported display protocol.  Instead we will only install"
+		elog "one generic Mozilla ${PN^} shortcut."
+		elog "If you still want to be able to select between running Mozilla ${PN^}"
+		elog "on X11 or Wayland, you have to re-create these shortcuts on your own."
 	fi
 }
