@@ -29,11 +29,11 @@ DEPEND="
 		>=dev-python/cffi-1.0.0[${PYTHON_USEDEP}]
 		dev-python/future[${PYTHON_USEDEP}]
 		test? (
-			  dev-python/aspectlib[${PYTHON_USEDEP}]
-			  dev-python/pytest-benchmark[${PYTHON_USEDEP}]
-			  dev-python/pytest-cov[${PYTHON_USEDEP}]
-			  dev-python/pytest-flake8[${PYTHON_USEDEP}]
-			  dev-python/pytest-isort[${PYTHON_USEDEP}]
+			dev-python/aspectlib[${PYTHON_USEDEP}]
+			dev-python/pytest-benchmark[${PYTHON_USEDEP}]
+			dev-python/pytest-cov[${PYTHON_USEDEP}]
+			dev-python/pytest-flake8[${PYTHON_USEDEP}]
+			dev-python/pytest-isort[${PYTHON_USEDEP}]
 		)
 	)
 "
@@ -90,7 +90,7 @@ src_test() {
 	emake test
 	if use python; then
 		pushd python || die
-		distutils-r1_src_test
+		LD_LIBRARY_PATH="${BUILD_DIR}:${LD_LIBRARY_PATH}" distutils-r1_src_test
 		popd || die
 	fi
 }
