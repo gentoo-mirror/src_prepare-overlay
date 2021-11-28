@@ -11,6 +11,9 @@ dev-libs/sdl-kitchensink:examples - Build examples. If static is also set, examp
 dev-libs/sdl-kitchensink:sanitize - Use sanitizer functions (ASAN/TSAN/etc...)
 dev-libs/sdl-kitchensink:static - Build static libraries
 dev-python/matrix-nio:e2e - Enable end to end encryption support
+dev-scheme/gerbil:leveldb - Add support for using dev-libs/leveldb
+dev-scheme/gerbil:lmdb - Add support for using dev-db/lmdb
+dev-scheme/gerbil:yaml - Add support for yaml file format
 dev-scheme/kawa:awt - Enable AWT support
 dev-scheme/kawa:frontend - Enable "front-end" using sys-libs/readline
 dev-scheme/kawa:jemacs - Build JEmacs
