@@ -1,9 +1,9 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python3_{7..9} )
 
 inherit xdg distutils-r1
 
@@ -21,18 +21,14 @@ fi
 RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="+atomicparsley +ffmpeg"
+IUSE="+atomicparsley"
 
 RDEPEND="
 	dev-python/pygobject[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
-	net-misc/youtube-dl
 	x11-themes/adwaita-icon-theme
 	atomicparsley? (
 		media-video/atomicparsley
-	)
-	ffmpeg? (
-		media-video/ffmpeg
 	)
 "
 
