@@ -14,13 +14,6 @@ dev-python/matrix-nio:e2e - Enable end to end encryption support
 dev-scheme/gerbil:leveldb - Add support for using dev-libs/leveldb
 dev-scheme/gerbil:lmdb - Add support for using dev-db/lmdb
 dev-scheme/gerbil:yaml - Add support for yaml file format
-dev-scheme/kawa:awt - Enable AWT support
-dev-scheme/kawa:frontend - Enable "front-end" using sys-libs/readline
-dev-scheme/kawa:jemacs - Build JEmacs
-dev-scheme/kawa:krl - Build BRL emulation and KRL
-dev-scheme/kawa:sax - Enable SAX2 with dev-java/sax
-dev-scheme/kawa:servlets - Enable support for generating servlets
-dev-scheme/kawa:swing - Enable Swing support
 dev-util/plan9port:freefonts - Don't install BigelowHolmes fonts
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
 games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
