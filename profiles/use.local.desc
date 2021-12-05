@@ -5,8 +5,6 @@
 app-emacs/ement:e2e - Enable end to end encryption support via pantalaimon
 app-emacs/ement:extras - Install extra features (auth-source and proxy support)
 app-emulation/dos32a:binary - Fetch binary release instead of compiling the package from source.
-dev-lang/neko:apache - Build Apache modules
-dev-lang/neko:gtk2 - Build GTK-2 UI support
 dev-libs/sdl-kitchensink:examples - Build examples. If static is also set, examples will be linked against static library
 dev-libs/sdl-kitchensink:sanitize - Use sanitizer functions (ASAN/TSAN/etc...)
 dev-libs/sdl-kitchensink:static - Build static libraries
