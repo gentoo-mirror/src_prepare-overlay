@@ -1,0 +1,14 @@
+BDEPEND=|| ( dev-java/gradle-bin dev-java/gradle ) doc? ( dev-texlive/texlive-xetex || ( app-text/pandoc app-text/pandoc-bin ) )
+DEFINED_PHASES=compile configure install prepare
+DEPEND=>=virtual/jdk-1.8.0:* virtual/dotnet-sdk:5.0
+DESCRIPTION=Verification-aware programming language
+EAPI=8
+HOMEPAGE=https://dafny-lang.github.io/dafny/
+IUSE=debug doc
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=>=virtual/jdk-1.8.0:* virtual/dotnet-sdk:5.0 ~sci-mathematics/z3-4.8.5
+RESTRICT=network-sandbox test
+SLOT=0
+SRC_URI=https://github.com/dafny-lang/dafny/archive/v3.3.0.tar.gz -> dafny-3.3.0.tar.gz
+_md5_=1a40c9eb6b9ce3262a9a2ea9a5e6f332

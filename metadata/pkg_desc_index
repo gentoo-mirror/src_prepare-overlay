@@ -33,7 +33,7 @@ app-text/pandoc-bin 2.11.0.2 2.13: Universal markup converter
 dev-cpp/properties-cpp 0_pre20180409 9999: A very simple convenience library for handling properties and signals in C++11
 dev-cpp/sdbus-cpp 0.8.3 1.0.0: High-level C++ D-Bus library for Linux
 dev-lang/boogie 2.9.6: Intermediate verification language built on .NET
-dev-lang/dafny 3.3.0: Verification-aware programming language
+dev-lang/dafny 3.3.0-r1: Verification-aware programming language
 dev-lang/fstar 2021.11.27: Verification system for effectful programs
 dev-lang/hy 1.0_alpha1 9999: A LISP dialect running in python
 dev-lang/lci 0.11.2: LOLCODE interpreter written in C
