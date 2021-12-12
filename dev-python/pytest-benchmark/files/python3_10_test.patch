@@ -1,0 +1,87 @@
+diff --git a/tests/test_cli.py b/tests/test_cli.py
+index c71ef22..d2ae1da 100644
+--- a/tests/test_cli.py
++++ b/tests/test_cli.py
+@@ -3,13 +3,14 @@ from collections import namedtuple
+ 
+ import py
+ import pytest
++from os import environ
+ from _pytest.pytester import LineMatcher
+ 
+ pytest_plugins = 'pytester',
+ 
+ THIS = py.path.local(__file__)
+ STORAGE = THIS.dirpath('test_storage')
+-
++environ["LINES"]="40"
+ 
+ @pytest.fixture
+ def testdir(testdir, monkeypatch):
+@@ -20,13 +21,13 @@ def testdir(testdir, monkeypatch):
+ 
+ def test_help(testdir):
+     result = testdir.run('py.test-benchmark', '--help')
+-    result.stdout.fnmatch_lines([
++    result.stdout.re_match_lines([
+         "usage: py.test-benchmark *",
+         "                         {help,list,compare} ...",
+         "",
+         "pytest_benchmark's management commands.",
+         "",
+-        "optional arguments:",
++        "option(s|al arguments):",
+         "  -h [COMMAND], --help [COMMAND]",
+         "                        Display help and exit.",
+         "  --storage URI, -s URI",
+@@ -49,7 +50,7 @@ def test_help(testdir):
+ 
+ def test_help_command(testdir):
+     result = testdir.run('py.test-benchmark', 'help')
+-    result.stdout.fnmatch_lines([
++    result.stdout.re_match_lines([
+         'usage: py.test-benchmark help [-h] [command]',
+         '',
+         'Display help and exit.',
+@@ -57,7 +58,7 @@ def test_help_command(testdir):
+         'positional arguments:',
+         '  command',
+         '',
+-        'optional arguments:',
++        'option(s|al arguments):',
+         '  -h, --help  show this help message and exit',
+     ])
+ 
+@@ -65,12 +66,12 @@ def test_help_command(testdir):
+ @pytest.mark.parametrize('args', ['list --help', 'help list'])
+ def test_help_list(testdir, args):
+     result = testdir.run('py.test-benchmark', *args.split())
+-    result.stdout.fnmatch_lines([
++    result.stdout.re_match_lines([
+         "usage: py.test-benchmark list [-h]",
+         "",
+         "List saved runs.",
+         "",
+-        "optional arguments:",
++        "option(s|al arguments):",
+         "  -h, --help  show this help message and exit",
+     ])
+     assert result.ret == 0
+@@ -79,7 +80,7 @@ def test_help_list(testdir, args):
+ @pytest.mark.parametrize('args', ['compare --help', 'help compare'])
+ def test_help_compare(testdir, args):
+     result = testdir.run('py.test-benchmark', *args.split())
+-    result.stdout.fnmatch_lines([
++    result.stdout.re_match_lines([
+         "usage: py.test-benchmark compare [-h] [--sort COL] [--group-by LABEL]",
+         "                                 [--columns LABELS] [--name FORMAT]",
+         "                                 [--histogram [FILENAME-PREFIX]]",
+@@ -92,7 +93,7 @@ def test_help_compare(testdir, args):
+         "  glob_or_file          Glob or exact path for json files. If not specified",
+         "                        all runs are loaded.",
+         "",
+-        "optional arguments:",
++        "option(s|al arguments):",
+         "  -h, --help            show this help message and exit",
+         "  --sort COL            Column to sort on. Can be one of: 'min', 'max',",
+         "                        'mean', 'stddev', 'name', 'fullname'. Default: 'min'",

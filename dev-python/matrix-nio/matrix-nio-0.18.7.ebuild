@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..9})
+PYTHON_COMPAT=( python3_{8..10})
 DISTUTILS_USE_SETUPTOOLS="pyproject.toml"
 
 inherit distutils-r1
@@ -19,7 +19,6 @@ IUSE="e2e test"
 
 RESTRICT="!e2e? ( test )"
 
-# 28.11.2021: 3.10 blocked by logbook, olm, pytest-{benchmark,isort}
 RDEPEND="
 	>=dev-python/aiohttp-3.7.4[${PYTHON_USEDEP}]
 	>=dev-python/aiohttp-socks-0.6.0[${PYTHON_USEDEP}]

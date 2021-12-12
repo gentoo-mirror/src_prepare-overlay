@@ -27,9 +27,9 @@ RDEPEND="
 DEPEND="
 	dev-python/sphinx-py3doc-enhanced-theme[${PYTHON_USEDEP}]
 	test? (
-		  ${RDEPEND}
-		  dev-python/freezegun[${PYTHON_USEDEP}]
-		  dev-python/pytest-xdist[${PYTHON_USEDEP}]
+		${RDEPEND}
+		dev-python/freezegun[${PYTHON_USEDEP}]
+		dev-python/pytest-xdist[${PYTHON_USEDEP}]
 	)
 "
 BDEPEND="
