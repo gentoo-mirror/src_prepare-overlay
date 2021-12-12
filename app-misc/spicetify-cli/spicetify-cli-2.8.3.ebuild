@@ -1,7 +1,7 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit go-module
 
@@ -38,28 +38,6 @@ EGO_SUM=(
 	"gopkg.in/ini.v1 v1.62.0/go.mod"
 )
 
-#EGO_SUM=(
-#	"github.com/go-ini/ini v1.55.0"
-#	"github.com/go-ini/ini v1.55.0/go.mod"
-#	"github.com/mattn/go-colorable v0.1.6"
-#	"github.com/mattn/go-colorable v0.1.6/go.mod"
-#	"github.com/mattn/go-isatty v0.0.12"
-#	"github.com/mattn/go-isatty v0.0.12/go.mod"
-#	"golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod"
-#	"golang.org/x/net v0.0.0-20200506145744-7e3656a0809f"
-#	"golang.org/x/net v0.0.0-20200506145744-7e3656a0809f/go.mod"
-#	"golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a"
-#	"golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod"
-#	"golang.org/x/sys v0.0.0-20200116001909-b77594299b42"
-#	"golang.org/x/sys v0.0.0-20200116001909-b77594299b42/go.mod"
-#	"golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae"
-#	"golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae/go.mod"
-#	"golang.org/x/sys v0.0.0-20200323222414-85ca7c5b95cd"
-#	"golang.org/x/sys v0.0.0-20200323222414-85ca7c5b95cd/go.mod"
-#	"golang.org/x/text v0.3.0"
-#	"golang.org/x/text v0.3.0/go.mod"
-#)
-
 go-module_set_globals
 
 DESCRIPTION="Commandline tool to customize Spotify client."
@@ -75,21 +53,10 @@ KEYWORDS="~amd64"
 
 INSTALLDIR="/opt/${PN}"
 
-#src_unpack() {
-#	unpack "${DISTDIR}"/golang.org%2Fx%2Fsys%2F@v%2Fv0.0.0-20200323222414-85ca7c5b95cd.zip
-#	go-module_src_unpack
-#	default
-#}
-
-#src_prepare() {
-	# Have to do this as eclass has issues with this for reasons unknown to me
-#	mkdir -p "${HOME}"/go/pkg/mod/golang.org/x/
-#	cp -r "${WORKDIR}"/golang.org/x/sys\@v0.0.0-20200323222414-85ca7c5b95cd/ "${HOME}"/go/pkg/mod/golang.org/x/sys\@v0.0.0-20200323222414-85ca7c5b95cd
-#	default
-#}
+PATCHES=( "${FILESDIR}/add_gentoo_install_dir.patch" )
 
 src_compile() {
-	go build
+	go build || die
 }
 
 src_install() {
@@ -97,4 +64,16 @@ src_install() {
 	doins -r {CustomApps,Extensions,Themes,jsHelper,spicetify-cli}
 	dobin "${FILESDIR}/spicetify"
 	fperms +x "${INSTALLDIR}/spicetify-cli"
+}
+
+pkg_postinst() {
+	elog "Spicetify requires a Spotify install that it can modify. Version 1.1.72 and 1.1.73"
+	elog "are supported by this version of spicetify. To be able to modify system installed "
+	elog "Spotify like media-sound/spotify then you have to allow spicetify to read and write"
+	elog "to its install location like shown below."
+	elog "# chmod a+wr /opt/spotify/spotify-client"
+	elog "# chmod a+wr /opt/spotify/Apps -R"
+	elog ""
+	elog "Otherwise you can install spotify to a user modifiable location like as a flatpak:"
+	elog "https://github.com/khanhas/spicetify-cli/wiki/Installation#spotify-installed-from-flatpak"
 }
