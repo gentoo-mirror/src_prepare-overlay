@@ -37,6 +37,7 @@ net-misc/meganz-sdk:fuse - Build FUSE-based example client
 net-misc/meganz-sdk:libuv - Support asynchronous I/O via dev-libs/libuv
 net-misc/meganz-sdk:mediainfo - Use media-libs/libmediainfo for media files
 net-misc/meganz-sdk:qt - Install QT bindings
+sci-mathematics/acl2:books - build community books, the canonical collection of open-source libraries
 sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theorem prover
 sci-visualization/tulip:ccache - Use dev-util/ccache to speed up rebuilds
 sys-apps/xbps:lto - Build with Link Time Optimization
