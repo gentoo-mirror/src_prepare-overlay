@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <use>
+    <flag name="isabelle">
+      Add integration support for the Isabelle/HOL theorem prover
+    </flag>
+  </use>
+  <upstream>
+    <bugs-to>https://github.com/Z3Prover/z3</bugs-to>
+    <remote-id type="github">Z3Prover/z3</remote-id>
+  </upstream>
+</pkgmetadata>

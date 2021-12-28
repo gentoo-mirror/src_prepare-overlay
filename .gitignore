@@ -37,5 +37,6 @@
 /eclass/*.5
 /local/
 /metadata/md5-cache
+/metadata/pkg_desc_index
 /packages/
 /profiles/use.local.desc
