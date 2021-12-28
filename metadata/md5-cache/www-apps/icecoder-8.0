@@ -1,5 +1,5 @@
 DEFINED_PHASES=install postinst prerm setup
-DEPEND=>=app-admin/webapp-config-1.50.15
+DEPEND=app-admin/webapp-config
 DESCRIPTION=Browser code editor awesomeness
 EAPI=7
 HOMEPAGE=https://icecoder.net/
@@ -7,9 +7,9 @@ INHERIT=webapp
 IUSE=vhosts
 KEYWORDS=~amd64
 LICENSE=MIT
-RDEPEND=dev-lang/php:7.4 virtual/httpd-php >=app-admin/webapp-config-1.50.15
+RDEPEND=dev-lang/php:7.4 virtual/httpd-php app-admin/webapp-config
 RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/icecoder/ICEcoder/archive/8.0.tar.gz -> icecoder-8.0.tar.gz
-_eclasses_=webapp	cd327e73cdb307ceb80dcca6b8ad8b52
+_eclasses_=webapp	60f2eb31dec733d05e8114cc078ebc33
 _md5_=c3f7800226f8551d7727a0cfac983ba6
