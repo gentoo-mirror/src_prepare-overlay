@@ -11,5 +11,5 @@ RDEPEND=!build? ( dev-lang/perl sys-devel/bc sys-devel/make >=sys-libs/ncurses-5
 RESTRICT=binchecks strip
 SLOT=5.15.11
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-2.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.15-2.extras.tar.xz https://github.com/zen-kernel/zen-kernel/releases/download/v5.15.11-lqx1/v5.15.11-lqx1.patch.xz
-_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	8a0248f83ae77f945d376ff4a7953257	estack	055c42df72f76a4f45ec92b35e83cd56	eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	kernel-2-src-prepare-overlay	578c2e6dd65bd74989dee980b8f6803d
+_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	estack	055c42df72f76a4f45ec92b35e83cd56	eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	kernel-2-src-prepare-overlay	578c2e6dd65bd74989dee980b8f6803d
 _md5_=1b24ae4b02e77f0e5c4a035caa15f069
