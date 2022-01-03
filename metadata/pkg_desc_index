@@ -160,4 +160,5 @@ x11-plugins/enlightenment-clipboard 0.1.0_alpha6 9999: A clipboard module for En
 x11-plugins/purple-discord 9999: Pidgin/Purple PRotocol PLugin for Discord
 x11-terms/kgx 9999: A minimal terminal for GNOME
 x11-terms/xst 9999: Simple terminal implementation for X with Xresources support and other patches
+x11-themes/fluent-icon-theme 2021.12.20: Fluent icon theme for Linux desktops
 x11-themes/src_prepare-artwork 9999: Miscellaneous logos, wallpapers and other artwork from src_prepare group
