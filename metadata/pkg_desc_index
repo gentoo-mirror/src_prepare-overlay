@@ -140,9 +140,9 @@ sys-boot/etcher-bin 1.5.77 1.5.109: Flash OS images to SD cards & USB drives, sa
 sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
 sys-boot/rpi-imager 1.6.1 1.6.2 9999: Raspberry Pi Imaging Utility
 sys-kernel/ck-sources 5.7.2 5.7.3 5.7.4 5.7.5 5.12.19: Con Kolivas sources including the Gentoo patchsets for the 5.12 kernel tree
-sys-kernel/liquorix-sources 5.14.10 5.14.15 5.14.19 5.15.3 5.15.6 5.15.11: Liquorix sources including the Gentoo patchsets for the 5.15 kernel tree
-sys-kernel/xanmod-sources 5.14.15 5.15.1 5.15.3 5.15.4 5.15.6 5.15.11: Full XanMod sources with cacule option and including the Gentoo patchset
-sys-kernel/zen-sources 5.14.15 5.15.1 5.15.3 5.15.4 5.15.6 5.15.11: Zen sources including the Gentoo patchsets for the 5.15 kernel tree
+sys-kernel/liquorix-sources 5.14.15 5.14.19 5.15.3 5.15.6 5.15.11 5.15.13: Liquorix sources including the Gentoo patchsets for the 5.15 kernel tree
+sys-kernel/xanmod-sources 5.15.1 5.15.3 5.15.4 5.15.6 5.15.11 5.15.13: Full XanMod sources with cacule option and including the Gentoo patchset
+sys-kernel/zen-sources 5.15.1 5.15.3 5.15.4 5.15.6 5.15.11 5.15.13: Zen sources including the Gentoo patchsets for the 5.15 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-apps/icecoder 8.0: Browser code editor awesomeness
 www-apps/miniflux 2.0.24: Minimalist and opinionated feed reader
