@@ -1,4 +1,4 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -28,7 +28,7 @@ SLOT="0"
 IUSE="X wayland systemd"
 
 DEPEND="
-	>=app-emulation/lxc-3.0.0
+	>=app-containers/lxc-3.0.0
 	dev-cpp/properties-cpp
 	dev-cpp/sdbus-cpp
 	dev-cpp/gtest
