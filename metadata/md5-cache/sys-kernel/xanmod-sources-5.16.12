@@ -1,0 +1,15 @@
+BDEPEND=!build? ( sys-apps/sed )
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DESCRIPTION=Full XanMod sources with cacule option and including the Gentoo patchset
+EAPI=8
+HOMEPAGE=https://xanmod.org
+INHERIT=kernel-2-src-prepare-overlay
+IUSE=symlink build
+KEYWORDS=~amd64
+LICENSE=GPL-2 CDDL
+RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+RESTRICT=binchecks strip
+SLOT=5.16.12
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.16.tar.xz https://github.com/xanmod/linux/releases/download//5.16.12-xanmod1/patch-5.16.12-xanmod1.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.16-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.16-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.16-1.extras.tar.xz
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	kernel-2-src-prepare-overlay	6f06284f49d29dc8e9e6f3f25cd42ca9
+_md5_=105962419146b3c9ed95025636bc828e
