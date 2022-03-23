@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: bintron.eclass
@@ -35,7 +35,7 @@ _BINTRON_LANGS="
 	sv sw ta te th tr uk vi zh-CN zh-TW
 "
 
-# @ECLASS-VARIABLE: BINTRON_LANGS
+# @ECLASS_VARIABLE: BINTRON_LANGS
 # @DESCRIPTION:
 # List of language packs available for this package.
 : ${BINTRON_LANGS:=${_BINTRON_LANGS}}
@@ -104,7 +104,7 @@ IUSE+=" +system-ffmpeg +system-vulkan "
 QA_PREBUILT='*'
 QA_PRESTRIPPED='*'
 
-# @ECLASS-VARIABLE: BINTRON_HOME
+# @ECLASS_VARIABLE: BINTRON_HOME
 # @DESCRIPTION:
 # Path where the package contents will we installed.
 : ${BINTRON_HOME:="/usr/share/${PN}/"}

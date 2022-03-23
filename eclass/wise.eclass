@@ -1,4 +1,4 @@
-# Copyright 2021-2021 Gentoo Foundation
+# Copyright 2021-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: wise.eclass
@@ -23,7 +23,7 @@
 # In order to disable network-sandbox:
 PROPERTIES+="live"
 
-# @ECLASS-VARIABLE: WISE_INSTALLER
+# @ECLASS_VARIABLE: WISE_INSTALLER
 # @DESCRIPTION:
 # WISE installer filename. It can be an array!
 : ${WISE_INSTALLER:=}
