@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 #
 # @ECLASS: mozconfig-v6.55.eclass
@@ -34,7 +34,7 @@ case ${PN} in
 	(*) die "Don't use this eclass with some other package!" ;;
 esac
 
-# @ECLASS-VARIABLE: MOZCONFIG_OPTIONAL_WIFI
+# @ECLASS_VARIABLE: MOZCONFIG_OPTIONAL_WIFI
 # @DESCRIPTION:
 # Set this variable before the inherit line, when an ebuild needs to provide
 # optional necko-wifi support via IUSE="wifi".  Currently this would include
@@ -44,7 +44,7 @@ esac
 # Set the variable to "enabled" if the use flag should be enabled by default.
 # Set the variable to any value if the use flag should exist but not be default-enabled.
 
-# @ECLASS-VARIABLE: MOZCONFIG_OPTIONAL_JIT
+# @ECLASS_VARIABLE: MOZCONFIG_OPTIONAL_JIT
 # @DESCRIPTION:
 # Set this variable before the inherit line, when an ebuild needs to provide
 # deterministic jit support via IUSE="jit".  The upstream default will be used
@@ -54,7 +54,7 @@ esac
 # Set the variable to "enabled" if the use flag should be enabled by default.
 # Set the variable to any value if the use flag should exist but not be default-enabled.
 
-# @ECLASS-VARIABLE: MOZCONFIG_OPTIONAL_GTK3
+# @ECLASS_VARIABLE: MOZCONFIG_OPTIONAL_GTK3
 # @DESCRIPTION:
 # Set this variable before the inherit line, when an ebuild can provide
 # optional gtk3 support via IUSE="force-gtk3".  Currently this would include
@@ -66,7 +66,7 @@ esac
 # If gtk+:3 is to be the standard toolkit, do not use this and instead use
 # MOZCONFIG_OPTIONAL_GTK2ONLY.
 
-# @ECLASS-VARIABLE: MOZCONFIG_OPTIONAL_GTK2ONLY
+# @ECLASS_VARIABLE: MOZCONFIG_OPTIONAL_GTK2ONLY
 # @DESCRIPTION:
 # Set this variable before the inherit line, when an ebuild can provide
 # optional gtk2-only support via IUSE="gtk2".
@@ -79,7 +79,7 @@ esac
 # Set the variable to "enabled" if the use flag should be enabled by default.
 # Set the variable to any value if the use flag should exist but not be default-enabled.
 
-# @ECLASS-VARIABLE: MOZCONFIG_OPTIONAL_QT5
+# @ECLASS_VARIABLE: MOZCONFIG_OPTIONAL_QT5
 # @DESCRIPTION:
 # Set this variable before the inherit line, when an ebuild can provide
 # optional qt5 support via IUSE="qt5".  Currently this would include

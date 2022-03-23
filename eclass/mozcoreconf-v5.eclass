@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 #
 # @ECLASS: mozcoreconf-v5.eclass
@@ -9,7 +9,7 @@
 #
 # inherit mozconfig-v6.* or above for mozilla configuration support
 
-# @ECLASS-VARIABLE: MOZILLA_FIVE_HOME
+# @ECLASS_VARIABLE: MOZILLA_FIVE_HOME
 # @DESCRIPTION:
 # This is an eclass-generated variable that defines the rpath that the mozilla
 # product will be installed in.  Read-only

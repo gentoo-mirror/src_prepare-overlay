@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: cargo-git.eclass
@@ -24,7 +24,7 @@ inherit cargo git-r3
 
 EXPORT_FUNCTIONS src_unpack
 
-# @ECLASS-VARIABLE: CARGO_GIT
+# @ECLASS_VARIABLE: CARGO_GIT
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Array with the syntax "repourl oid identifier" (still not sure where the oid comes from :/)

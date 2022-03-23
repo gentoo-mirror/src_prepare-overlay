@@ -1,4 +1,4 @@
-# Copyright 2020-2020 Gentoo Foundation
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: gog.eclass
@@ -19,24 +19,24 @@
 # In order to disable network-sandbox:
 PROPERTIES+="live"
 
-# @ECLASS-VARIABLE: GOG_GAME_NAME
+# @ECLASS_VARIABLE: GOG_GAME_NAME
 # @DESCRIPTION:
 # Name of the game as it appears in lgogdownloader list.
 : ${GOG_GAME_NAME:=}
 
-# @ECLASS-VARIABLE: GOG_GAME_L10N
+# @ECLASS_VARIABLE: GOG_GAME_L10N
 # @DESCRIPTION:
 # Languages available for the game.
 : ${GOG_GAME_L10N:=()}
 
-# @ECLASS-VARIABLE: GOG_GAME_PLATFORM
+# @ECLASS_VARIABLE: GOG_GAME_PLATFORM
 # @DESCRIPTION:
 # This choice specifies which binaries, for which platform, will be downloaded from GOG.
 # Sometimes, this can be irrelevant, as unofficial platform binaries may come from 3rd
 # party sources.
 : ${GOG_GAME_PLATFORM:=}
 
-# @ECLASS-VARIABLE: GOG_GAME_INSTALLER
+# @ECLASS_VARIABLE: GOG_GAME_INSTALLER
 # @DESCRIPTION:
 # Filename of the installer. There can be many, as some games support each language
 # through separate installers.
