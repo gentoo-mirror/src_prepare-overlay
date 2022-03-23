@@ -11,5 +11,5 @@ RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-d
 RESTRICT=binchecks strip
 SLOT=5.16.0
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.16.tar.xz https://github.com/xanmod/linux/releases/download//5.16.0-xanmod1/patch-5.16.0-xanmod1.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.16-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.16-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.16-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.16-1.extras.tar.xz
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	kernel-2-src-prepare-overlay	6f06284f49d29dc8e9e6f3f25cd42ca9
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	kernel-2-src-prepare-overlay	1e42eb7edc2f4814fa09602bb456e937
 _md5_=415e8ff4813494766a1aa4774c4dde77
