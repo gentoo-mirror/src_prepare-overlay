@@ -9,5 +9,5 @@ LICENSE=MPL-2.0
 RESTRICT=mirror strip test
 SLOT=0
 SRC_URI=https://dl.pstmn.io/download/version/7.35.0/linux64 -> postman-bin-7.35.0-amd64.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	pax-utils	fce6ad998516159787b92e8043167889	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	pax-utils	91d47e5d20627c717aa878b9167c62a8	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
 _md5_=25d81d7286b7a155e7581f720cac0703
