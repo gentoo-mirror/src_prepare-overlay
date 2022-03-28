@@ -11,5 +11,5 @@ RDEPEND=dev-lang/php:7.4 virtual/httpd-php app-admin/webapp-config
 RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/icecoder/ICEcoder/archive/8.0.tar.gz -> icecoder-8.0.tar.gz
-_eclasses_=webapp	cbf94d7383f416c5ead4634aa89916a9
+_eclasses_=webapp	d872f28d7595b70dd46545199ef35fb0
 _md5_=c3f7800226f8551d7727a0cfac983ba6
