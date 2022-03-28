@@ -1,16 +1,21 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 MY_PN="${PN/-bin}"
 
-if [[ "${PV}" == *_rc* ]]; then
+if [[ "${PV}" == *_rc* ]] ; then
 	# _rc -> ~rc
 	MY_PV="${PV/_rc/~rc}"
 	SRV_SRC="${MY_PN}-server_${MY_PV}"
 	WEB_SRC="${MY_PN}-web_${MY_PV}"
 	RELEASE="stable-rc"
+elif [[ "${PV}" == *_beta* ]] ; then
+	MY_PV="${PV/_beta/-beta}"
+	SRV_SRC="${MY_PN}-server_${MY_PV/-beta/~beta}"
+	WEB_SRC="${MY_PN}-web_${MY_PV/-beta/~beta}"
+	RELEASE="stable-pre"
 else
 	# Add "-1"
 	MY_PV="${PV}"
