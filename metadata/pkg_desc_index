@@ -45,10 +45,8 @@ dev-perl/File-Rename 1.10 1.20: Perl extension for renaming multiple files
 dev-python/aioresponses 0.7.2: Aioresponses is a helper for mock/fake web requests in python aiohttp package.
 dev-python/aspectlib 1.5.2: An aspect-oriented programming, monkey-patch and decorators library.
 dev-python/baron 0.9: Full Syntax Tree for python to make writing refactoring code a realist task
-dev-python/ffmpeg-python 0.2.0 9999: Python bindings for FFmpeg with complex filtering support
 dev-python/hsluv-python 5.0.2: Python implementation of HSLuv
 dev-python/html_sanitizer 1.9.1: Allowlist-based HTML cleaner
-dev-python/itunespy 1.6 9999: A simple library to fetch data from the iTunes Store API
 dev-python/janus 0.5.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/logbook 1.5.3: A logging replacement for Python
 dev-python/m2r2 0.2.7 0.2.8: Markdown to reStructuredText converter
@@ -68,7 +66,6 @@ dev-python/pytest-black 0.3.12: pytest plugin to enable formatting checks with b
 dev-python/pytest-isort 2.0.0: py.test plugin to check import ordering using isort
 dev-python/redbaron 0.9.2: FST for python to make writing refactoring code a realistic task
 dev-python/rich 9.8.2: Validate configuration and produce human-readable messages
-dev-python/simber 0.2.1 0.2.2: Simple, minimal and powerful logging library for Python
 dev-python/simpleaudio 1.0.4: A simple audio playback Python extension
 dev-python/sphinx-py3doc-enhanced-theme 2.4.0: A theme based on the theme of https://docs.python.org/3/.
 dev-python/sphinx-tabs 2.1.0: Tabbed views for Sphinx
@@ -123,12 +120,10 @@ net-im/pantalaimon 0.10.2: A Matrix proxy daemon that adds E2E encryption capabi
 net-im/spectral 854 9999: A glossy client for Matrix, written in QtQuick Controls 2 and C++.
 net-libs/libquotient 0.6.3 0.6.4: A Qt5 library to write cross-platform clients for Matrix
 net-misc/ddgr 1.7 1.8 1.9 9999: DuckDuckGo from the terminal
-net-misc/downloader-cli 0.3.1 9999: A simple downloader written in Python with an awesome progressbar
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
 net-misc/megacmd 1.4.0 9999: Command Line Interactive and Scriptable Application to access MEGA
 net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
 net-misc/postman-bin 7.35.0: Supercharge your API workflow
-net-misc/ytmdl 2021.05.26 2021.06.26 9999: A simple app to get songs from youtube in mp3 format
 net-wireless/mdk4 4.1 9999: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
 sci-mathematics/acl2 8.4: Industrial strength theorem prover
 sci-mathematics/isabelle-bin 2021: Generic proof assistant with higher-order logic
