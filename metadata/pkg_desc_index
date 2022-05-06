@@ -1,8 +1,6 @@
 acct-group/jellyfin 0: Jelyfin program group
-acct-group/miniflux 0: System group: miniflux
 acct-group/sensu 1: Sensu program group
 acct-user/jellyfin 0: Jellyfin user
-acct-user/miniflux 0: User for www-apps/miniflux
 acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/cgls 246 247: cgls from systemd
 app-admin/cgtop 246 247: cgtop from systemd
@@ -140,7 +138,6 @@ sys-kernel/xanmod-sources 5.16.1 5.16.2 5.16.5 5.16.10 5.16.12 5.17.1: Full XanM
 sys-kernel/zen-sources 5.16.1 5.16.2 5.16.5 5.16.10 5.16.12 5.17.1: Zen sources including the Gentoo patchsets for the 5.17 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 www-apps/icecoder 8.0: Browser code editor awesomeness
-www-apps/miniflux 2.0.24: Minimalist and opinionated feed reader
 www-client/brave-bin 1.12.77 1.12.78: Brave Web Browser
 www-client/icecat 91.7.0 91.8.0: GNU IceCat Web Browser
 www-client/makeicecat 91.7.0 91.8.0: Script for creating GNU Icecat tarball

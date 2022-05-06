@@ -42,7 +42,6 @@ sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theor
 sci-visualization/tulip:ccache - Use dev-util/ccache to speed up rebuilds
 sys-apps/xbps:lto - Build with Link Time Optimization
 sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
-www-apps/miniflux:acct - Create and use the miniflux user account to run the miniflux server
 www-client/icecat:buildtarball - Build tarball with makeicecat
 www-client/icecat:clang - Use Clang compiler instead of GCC
 www-client/icecat:geckodriver - Enable WebDriver support
