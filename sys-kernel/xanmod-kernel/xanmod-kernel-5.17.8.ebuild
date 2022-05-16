@@ -5,30 +5,22 @@ EAPI=7
 
 inherit kernel-build toolchain-funcs
 
-MY_P=linux-${PV%.*}
-# https://dev.gentoo.org/~mpagano/genpatches/index.html
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 2 ))
-CONFIG_VER=5.17.5
-# Commit hash from https://src.fedoraproject.org/rpms/kernel
-CONFIG_HASH=f20aa9d1023a1912c5ef522d47b7deab27fae207
-# Tag from https://github.com/mgorny/gentoo-kernel-config
+MY_P=linux-${PV}-xanmod1
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 4 ))
 GENTOO_CONFIG_VER=g1
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
 HOMEPAGE="https://www.kernel.org/ https://xanmod.org/"
 SRC_URI+="
-	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
-	https://github.com/xanmod/linux/releases/download/${PV}-xanmod1/patch-${PV}-xanmod1.xz
+	https://github.com/xanmod/linux/archive/refs/tags/${PV}-xanmod1.tar.gz
+		-> ${MY_P}.tar.gz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/mgorny/gentoo-kernel-config/archive/${GENTOO_CONFIG_VER}.tar.gz
 		-> gentoo-kernel-config-${GENTOO_CONFIG_VER}.tar.gz
-	amd64? (
-		https://src.fedoraproject.org/rpms/kernel/raw/${CONFIG_HASH}/f/kernel-x86_64-fedora.config
-			-> kernel-x86_64-fedora.config.${CONFIG_VER}
-	)
 "
 S=${WORKDIR}/${MY_P}
+SLOT="${PV}"
 
 LICENSE="GPL-2"
 KEYWORDS="-* ~amd64"
@@ -56,14 +48,13 @@ src_prepare() {
 	local PATCHES=(
 		# meh, genpatches have no directory
 		"${WORKDIR}"/*.patch
-		"${WORKDIR}"/patch-${PV}-xanmod1
 	)
 	default
 
 	# prepare the default config
 	case ${ARCH} in
 		amd64)
-			cp "${DISTDIR}/kernel-x86_64-fedora.config.${CONFIG_VER}" .config || die
+			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64" .config || die
 			;;
 		*)
 			die "Unsupported arch ${ARCH}"
