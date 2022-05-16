@@ -20,7 +20,6 @@ SRC_URI+="
 		-> gentoo-kernel-config-${GENTOO_CONFIG_VER}.tar.gz
 "
 S=${WORKDIR}/${MY_P}
-SLOT="${PV}"
 
 LICENSE="GPL-2"
 KEYWORDS="-* ~amd64"
