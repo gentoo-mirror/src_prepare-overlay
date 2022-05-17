@@ -12,5 +12,5 @@ RDEPEND=dev-lang/erlang emacs? ( >=app-editors/emacs-23.1:* )
 RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/rvirding/lfe/archive/dbfd16af065b12d2dbce26ff1fbad151765243fd.tar.gz -> lfe-1.3.0_p20210419.tar.gz
-_eclasses_=elisp-common	e7aaa047873789f549ea3df2f04b2145	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4a33c9008e5ee30cb8840a3fdc24df2b
+_eclasses_=elisp-common	e7aaa047873789f549ea3df2f04b2145	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85
 _md5_=e861ef967315ada70949634b482bfcfd
