@@ -27,7 +27,6 @@ app-portage/gen-pkgs 1.0.0 9999: Create HTML page based off of a given overlay U
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
 app-portage/src_prepare-scripts 1.0.0 9999: Small scripts from src_prepare group
 app-text/mdbook 0.4.9 0.4.14: Create book from markdown files. Like Gitbook but implemented in Rust.
-app-text/pandoc-bin 2.11.0.2 2.13: Universal markup converter
 dev-cpp/properties-cpp 0_pre20180409 9999: A very simple convenience library for handling properties and signals in C++11
 dev-cpp/sdbus-cpp 0.8.3 1.0.0: High-level C++ D-Bus library for Linux
 dev-lang/boogie 2.9.6: Intermediate verification language built on .NET
