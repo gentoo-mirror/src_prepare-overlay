@@ -3,16 +3,13 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..10} )
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{8..11} )
 inherit distutils-r1
-
-MY_PN="hsluv"
-MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Python implementation of HSLuv "
 HOMEPAGE="http://pypi.org/project/hsluv"
-SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
-S="${WORKDIR}/${MY_P}"
+SRC_URI="https://github.com/hsluv/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
