@@ -42,7 +42,7 @@ dev-perl/File-Rename 1.10 1.20: Perl extension for renaming multiple files
 dev-python/aioresponses 0.7.2: Aioresponses is a helper for mock/fake web requests in python aiohttp package.
 dev-python/aspectlib 1.5.2: An aspect-oriented programming, monkey-patch and decorators library.
 dev-python/baron 0.9: Full Syntax Tree for python to make writing refactoring code a realist task
-dev-python/hsluv-python 5.0.2: Python implementation of HSLuv
+dev-python/hsluv-python 5.0.3: Python implementation of HSLuv
 dev-python/html_sanitizer 1.9.1: Allowlist-based HTML cleaner
 dev-python/janus 0.5.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
 dev-python/logbook 1.5.3: A logging replacement for Python
