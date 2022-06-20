@@ -90,7 +90,7 @@ games-simulation/clou2 2.0f-r1: Burglary simulator
 games-strategy/mindustry-bin 126.2 135: A sandbox tower defense game
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader-export-credentials 1: Helper script for src_prepare-overlay GOG eclass that exports credentials.
-games-util/xone 0.2: Linux kernel driver for Xbox One and Xbox Series X|S accessories
+games-util/xone 0.3: Linux kernel driver for Xbox One and Xbox Series X|S accessories
 mail-client/heirloom-mailx 12.5: The mailx utility from CentOS
 media-fonts/joypixels 6.0.0 6.5.0: Emoji as a Service (formerly EmojiOne)
 media-fonts/labiryntowy 1.53: Practical font realization of the Labirynth Alphabet
