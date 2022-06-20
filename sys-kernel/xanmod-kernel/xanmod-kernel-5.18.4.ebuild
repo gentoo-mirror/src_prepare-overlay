@@ -6,7 +6,7 @@ EAPI=7
 inherit kernel-build toolchain-funcs
 
 MY_P=linux-${PV}-xanmod1
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 4 ))
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 3 ))
 GENTOO_CONFIG_VER=g1
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
