@@ -60,6 +60,7 @@ www-client/icecat:system-icu - Use the system-wide dev-libs/icu instead of bundl
 www-client/icecat:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
 www-client/icecat:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
 www-client/icecat:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
+www-client/icecat:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 www-client/icecat:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
 www-client/makeicecat:buildtarball - Build GNU IceCat tarball with makeicecat script
 x11-misc/compton-tryone:drm - Enable VSync with DRM_IOCTL_WAIT_VBLANK
