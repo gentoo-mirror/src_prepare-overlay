@@ -11,5 +11,5 @@ RDEPEND=>=app-accessibility/at-spi2-atk-2.26:2 >=app-accessibility/at-spi2-core-
 RESTRICT=bindist mirror
 SLOT=0
 SRC_URI=https://github.com/atom/atom/releases/download/v1.58.0/atom-amd64.tar.gz -> atom-1.58.0.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	optfeature	d524f291c80f9d21ad80fe978e3ca760	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857	bintron	1a2b58e4967827abd500425ab3def6ab
+_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	optfeature	d524f291c80f9d21ad80fe978e3ca760	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857	bintron	1a2b58e4967827abd500425ab3def6ab
 _md5_=e0d68c8a2b5a5350626f6a30325cb57d

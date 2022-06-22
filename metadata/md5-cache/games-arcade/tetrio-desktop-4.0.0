@@ -8,5 +8,5 @@ KEYWORDS=~amd64
 LICENSE=all-rights-reserved
 SLOT=0
 SRC_URI=https://tetr.io/about/desktop/builds/TETR.IO%20Setup.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	pax-utils	91d47e5d20627c717aa878b9167c62a8	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
+_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	pax-utils	91d47e5d20627c717aa878b9167c62a8	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	xdg	6024fbc93167fad782e2032933654857
 _md5_=0b92ef0e4605766958e45ec157d26368
