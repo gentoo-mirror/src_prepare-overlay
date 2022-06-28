@@ -3,12 +3,12 @@
 
 # Ebuild is based on the Firefox ebuilds in the main repo
 
-EAPI="7"
+EAPI="8"
 
 # Using Gentoos firefox patches as system libraries and lto are quite nice
-FIREFOX_PATCHSET="firefox-91esr-patches-06j.tar.xz"
+FIREFOX_PATCHSET="firefox-91esr-patches-10j.tar.xz"
 
-LLVM_MAX_SLOT=13
+LLVM_MAX_SLOT=14
 
 PYTHON_COMPAT=( python3_{8..10} )
 PYTHON_REQ_USE="ncurses,sqlite,ssl"
@@ -37,14 +37,10 @@ KEYWORDS="~amd64"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+clang cpu_flags_arm_neon dbus debug +buildtarball geckodriver
-	hardened hwaccel jack lto +openh264 pgo pulseaudio screencast selinux
-	+system-av1 +system-harfbuzz +system-icu +system-jpeg +system-libevent
-	+system-libvpx +system-webp wayland wifi"
 
 IUSE="+clang cpu_flags_arm_neon dbus debug +buildtarball hardened hwaccel"
 IUSE+=" jack lto +openh264 pgo pulseaudio sndio selinux"
-IUSE+=" +system-av1 +system-harfbuzz +system-icu +system-jpeg +system-libevent +system-libvpx +system-webp"
+IUSE+=" +system-av1 +system-harfbuzz +system-icu +system-jpeg +system-libevent +system-libvpx system-png +system-webp"
 IUSE+=" wayland wifi"
 
 # Firefox-only IUSE
@@ -52,6 +48,7 @@ IUSE+=" geckodriver"
 IUSE+=" screencast"
 
 REQUIRED_USE="debug? ( !system-av1 )
+	pgo? ( lto )
 	wifi? ( dbus )"
 
 # Firefox-only REQUIRED_USE flags
@@ -60,11 +57,19 @@ REQUIRED_USE+=" screencast? ( wayland )"
 BDEPEND="${PYTHON_DEPS}
 	app-arch/unzip
 	app-arch/zip
-	>=dev-util/cbindgen-0.19.0
+	>=dev-util/cbindgen-0.24.0
 	>=net-libs/nodejs-10.23.1
 	virtual/pkgconfig
 	>=virtual/rust-1.51.0
 	|| (
+		(
+			sys-devel/clang:14
+			sys-devel/llvm:14
+			clang? (
+				=sys-devel/lld-14*
+				pgo? ( =sys-libs/compiler-rt-sanitizers-14*[profile] )
+			)
+		)
 		(
 			sys-devel/clang:13
 			sys-devel/llvm:13
@@ -95,7 +100,6 @@ COMMON_DEPEND="
 	>=x11-libs/gtk+-3.4.0:3[X]
 	x11-libs/gdk-pixbuf
 	>=x11-libs/pango-1.22.0
-	>=media-libs/libpng-1.6.35:0=[apng]
 	>=media-libs/mesa-10.2:*
 	media-libs/fontconfig
 	>=media-libs/freetype-2.4.10
@@ -118,7 +122,7 @@ COMMON_DEPEND="
 		sys-apps/dbus
 		dev-libs/dbus-glib
 	)
-	screencast? ( media-video/pipewire:0/0.3 )
+	screencast? ( media-video/pipewire:= )
 	system-av1? (
 		>=media-libs/dav1d-0.8.1:=
 		>=media-libs/libaom-1.0.0:=
@@ -131,6 +135,7 @@ COMMON_DEPEND="
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-libevent? ( >=dev-libs/libevent-2.0:0=[threads] )
 	system-libvpx? ( >=media-libs/libvpx-1.8.2:0=[postproc] )
+	system-png? ( >=media-libs/libpng-1.6.35:0=[apng] )
 	system-webp? ( >=media-libs/libwebp-1.1.0:0= )
 	wifi? (
 		kernel_linux? (
@@ -592,7 +597,7 @@ src_prepare() {
 	BUILD_DIR="${WORKDIR}/${PN}_build"
 	mkdir -p "${BUILD_DIR}" || die
 
-	xdg_src_prepare
+	xdg_enviroment_reset
 }
 
 src_configure() {
@@ -646,6 +651,9 @@ src_configure() {
 	# python/mach/mach/mixin/process.py fails to detect SHELL
 	export SHELL="${EPREFIX}/bin/bash"
 
+	# Set state path
+	export MOZBUILD_STATE_PATH="${BUILD_DIR}"
+
 	# Set MOZCONFIG
 	export MOZCONFIG="${S}/.mozconfig"
 
@@ -677,12 +685,13 @@ src_configure() {
 		--with-libclang-path="$(llvm-config --libdir)" \
 		--with-system-nspr \
 		--with-system-nss \
-		--with-system-png \
 		--with-system-zlib \
 		--with-toolchain-prefix="${CHOST}-" \
 		--with-unsigned-addon-scopes=app,system \
-		--x-includes="${SYSROOT}${EPREFIX}/usr/include" \
-		--x-libraries="${SYSROOT}${EPREFIX}/usr/$(get_libdir)"
+		--x-includes="${ESYSROOT}/usr/include" \
+		--x-libraries="${ESYSROOT}/usr/$(get_libdir)"
+
+	mozconfig_add_options_ac '' --update-channel=esr
 
 	if ! use x86 && [[ ${CHOST} != armv*h* ]] ; then
 		mozconfig_add_options_ac '' --enable-rust-simd
@@ -693,8 +702,9 @@ src_configure() {
 	mozconfig_use_with system-harfbuzz system-graphite2
 	mozconfig_use_with system-icu
 	mozconfig_use_with system-jpeg
-	mozconfig_use_with system-libevent system-libevent "${SYSROOT}${EPREFIX}/usr"
+	mozconfig_use_with system-libevent system-libevent "${ESYSROOT}/usr"
 	mozconfig_use_with system-libvpx
+	mozconfig_use_with system-png
 	mozconfig_use_with system-webp
 
 	mozconfig_use_enable dbus
@@ -736,6 +746,7 @@ src_configure() {
 
 			# ThinLTO is currently broken, see bmo#1644409
 			mozconfig_add_options_ac '+lto' --enable-lto=full
+			mozconfig_add_options_ac "linker is set to bfd" --enable-linker=bfd
 		fi
 
 		if use pgo ; then
@@ -957,6 +968,7 @@ src_install() {
 	# Install policy (currently only used to disable application updates)
 	insinto "${MOZILLA_FIVE_HOME}/distribution"
 	newins "${FILESDIR}"/distribution.ini distribution.ini
+	newins "${FILESDIR}"/disable-auto-update.policy.json policies.json
 
 	# Install system-wide preferences
 	local PREFS_DIR="${MOZILLA_FIVE_HOME}/browser/defaults/preferences"
@@ -998,7 +1010,7 @@ src_install() {
 	# Install language packs
 	local langpacks=( $(find "${BUILD_DIR}"/dist/linux-x86_64/xpi -type f -name '*.xpi') )
 	if [[ -n "${langpacks}" ]] ; then
-		moz_install_xpi "${MOZILLA_FIVE_HOME}/browser/extensions" "${langpacks[@]}"
+		moz_install_xpi "${MOZILLA_FIVE_HOME}/distribution/extensions" "${langpacks[@]}"
 	fi
 
 	# Install geckodriver
@@ -1016,7 +1028,7 @@ src_install() {
 	local icon_symbolic_file="${FILESDIR}/icon/"${PN}"-symbolic.svg"
 
 	insinto /usr/share/icons/hicolor/symbolic/apps
-	newins "${icon_symbolic_file}" "${PN}"-symbolic.svg
+	newins "${icon_symbolic_file}" ${PN}-symbolic.svg
 
 	local icon size
 	for icon in "${icon_srcdir}"/default*.png ; do
