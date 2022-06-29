@@ -1,4 +1,4 @@
-BDEPEND=python_targets_python3_9? ( >=dev-lang/python-3.9.9-r1:3.9 ) >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)?]
+BDEPEND=python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)?]
 DEFINED_PHASES=compile configure install prepare test
 DESCRIPTION=A Matrix proxy daemon that adds E2E encryption capabilities
 EAPI=7
@@ -7,10 +7,10 @@ INHERIT=distutils-r1
 IUSE=dbus panctl systemd python_targets_python3_9
 KEYWORDS=~amd64
 LICENSE=Apache-2.0
-RDEPEND=>=dev-python/attrs-19.3.0 >=dev-python/aiohttp-3.6 >=dev-python/appdirs-1.4.4 >=dev-python/click-7.1.2 >=dev-python/keyring-21.2.1 >=dev-python/logbook-1.5.3 >=dev-python/peewee-3.13.1 >=dev-python/cachetools-3.0.0 >dev-python/prompt_toolkit-2 >=dev-python/janus-0.5 >=dev-python/matrix-nio-0.18[e2e] dbus? ( >=dev-python/dbus-python-1.2 >=dev-python/pygobject-3.36 >=dev-python/pydbus-0.6 >=dev-python/notify2-0.3 ) python_targets_python3_9? ( >=dev-lang/python-3.9.9-r1:3.9 )
+RDEPEND=>=dev-python/attrs-19.3.0 >=dev-python/aiohttp-3.6 >=dev-python/appdirs-1.4.4 >=dev-python/click-7.1.2 >=dev-python/keyring-21.2.1 >=dev-python/logbook-1.5.3 >=dev-python/peewee-3.13.1 >=dev-python/cachetools-3.0.0 >dev-python/prompt_toolkit-2 >=dev-python/janus-0.5 >=dev-python/matrix-nio-0.18[e2e] dbus? ( >=dev-python/dbus-python-1.2 >=dev-python/pygobject-3.36 >=dev-python/pydbus-0.6 >=dev-python/notify2-0.3 ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 )
 REQUIRED_USE=panctl? ( dbus ) || ( python_targets_python3_9 )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/matrix-org/pantalaimon/archive/refs/tags/0.10.2.tar.gz -> pantalaimon-0.10.2.tar.gz
-_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	python-utils-r1	648fe6a039e87233d7f48da72cadb76f	python-r1	e2883e4f04f0503cdf7f2954e2bf5e15	distutils-r1	10a93585889c3ca7651cbcd2ee831e47
+_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	python-utils-r1	32313e7e2fbfba8f62a99ef923fc923c	python-r1	e2883e4f04f0503cdf7f2954e2bf5e15	distutils-r1	64c5b9cc381383c9c1ef74fb199293ea
 _md5_=e44d268aca6ec17d3da8181b370ebda2
