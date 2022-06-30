@@ -90,13 +90,13 @@ src_install() {
 	fowners -R jellyfin:jellyfin /usr/lib/${MY_PN}
 
 	# Wrappers
-	make_wrapper ${MY_PN} "${EPREFIX}"/usr/lib/${MY_PN}/bin/${MY_PN}
-	dosym "${EPREFIX}"/usr/bin/${MY_PN} "${EPREFIX}"/usr/bin/${PN}
+	make_wrapper ${PN} "${EPREFIX}"/usr/lib/${MY_PN}/bin/${MY_PN}
+	dosym ../../usr/bin/${PN} /usr/bin/${MY_PN}
 
 	# Services
 	newinitd "${FILESDIR}"/${MY_PN} ${MY_PN}
-	doconfd /etc/default/${MY_PN}
-	dosym "${EPREFIX}"/etc/conf.d/${MY_PN} "${EPREFIX}"/etc/default/${MY_PN}
+	doconfd etc/default/${MY_PN}
+	dosym ../../etc/conf.d/${MY_PN} /etc/default/${MY_PN}
 	systemd_dounit lib/systemd/system/${MY_PN}.service
 	systemd_install_serviced etc/systemd/system/${MY_PN}.service.d/${MY_PN}.service.conf
 }
