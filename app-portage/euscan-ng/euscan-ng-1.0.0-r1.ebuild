@@ -1,33 +1,26 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..11} )
 
 inherit distutils-r1
 
 DESCRIPTION="Check if a given package has new upstream versions"
 HOMEPAGE="https://gitlab.com/src_prepare/euscan-ng"
 
-if [[ "${PV}" == *9999* ]]; then
+if [[ "${PV}" == *9999* ]] ; then
 	inherit git-r3
-	EGIT_REPO_URI="
-		https://gitlab.com/src_prepare/${PN}.git
-		https://github.com/xgqt/${PN}.git
-	"
+	EGIT_REPO_URI="https://gitlab.com/src_prepare/${PN}.git"
 else
-	SRC_URI="
-		https://gitlab.com/src_prepare/${PN}/-/archive/${PV}/${PN}-${PV}.tar.gz
-		https://github.com/xgqt/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
-	"
+	SRC_URI="https://gitlab.com/src_prepare/${PN}/-/archive/${PV}/${PN}-${PV}.tar.gz"
 	KEYWORDS="~amd64"
 fi
 
 RESTRICT="mirror"
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
-IUSE=""
 
 # web (
 # 'Django>=1.4',              dev-python/django           OK
@@ -44,10 +37,8 @@ IUSE=""
 # )
 
 # Right now euscan-ng and euscan can't be both installed on the same system
-DEPEND="
+RDEPEND="
 	!app-portage/euscan
 	>=dev-python/beautifulsoup4-4.8.2[${PYTHON_USEDEP}]
 "
-RDEPEND="
-	${DEPEND}
-"
+BDEPEND="${RDEPEND}"
