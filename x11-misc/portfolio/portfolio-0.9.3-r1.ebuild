@@ -1,29 +1,26 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_{7,8,9} )
+PYTHON_COMPAT=( python3_{9..10} )
 
 inherit python-single-r1 gnome2-utils meson xdg
 
 DESCRIPTION="Minimalist file manager for those who want to use Linux mobile devices"
 HOMEPAGE="https://github.com/tchx84/Portfolio"
 
-if [[ "${PV}" == *9999* ]]; then
+if [[ "${PV}" == *9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/tchx84/${PN^}.git"
 else
 	SRC_URI="https://github.com/tchx84/${PN^}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64"
-	S="${WORKDIR}/${P^}"
+	KEYWORDS="~amd64 ~x86"
+	S="${WORKDIR}"/${P^}
 fi
 
-RESTRICT="
-	mirror
-	!test? ( test )
-"
-LICENSE="GPL-3"
+RESTRICT="!test? ( test )"
+LICENSE="GPL-3+"
 SLOT="0"
 IUSE="test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
@@ -33,16 +30,18 @@ RDEPEND="
 	dev-libs/appstream-glib[introspection]
 	x11-libs/gtk+:3[introspection]
 	$(python_gen_cond_dep '
-		dev-python/pycairo[${PYTHON_MULTI_USEDEP}]
-		dev-python/pygobject:3[${PYTHON_MULTI_USEDEP}]
+		dev-python/pycairo[${PYTHON_USEDEP}]
+		dev-python/pygobject:3[${PYTHON_USEDEP}]
 	')
 "
 DEPEND="
 	${RDEPEND}
 	test? (
-		dev-python/black
-		dev-python/pyflakes
-		dev-python/pytest
+		$(python_gen_cond_dep '
+			dev-python/black[${PYTHON_USEDEP}]
+			dev-python/pyflakes[${PYTHON_USEDEP}]
+			dev-python/pytest[${PYTHON_USEDEP}]
+		')
 	)
 "
 
