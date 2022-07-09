@@ -30,7 +30,6 @@ net-analyzer/sensu:systemd - Install systemd service units rather than OpenRC in
 net-im/pantalaimon:dbus - Support additional features that require dbus
 net-im/pantalaimon:panctl - Install a CLI utility to control pantalaimon
 net-im/pantalaimon:systemd - Install systemd .service script
-net-libs/libquotient:e2e - Build with e2e encryption support
 net-misc/ddgr:fish-completion - Enable fish completion support
 net-misc/meganz-sdk:freeimage - Enable support for image I/O via media-libs/freeimage
 net-misc/meganz-sdk:fuse - Build FUSE-based example client

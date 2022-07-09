@@ -1,15 +1,15 @@
 BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=systemd? ( sys-apps/systemd ) virtual/pkgconfig
-DESCRIPTION=High-level C++ D-Bus library for Linux
+DEPEND=doc? ( app-doc/doxygen ) test? ( dev-cpp/gtest )
+DESCRIPTION=A very simple convenience library for handling properties and signals in C++11
 EAPI=8
-HOMEPAGE=https://github.com/Kistler-Group/sdbus-cpp/
+HOMEPAGE=https://github.com/lib-cpp/properties-cpp
 INHERIT=cmake
-IUSE=systemd
+IUSE=doc test
 KEYWORDS=~amd64
-LICENSE=LGPL-2.1
-RDEPEND=systemd? ( sys-apps/systemd )
+LICENSE=LGPL-3
+RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://github.com/Kistler-Group/sdbus-cpp/archive/v1.0.0.tar.gz -> sdbus-cpp-1.0.0.tar.gz !systemd? ( https://github.com/systemd/systemd-stable/archive/v242.tar.gz -> systemd-stable-242.tar.gz )
+SRC_URI=https://github.com/lib-cpp/properties-cpp/archive/45863e849b39c4921d6553e6d27e267a96ac7d77.tar.gz -> properties-cpp-0_pre20180409.tar.gz
 _eclasses_=toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	flag-o-matic	a3abd6002fafb3022597be6b8d01f88b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	cmake	44afbf15c35884f7c840470f1cf05d0d
-_md5_=f91bd023212a68d19482bd3b76bb1288
+_md5_=06a98e1be24410b32b97413f5186b5f0
