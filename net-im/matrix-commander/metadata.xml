@@ -3,5 +3,6 @@
 <pkgmetadata>
   <upstream>
     <remote-id type="github">8go/matrix-commander</remote-id>
+    <remote-id type="pypi">matrix-commander</remote-id>
   </upstream>
 </pkgmetadata>
