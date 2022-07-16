@@ -25,6 +25,7 @@ BDEPEND="
 "
 RDEPEND="
 	app-arch/libarchive
+	dev-libs/openssl
 	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
@@ -36,10 +37,6 @@ RDEPEND="
 	dev-qt/qtxml:5
 	net-misc/curl
 	sys-fs/udisks:2
-	|| (
-		dev-libs/openssl
-		net-libs/gnutls
-	)
 "
 DEPEND="
 	${RDEPEND}
