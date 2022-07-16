@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=!www-servers/jellyfin <=dev-util/lttng-ust-2.12.1 >=media-video/ffmpeg-4.2.2 acct-group/jellyfin acct-user/jellyfin app-crypt/mit-krb5 dev-db/sqlite media-libs/fontconfig media-libs/freetype
 SLOT=0
 SRC_URI=amd64? ( https://repo.jellyfin.org/releases/server/debian/versions/stable/server/10.8.1/jellyfin-server_10.8.1-1_amd64.deb -> jellyfin-bin-10.8.1-server-amd64.deb ) arm64? ( https://repo.jellyfin.org/releases/server/debian/versions/stable/server/10.8.1/jellyfin-server_10.8.1-1_arm64.deb -> jellyfin-bin-10.8.1-server-arm64.deb ) https://repo.jellyfin.org/releases/server/debian/versions/stable/web/10.8.1/jellyfin-web_10.8.1-1_all.deb -> jellyfin-bin-10.8.1-web.deb
-_eclasses_=toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	unpacker	697382d119fd3d195f110b7979184285	systemd	2736b403a83f194b59b767f3b344c2c1	wrapper	4a1902f969e5718126434fc35f3a0d9c
+_eclasses_=toolchain-funcs	3484f775017f532a8d1ae02c65defe13	multilib	4fbbbc98f236f1b43acd99476bc3cd85	unpacker	697382d119fd3d195f110b7979184285	systemd	2736b403a83f194b59b767f3b344c2c1	wrapper	4a1902f969e5718126434fc35f3a0d9c
 _md5_=b17cd574fad8bc74efec200b9bed8b7f
