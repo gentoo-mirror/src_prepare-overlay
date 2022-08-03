@@ -1,10 +1,10 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="14"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ZEN_VERSION="1"
@@ -22,6 +22,7 @@ ZEN_URI="https://github.com/zen-kernel/zen-kernel/releases/download/v${PV}-zen${
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${ZEN_URI}"
 
 UNIPATCH_LIST="${DISTDIR}/v${PV}-zen${ZEN_VERSION}.patch.xz"
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch"
 UNIPATCH_STRICTORDER="yes"
 
 K_EXTRAEINFO="For more info on zen-sources, and for how to report problems, see: \
