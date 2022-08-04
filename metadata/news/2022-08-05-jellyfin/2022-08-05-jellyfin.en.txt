@@ -1,0 +1,9 @@
+Title: jellyfin
+Author: Maciej Barć <xgqt@gentoo.org>
+Content-Type: text/plain
+Posted: 2022-08-05
+Revision: 1
+News-Item-Format: 2.0
+Display-If-Installed: www-servers/jellyfin-bin
+
+Please, use www-apps/jellyfin from the official ::gentoo repo instead of www-servers/jellyfin-bin.
