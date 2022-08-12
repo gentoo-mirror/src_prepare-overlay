@@ -19,7 +19,7 @@ app-emulation/bottles 20211128 20220314_p3 99999999: Easily manage WINE prefixes
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
-app-misc/spicetify-cli 2.8.3: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.8.3 2.10.2: Commandline tool to customize Spotify client.
 app-office/onlyoffice-bin 6.3.1 6.4.2: Onlyoffice is an office productivity suite (binary version)
 app-portage/euscan-ng 1.0.0-r1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.0.0 9999: Create HTML page based off of a given overlay URL
