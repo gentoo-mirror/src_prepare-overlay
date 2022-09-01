@@ -3,7 +3,7 @@
 
 EAPI="8"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="8"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 ETYPE="sources"
@@ -25,6 +25,7 @@ SRC_URI="
 src_unpack() {
 UNIPATCH_LIST_DEFAULT=""
 		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
+		UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch"
 	kernel-2-src-prepare-overlay_src_unpack
 }
 
