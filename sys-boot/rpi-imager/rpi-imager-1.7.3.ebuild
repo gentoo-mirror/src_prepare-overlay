@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit xdg cmake
+inherit xdg cmake optfeature
 
 DESCRIPTION="Raspberry Pi Imaging Utility"
 HOMEPAGE="https://github.com/raspberrypi/rpi-imager"
@@ -16,18 +16,23 @@ else
 	KEYWORDS="~amd64"
 fi
 
-RESTRICT="mirror"
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="debug"
+CMAKE_USE_DIR="${S}/src"
 
+BDEPEND="
+	dev-qt/linguist-tools
+"
 RDEPEND="
 	app-arch/libarchive
+	dev-libs/openssl
 	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
+	dev-qt/qtdbus:5
 	dev-qt/qtdeclarative:5
 	dev-qt/qtgui:5
 	dev-qt/qtquickcontrols2:5
+	dev-qt/qtsvg:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtxml:5
 	net-misc/curl
@@ -38,12 +43,14 @@ DEPEND="
 "
 
 src_configure() {
-	local CMAKE_BUILD_TYPE
-	if use debug; then
-		CMAKE_BUILD_TYPE="Debug"
-	else
-		CMAKE_BUILD_TYPE="Release"
-	fi
+	local mycmakeargs=(
+		-DENABLE_CHECK_VERSION=OFF
+		-DENABLE_TELEMETRY=OFF
+	)
 
 	cmake_src_configure
+}
+
+pkg_postinst() {
+	optfeature "writing to disk as non-root user" sys-fs/udisks
 }
