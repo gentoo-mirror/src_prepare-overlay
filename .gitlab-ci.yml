@@ -29,10 +29,6 @@ variables:
   common_pkgcheck_args: "--color 1"
 
 
-repoman_push:
-  script:
-    - bash scripts/repomanci
-
 pkgcheck_push:
   script:
     - pkgcheck scan $common_pkgcheck_args --commits $CI_COMMIT_SHA
