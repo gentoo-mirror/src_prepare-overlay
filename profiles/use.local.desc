@@ -48,6 +48,7 @@ www-client/icecat:buildtarball - Build tarball with makeicecat
 www-client/icecat:clang - Use Clang compiler instead of GCC
 www-client/icecat:geckodriver - Enable WebDriver support
 www-client/icecat:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
+www-client/icecat:libproxy - Enable libproxy support
 www-client/icecat:lto - Enable Link Time Optimization (LTO). Requires Gold linker when using GCC or LDD linker when using Clang
 www-client/icecat:openh264 - Use media-libs/openh264 for H.264 support instead of downloading binary blob from Mozilla at runtime
 www-client/icecat:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
@@ -60,6 +61,7 @@ www-client/icecat:system-jpeg - Use the system-wide media-libs/libjpeg-turbo ins
 www-client/icecat:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
 www-client/icecat:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
 www-client/icecat:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
+www-client/icecat:system-python-libs - Use system's python site instead of bundled python libraries
 www-client/icecat:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
 www-client/makeicecat:buildtarball - Build GNU IceCat tarball with makeicecat script
 x11-misc/compton-tryone:drm - Enable VSync with DRM_IOCTL_WAIT_VBLANK
