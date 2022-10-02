@@ -1,19 +1,20 @@
 # Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit kernel-build toolchain-funcs
 
-MY_P=linux-${PV}-xanmod1
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 3 ))
+#MY_P=linux-${PV}-xanmod1
+MY_P=linux-${PV%.*}
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 2 ))
 GENTOO_CONFIG_VER=g2
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
 HOMEPAGE="https://www.kernel.org/ https://xanmod.org/"
-SRC_URI+="
-	https://github.com/xanmod/linux/archive/refs/tags/${PV}-xanmod1.tar.gz
-		-> ${MY_P}.tar.gz
+SRC_URI="
+	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
+	https://github.com/xanmod/linux/releases/download/${PV}-xanmod1/patch-${PV}-xanmod1.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/mgorny/gentoo-kernel-config/archive/${GENTOO_CONFIG_VER}.tar.gz
@@ -46,6 +47,7 @@ src_prepare() {
 
 	local PATCHES=(
 		# meh, genpatches have no directory
+		"${WORKDIR}"/patch-${PV}-xanmod1
 		"${WORKDIR}"/*.patch
 	)
 	default
