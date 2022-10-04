@@ -28,7 +28,6 @@ app-portage/src_prepare-scripts 1.0.0 9999: Small scripts from src_prepare group
 app-text/mdbook 0.4.9 0.4.14: Create book from markdown files. Like Gitbook but implemented in Rust.
 dev-cpp/properties-cpp 0_pre20180409 0_pre20180409-r1 9999: A very simple convenience library for handling properties and signals in C++11
 dev-cpp/sdbus-cpp 1.1.0: High-level C++ D-Bus library for Linux
-dev-lang/boogie 2.9.6: Intermediate verification language built on .NET
 dev-lang/dafny 3.3.0-r1: Verification-aware programming language
 dev-lang/fstar 2021.11.27: Verification system for effectful programs
 dev-lang/hy 1.0_alpha1 9999: A LISP dialect running in python
