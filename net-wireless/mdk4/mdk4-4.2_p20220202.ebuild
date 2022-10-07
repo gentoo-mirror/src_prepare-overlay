@@ -1,7 +1,7 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2021-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit flag-o-matic
 
@@ -12,7 +12,10 @@ if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/aircrack-ng/mdk4.git"
 else
-	SRC_URI="https://github.com/aircrack-ng/mdk4/archive/"${PV}".tar.gz -> "${P}".tar.gz"
+	# Use a newer commits for build fixed + man page correction
+	COMMIT="4ba85e4c94a79b634b63d26e64a977e568551367" # 2.2.2022
+	SRC_URI="https://github.com/aircrack-ng/mdk4/archive/${COMMIT}.tar.gz -> ${PN}-${COMMIT}.tar.gz"
+	S="${WORKDIR}/${PN}-${COMMIT}"
 	KEYWORDS="~amd64"
 fi
 
@@ -26,25 +29,20 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
 
-PATCHES=( ""${FILESDIR}"/include_stdlib.patch" )
-# https://github.com/aircrack-ng/mdk4/commit/a70d75cff34ba24231e75bcef7f8075eb4e7b0a3
+src_prepare() {
+	default
+
+	# dont clean dir in all
+	sed -i 's/all: clean/all:/' Makefile || die
+}
 
 src_configure() {
-	filter-flags -fno-common
+	# https://github.com/aircrack-ng/mdk4/blob/4.2/src/Makefile#L4
 	append-flags -fcommon
 	default
 }
 
-src_install() {
-	# The install phase is a tad bit too funky, so doing by hand
-	dosbin src/mdk4
-	doman man/mdk4.1
-
-	insinto /usr/share/"${PN}"
-	doins -r useful_files
-
-	HTML_DOCS="docs"
-	einstalldocs
-
-	dodoc AUTHORS CHANGELOG TODO
+src_test() {
+	emake test
+	./test || die
 }

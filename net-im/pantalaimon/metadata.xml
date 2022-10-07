@@ -7,11 +7,6 @@
   </maintainer>
   <longdescription>Pantalaimon is an end-to-end encryption aware Matrix reverse proxy daemon that handles the encryption.  Messages are transparently encrypted and decrypted for clients inside of pantalaimon.
   </longdescription>
-  <use>
-    <flag name="dbus">Support additional features that require dbus</flag>
-    <flag name="panctl">Install a CLI utility to control pantalaimon</flag>
-    <flag name="systemd">Install systemd .service script</flag>
-  </use>
   <upstream>
     <remote-id type="github">matrix-org/pantalaimon</remote-id>
   </upstream>
