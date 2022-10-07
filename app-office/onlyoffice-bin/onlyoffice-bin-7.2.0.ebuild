@@ -1,9 +1,9 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit desktop gnome2-utils unpacker multilib xdg
+inherit desktop unpacker xdg
 
 MY_P="ONLYOFFICE-DesktopEditors-"${PV}""
 
@@ -18,70 +18,50 @@ SRC_URI="
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror strip"
+RESTRICT="mirror strip test"
 
 RDEPEND="
 	app-accessibility/at-spi2-atk:2
 	app-accessibility/at-spi2-core:2
-	app-arch/bzip2
 	!app-office/onlyoffice
-	dev-lang/orc
 	dev-libs/atk
-	dev-libs/double-conversion
 	dev-libs/expat
-	dev-libs/fribidi
-	dev-libs/glib
-	dev-libs/gmp
+	dev-libs/glib:2
 	dev-libs/nspr
 	dev-libs/nss
-	dev-libs/libbsd
-	dev-libs/libffi
-	dev-libs/libpcre
-	dev-libs/libpcre2
-	dev-libs/libtasn1
-	dev-libs/libunistring
-	dev-libs/nettle
+	dev-libs/wayland
+	dev-qt/qtgui:5
 	dev-qt/qtdeclarative:5
-	media-gfx/graphite2
+	dev-qt/qtwayland:5
 	media-libs/alsa-lib
 	media-libs/fontconfig
 	media-libs/freetype
-	media-libs/gst-plugins-base
-	media-libs/gstreamer
+	media-libs/gst-plugins-base:1.0
+	media-libs/gstreamer:1.0
 	media-libs/harfbuzz
-	media-libs/libepoxy
-	media-libs/libpng
-	net-dns/libidn2
-	net-libs/gnutls
+	media-libs/libglvnd
+	media-libs/libpulse
 	net-print/cups
 	sys-apps/dbus
-	sys-apps/util-linux
-	sys-libs/zlib
 	x11-libs/cairo
-	x11-libs/gdk-pixbuf
+	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:3
 	x11-libs/libdrm
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
-	x11-libs/libXau
 	x11-libs/libxcb
 	x11-libs/libXcomposite
 	x11-libs/libXcursor
 	x11-libs/libXdamage
-	x11-libs/libXdmcp
 	x11-libs/libXext
 	x11-libs/libXfixes
 	x11-libs/libXi
-	x11-libs/libXinerama
-	x11-libs/libxkbcommon
 	x11-libs/libXrandr
 	x11-libs/libXrender
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst
 	x11-libs/pango
-	x11-libs/pixman
-	x11-libs/xcb-util-image
 "
 
 S="${WORKDIR}"
@@ -170,6 +150,10 @@ QA_PREBUILT="
 
 src_install() {
 	domenu usr/share/applications/onlyoffice-desktopeditors.desktop
+	for size in {16,24,32,48,64,128,256}; do
+		newicon -s "${size}" opt/onlyoffice/desktopeditors/asc-de-"${size}".png onlyoffice-desktopeditors.png
+	done
+
 	dobin usr/bin/desktopeditors usr/bin/onlyoffice-desktopeditors
 	doins -r opt
 	fperms +x /opt/onlyoffice/desktopeditors/{DesktopEditors,editors_helper,converter/x2t}
