@@ -8,7 +8,4 @@
   <upstream>
     <remote-id type="github">ionelmc/sphinx-py3doc-enhanced-theme</remote-id>
   </upstream>
-  <longdescription>
-    A theme based on the theme of https://docs.python.org/3/ with some responsive enhancements.
-  </longdescription>
 </pkgmetadata>
