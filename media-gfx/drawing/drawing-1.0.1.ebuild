@@ -45,7 +45,7 @@ BDEPEND="
 
 src_configure() {
 	local emesonargs=(
-		$(meson_use doc enable-translation-and-appdate)
+		$(meson_use doc enable-translations-and-appdata)
 	)
 	meson_src_configure
 }
