@@ -8,7 +8,4 @@
   <upstream>
     <remote-id type="github">poljar/matrix-nio</remote-id>
   </upstream>
-  <use>
-    <flag name="e2e">Enable end to end encryption support</flag>
-  </use>
 </pkgmetadata>
