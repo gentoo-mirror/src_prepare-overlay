@@ -10,5 +10,5 @@ LICENSE=OFL
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://fedora.osuosl.org/linux/releases/33/Everything/x86_64/os/Packages/l/labiryntowy-fonts-1.53-12.fc33.noarch.rpm -> labiryntowy-1.53.rpm
-_eclasses_=font	d31f12a0f6e13d56dc3062e76ae58a61	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	f73e907469f65e52192f110dec72dce0
+_eclasses_=font	bc7d91ca9054e47ad87b5763214665a4	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	estack	055c42df72f76a4f45ec92b35e83cd56	rpm	f73e907469f65e52192f110dec72dce0
 _md5_=9310479423bf8b48542b8acfc72b790d
