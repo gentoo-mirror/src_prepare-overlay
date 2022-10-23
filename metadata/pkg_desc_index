@@ -109,11 +109,11 @@ sys-boot/multibootusb 9.2.0 9999: Create multiboot live Linux on a USB disk
 sys-boot/rpi-imager 1.6.2 1.7.2 1.7.3 9999: Raspberry Pi Imaging Utility
 sys-kernel/ck-sources 5.7.2 5.7.3 5.7.4 5.7.5 5.12.19: Con Kolivas sources including the Gentoo patchsets for the 5.12 kernel tree
 sys-kernel/liquorix-sources 5.17.5 5.17.13 5.18.10 5.18.15 5.19.6 5.19.10 5.19.16: Liquorix sources including the Gentoo patchsets for the 5.19 kernel tree
-sys-kernel/xanmod-kernel 5.19.14 5.19.15 6.0.0 6.0.1 6.0.2: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-kernel 5.19.14 5.19.15 6.0.0 6.0.1 6.0.2 6.0.3: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-sources 5.17.5 5.18.2 5.18.10 5.19.0 5.19.6 5.19.10 6.0.2: Full XanMod sources with cacule option and including the Gentoo patchset
 sys-kernel/zen-sources 5.17.1 5.18.2 5.18.10 5.18.15 5.19.6 5.19.10 6.0.2: Zen sources including the Gentoo patchsets for the 6.0 kernel tree
 sys-process/nq 0.3.1 9999: Unix command line queue utility
-virtual/dist-kernel 5.19.14 5.19.15 6.0.0 6.0.1 6.0.2: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 5.19.14 5.19.15 6.0.0 6.0.1 6.0.2 6.0.3: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
 www-apps/icecoder 8.0: Browser code editor awesomeness
 www-client/brave-bin 1.12.77 1.12.78: Brave Web Browser
