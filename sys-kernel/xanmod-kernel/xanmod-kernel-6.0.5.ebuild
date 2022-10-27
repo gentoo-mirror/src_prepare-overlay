@@ -7,7 +7,7 @@ inherit kernel-build toolchain-funcs
 
 #MY_P=linux-${PV}-xanmod1
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 1 ))
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 0 ))
 GENTOO_CONFIG_VER=g2
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
@@ -43,9 +43,7 @@ QA_FLAGS_IGNORED="
 
 src_prepare() {
 	# Remove linux-stable patches (see 0000_README)
-	if [[ -e 1[0-4][0-9][0-9]*.patch ]]; then
-		find "${WORKDIR}" -maxdepth 1 -name "1[0-4][0-9][0-9]*.patch" | xargs rm || die
-	fi
+	find "${WORKDIR}" -maxdepth 1 -name "1[0-4][0-9][0-9]*.patch" -exec rm {} + || die
 
 	local PATCHES=(
 		# meh, genpatches have no directory
