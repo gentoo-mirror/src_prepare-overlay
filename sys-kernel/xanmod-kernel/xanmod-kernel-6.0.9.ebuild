@@ -3,19 +3,19 @@
 
 EAPI=8
 
-inherit kernel-build toolchain-funcs
+inherit kernel-build
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 4 ))
-GENTOO_CONFIG_VER=g2
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 0 ))
+GENTOO_CONFIG_VER=g3
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
 HOMEPAGE="https://www.kernel.org/ https://xanmod.org/"
 SRC_URI="
 	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
 	https://github.com/xanmod/linux/releases/download/${PV}-xanmod1/patch-${PV}-xanmod1.xz
-	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
-	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
+	https://dev.gentoo.org/~alicef/dist/genpatches/${GENPATCHES_P}.base.tar.xz
+	https://dev.gentoo.org/~alicef/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/mgorny/gentoo-kernel-config/archive/${GENTOO_CONFIG_VER}.tar.gz
 		-> gentoo-kernel-config-${GENTOO_CONFIG_VER}.tar.gz
 "
@@ -23,7 +23,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="-* ~amd64"
-IUSE="debug hardened"
+IUSE="debug"
 
 RDEPEND="
 	!sys-kernel/xanmod-kernel-bin:${SLOT}
@@ -54,7 +54,7 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 		amd64)
-			cp "${S}/CONFIGS/xanmod/gcc/config" .config || die
+			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v1" .config || die
 			;;
 		*)
 			die "Unsupported arch ${ARCH}"
@@ -63,7 +63,6 @@ src_prepare() {
 
 	rm "${S}/localversion" || die
 	local myversion="-xanmod1-dist"
-	use hardened && myversion+="-hardened"
 	echo "CONFIG_LOCALVERSION=\"${myversion}\"" > "${T}"/version.config || die
 	local dist_conf_path="${WORKDIR}/gentoo-kernel-config-${GENTOO_CONFIG_VER}"
 
@@ -74,15 +73,6 @@ src_prepare() {
 	use debug || merge_configs+=(
 		"${dist_conf_path}"/no-debug.config
 	)
-	if use hardened; then
-		merge_configs+=( "${dist_conf_path}"/hardened-base.config )
-
-		tc-is-gcc && merge_configs+=( "${dist_conf_path}"/hardened-gcc-plugins.config )
-
-		if [[ -f "${dist_conf_path}/hardened-${ARCH}.config" ]]; then
-			merge_configs+=( "${dist_conf_path}/hardened-${ARCH}.config" )
-		fi
-	fi
 
 	kernel-build_merge_configs "${merge_configs[@]}"
 }
