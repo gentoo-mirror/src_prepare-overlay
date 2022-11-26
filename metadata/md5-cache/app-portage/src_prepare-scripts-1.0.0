@@ -7,10 +7,10 @@ INHERIT=python-r1
 IUSE=test python_targets_python3_8 python_targets_python3_9
 KEYWORDS=~amd64
 LICENSE=GPL-3
-RDEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.13:3.8[xml] ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9[xml] ) app-admin/eselect app-portage/eix app-portage/euscan-ng app-portage/repoman app-shells/bash:* dev-lang/perl dev-util/pkgcheck sys-apps/portage
+RDEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.15_p3:3.8[xml] ) python_targets_python3_9? ( >=dev-lang/python-3.9.15_p3:3.9[xml] ) app-admin/eselect app-portage/eix app-portage/euscan-ng app-portage/repoman app-shells/bash:* dev-lang/perl dev-util/pkgcheck sys-apps/portage
 REQUIRED_USE=|| ( python_targets_python3_8 python_targets_python3_9 )
 RESTRICT=mirror !test? ( test )
 SLOT=0
 SRC_URI=https://gitlab.com/src_prepare/scripts/-/archive/1.0.0/scripts-1.0.0.tar.gz
-_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	b9fc5e97e886514e5132f50465185401	python-r1	2d51fd03931e743811ce30d198e4dcfd
+_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	25c880c1db58e21b80b684bacc964958	python-r1	2d51fd03931e743811ce30d198e4dcfd
 _md5_=2c64ef255fc000a4721602a7e38e226b
