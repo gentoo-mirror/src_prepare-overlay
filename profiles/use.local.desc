@@ -37,7 +37,6 @@ sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theor
 sci-visualization/tulip:ccache - Use dev-util/ccache to speed up rebuilds
 sys-apps/xbps:lto - Build with Link Time Optimization
 sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
-sys-kernel/xanmod-kernel:hardened - Use selection of hardening options recommended by Kernel Self Protection Project
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
 virtual/linux-sources:firmware - Install linux kernel firmware
 www-client/icecat:buildtarball - Build tarball with makeicecat
