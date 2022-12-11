@@ -36,6 +36,7 @@ pkgcheck_push:
 pkgcheck_full_scan:
   rules:
     - allow_failure: true
+    - if: $CI_PIPELINE_SOURCE != 'merge_request_event'
   script:
     - pkgcheck ci $common_pkgcheck_args
 
