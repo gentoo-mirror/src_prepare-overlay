@@ -1,6 +1,6 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install setup unpack
-DEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.15_p3:3.8 ) dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) xinerama? ( x11-libs/libXinerama ) app-text/asciidoc virtual/pkgconfig x11-base/xorg-proto drm? ( x11-libs/libdrm )
+DEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.16:3.8 ) dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) xinerama? ( x11-libs/libXinerama ) app-text/asciidoc virtual/pkgconfig x11-base/xorg-proto drm? ( x11-libs/libdrm )
 DESCRIPTION=A compositor for X, branch with dual kawase blur
 EAPI=7
 HOMEPAGE=https://github.com/tryone144/compton
@@ -8,9 +8,9 @@ INHERIT=toolchain-funcs python-r1 git-r3
 IUSE=dbus +drm opengl +pcre xinerama python_targets_python3_8
 LICENSE=MIT
 PROPERTIES=live
-RDEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.15_p3:3.8 ) dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) xinerama? ( x11-libs/libXinerama ) !x11-misc/compton x11-apps/xprop x11-apps/xwininfo
+RDEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.16:3.8 ) dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) xinerama? ( x11-libs/libXinerama ) !x11-misc/compton x11-apps/xprop x11-apps/xwininfo
 REQUIRED_USE=|| ( python_targets_python3_8 )
 RESTRICT=mirror
 SLOT=0
-_eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	multibuild	d26d81f242cb193d899a72bca423d0bd	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	python-utils-r1	25c880c1db58e21b80b684bacc964958	python-r1	2d51fd03931e743811ce30d198e4dcfd	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	multibuild	d26d81f242cb193d899a72bca423d0bd	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	python-utils-r1	6a75203e8a499f0fb42971452ce15388	python-r1	2d51fd03931e743811ce30d198e4dcfd	git-r3	2347f8fe2d392b2a091191f94be37e6f
 _md5_=5461bc06e59603e990529d9ed1c0df82
