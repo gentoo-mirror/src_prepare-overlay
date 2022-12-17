@@ -22,7 +22,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="doc test"
 
-#media-video/opentimelineio : The CMakeFile tries to find it, but doesnt do anything yet.
+# TODO: qt6
 DEPEND="
 	>=dev-qt/qtconcurrent-5.6.0
 	>=dev-qt/qtcore-5.6.0
@@ -30,19 +30,18 @@ DEPEND="
 	>=dev-qt/qtopengl-5.6.0
 	>=dev-qt/qtsvg-5.6.0
 	>=dev-qt/qtwidgets-5.6.0
-	>=media-libs/opencolorio-2.0.0
-	media-libs/openexr:*
-	>=media-libs/openimageio-2.1.12
+	>=media-libs/opencolorio-2.0.0:=
+	media-libs/openexr:=
+	>=media-libs/openimageio-2.1.12:=
+	media-libs/opentimelineio:=
 	media-libs/portaudio
 	>=media-video/ffmpeg-3.0.0
 	virtual/opengl
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
-	dev-qt/linguist-tools
-	doc? (
-		app-doc/doxygen[dot]
-	)
+	dev-qt/linguist-tools:5
+	doc? ( app-doc/doxygen[dot] )
 "
 
 src_configure() {
