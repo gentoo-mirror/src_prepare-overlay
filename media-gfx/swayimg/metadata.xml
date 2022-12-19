@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+  <email>med.anis.jbara.2000@gmail.com</email>
+  <name>Med Anis Jbara</name>
+</maintainer>
+<upstream>
+  <remote-id type="github">artemsen/swayimg</remote-id>
+</upstream>
+<use>
+  <flag name="heif">Support for HEIF and AVIF image formats</flag>
+  <flag name="jpegxl">Support for JPEG XL image format</flag>
+</use>
+</pkgmetadata>
