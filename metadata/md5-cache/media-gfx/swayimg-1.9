@@ -1,0 +1,16 @@
+BDEPEND=dev-util/wayland-scanner >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+DEFINED_PHASES=compile configure install postinst postrm preinst test
+DEPEND=dev-libs/json-c dev-libs/wayland media-libs/fontconfig media-libs/freetype x11-libs/libxkbcommon exif? ( media-libs/libexif ) gif? ( media-libs/giflib ) heif? ( media-libs/libheif ) jpeg? ( media-libs/libjpeg-turbo ) jpegxl? ( media-libs/libjxl ) png? ( media-libs/libpng ) svg? ( gnome-base/librsvg ) tiff? ( media-libs/tiff ) webp? ( media-libs/libwebp ) dev-libs/wayland-protocols
+DESCRIPTION=A lightweight image viewer for Sway/Wayland display servers.
+EAPI=8
+HOMEPAGE=https://github.com/artemsen/swayimg
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=bash-completion-r1 meson xdg
+IUSE=exif gif heif jpeg jpegxl png svg tiff webp
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=dev-libs/json-c dev-libs/wayland media-libs/fontconfig media-libs/freetype x11-libs/libxkbcommon exif? ( media-libs/libexif ) gif? ( media-libs/giflib ) heif? ( media-libs/libheif ) jpeg? ( media-libs/libjpeg-turbo ) jpegxl? ( media-libs/libjxl ) png? ( media-libs/libpng ) svg? ( gnome-base/librsvg ) tiff? ( media-libs/tiff ) webp? ( media-libs/libwebp )
+SLOT=0
+SRC_URI=https://github.com/artemsen/swayimg/archive/refs/tags/v1.9.tar.gz -> swayimg-1.9.tar.gz
+_eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	8ed38f92fe095be374d6c4c8d4c0dda7	python-utils-r1	6a75203e8a499f0fb42971452ce15388	meson	1994a5aef5d4f5798b92f64d6f9a6003	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_md5_=46a59c01826d785179834d01da788e84

@@ -83,6 +83,7 @@ media-gfx/fondo 1.3.10 1.5.0 9999: Wallpaper App for Linux
 media-gfx/gpick 0.2.6: Advanced color picker written in C++ using GTK+ toolkit
 media-gfx/koko 9999: Image gallery application by KDE designed for desktop and touch devices
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
+media-gfx/swayimg 1.9: A lightweight image viewer for Sway/Wayland display servers.
 media-libs/opentimelineio 0.15: Open Source API and interchange format for editorial timeline information.
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
