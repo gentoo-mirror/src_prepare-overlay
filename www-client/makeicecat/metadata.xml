@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <use>
-    <flag name="buildtarball">Build GNU IceCat tarball with makeicecat script</flag>
-  </use>
+	<upstream>
+		<remote-id type="savannah">gnuzilla</remote-id>
+	</upstream>
+	<use>
+		<flag name="buildtarball">Build GNU IceCat tarball with makeicecat script</flag>
+	</use>
 </pkgmetadata>
