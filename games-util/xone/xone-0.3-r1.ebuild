@@ -44,6 +44,8 @@ pkg_setup() {
 	BUILD_TARGETS="module"
 	BUILD_PARAMS="KERNEL_DIR=${KERNEL_DIR} V=1"
 
+	# TODO: more robust solution in linux-mod would be ideal
+	KERNEL_CC="$(tc-getCC)"
 	if linux_chkconfig_present CC_IS_CLANG; then
 		tc-is-clang || : "${KERNEL_CC:=${CHOST}-clang}"
 		if linux_chkconfig_present LD_IS_LLD; then
@@ -54,7 +56,7 @@ pkg_setup() {
 		fi
 	fi
 
-	BUILD_PARAMS+=" ${KERNEL_CC:+CC=${KERNEL_CC}} ${KERNEL_LD:+LD=${KERNEL_LD}}"
+	BUILD_PARAMS+=" CC=${KERNEL_CC} ${KERNEL_LD:+LD=${KERNEL_LD}}"
 }
 
 src_unpack() {
