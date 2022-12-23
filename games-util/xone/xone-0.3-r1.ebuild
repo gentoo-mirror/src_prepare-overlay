@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit toolchain-funcs linux-mod
+inherit linux-mod
 
 DESCRIPTION="Linux kernel driver for Xbox One and Xbox Series X|S accessories"
 
@@ -45,18 +45,17 @@ pkg_setup() {
 	BUILD_PARAMS="KERNEL_DIR=${KERNEL_DIR} V=1"
 
 	# TODO: more robust solution in linux-mod would be ideal
-	KERNEL_CC="$(tc-getCC)"
 	if linux_chkconfig_present CC_IS_CLANG; then
-		tc-is-clang || : "${KERNEL_CC:=${CHOST}-clang}"
+		"${KERNEL_CC:=${CHOST}-clang}"
 		if linux_chkconfig_present LD_IS_LLD; then
-			: "${KERNEL_LD:=ld.ldd}"
+			: "${KERNEL_LD:=ld.lld}"
 			if linux_chkconfig_present LTO_CLANG_THIN; then
 				BUILD_PARAMS+=" ldflags-y=--thinlto-cache-dir= LDFLAGS_MODULE=--thinlto-cache-dir="
 			fi
 		fi
 	fi
 
-	BUILD_PARAMS+=" CC=${KERNEL_CC} ${KERNEL_LD:+LD=${KERNEL_LD}}"
+	BUILD_PARAMS+=" ${KERNEL_CC:+CC=${KERNEL_CC}} ${KERNEL_LD:+LD=${KERNEL_LD}}"
 }
 
 src_unpack() {
