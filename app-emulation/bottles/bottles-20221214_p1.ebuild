@@ -26,7 +26,9 @@ else
 	S="${WORKDIR}/${PN^}-${MY_PV}"
 fi
 
-RESTRICT="!test? ( test )"
+# Appstream file fails to validate, upstream issue
+RESTRICT="test"
+#RESTRICT="!test? ( test )"
 PROPERTIES="test_network"
 IUSE="test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

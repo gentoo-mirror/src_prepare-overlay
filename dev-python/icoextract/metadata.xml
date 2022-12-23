@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>parona@protonmail.com</email>
+		<name>Alfred Wingate</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">jlu5/icoextract</remote-id>
+		<remote-id type="pypi">icoextract</remote-id>
+	</upstream>
+</pkgmetadata>
