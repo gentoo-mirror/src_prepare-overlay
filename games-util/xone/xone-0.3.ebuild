@@ -31,7 +31,7 @@ MODULE_NAMES="
 	xone-gip-guitar(kernel/drivers/input/joystick)
 "
 BUILD_TARGETS="module"
-BUILD_PARAMS="KERNEL_DIR=${KERNEL_DIR}"
+BUILD_PARAMS="KERNEL_DIR=${KERNEL_DIR} V=1"
 
 BDEPEND="app-arch/cabextract"
 

@@ -42,7 +42,7 @@ pkg_setup() {
 	linux-mod_pkg_setup
 
 	BUILD_TARGETS="module"
-	BUILD_PARAMS="KERNEL_DIR=${KERNEL_DIR}"
+	BUILD_PARAMS="KERNEL_DIR=${KERNEL_DIR} V=1"
 
 	if linux_chkconfig_present CC_IS_CLANG; then
 		tc-is-clang || : "${KERNEL_CC:=${CHOST}-clang}"
