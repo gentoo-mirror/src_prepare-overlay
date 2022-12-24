@@ -53,7 +53,7 @@ src_configure() {
 		$(meson_feature webp)
 		-Ddesktop=true
 		-Dman=true
-		-Dzsh=true
+		-Dzsh=enabled
 	)
 	meson_src_configure
 }
