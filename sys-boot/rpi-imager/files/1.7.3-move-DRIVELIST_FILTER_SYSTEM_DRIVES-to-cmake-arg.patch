@@ -1,0 +1,37 @@
+# Expose drivelist filtering as cmake variable
+
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -134,6 +134,17 @@ else()
+     add_definitions(-DTELEMETRY_ENABLED_DEFAULT=false)
+ endif()
+ 
++if(DEFINED DRIVELIST_FILTER_SYSTEM_DRIVES)
++    if(DRIVELIST_FILTER_SYSTEM_DRIVES)
++        # Hide system drives from list
++        add_definitions(-DDRIVELIST_FILTER_SYSTEM_DRIVES=true)
++    else()
++        add_definitions(-DDRIVELIST_FILTER_SYSTEM_DRIVES=false)
++    endif()
++else()
++    add_definitions(-DDRIVELIST_FILTER_SYSTEM_DRIVES=true)
++endif()
++
+ if(ENABLE_CHECK_VERSION)
+     add_definitions(-DCHECK_VERSION_DEFAULT=true)
+ else()
+--- a/src/config.h
++++ b/src/config.h
+@@ -19,9 +19,6 @@
+ /* Hash algorithm for verifying (uncompressed image) checksum */
+ #define OSLIST_HASH_ALGORITHM             QCryptographicHash::Sha256
+ 
+-/* Hide system drives from list */
+-#define DRIVELIST_FILTER_SYSTEM_DRIVES    true
+-
+ /* Update progressbar every 0.1 second */
+ #define PROGRESS_UPDATE_INTERVAL          100
+ 
+-- 
+2.38.2
+

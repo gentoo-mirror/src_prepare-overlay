@@ -8,4 +8,8 @@
     <upstream>
         <remote-id type="github">raspberrypi/rpi-imager</remote-id>
     </upstream>
+    <use>
+        <flag name="filter-drivelist">Filters list of drives to just display USB-Drives, SD-Cards and NVME (root excluded)</flag>
+    </use>
+
 </pkgmetadata>
