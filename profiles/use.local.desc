@@ -38,6 +38,7 @@ sci-mathematics/acl2:books - build community books, the canonical collection of 
 sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theorem prover
 sci-visualization/tulip:ccache - Use dev-util/ccache to speed up rebuilds
 sys-apps/xbps:lto - Build with Link Time Optimization
+sys-boot/rpi-imager:filter-drivelist - Filters list of drives to just display USB-Drives, SD-Cards and NVME (root excluded)
 sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
 virtual/linux-sources:firmware - Install linux kernel firmware
