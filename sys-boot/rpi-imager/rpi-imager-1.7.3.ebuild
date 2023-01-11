@@ -42,10 +42,17 @@ DEPEND="
 	${RDEPEND}
 "
 
+IUSE="+filter-drivelist"
+
+PATCHES=(
+	"${FILESDIR}/${PV}-move-DRIVELIST_FILTER_SYSTEM_DRIVES-to-cmake-arg.patch"
+)
+
 src_configure() {
 	local mycmakeargs=(
 		-DENABLE_CHECK_VERSION=OFF
 		-DENABLE_TELEMETRY=OFF
+		-DDRIVELIST_FILTER_SYSTEM_DRIVES=$(usex filter-drivelist)
 	)
 
 	cmake_src_configure
