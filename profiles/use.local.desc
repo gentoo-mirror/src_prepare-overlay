@@ -28,7 +28,6 @@ net-analyzer/sensu:agent - Installs Sensu agent
 net-analyzer/sensu:backend - Install Sensu dashboard and backend server
 net-analyzer/sensu:gcc - Compile with GCC's Go compiler instead of Google's reference Go compiler (NOT SUPPORTED)
 net-analyzer/sensu:systemd - Install systemd service units rather than OpenRC init scripts (NOT SUPPORTED)
-net-misc/ddgr:fish-completion - Enable fish completion support
 net-misc/meganz-sdk:freeimage - Enable support for image I/O via media-libs/freeimage
 net-misc/meganz-sdk:fuse - Build FUSE-based example client
 net-misc/meganz-sdk:libuv - Support asynchronous I/O via dev-libs/libuv
@@ -62,6 +61,4 @@ www-client/icecat:system-png - Use the system-wide media-libs/libpng instead of 
 www-client/icecat:system-python-libs - Use system's python site instead of bundled python libraries
 www-client/icecat:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
 www-client/makeicecat:buildtarball - Build GNU IceCat tarball with makeicecat script
-x11-misc/compton-tryone:drm - Enable VSync with DRM_IOCTL_WAIT_VBLANK
-x11-misc/compton-tryone:opengl - Enable VSync with SGI_swap_control OpenGL extension
 x11-terms/kgx:generic - Present using the generic name "Terminal"
