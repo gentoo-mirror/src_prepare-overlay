@@ -6,6 +6,6 @@
     <name>Maciej Barć</name>
   </maintainer>
   <upstream>
-    <remote-id type="gitlab">maoschanz/drawing</remote-id>
+    <remote-id type="github">maoschanz/drawing</remote-id>
   </upstream>
 </pkgmetadata>
