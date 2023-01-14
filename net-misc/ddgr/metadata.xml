@@ -3,5 +3,6 @@
 <pkgmetadata>
   <upstream>
     <remote-id type="github">jarun/ddgr</remote-id>
+    <remote-id type="pypi">ddgr</remote-id>
   </upstream>
 </pkgmetadata>
