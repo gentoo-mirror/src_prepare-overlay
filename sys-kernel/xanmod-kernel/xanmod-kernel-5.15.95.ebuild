@@ -6,7 +6,7 @@ EAPI=8
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 2 ))
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 4 ))
 GENTOO_CONFIG_VER=g6
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
@@ -54,7 +54,7 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 		amd64)
-			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v1" .config || die
+			cp "${S}/CONFIGS/xanmod/gcc/config" .config || die
 			;;
 		*)
 			die "Unsupported arch ${ARCH}"
