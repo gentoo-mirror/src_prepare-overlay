@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,8 +6,8 @@ EAPI=8
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 4 ))
-GENTOO_CONFIG_VER=g5
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 3 ))
+GENTOO_CONFIG_VER=g6
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
 HOMEPAGE="https://www.kernel.org/ https://xanmod.org/"
@@ -54,7 +54,7 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 		amd64)
-			cp "${S}/CONFIGS/xanmod/gcc/config" .config || die
+			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v1" .config || die
 			;;
 		*)
 			die "Unsupported arch ${ARCH}"
