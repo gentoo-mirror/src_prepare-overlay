@@ -10,5 +10,5 @@ LICENSE=Apache-2.0
 RDEPEND=|| ( dev-libs/imath media-libs/ilmbase )
 SLOT=0
 SRC_URI=https://github.com/AcademySoftwareFoundation/OpenTimelineIO/archive/refs/tags/v0.15.tar.gz -> opentimelineio-0.15.tar.gz https://github.com/thelink2012/any/archive/bfc77f2e4be6e9a093dd645ef3f1aa30620c9205.tar.gz -> any-bfc77f2e4be6e9a093dd645ef3f1aa30620c9205.tar.gz https://github.com/martinmoene/optional-lite/archive/be720ebfd7add22abe60e49602735de9231105d0.tar.gz -> optional-lite-be720ebfd7add22abe60e49602735de9231105d0.tar.gz https://github.com/Tencent/rapidjson/archive/06d58b9e848c650114556a23294d0b6440078c61.tar.gz -> rapidjson-.tar.gz
-_eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	449b4785acace35308fe747fc939bde1
+_eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	b2e109b7341cd993b8bdfcc60652a14d
 _md5_=12cf4c0050218fe6392e7711ab4831f0
