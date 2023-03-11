@@ -1,4 +1,4 @@
-# Copyright 2020-2022 Gentoo Authors
+# Copyright 2020-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -65,87 +65,7 @@ RDEPEND="
 
 S="${WORKDIR}"
 
-QA_PREBUILT="
-	opt/onlyoffice/desktopeditors/DesktopEditors
-	opt/onlyoffice/desktopeditors/editors_helper
-	opt/onlyoffice/desktopeditors/libascdocumentscore.so
-	opt/onlyoffice/desktopeditors/libcef.so
-	opt/onlyoffice/desktopeditors/libEGL.so
-	opt/onlyoffice/desktopeditors/libGLESv2.so
-	opt/onlyoffice/desktopeditors/libhunspell.so
-	opt/onlyoffice/desktopeditors/libicudata.so
-	opt/onlyoffice/desktopeditors/libicudata.so.52
-	opt/onlyoffice/desktopeditors/libicudata.so.52.1
-	opt/onlyoffice/desktopeditors/libicui18n.so
-	opt/onlyoffice/desktopeditors/libicui18n.so.52
-	opt/onlyoffice/desktopeditors/libicui18n.so.52.1
-	opt/onlyoffice/desktopeditors/libicuuc.so
-	opt/onlyoffice/desktopeditors/libicuuc.so.52
-	opt/onlyoffice/desktopeditors/libicuuc.so.52.1
-	opt/onlyoffice/desktopeditors/libooxmlsignature.so
-	opt/onlyoffice/desktopeditors/libqgsttools_p.so
-	opt/onlyoffice/desktopeditors/libqgsttools_p.so.1
-	opt/onlyoffice/desktopeditors/libqgsttools_p.so.1.0
-	opt/onlyoffice/desktopeditors/libqgsttools_p.so.1.0.0
-	opt/onlyoffice/desktopeditors/libQt5Core.so.5
-	opt/onlyoffice/desktopeditors/libQt5DBus.so.5
-	opt/onlyoffice/desktopeditors/libQt5Gui.so.5
-	opt/onlyoffice/desktopeditors/libQt5Multimedia.so.5
-	opt/onlyoffice/desktopeditors/libQt5MultimediaWidgets.so.5
-	opt/onlyoffice/desktopeditors/libQt5Network.so.5
-	opt/onlyoffice/desktopeditors/libQt5OpenGL.so.5
-	opt/onlyoffice/desktopeditors/libQt5PrintSupport.so.5
-	opt/onlyoffice/desktopeditors/libQt5Svg.so.5
-	opt/onlyoffice/desktopeditors/libQt5Widgets.so.5
-	opt/onlyoffice/desktopeditors/libQt5X11Extras.so.5
-	opt/onlyoffice/desktopeditors/libQt5XcbQpa.so.5
-	opt/onlyoffice/desktopeditors/libqtascdocumentscore.so
-	opt/onlyoffice/desktopeditors/libvideoplayer.so
-	opt/onlyoffice/desktopeditors/bearer/libqconnmanbearer.so
-	opt/onlyoffice/desktopeditors/bearer/libqgenericbearer.so
-	opt/onlyoffice/desktopeditors/bearer/libqnmbearer.so
-	opt/onlyoffice/desktopeditors/converter/libDjVuFile.so
-	opt/onlyoffice/desktopeditors/converter/libdoctrenderer.so
-	opt/onlyoffice/desktopeditors/converter/libgraphics.so
-	opt/onlyoffice/desktopeditors/converter/libHtmlFile.so
-	opt/onlyoffice/desktopeditors/converter/libHtmlRenderer.so
-	opt/onlyoffice/desktopeditors/converter/libicudata.so.58
-	opt/onlyoffice/desktopeditors/converter/libicuuc.so.58
-	opt/onlyoffice/desktopeditors/converter/libkernel.so
-	opt/onlyoffice/desktopeditors/converter/libPdfReader.so
-	opt/onlyoffice/desktopeditors/converter/libPdfWriter.so
-	opt/onlyoffice/desktopeditors/converter/libUnicodeConverter.so
-	opt/onlyoffice/desktopeditors/converter/libXpsFile.so
-	opt/onlyoffice/desktopeditors/converter/x2t
-	opt/onlyoffice/desktopeditors/iconengines/libqsvgicon.so
-	opt/onlyoffice/desktopeditors/imageformats/libqsvg.so
-	opt/onlyoffice/desktopeditors/imageformats/libqico.so
-	opt/onlyoffice/desktopeditors/imageformats/libqicns.so
-	opt/onlyoffice/desktopeditors/imageformats/libqwbmp.so
-	opt/onlyoffice/desktopeditors/imageformats/libqjpeg.so
-	opt/onlyoffice/desktopeditors/imageformats/libqtiff.so
-	opt/onlyoffice/desktopeditors/imageformats/libqtga.so
-	opt/onlyoffice/desktopeditors/imageformats/libqwebp.so
-	opt/onlyoffice/desktopeditors/imageformats/libqgif.so
-	opt/onlyoffice/desktopeditors/mediaservice/libgstcamerabin.so
-	opt/onlyoffice/desktopeditors/mediaservice/libgstaudiodecoder.so
-	opt/onlyoffice/desktopeditors/mediaservice/libgstmediacapture.so
-	opt/onlyoffice/desktopeditors/mediaservice/libgstmediaplayer.so
-	opt/onlyoffice/desktopeditors/platforminputcontexts/libibusplatforminputcontextplugin.so
-	opt/onlyoffice/desktopeditors/platforminputcontexts/libqtvirtualkeyboardplugin.so
-	opt/onlyoffice/desktopeditors/platforminputcontexts/libcomposeplatforminputcontextplugin.so
-	opt/onlyoffice/desktopeditors/platforms/libqoffscreen.so
-	opt/onlyoffice/desktopeditors/platforms/libqlinuxfb.so
-	opt/onlyoffice/desktopeditors/platforms/libqvnc.so
-	opt/onlyoffice/desktopeditors/platforms/libqxcb.so
-	opt/onlyoffice/desktopeditors/platforms/libqminimal.so
-	opt/onlyoffice/desktopeditors/platformthemes/libqgtk3.so
-	opt/onlyoffice/desktopeditors/playlistformats/libqtmultimedia_m3u.so
-	opt/onlyoffice/desktopeditors/printsupport/libcupsprintersupport.so
-	opt/onlyoffice/desktopeditors/swiftshader/libEGL.so
-	opt/onlyoffice/desktopeditors/swiftshader/libGLESv2.so
-	opt/onlyoffice/desktopeditors/xcbglintegrations/libqxcb-glx-integration.so
-"
+QA_PREBUILT="*"
 
 src_install() {
 	domenu usr/share/applications/onlyoffice-desktopeditors.desktop
