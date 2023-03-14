@@ -75,7 +75,7 @@ RDEPEND="
 "
 BDEPEND="
 	${PYTHON_DEPS}
-	app-text/blueprint-compiler
+	dev-util/blueprint-compiler
 	dev-libs/glib:2
 	sys-devel/gettext
 	test? (
