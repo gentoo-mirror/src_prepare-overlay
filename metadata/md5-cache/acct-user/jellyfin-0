@@ -5,5 +5,5 @@ INHERIT=acct-user
 KEYWORDS=~amd64 ~arm64
 RDEPEND=acct-group/jellyfin
 SLOT=0
-_eclasses_=user-info	83547b4df3e1ba5a6bf91a0837eaa664	acct-user	bdca122e03cd10755e7ed12b03562501
+_eclasses_=user-info	83547b4df3e1ba5a6bf91a0837eaa664	acct-user	98058a1561d517416b208e3219858871
 _md5_=b030005d17a75582414893c8aaa5cd3e
