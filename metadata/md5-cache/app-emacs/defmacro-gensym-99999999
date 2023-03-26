@@ -8,5 +8,5 @@ KEYWORDS=~amd64
 LICENSE=Unlicense
 PROPERTIES=live
 SLOT=0
-_eclasses_=elisp-common	4f91d24ccf86f94b3f28c6470aab24d3	git-r3	27e13c09a4c7e4c78ac812f74727e676
+_eclasses_=elisp-common	1d6e8d43be4713f04a441f721d890d48	git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=67f762728ee198ef2e85ce9508754dae
