@@ -11,5 +11,5 @@ RDEPEND=!www-servers/jellyfin <=dev-util/lttng-ust-2.12.1 >=media-video/ffmpeg-4
 RESTRICT=mirror
 SLOT=0
 SRC_URI=amd64? ( https://repo.jellyfin.org/releases/server/debian/versions/stable/server/10.8.0/jellyfin-server_10.8.0-1_amd64.deb -> jellyfin-bin-10.8.0-server-amd64.deb ) arm64? ( https://repo.jellyfin.org/releases/server/debian/versions/stable/server/10.8.0/jellyfin-server_10.8.0-1_arm64.deb -> jellyfin-bin-10.8.0-server-arm64.deb ) https://repo.jellyfin.org/releases/server/debian/versions/stable/web/10.8.0/jellyfin-web_10.8.0-1_all.deb -> jellyfin-bin-10.8.0-web.deb
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	65735fed9c1c30cb461c90db600ac990	systemd	5f4bb0758df2e483babf68cd517078ca	wrapper	4a1902f969e5718126434fc35f3a0d9c
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	unpacker	79b8360df7fa828892dd5c4dfc23242d	systemd	5f4bb0758df2e483babf68cd517078ca	wrapper	4a1902f969e5718126434fc35f3a0d9c
 _md5_=07b7a96f7af09ebb382027d8d7a2c66d

@@ -9,5 +9,5 @@ PROPERTIES=live
 RDEPEND=app-portage/euscan-ng app-portage/gentoolkit app-portage/repoman sys-apps/busybox
 RESTRICT=mirror
 SLOT=0
-_eclasses_=git-r3	c57c50c922e121043788de0b40ada60a
+_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=570d1b00bdf4c87745aa83b83be6e624
