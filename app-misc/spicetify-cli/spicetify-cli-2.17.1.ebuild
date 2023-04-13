@@ -20,7 +20,7 @@ KEYWORDS="~amd64"
 
 INSTALLDIR="/opt/${PN}"
 
-RDEPEND="|| ( ~media-sound/spotify-1.2.8 ~media-sound/spotify-1.1.99 )"
+RDEPEND="~media-sound/spotify-1.2.8"
 
 src_compile() {
 	ego build
@@ -34,7 +34,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Spicetify requires a Spotify install that it can modify. Versions 1.2.8 and 1.1.99 are"
+	elog "Spicetify requires a Spotify install that it can modify. Version 1.2.8 is"
 	elog "supported by this version of spicetify. To be able to modify system installed "
 	elog "Spotify like media-sound/spotify then you have to allow spicetify to read and write"
 	elog "to its install location like shown below."
