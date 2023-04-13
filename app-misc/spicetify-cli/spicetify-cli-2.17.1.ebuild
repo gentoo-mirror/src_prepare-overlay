@@ -1,4 +1,4 @@
-# Copyright 2020-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -20,9 +20,7 @@ KEYWORDS="~amd64"
 
 INSTALLDIR="/opt/${PN}"
 
-RDEPEND="~media-sound/spotify-1.1.84"
-
-PATCHES=( "${FILESDIR}/add_gentoo_install_dir-2.10.2.patch" )
+RDEPEND="~media-sound/spotify-1.2.8"
 
 src_compile() {
 	ego build
@@ -36,7 +34,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Spicetify requires a Spotify install that it can modify. Version 1.1.84 is"
+	elog "Spicetify requires a Spotify install that it can modify. Version 1.2.8 is"
 	elog "supported by this version of spicetify. To be able to modify system installed "
 	elog "Spotify like media-sound/spotify then you have to allow spicetify to read and write"
 	elog "to its install location like shown below."
