@@ -9,5 +9,5 @@ LICENSE=GPL-3+
 PROPERTIES=live
 RDEPEND=app-emacs/ement
 SLOT=0
-_eclasses_=elisp-common	1d6e8d43be4713f04a441f721d890d48	git-r3	27e13c09a4c7e4c78ac812f74727e676
+_eclasses_=elisp-common	dcd21c5d379fc2217e95f529504c5fe0	git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=e6eeae0b5d1725eaca358a0c4a4e5c17
