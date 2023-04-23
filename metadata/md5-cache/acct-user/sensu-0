@@ -5,5 +5,5 @@ INHERIT=acct-user
 KEYWORDS=~*
 RDEPEND=acct-group/sensu
 SLOT=0
-_eclasses_=user-info	83547b4df3e1ba5a6bf91a0837eaa664	acct-user	e0a8307fcba2b1c2ec2914c064c50a7f
+_eclasses_=user-info	83547b4df3e1ba5a6bf91a0837eaa664	acct-user	fc9fc6ef53c366ecc85e35416e556390
 _md5_=bb8b4ae287f47ca906b7645a90de37d9
