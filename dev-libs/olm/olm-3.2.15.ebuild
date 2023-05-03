@@ -1,10 +1,11 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..10} )
+DISTUTILS_USE_PEP517=setuptools
 DISTUTILS_OPTIONAL=1
+PYTHON_COMPAT=( python3_{10..11} )
 
 inherit cmake distutils-r1
 
@@ -22,18 +23,23 @@ fi
 LICENSE="Apache-2.0"
 SLOT="0/$(ver_cut 1)"
 IUSE="python test"
-REQUIRED_USE="doc? ( python )"
+REQUIRED_USE="
+	doc? ( python )
+	python? ( ${PYTHON_REQUIRED_USE} )
+"
 
-DEPEND="
+RDEPEND="
 	python? (
+		${PYTHON_DEPS}
 		>=dev-python/cffi-1.0.0[${PYTHON_USEDEP}]
-		dev-python/future[${PYTHON_USEDEP}]
+	)
+"
+BDEPEND="
+	${DISTUTILS_DEPS}
+	python? (
+		${RDEPEND}
 		test? (
 			dev-python/aspectlib[${PYTHON_USEDEP}]
-			dev-python/pytest-benchmark[${PYTHON_USEDEP}]
-			dev-python/pytest-cov[${PYTHON_USEDEP}]
-			dev-python/pytest-flake8[${PYTHON_USEDEP}]
-			dev-python/pytest-isort[${PYTHON_USEDEP}]
 		)
 	)
 "
@@ -43,7 +49,15 @@ distutils_enable_sphinx "${S}"/python/docs
 
 DOCS=( "${S}/docs/" )
 
+EPYTEST_DESELECT=(
+	# deselect tests using benchmark fixtures
+	"tests/group_session_test.py::TestClass::test_encrypt"
+	"tests/group_session_test.py::TestClass::test_decrypt"
+)
+
 src_prepare() {
+	sed -i '/flake8/,/^$/ d' python/setup.cfg || die
+
 	cmake_src_prepare
 	if use python; then
 		pushd python || die
@@ -55,7 +69,7 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		-DBUILD_SHARED_LIBS=ON
-		-DOLM_TESTS=$(usex test ON OFF)
+		-DOLM_TESTS=$(usex test)
 	)
 	cmake_src_configure
 	if use python; then
@@ -87,9 +101,11 @@ src_install() {
 }
 
 src_test() {
-	emake test
+	# eclass doesnt appear to be to handle CTestTestfile.cmake in build root locations
+	BUILD_DIR="${BUILD_DIR}/tests" cmake_src_test
+
 	if use python; then
-		pushd python || die
+		pushd "${S}"/python || die
 		LD_LIBRARY_PATH="${BUILD_DIR}:${LD_LIBRARY_PATH}" distutils-r1_src_test
 		popd || die
 	fi
