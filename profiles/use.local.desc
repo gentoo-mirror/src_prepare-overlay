@@ -23,7 +23,6 @@ media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
 media-gfx/gpick:gtk2 - Enable support for GTK+2 instead of GTK+3
 media-gfx/swayimg:heif - Support for HEIF and AVIF image formats
 media-gfx/swayimg:jpegxl - Support for JPEG XL image format
-media-video/tartube:atomicparsley - Use AtomicParsley for embedding thumbnails in audio files
 net-analyzer/sensu:agent - Installs Sensu agent
 net-analyzer/sensu:backend - Install Sensu dashboard and backend server
 net-analyzer/sensu:gcc - Compile with GCC's Go compiler instead of Google's reference Go compiler (NOT SUPPORTED)
@@ -35,7 +34,6 @@ net-misc/meganz-sdk:mediainfo - Use media-libs/libmediainfo for media files
 net-misc/meganz-sdk:qt - Install QT bindings
 sci-mathematics/acl2:books - build community books, the canonical collection of open-source libraries
 sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theorem prover
-sci-visualization/tulip:ccache - Use dev-util/ccache to speed up rebuilds
 sys-apps/xbps:lto - Build with Link Time Optimization
 sys-boot/rpi-imager:filter-drivelist - Filters list of drives to just display USB-Drives, SD-Cards and NVME (root excluded)
 sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
