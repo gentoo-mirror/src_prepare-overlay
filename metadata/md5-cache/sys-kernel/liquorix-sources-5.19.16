@@ -11,5 +11,5 @@ RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-d
 RESTRICT=binchecks strip
 SLOT=5.19.16
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.19.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.19-1.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.19-1.base.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.19-1.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-5.19-1.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-5.19-1.extras.tar.xz https://dev.gentoo.org/~whissi/dist/genpatches/genpatches-5.19-1.extras.tar.xz https://github.com/zen-kernel/zen-kernel/releases/download/v5.19.16-lqx1/v5.19.16-lqx1.patch.xz
-_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	kernel-2-src-prepare-overlay	1e42eb7edc2f4814fa09602bb456e937
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	kernel-2-src-prepare-overlay	1e42eb7edc2f4814fa09602bb456e937
 _md5_=4b086cefb1dc1a9103ee7b18af39274d
