@@ -1,4 +1,14 @@
 # Alfred Wingate <parona@protonmail.com> (2023-05-11)
+# Unmaintained patchsets.
+# ck-sources isnt updated anymore:
+#  https://ck-hack.blogspot.com/2021/08/514-and-future-of-muqss-and-ck-once.html
+# Use liquorix-sources from ::thegreatmcpain
+# Use zen-sources from ::kzd or ::gentoo.
+sys-kernel/ck-sources
+sys-kernel/liquorix-sources
+sys-kernel/zen-sources
+
+# Alfred Wingate <parona@protonmail.com> (2023-05-11)
 # Not maintained well, use pf4public instead.
 www-client/ungoogled-chromium-bin
 
