@@ -1,1 +1,3 @@
+# Maciej Barć <xgqt@gentoo.org> (2022-08-05)
+# Please, use www-apps/jellyfin from the official ::gentoo repo instead.
 www-servers/jellyfin-bin
