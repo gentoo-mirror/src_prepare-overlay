@@ -1,3 +1,7 @@
+# Alfred Wingate <parona@protonmail.com> (2023-05-11)
+# Not maintained well, use pf4public instead.
+www-client/ungoogled-chromium-bin
+
 # Maciej Barć <xgqt@gentoo.org> (2022-08-05)
 # Please, use www-apps/jellyfin from the official ::gentoo repo instead.
 www-servers/jellyfin-bin
