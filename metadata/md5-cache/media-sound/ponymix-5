@@ -10,5 +10,5 @@ LICENSE=MIT
 RDEPEND=media-sound/pulseaudio
 SLOT=0
 SRC_URI=https://github.com/falconindy/ponymix/archive/5.tar.gz -> ponymix-5.tar.gz
-_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	bash-completion-r1	59cf54afadd3b37d31d9d85c7d7d8067
+_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	bash-completion-r1	2d494116054ca45ab8d545a5da206bbb
 _md5_=b0b8bef278f93b0681279f9c9ee4adb9
