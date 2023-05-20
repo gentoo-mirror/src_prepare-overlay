@@ -36,16 +36,12 @@ dev-perl/File-Rename 1.20 1.31: Perl extension for renaming multiple files
 dev-python/FVS 0.3.4: File Versioning System with hash comparison
 dev-python/aspectlib 1.5.2-r1: An aspect-oriented programming, monkey-patch and decorators library.
 dev-python/icoextract 0.1.4: Extract icons from Windows PE files (.exe/.dll)
-dev-python/janus 0.5.0 1.0.0: Thread-safe asyncio-aware queue for Python
+dev-python/janus 1.0.0: Thread-safe asyncio-aware queue for Python
 dev-python/logbook 1.5.3: A logging replacement for Python
 dev-python/m2r2 0.2.8: Markdown to reStructuredText converter
 dev-python/matrix-nio 0.20.2: A Python Matrix client library, designed according to sans I/O principles
 dev-python/orjson 3.8.3: Fast, correct Python JSON library supporting dataclasses, datetimes, and numpy
-dev-python/pygaljs 1.0.2-r1: Python package providing assets from pygal.js
-dev-python/pytest-benchmark 3.4.1-r1: py.test fixture for benchmarking code
-dev-python/pytest-isort 2.0.0: py.test plugin to check import ordering using isort
 dev-python/sphinx-py3doc-enhanced-theme 2.4.0: A theme based on the theme of https://docs.python.org/3/.
-dev-python/unpaddedbase64 2.1.0-r1: Encode and decode Base64 without = padding.
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.16 9999: Dialect of Scheme designed for Systems Programming
 dev-tex/tectonic 0.11.0: A modernized, complete, self-contained TeX/LaTeX engine.
