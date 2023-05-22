@@ -7,6 +7,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="github">khanhas/spicetify-cli</remote-id>
-		<doc>https://github.com/khanhas/spicetify-cli/wiki</doc>
+		<doc>https://spicetify.app/docs/getting-started</doc>
 	</upstream>
 </pkgmetadata>
