@@ -27,7 +27,7 @@ RDEPEND="
 "
 
 src_compile() {
-	ego build -ldflags "-X main.version=v${PV}"
+	ego build -ldflags "-X main.version=${PV}"
 }
 
 src_install() {
