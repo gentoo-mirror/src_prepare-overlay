@@ -11,5 +11,5 @@ RDEPEND=X? ( x11-apps/xauth ) truetype? ( media-libs/freetype media-libs/fontcon
 REQUIRED_USE=?? ( X aqua )
 SLOT=0
 SRC_URI=https://github.com/9fans/plan9port/archive/e683bdfa76a5c2c54422a6bd2934b133d77ba610.tar.gz -> plan9port-2021.10.05.tar.gz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	readme.gentoo-r1	204091a2cde6179cd9d3db26d09412d3	flag-o-matic	16483e58fadb0d47b4528f0aa7e171f6
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	c19072c3cd7ac5cb21de013f7e9832e0	readme.gentoo-r1	204091a2cde6179cd9d3db26d09412d3	flag-o-matic	16483e58fadb0d47b4528f0aa7e171f6
 _md5_=7ae13afa91e7b2107ae19a42ff3381a6
