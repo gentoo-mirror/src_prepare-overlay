@@ -4,8 +4,8 @@
 EAPI=8
 
 PYPI_NO_NORMALIZE=y
-
-PYTHON_COMPAT=( python3_{8..11} )
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{8..12} )
 inherit distutils-r1 pypi
 
 DESCRIPTION="A theme based on the theme of https://docs.python.org/3/."
