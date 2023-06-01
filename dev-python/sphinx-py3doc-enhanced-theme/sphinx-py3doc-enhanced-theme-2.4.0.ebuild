@@ -3,12 +3,13 @@
 
 EAPI=8
 
+PYPI_NO_NORMALIZE=y
+
 PYTHON_COMPAT=( python3_{8..11} )
 inherit distutils-r1 pypi
 
 DESCRIPTION="A theme based on the theme of https://docs.python.org/3/."
 HOMEPAGE="https://github.com/ionelmc/sphinx-py3doc-enhanced-theme"
-SRC_URI="$(pypi_sdist_url --no-normalize "${PN}" "${PV}")"
 
 LICENSE="BSD-2"
 SLOT="0"
