@@ -5,7 +5,6 @@ acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/cgls 246 247: cgls from systemd
 app-admin/cgtop 246 247: cgtop from systemd
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
-app-editors/atom 1.58.0: A hackable text editor for the 21st Century
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
 app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
 app-editors/rehex 0.3.0 9999: Reverse Engineers' Hex Editor
@@ -15,11 +14,11 @@ app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU
 app-emacs/plz 9999: An HTTP library that uses curl as a backend
 app-emacs/ts 9999: Timestamp and date/time library
 app-emulation/anbox 20211020 99999999: Container-based approach to boot a full Android system
-app-emulation/bottles 51.5 9999: Run Windows software and games on Linux
+app-emulation/bottles 51.5 51.6 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
-app-misc/spicetify-cli 2.17.1 2.18.1: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.17.1 2.18.1 2.19.0: Commandline tool to customize Spotify client.
 app-office/onlyoffice-bin 7.3.0: Onlyoffice is an office productivity suite (binary version)
 app-portage/euscan-ng 1.0.0-r1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.0.0 9999: Create HTML page based off of a given overlay URL
@@ -40,7 +39,6 @@ dev-python/janus 1.0.0: Thread-safe asyncio-aware queue for Python
 dev-python/logbook 1.5.3: A logging replacement for Python
 dev-python/m2r2 0.2.8: Markdown to reStructuredText converter
 dev-python/matrix-nio 0.20.2: A Python Matrix client library, designed according to sans I/O principles
-dev-python/orjson 3.8.3: Fast, correct Python JSON library supporting dataclasses, datetimes, and numpy
 dev-python/sphinx-py3doc-enhanced-theme 2.4.0 2.4.0-r1: A theme based on the theme of https://docs.python.org/3/.
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.16 9999: Dialect of Scheme designed for Systems Programming
