@@ -18,7 +18,7 @@ app-emulation/bottles 51.5 51.6 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
-app-misc/spicetify-cli 2.17.1 2.18.1 2.19.0: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.17.1 2.18.1 2.19.0 2.20.0: Commandline tool to customize Spotify client.
 app-office/onlyoffice-bin 7.3.0: Onlyoffice is an office productivity suite (binary version)
 app-portage/euscan-ng 1.0.0-r1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.0.0 9999: Create HTML page based off of a given overlay URL
