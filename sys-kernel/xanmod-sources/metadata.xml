@@ -2,14 +2,16 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>theevilskeleton@riseup.net</email>
-		<name>TheEvilSkeleton</name>
-	</maintainer>
-	<maintainer type="person">
 		<email>hedmoo@yahoo.com</email>
 		<name>Andreas Westman Dorcsak</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>parona@protonmail.com</email>
+		<name>Alfred Wingate</name>
+	</maintainer>
 	<upstream>
 		<remote-id type="github">xanmod/linux</remote-id>
+		<remote-id type="gitlab">xanmod/linux</remote-id>
+		<remote-id type="sourceforge">xanmod</remote-id>
 	</upstream>
 </pkgmetadata>
