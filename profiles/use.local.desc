@@ -35,7 +35,6 @@ net-misc/meganz-sdk:qt - Install QT bindings
 sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theorem prover
 sys-apps/xbps:lto - Build with Link Time Optimization
 sys-boot/rpi-imager:filter-drivelist - Filters list of drives to just display USB-Drives, SD-Cards and NVME (root excluded)
-sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
 virtual/linux-sources:firmware - Install linux kernel firmware
 www-client/icecat:buildtarball - Build tarball with makeicecat
