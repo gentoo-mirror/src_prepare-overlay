@@ -18,7 +18,7 @@ app-emulation/bottles 51.5 51.6 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
-app-misc/spicetify-cli 2.17.1 2.18.1 2.19.0 2.20.0: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.20.0 2.20.1: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.0-r1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.0.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
@@ -93,7 +93,6 @@ net-misc/postman-bin 7.35.0: Supercharge your API workflow
 net-wireless/mdk4 4.2_p20220202: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
 sci-mathematics/isabelle-bin 2021: Generic proof assistant with higher-order logic
 sci-mathematics/scilab-bin 6.1.0: Scientific software package for numerical computations
-sci-mathematics/z3 4.8.5: An efficient theorem prover
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.5.77 1.5.109: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.6.2 1.7.2 1.7.3 9999: Raspberry Pi Imaging Utility
