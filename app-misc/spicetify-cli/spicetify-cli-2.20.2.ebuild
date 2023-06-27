@@ -32,7 +32,7 @@ RESTRICT="test"
 
 INSTALLDIR="/opt/${PN}"
 
-whitelist_versions_src_uri() {
+whitelist_versions_deps() {
 	local -a deps
 	local version_spec version1 version2
 
@@ -57,7 +57,7 @@ whitelist_versions_src_uri() {
 
 	RDEPEND=" || ( ${deps[@]} )"
 }
-whitelist_versions_src_uri
+whitelist_versions_deps
 
 whitelist_versions_elog() {
 	local versions
