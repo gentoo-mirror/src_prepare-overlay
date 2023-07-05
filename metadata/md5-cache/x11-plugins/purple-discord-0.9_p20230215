@@ -1,14 +1,13 @@
-BDEPEND=media-gfx/imagemagick[png] sys-devel/gettext >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile unpack
+BDEPEND=media-gfx/imagemagick[png] sys-devel/gettext
+DEFINED_PHASES=compile
 DEPEND=dev-libs/glib:2 dev-libs/json-glib dev-libs/nss net-im/pidgin:= sys-libs/zlib virtual/libintl qrcode? ( media-gfx/qrencode:= )
 DESCRIPTION=Pidgin/Purple PRotocol PLugin for Discord
 EAPI=8
 HOMEPAGE=https://github.com/EionRobb/purple-discord
-INHERIT=git-r3
 IUSE=+qrcode
+KEYWORDS=~amd64
 LICENSE=GPL-3
-PROPERTIES=live
 RDEPEND=dev-libs/glib:2 dev-libs/json-glib dev-libs/nss net-im/pidgin:= sys-libs/zlib virtual/libintl qrcode? ( media-gfx/qrencode:= )
 SLOT=0
-_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676
-_md5_=1153364931ef5d2a6e1a1e782c3f61a2
+SRC_URI=https://github.com/EionRobb/purple-discord/archive/4a091883e646f2c103ae68c41d04b1b880e8d0bf.tar.gz -> purple-discord-0.9_p20230215.tar.gz
+_md5_=5b0dfa9061e7f6ab25f0afcd9d90bd43
