@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email>y0rune@aol.com</email>
-		<name>Marcin Woźniak</name>
-	</maintainer>
+  <maintainer type="person">
+    <email>y0rune@aol.com</email>
+    <name>Marcin Woźniak</name>
+  </maintainer>
+  <upstream>
+    <remote-id type="github">EionRobb/purple-discord</remote-id>
+  </upstream>
+  <use>
+    <flag name="qrcode">Add support for qrcodes using media-gfx/qrencode</flag>
+  </use>
 </pkgmetadata>
