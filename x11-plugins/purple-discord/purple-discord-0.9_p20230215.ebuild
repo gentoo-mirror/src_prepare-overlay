@@ -11,7 +11,7 @@ if [[ "${PV}" == "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/EionRobb/${PN}.git"
 else
 	COMMIT="4a091883e646f2c103ae68c41d04b1b880e8d0bf"
-	SRC_URI="https://github.com/EionRobb/purple-discord/archive/${COMMIT}.tar.gz"
+	SRC_URI="https://github.com/EionRobb/purple-discord/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/${PN}-${COMMIT}"
 
 	KEYWORDS="~amd64"
