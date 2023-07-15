@@ -18,4 +18,5 @@ RDEPEND="
 		~sys-kernel/vanilla-kernel-${PV}
 		~sys-kernel/xanmod-kernel-${PV}
 		~sys-kernel/xanmod-kernel-bin-${PV}
+		~sys-kernel/xanmod-rt-kernel-${PV}
 		)"
