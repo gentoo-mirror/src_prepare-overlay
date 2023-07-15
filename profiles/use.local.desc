@@ -35,6 +35,7 @@ net-misc/meganz-sdk:qt - Install QT bindings
 sys-apps/xbps:lto - Build with Link Time Optimization
 sys-boot/rpi-imager:filter-drivelist - Filters list of drives to just display USB-Drives, SD-Cards and NVME (root excluded)
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
+sys-kernel/xanmod-rt-kernel:initramfs - Build initramfs along with the kernel.
 virtual/linux-sources:firmware - Install linux kernel firmware
 www-client/icecat:buildtarball - Build tarball with makeicecat
 www-client/icecat:clang - Use Clang compiler instead of GCC
