@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig test? ( sys-apps/dbus ) >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=systemd? ( sys-apps/systemd ) test? ( dev-cpp/gtest )
+DESCRIPTION=High-level C++ D-Bus library for Linux
+EAPI=8
+HOMEPAGE=https://github.com/Kistler-Group/sdbus-cpp/
+INHERIT=cmake
+IUSE=doc examples systemd test
+KEYWORDS=~amd64
+LICENSE=LGPL-2.1
+RDEPEND=systemd? ( sys-apps/systemd )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/Kistler-Group/sdbus-cpp/archive/v1.2.0.tar.gz -> sdbus-cpp-1.2.0.tar.gz !systemd? ( https://github.com/systemd/systemd-stable/archive/v253.tar.gz -> systemd-stable-253.tar.gz )
+_eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	ad475baa777c9978fa035216c8264a10	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	6c921d868d090cc18e142a396f66f74a
+_md5_=3bc7ac2f240d48de6e324980d920ba57
