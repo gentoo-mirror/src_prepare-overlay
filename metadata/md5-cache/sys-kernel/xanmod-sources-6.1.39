@@ -8,7 +8,7 @@ KEYWORDS=~amd64
 LICENSE=GPL-2 CDDL
 RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
 RESTRICT=binchecks strip
-SLOT=6.3.11
-SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.3.tar.xz mirror://sourceforge/xanmod/patch-6.3.11-xanmod1.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.3-15.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.3-15.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.3-15.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.3-15.extras.tar.xz
+SLOT=6.1.39
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.1.tar.xz mirror://sourceforge/xanmod/patch-6.1.39-xanmod1.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-45.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-45.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-45.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-45.extras.tar.xz
 _eclasses_=estack	c61c368a76fdf3a82fdf8dbaebea3804	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	kernel-2	f3fe06845554116f3a63786f864ff07f
-_md5_=83e9d0930b3dc55f0cb9c0b8ca828d70
+_md5_=4fae5a8e734dfb595d083f041a7fe776
