@@ -10,5 +10,5 @@ RDEPEND=|| ( ~media-sound/spotify-1.2.13 ~media-sound/spotify-1.2.11 ~media-soun
 RESTRICT=test strip
 SLOT=0
 SRC_URI=https://github.com/spicetify/spicetify-cli/archive/v2.21.0.tar.gz -> spicetify-cli-2.21.0.tar.gz https://gitlab.com/api/v4/projects/37881342/packages/generic/spicetify-cli/2.21.0/spicetify-cli-2.21.0-deps.tar.xz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	67b3e3d8916d690003f645486ed86aac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	fc2af1957597c539ae6e48f82bd43125	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22
 _md5_=2a8992d4ad3ebf3974367d0e9b98a9c2
