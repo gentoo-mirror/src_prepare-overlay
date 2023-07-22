@@ -1,4 +1,4 @@
-# Alfred Wingate <parona@protonmail.com> (2023-07-22(
+# Alfred Wingate <parona@protonmail.com> (2023-07-22)
 # Unmaintained, use from other overlays like brave-overlay
 www-client/brave-bin
 
