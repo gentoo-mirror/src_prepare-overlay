@@ -1,3 +1,7 @@
+# Alfred Wingate <parona@protonmail.com> (2023-07-22(
+# Unmaintained, use from other overlays like brave-overlay
+www-client/brave-bin
+
 # Alfred Wingate <parona@protonmail.com> (2023-05-11)
 # Unmaintained patchsets.
 # ck-sources isnt updated anymore:
