@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=x11-apps/bdftopcf
 RESTRICT=mirror
 SLOT=0
-_eclasses_=git-r3	97f7f638070d17e4c2b6542589bb4575	font	aa113a3df9cd0a9693a1c1ee7c34a6eb
+_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991	font	aa113a3df9cd0a9693a1c1ee7c34a6eb
 _md5_=6265db7668daa1c6d50bfdc95fc5255d
