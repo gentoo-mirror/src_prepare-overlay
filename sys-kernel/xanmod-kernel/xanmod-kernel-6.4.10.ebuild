@@ -6,7 +6,7 @@ EAPI=8
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 6 ))
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 2 ))
 GENTOO_CONFIG_VER=g7
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
@@ -72,6 +72,7 @@ src_prepare() {
 	)
 	use debug || merge_configs+=(
 		"${dist_conf_path}"/no-debug.config
+		"${FILESDIR}"/no-debug-extra.config
 	)
 
 	kernel-build_merge_configs "${merge_configs[@]}"
