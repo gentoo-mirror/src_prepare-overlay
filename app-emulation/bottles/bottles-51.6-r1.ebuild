@@ -3,8 +3,7 @@
 
 EAPI=8
 
-# todo patool, icoextract
-PYTHON_COMPAT=( python3_{9..10} )
+PYTHON_COMPAT=( python3_{10..11} )
 inherit gnome2-utils python-single-r1 meson xdg optfeature
 
 DESCRIPTION="Run Windows software and games on Linux"
@@ -24,8 +23,7 @@ SLOT="0"
 
 IUSE="test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
-# tests are quite pointless as they check static files and releases are tagged with them still failing
-RESTRICT="test"
+RESTRICT="!test? ( test )"
 
 # Very annoying to figure out the deps
 # Script for getting python modules:
@@ -56,21 +54,26 @@ RDEPEND="
 	gui-libs/gtksourceview[introspection]
 	media-gfx/imagemagick
 	>=sys-libs/glibc-2.32
-	virtual/wine
 	x11-apps/xdpyinfo
+	|| (
+		app-emulation/wine-vanilla[X,-llvm-libunwind]
+		app-emulation/wine-staging[X,-llvm-libunwind]
+	)
 	$(python_gen_cond_dep '
 		app-arch/patool[${PYTHON_USEDEP}]
 		dev-python/FVS[${PYTHON_USEDEP}]
-		dev-python/pygobject[${PYTHON_USEDEP}]
 		dev-python/icoextract[${PYTHON_USEDEP}]
 		dev-python/markdown[${PYTHON_USEDEP}]
 		dev-python/orjson[${PYTHON_USEDEP}]
 		dev-python/pathvalidate[${PYTHON_USEDEP}]
 		dev-python/pefile[${PYTHON_USEDEP}]
+		dev-python/pycairo[${PYTHON_USEDEP}]
 		dev-python/pycurl[${PYTHON_USEDEP}]
+		dev-python/pygobject[${PYTHON_USEDEP}]
+		dev-python/pyyaml[${PYTHON_USEDEP}]
 		dev-python/requests[${PYTHON_USEDEP}]
 		dev-python/vkbasalt-cli[${PYTHON_USEDEP}]
-		dev-python/pyyaml[${PYTHON_USEDEP}]
+		dev-python/wheel[${PYTHON_USEDEP}]
 	')
 "
 BDEPEND="
@@ -79,9 +82,9 @@ BDEPEND="
 	dev-libs/glib:2
 	sys-devel/gettext
 	test? (
-		dev-libs/appstream
-		dev-libs/glib
-		dev-util/desktop-file-utils
+		$(python_gen_cond_dep '
+			dev-python/pytest[${PYTHON_USEDEP}]
+		')
 	)
 "
 
@@ -102,6 +105,10 @@ src_install() {
 	meson_src_install
 	python_optimize "${D}/usr/share/bottles/"
 	python_fix_shebang "${D}/usr/"
+}
+
+src_test() {
+	epytest
 }
 
 pkg_preinst() {

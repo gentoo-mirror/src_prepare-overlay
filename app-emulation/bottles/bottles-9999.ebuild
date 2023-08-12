@@ -54,8 +54,11 @@ RDEPEND="
 	gui-libs/gtksourceview[introspection]
 	media-gfx/imagemagick
 	>=sys-libs/glibc-2.32
-	virtual/wine
 	x11-apps/xdpyinfo
+	|| (
+		app-emulation/wine-vanilla[X,-llvm-libunwind]
+		app-emulation/wine-staging[X,-llvm-libunwind]
+	)
 	$(python_gen_cond_dep '
 		app-arch/patool[${PYTHON_USEDEP}]
 		dev-python/FVS[${PYTHON_USEDEP}]
