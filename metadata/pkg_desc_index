@@ -41,7 +41,7 @@ dev-python/sphinx-py3doc-enhanced-theme 2.4.0 2.4.0-r1: A theme based on the the
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.16 9999: Dialect of Scheme designed for Systems Programming
 dev-tex/tectonic 0.11.0 0.14.1: A modernized, complete, self-contained TeX/LaTeX engine.
-dev-tex/texlab 5.8.0 5.9.0 5.9.1: LaTeX Language Server
+dev-tex/texlab 5.9.0 5.9.1 5.9.2: LaTeX Language Server
 dev-util/beekeeper-studio 2.1.4: Modern and easy to use SQL client
 dev-util/github-desktop 2.9.3: GitHub Desktop for Linux
 dev-util/plan9port 2021.03.21 2021.10.05: Port of many Plan 9 programs and libraries
