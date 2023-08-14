@@ -59,6 +59,7 @@ CRATES="
 	expect-test@1.4.1
 	fastrand@1.9.0
 	fern@0.6.2
+	file-id@0.1.0
 	filetime@0.2.21
 	flate2@1.0.26
 	fnv@1.0.7
@@ -104,6 +105,7 @@ CRATES="
 	memoffset@0.8.0
 	miniz_oxide@0.7.1
 	mio@0.8.6
+	notify-debouncer-full@0.2.0
 	notify@6.0.1
 	num-traits@0.2.15
 	num_cpus@1.15.0
@@ -218,16 +220,18 @@ SRC_URI="
 	${CARGO_CRATE_URIS}
 "
 
+BDEPEND="sys-apps/help2man"
+
 LICENSE="GPL-3"
 LICENSE+="
-	Apache-2.0 BSD ISC MIT Unicode-DFS-2016
-	|| ( Artistic CC0-1.0 )
+	Apache-2.0 BSD ISC MIT MPL-2.0 Unicode-DFS-2016
+	|| ( Artistic-2 CC0-1.0 )
 "
 
 SLOT="0"
 KEYWORDS="~amd64"
 
-DOCS=( CHANGELOG.md README.md  docs/ )
+DOCS=( CHANGELOG.md README.md )
 
 src_configure() {
 	local myfeature=(
@@ -240,6 +244,8 @@ src_configure() {
 
 src_install() {
 	cargo_src_install --path crates/texlab
+	help2man --output=texlab.1 --no-info "target/$(usex debug debug release)/texlab" || die
+	doman texlab.1
 	einstalldocs
 }
 
