@@ -72,6 +72,7 @@ src_prepare() {
 	)
 	use debug || merge_configs+=(
 		"${dist_conf_path}"/no-debug.config
+		"${FILESDIR}"/no-debug-extra.config
 	)
 
 	kernel-build_merge_configs "${merge_configs[@]}"
