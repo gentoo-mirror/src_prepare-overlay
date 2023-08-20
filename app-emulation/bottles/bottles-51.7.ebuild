@@ -54,11 +54,18 @@ RDEPEND="
 	gui-libs/gtksourceview[introspection]
 	media-gfx/imagemagick
 	>=sys-libs/glibc-2.32
-	virtual/wine
 	x11-apps/xdpyinfo
+	|| (
+		app-emulation/wine-vanilla[X,-llvm-libunwind]
+		app-emulation/wine-staging[X,-llvm-libunwind]
+	)
 	$(python_gen_cond_dep '
 		app-arch/patool[${PYTHON_USEDEP}]
+		dev-python/certifi[${PYTHON_USEDEP}]
+		dev-python/chardet[${PYTHON_USEDEP}]
+		dev-python/charset-normalizer[${PYTHON_USEDEP}]
 		dev-python/FVS[${PYTHON_USEDEP}]
+		dev-python/idna[${PYTHON_USEDEP}]
 		dev-python/icoextract[${PYTHON_USEDEP}]
 		dev-python/markdown[${PYTHON_USEDEP}]
 		dev-python/orjson[${PYTHON_USEDEP}]
@@ -69,6 +76,7 @@ RDEPEND="
 		dev-python/pygobject[${PYTHON_USEDEP}]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
 		dev-python/requests[${PYTHON_USEDEP}]
+		dev-python/urllib3[${PYTHON_USEDEP}]
 		dev-python/vkbasalt-cli[${PYTHON_USEDEP}]
 		dev-python/wheel[${PYTHON_USEDEP}]
 	')
