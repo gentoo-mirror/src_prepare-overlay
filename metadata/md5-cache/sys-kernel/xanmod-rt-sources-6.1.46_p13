@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DESCRIPTION=Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
+EAPI=8
+HOMEPAGE=https://xanmod.org
+INHERIT=kernel-2
+IUSE=symlink build
+KEYWORDS=~amd64
+LICENSE=GPL-2 CDDL
+RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+RESTRICT=binchecks strip
+SLOT=6.1.46_p13
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.1.tar.xz mirror://sourceforge/xanmod/patch-6.1.46-rt13-xanmod1.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-52.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-52.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.1-52.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.1-52.extras.tar.xz
+_eclasses_=estack	c61c368a76fdf3a82fdf8dbaebea3804	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	kernel-2	552a82e0738a2db29ddba6e36373405b
+_md5_=bb51113fa585a6fb97958ca9dd1611f0
