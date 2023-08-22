@@ -14,7 +14,7 @@ app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU
 app-emacs/plz 9999: An HTTP library that uses curl as a backend
 app-emacs/ts 9999: Timestamp and date/time library
 app-emulation/anbox 20211020 99999999: Container-based approach to boot a full Android system
-app-emulation/bottles 51.6-r1 51.7 9999: Run Windows software and games on Linux
+app-emulation/bottles 51.7 51.9 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
