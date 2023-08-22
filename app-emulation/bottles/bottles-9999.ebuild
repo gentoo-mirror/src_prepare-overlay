@@ -93,6 +93,14 @@ BDEPEND="
 	)
 "
 
+EPYTEST_DESELECT=(
+	# tests that check execution time are flaky in the right circumstances
+	# (like compiling llvm at the same time type circumstance)
+	"bottles/tests/backend/state/test_events.py::test_set_reset"
+	"bottles/tests/backend/state/test_events.py::test_simple_event"
+	"bottles/tests/backend/state/test_events.py::test_wait_after_done_event"
+)
+
 pkg_setup() {
 	python-single-r1_pkg_setup
 }
