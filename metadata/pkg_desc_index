@@ -95,12 +95,12 @@ sci-mathematics/scilab-bin 6.1.0: Scientific software package for numerical comp
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.5.77 1.5.109: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.6.2 1.7.2 1.7.3 9999: Raspberry Pi Imaging Utility
-sys-kernel/xanmod-kernel 6.1.45 6.1.46 6.4.10 6.4.11: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-kernel 6.1.46 6.1.47 6.4.11 6.4.12: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-kernel 6.1.38_p12 6.1.46_p13: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-sources 6.1.38_p12 6.1.46_p13: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
-sys-kernel/xanmod-sources 6.1.45 6.1.46 6.4.10 6.4.11: Full XanMod sources with cacule option and including the Gentoo patchset
+sys-kernel/xanmod-sources 6.1.46 6.1.47 6.4.11 6.4.12: Full XanMod sources with cacule option and including the Gentoo patchset
 sys-process/nq 0.3.1 9999: Unix command line queue utility
-virtual/dist-kernel 6.1.45 6.1.46 6.1.46_p13 6.4.10 6.4.11: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.1.46 6.1.46_p13 6.1.47 6.4.11 6.4.12: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
 www-apps/icecoder 8.0: Browser code editor awesomeness
 www-client/icecat 102.13.0 102.14.0: GNU IceCat Web Browser
