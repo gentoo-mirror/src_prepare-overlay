@@ -1,21 +1,14 @@
-# Alfred Wingate <parona@protonmail.com> (2023-07-22)
-# Unmaintained, use from other overlays like brave-overlay
-www-client/brave-bin
-
-# Alfred Wingate <parona@protonmail.com> (2023-05-11)
-# Unmaintained patchsets.
-# ck-sources isnt updated anymore:
-#  https://ck-hack.blogspot.com/2021/08/514-and-future-of-muqss-and-ck-once.html
-# Use liquorix-sources from ::thegreatmcpain
-# Use zen-sources from ::kzd or ::gentoo.
-sys-kernel/ck-sources
-sys-kernel/liquorix-sources
-sys-kernel/zen-sources
-
-# Alfred Wingate <parona@protonmail.com> (2023-05-11)
-# Not maintained well, use pf4public instead.
-www-client/ungoogled-chromium-bin
-
-# Maciej Barć <xgqt@gentoo.org> (2022-08-05)
-# Please, use www-apps/jellyfin from the official ::gentoo repo instead.
-www-servers/jellyfin-bin
+# Alfred Wingate <parona@protonmail.com> (2023-08-31)
+# Indiscriminate mask of packages with NonsolvableDepsInStable
+# Fix or remove
+app-emacs/ement
+app-emacs/ement-extras
+app-portage/gen-pkgs
+dev-lang/dafny
+dev-lang/fstar
+games-fps/quake15
+games-rpg/fallout1
+games-util/lgogdownloader-export-credentials
+net-analyzer/sensu
+net-im/pantalaimon
+sys-boot/etcher-bin
