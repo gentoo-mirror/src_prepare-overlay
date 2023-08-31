@@ -1,3 +1,18 @@
+# Alfred Wingate <parona@protonmail.com> (2023-08-31)
+# Indiscriminate mask of packages with NonsolvableDepsInStable
+# Fix or remove
+app-emacs/ement
+app-emacs/ement-extras
+app-portage/gen-pkgs
+dev-lang/dafny
+dev-lang/fstar
+games-fps/quake15
+games-rpg/fallout1
+games-util/lgogdownloader-export-credentials
+net-analyzer/sensu
+net-im/pantalaimon
+sys-boot/etcher-bin
+
 # Alfred Wingate <parona@protonmail.com> (2023-07-22)
 # Unmaintained, use from other overlays like brave-overlay
 www-client/brave-bin
