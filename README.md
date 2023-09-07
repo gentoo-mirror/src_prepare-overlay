@@ -51,14 +51,6 @@ The src_prepare project doesn't want to overtake or compete with the GURU projec
 
 ### Official list
 
-#### Layman
-
-If you are using [Layman](https://wiki.gentoo.org/wiki/Layman), execute:
-
-``` sh
-layman -a src_prepare-overlay
-```
-
 #### eselect-repository
 
 If you are using [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository), execute:
@@ -70,14 +62,6 @@ eselect repository enable src_prepare-overlay
 ### Manual
 
 If you want to manually add the overlay, see [examples/repos.conf/src_prepare-overlay.conf](examples/repos.conf/src_prepare-overlay.conf).
-
-#### Layman
-
-If you are using [Layman](https://wiki.gentoo.org/wiki/Layman), execute:
-
-``` sh
-layman -o 'https://gitlab.com/src_prepare/src_prepare-overlay/raw/master/repositories.xml' -f -a src_prepare-overlay
-```
 
 #### eselect-repository
 
