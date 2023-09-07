@@ -30,7 +30,7 @@ IUSE="X wayland systemd"
 DEPEND="
 	>=app-containers/lxc-3.0.0
 	dev-cpp/properties-cpp
-	dev-cpp/sdbus-cpp
+	dev-cpp/sdbus-c++
 	dev-cpp/gtest
 	dev-libs/boost[threads(+)]
 	dev-libs/expat
