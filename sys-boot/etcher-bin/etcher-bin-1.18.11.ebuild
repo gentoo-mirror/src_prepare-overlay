@@ -18,7 +18,6 @@ KEYWORDS="~amd64"
 
 RDEPEND="
 	app-arch/lzma
-	dev-libs/atk
 	dev-libs/expat
 	dev-libs/libappindicator
 	dev-libs/nss
