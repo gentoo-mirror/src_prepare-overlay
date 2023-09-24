@@ -21,7 +21,7 @@ fi
 LICENSE="GPL-3"
 SLOT="0"
 
-IUSE="test"
+IUSE="test llvm-libunwind"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RESTRICT="!test? ( test )"
 
@@ -55,9 +55,18 @@ RDEPEND="
 	media-gfx/imagemagick
 	>=sys-libs/glibc-2.32
 	x11-apps/xdpyinfo
-	|| (
-		app-emulation/wine-vanilla[X,-llvm-libunwind]
-		app-emulation/wine-staging[X,-llvm-libunwind]
+	llvm-libunwind? (
+		|| (
+			app-emulation/wine-vanilla[X,llvm-libunwind]
+			app-emulation/wine-staging[X,llvm-libunwind]
+		)
+	)
+	!llvm-libunwind? (
+		|| (
+			app-emulation/wine-vanilla[X,-llvm-libunwind]
+			app-emulation/wine-staging[X,-llvm-libunwind]
+			app-emulation/wine-proton[X(+),-llvm-libunwind]
+		)
 	)
 	$(python_gen_cond_dep '
 		app-arch/patool[${PYTHON_USEDEP}]
@@ -93,12 +102,20 @@ BDEPEND="
 	)
 "
 
+EPYTEST_DESELECT=(
+	# tests that check execution time are flaky in the right circumstances
+	# (like compiling llvm at the same time type circumstance)
+	"bottles/tests/backend/state/test_events.py::test_set_reset"
+	"bottles/tests/backend/state/test_events.py::test_simple_event"
+	"bottles/tests/backend/state/test_events.py::test_wait_after_done_event"
+)
+
 pkg_setup() {
 	python-single-r1_pkg_setup
 }
 
 src_configure() {
-	if  [[ "${PV}" == "9999" ]]; then
+	if [[ "${PV}" == "9999" ]]; then
 		local emesonargs=(
 			-Ddevel=true
 		)
@@ -129,4 +146,9 @@ pkg_postinst() {
 	optfeature "vmtouch support" dev-utils/vmtouch
 	#optfeature "MangoHub support" games-util/mangohub
 	#optfeature "obs-vkcapture support" media-video/obs-vkcapture
+	if !use llvm-libunwind; then
+		ewarn "When using llvm-libunwind useflag all wine version besides\n"
+		ewarn "wine-vanilla and wine-staging are broken (including the runner dowloading from bottles itself)\n"
+		ewarn "So when using llvm-libunwind system wide is recommended to stick only to system wine mentioned above\n"
+	fi
 }
