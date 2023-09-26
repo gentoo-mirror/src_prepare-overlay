@@ -1,3 +1,7 @@
+# Alfred Wingate <paronta@protonmail.com> (2023-09-26)
+# Uses php-7 which has been removed from tree
+www-apps/icecoder
+
 # Alfred Wingate <parona@protonmail.com> (2023-09-07)
 # Deprecated.
 # https://github.com/anbox/anbox#important---hi-there-
