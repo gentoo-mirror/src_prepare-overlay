@@ -20,4 +20,3 @@ games-rpg/fallout1
 games-util/lgogdownloader-export-credentials
 net-analyzer/sensu
 net-im/pantalaimon
-sys-boot/etcher-bin
