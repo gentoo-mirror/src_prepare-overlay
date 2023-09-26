@@ -13,7 +13,6 @@ app-emulation/anbox
 app-emacs/ement
 app-emacs/ement-extras
 app-portage/gen-pkgs
-dev-lang/dafny
 dev-lang/fstar
 games-fps/quake15
 games-rpg/fallout1
