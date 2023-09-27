@@ -9,25 +9,12 @@ inherit perl-module
 DESCRIPTION="Perl extension for renaming multiple files"
 SLOT="0"
 KEYWORDS="~amd64"
-# No virtuals for
-#   Pod::Usage
-#   File::Basename
 
-RDEPEND="
-	>=virtual/perl-ExtUtils-MakeMaker-7.36
-	virtual/perl-File-Spec
-	>=virtual/perl-Getopt-Long-2.24
-"
+RDEPEND=">=virtual/perl-Getopt-Long-2.24"
 BDEPEND="
-	test? (
-		${RDEPEND}
-		virtual/perl-File-Temp
-	)
+	>=virtual/perl-ExtUtils-MakeMaker-7.36
+	test? ( ${RDEPEND} )
 "
-#BDEPEND="
-#	dev-perl/Module-Build
-#	virtual/perl-File-Spec
-#"
 
 # There are differences between distributions on the name of this binary.
 # currently Debian derivatives call it prename while Arch derivatives call
