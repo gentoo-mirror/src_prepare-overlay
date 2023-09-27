@@ -38,6 +38,16 @@ pkgcheck_full_scan:
   script:
     - pkgcheck ci $common_pkgcheck_args
 
+pkgcheck_strict_scan:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+      when: never
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+      when: manual
+  script:
+    # temporarily disable BadDefaultUseFlags
+    - pkgcheck ci -k error,-BadDefaultUseFlags $common_pkgcheck_args
+
 pkgcheck_merge:
   rules:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
