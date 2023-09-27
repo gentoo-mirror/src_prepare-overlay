@@ -1,9 +1,9 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit gnome2-utils meson python-single-r1 xdg
 
@@ -12,13 +12,11 @@ HOMEPAGE="https://github.com/maoschanz/drawing"
 
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/maoschanz/${PN}.git"
+	EGIT_REPO_URI="https://github.com/maoschanz/drawing.git"
 else
-	SRC_URI="https://github.com/maoschanz/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/maoschanz/drawing/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 fi
-
-IUSE="doc"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -30,22 +28,24 @@ RESTRICT="test"
 DEPEND="
 	${PYTHON_DEPS}
 	dev-libs/glib:2
-	dev-python/pygobject[cairo]
 	x11-libs/gtk+:3
+	$(python_gen_cond_dep '
+		dev-python/pygobject[cairo,${PYTHON_USEDEP}]
+	')
 "
 RDEPEND="
 	${DEPEND}
 "
 BDEPEND="
-	doc? (
-		dev-util/itstool
-		sys-devel/gettext
-	)
+	dev-libs/appstream-glib
+	dev-util/itstool
+	sys-devel/gettext
 "
 
 src_configure() {
 	local emesonargs=(
-		$(meson_use doc enable-translation-and-appdate)
+		-Denable-translations-and-appdata=true
+		-Duse-uuid-as-binary-name=false
 	)
 	meson_src_configure
 }
