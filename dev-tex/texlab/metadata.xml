@@ -6,6 +6,7 @@
     <name>Alfred Wingate</name>
   </maintainer>
   <upstream>
+    <doc>https://github.com/latex-lsp/texlab/wiki</doc>
     <remote-id type="github">latex-lsp/texlab</remote-id>
   </upstream>
 </pkgmetadata>
