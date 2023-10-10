@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -13,6 +13,8 @@ S="${WORKDIR}/usr/lib/github-desktop"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64"
+
+RDEPEND="dev-libs/openssl-compat:1.1.1"
 
 src_install() {
 	domenu ../../share/applications/github-desktop.desktop
