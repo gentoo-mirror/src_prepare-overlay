@@ -40,6 +40,7 @@ pkgcheck_full_scan:
 
 pkgcheck_strict_scan:
   rules:
+    - if: $CI_PIPELINE_SOURCE == 'push'
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
       when: never
     - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
