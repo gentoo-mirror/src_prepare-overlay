@@ -6,6 +6,7 @@ EAPI=8
 inherit go-module
 
 WHITELIST_VERSIONS=(
+	"~ 1.2.22"
 	"~ 1.2.20"
 	"~ 1.2.13"
 	"~ 1.2.11"
