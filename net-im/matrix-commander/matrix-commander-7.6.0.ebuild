@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 # Tests are a bunch shell scripts and lone python script
-# Not gonna bother
+# Not gonna bother as they require testing against a running matrix server
 RESTRICT="test"
 
 RDEPEND="
