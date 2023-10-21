@@ -8,8 +8,8 @@ inherit kernel-build
 MY_P=linux-${PV%.*}
 MY_PV="${PV%_p*}"
 
-GENPATCHES_P=genpatches-${MY_PV%.*}-$(( ${MY_PV##*.} + 6 ))
-GENTOO_CONFIG_VER=g7
+GENPATCHES_P=genpatches-${MY_PV%.*}-$(( ${MY_PV##*.} + 7 ))
+GENTOO_CONFIG_VER=g9
 
 RT_PATCHSET="${PV/*_p}"
 
@@ -24,6 +24,7 @@ SRC_URI="
 		-> gentoo-kernel-config-${GENTOO_CONFIG_VER}.tar.gz
 "
 S=${WORKDIR}/${MY_P}
+SLOT="${MY_PV}"
 
 LICENSE="GPL-2"
 KEYWORDS="-* ~amd64"
