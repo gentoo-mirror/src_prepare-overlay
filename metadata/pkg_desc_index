@@ -98,7 +98,7 @@ sys-process/nq 0.3.1 9999: Unix command line queue utility
 virtual/dist-kernel 6.1.54_p15 6.1.57 6.1.59-r1 6.5.7 6.5.8: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
 www-apps/icecoder 8.0: Browser code editor awesomeness
-www-client/icecat 115.3.0: GNU IceCat Web Browser
+www-client/icecat 115.3.0 115.4.0: GNU IceCat Web Browser
 www-client/makeicecat 115.3.0: Script for creating GNU Icecat tarball
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
 x11-misc/portfolio 1.0.0 9999: Minimalist file manager for those who want to use Linux mobile devices
