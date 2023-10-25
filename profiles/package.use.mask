@@ -1,0 +1,8 @@
+# Copyright 1999-2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# New entries go on top.
+
+# Alfred Wingate <parona@protonmail.com> (2023-10-25)
+# pgo is broken and gets stuck.
+>=www-client/icecat-115.0.0 pgo
