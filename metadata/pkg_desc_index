@@ -17,7 +17,7 @@ app-emulation/bottles 51.9 51.9-r1 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
-app-misc/spicetify-cli 2.25.2 2.25.3: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.25.3 2.26.0: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.0-r1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.0.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
@@ -36,7 +36,7 @@ dev-python/sphinx-py3doc-enhanced-theme 2.4.0 2.4.0-r1: A theme based on the the
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.16 9999: Dialect of Scheme designed for Systems Programming
 dev-tex/tectonic 0.14.1: A modernized, complete, self-contained TeX/LaTeX engine.
-dev-tex/texlab 5.10.0 5.10.1: LaTeX Language Server
+dev-tex/texlab 5.10.0 5.10.1 5.11.0: LaTeX Language Server
 dev-util/beekeeper-studio 2.1.4: Modern and easy to use SQL client
 dev-util/github-desktop 2.9.3-r1: GitHub Desktop for Linux
 dev-util/plan9port 2023.09.13: Port of many Plan 9 programs and libraries
