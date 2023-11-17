@@ -20,7 +20,10 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	>=dev-libs/olm-3.1.3[python(-),${PYTHON_USEDEP}]
+	|| (
+		>=dev-python/python-olm-3.1.3[${PYTHON_USEDEP}]
+		>=dev-libs/olm-3.1.3[python(-),${PYTHON_USEDEP}]
+	)
 	>=dev-python/aiohttp-3.8.3[${PYTHON_USEDEP}]
 	>=dev-python/aiohttp-socks-0.7.0[${PYTHON_USEDEP}]
 	>=dev-python/aiofiles-23.1.0[${PYTHON_USEDEP}]
