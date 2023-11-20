@@ -20,7 +20,7 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	>=dev-libs/olm-3.1.3[python(-),${PYTHON_USEDEP}]
+	>=dev-python/python-olm-3.2.15[${PYTHON_USEDEP}]
 	>=dev-python/aiohttp-3.8.3[${PYTHON_USEDEP}]
 	>=dev-python/aiohttp-socks-0.7.0[${PYTHON_USEDEP}]
 	>=dev-python/aiofiles-23.1.0[${PYTHON_USEDEP}]
@@ -29,7 +29,7 @@ RDEPEND="
 	>=dev-python/h11-0.14.0[${PYTHON_USEDEP}]
 	>=dev-python/h2-4.0.0[${PYTHON_USEDEP}]
 	>=dev-python/jsonschema-4.4.0[${PYTHON_USEDEP}]
-	>=dev-python/peewee-3.14.4[${PYTHON_USEDEP}]
+	>=dev-python/peewee-3.17.0[${PYTHON_USEDEP}]
 	>=dev-python/pycryptodome-3.10.1[${PYTHON_USEDEP}]
 	>=dev-python/unpaddedbase64-2.1.0[${PYTHON_USEDEP}]
 "
