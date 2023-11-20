@@ -23,7 +23,6 @@ app-portage/gen-pkgs 1.0.0 9999: Create HTML page based off of a given overlay U
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
 dev-lang/fstar 2021.11.27: Verification system for effectful programs
 dev-lang/lci 0.11.2: LOLCODE interpreter written in C
-dev-libs/olm 3.2.15: An implementation of the Double Ratchet cryptographic ratchet in C++
 dev-libs/sdl-kitchensink 1.0.8-r1: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
 dev-perl/File-Rename 2.01-r1: Perl extension for renaming multiple files
 dev-python/FVS 0.3.4-r1: File Versioning System with hash comparison
@@ -31,7 +30,8 @@ dev-python/aspectlib 2.0.0: An aspect-oriented programming, monkey-patch and dec
 dev-python/icoextract 0.1.4: Extract icons from Windows PE files (.exe/.dll)
 dev-python/janus 1.0.0: Thread-safe asyncio-aware queue for Python
 dev-python/m2r2 0.2.8: Markdown to reStructuredText converter
-dev-python/matrix-nio 0.22.1: A Python Matrix client library, designed according to sans I/O principles
+dev-python/matrix-nio 0.22.1-r1 0.23.0: A Python Matrix client library, designed according to sans I/O principles
+dev-python/python-olm 3.2.15: python CFFI bindings for the olm cryptographic ratchet library
 dev-python/sphinx-py3doc-enhanced-theme 2.4.0 2.4.0-r1: A theme based on the theme of https://docs.python.org/3/.
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.16 9999: Dialect of Scheme designed for Systems Programming
@@ -97,7 +97,6 @@ sys-kernel/xanmod-sources 6.1.60 6.1.61 6.1.62 6.5.9 6.5.10 6.5.11 6.6.0 6.6.1: 
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 virtual/dist-kernel 6.1.59-r1 6.1.60 6.1.61 6.1.62 6.5.9 6.5.10 6.5.11 6.6.0 6.6.1: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
-www-apps/icecoder 8.0: Browser code editor awesomeness
 www-client/icecat 115.3.0 115.4.0: GNU IceCat Web Browser
 www-client/makeicecat 115.3.0: Script for creating GNU Icecat tarball
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
