@@ -1,0 +1,114 @@
+From c0be008217350f03de7f856866a402d95b5db2a3 Mon Sep 17 00:00:00 2001
+From: Alfred Wingate <parona@protonmail.com>
+Date: Tue, 21 Nov 2023 15:13:35 +0200
+Subject: [PATCH] Move metadata to project.toml
+
+* Setuptools 69.0.0 deprecated a slew of old style configurations.
+
+Signed-off-by: Alfred Wingate <parona@protonmail.com>
+---
+ python/olm/__version__.py |  9 ---------
+ python/pyproject.toml     | 14 +++++++++++---
+ python/setup.cfg          |  3 ---
+ python/setup.py           | 29 +----------------------------
+ 4 files changed, 12 insertions(+), 43 deletions(-)
+ delete mode 100644 python/olm/__version__.py
+
+diff --git a/python/olm/__version__.py b/python/olm/__version__.py
+deleted file mode 100644
+index a3144ae..0000000
+--- a/python/olm/__version__.py
++++ /dev/null
+@@ -1,9 +0,0 @@
+-__title__ = "python-olm"
+-__description__ = ("python CFFI bindings for the olm "
+-                   "cryptographic ratchet library")
+-__url__ = "https://gitlab.matrix.org/matrix-org/olm/-/tree/master/python"
+-__version__ = "3.2.15"
+-__author__ = "Damir Jelić"
+-__author_email__ = "poljar@termina.org.uk"
+-__license__ = "Apache 2.0"
+-__copyright__ = "Copyright 2018-2019 Damir Jelić, 2019-2023 The Matrix.org Foundation C.I.C."
+diff --git a/python/pyproject.toml b/python/pyproject.toml
+index 3416456..1db7b7d 100644
+--- a/python/pyproject.toml
++++ b/python/pyproject.toml
+@@ -1,14 +1,22 @@
++[build-system]
++requires = ["setuptools", "cffi>=1.0.0"]
++build-backend = "setuptools.build_meta"
++
+ [project]
+ name = "python-olm"
+ version = "3.2.15"
+ description = "python CFFI bindings for the olm cryptographic ratchet library"
+ authors = [{name = "Damir Jelić", email = "poljar@termina.org.uk"}]
++license = {text = "Apache-2.0"}
++readme = "README.md"
+ classifiers = [
+     "License :: OSI Approved :: Apache Software License",
+     "Topic :: Communications",
+ ]
+ dependencies = ["cffi>=1.0.0"]
+ 
+-[build-system]
+-requires = ["setuptools", "cffi>=1.0.0"]
+-build-backend = "setuptools.build_meta"
++[project.urls]
++homepage = "https://gitlab.matrix.org/matrix-org/olm/-/tree/master/python"
++
++[tool.setuptools]
++packages = [ "olm" ]
+diff --git a/python/setup.cfg b/python/setup.cfg
+index d10b7e4..1be5f25 100644
+--- a/python/setup.cfg
++++ b/python/setup.cfg
+@@ -3,6 +3,3 @@ testpaths = tests
+ flake8-ignore =
+     olm/*.py F401
+     tests/*.py W503
+-
+-[coverage:run]
+-omit=olm/__version__.py
+diff --git a/python/setup.py b/python/setup.py
+index 3314b8a..4f52965 100644
+--- a/python/setup.py
++++ b/python/setup.py
+@@ -1,33 +1,6 @@
+ # -*- coding: utf-8 -*-
+-
+-import os
+-from codecs import open
+-
+ from setuptools import setup
+ 
+-here = os.path.abspath(os.path.dirname(__file__))
+-
+-about = {}
+-with open(os.path.join(here, "olm", "__version__.py"), "r", "utf-8") as f:
+-    exec(f.read(), about)
+-
+ setup(
+-    name=about["__title__"],
+-    version=about["__version__"],
+-    description=about["__description__"],
+-    author=about["__author__"],
+-    author_email=about["__author_email__"],
+-    url=about["__url__"],
+-    license=about["__license__"],
+-    packages=["olm"],
+-    setup_requires=["cffi>=1.0.0"],
+-    cffi_modules=["olm_build.py:ffibuilder"],
+-    install_requires=[
+-        "cffi>=1.0.0",
+-        "typing;python_version<'3.5'"
+-    ],
+-    zip_safe=False,
+-    package_data={
+-        "olm": ["py.typed"]
+-    }
++    cffi_modules=["olm_build.py:ffibuilder"]
+ )
+-- 
+2.43.0
+
