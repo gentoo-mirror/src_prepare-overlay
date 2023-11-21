@@ -1,19 +1,22 @@
-# Copyright 2021-2022 Gentoo Authors
+# Copyright 2021-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{9..10} )
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{10..11} )
 inherit distutils-r1
 
 DESCRIPTION="A Matrix proxy daemon that adds E2E encryption capabilities"
 HOMEPAGE="https://github.com/matrix-org/pantalaimon"
+# tests not included in sdist
 SRC_URI="https://github.com/matrix-org/pantalaimon/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
+# lets relax dbus-python, matrix-nio and pygobject
 RDEPEND="
 	>=dev-python/attrs-19.3.0[${PYTHON_USEDEP}]
 	>=dev-python/aiohttp-3.6[${PYTHON_USEDEP}]
@@ -21,24 +24,20 @@ RDEPEND="
 	>=dev-python/appdirs-1.4.4[${PYTHON_USEDEP}]
 	>=dev-python/cachetools-3.0.0[${PYTHON_USEDEP}]
 	>=dev-python/click-7.1.2[${PYTHON_USEDEP}]
-	>=dev-python/dbus-python-1.2[${PYTHON_USEDEP}]
-	<dev-python/dbus-python-1.3[${PYTHON_USEDEP}]
+	dev-python/dbus-python[${PYTHON_USEDEP}]
 	>=dev-python/janus-0.5[${PYTHON_USEDEP}]
 	>=dev-python/keyring-21.2.1[${PYTHON_USEDEP}]
 	>=dev-python/logbook-1.5.3[${PYTHON_USEDEP}]
-	>=dev-python/matrix-nio-0.18[e2e(+),${PYTHON_USEDEP}]
-	<dev-python/matrix-nio-0.20[e2e(+),${PYTHON_USEDEP}]
+	dev-python/matrix-nio[e2e(+),${PYTHON_USEDEP}]
 	>=dev-python/notify2-0.3[${PYTHON_USEDEP}]
 	<dev-python/notify2-0.4[${PYTHON_USEDEP}]
 	>=dev-python/peewee-3.13.1[${PYTHON_USEDEP}]
-	>dev-python/prompt_toolkit-2[${PYTHON_USEDEP}]
-	<dev-python/prompt_toolkit-4[${PYTHON_USEDEP}]
+	>=dev-python/prompt-toolkit-3[${PYTHON_USEDEP}]
+	<dev-python/prompt-toolkit-4[${PYTHON_USEDEP}]
 	>=dev-python/pydbus-0.6[${PYTHON_USEDEP}]
 	<dev-python/pydbus-0.7[${PYTHON_USEDEP}]
-	>=dev-python/pygobject-3.36[${PYTHON_USEDEP}]
+	dev-python/pygobject[${PYTHON_USEDEP}]
 "
-# lets relax the dependency
-#	<dev-python/pygobject-3.40[${PYTHON_USEDEP}]
 BDEPEND="
 	test? (
 		${RDEPEND}

@@ -38,3 +38,14 @@ EPYTEST_DESELECT=(
 	"tests/group_session_test.py::TestClass::test_encrypt"
 	"tests/group_session_test.py::TestClass::test_decrypt"
 )
+
+PATCHES=(
+	"${FILESDIR}"/python-olm-3.2.15-move-metadata-to-pyproject.patch
+)
+
+src_prepare() {
+	pushd "${WORKDIR}/olm-${PV}" > /dev/null || die
+	eapply "${PATCHES[@]}"
+	eapply_user
+	popd > /dev/null || die
+}
