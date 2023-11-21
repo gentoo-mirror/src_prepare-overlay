@@ -9,4 +9,3 @@ games-fps/quake15
 games-rpg/fallout1
 games-util/lgogdownloader-export-credentials
 net-analyzer/sensu
-net-im/pantalaimon
