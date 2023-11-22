@@ -43,7 +43,6 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 #TODO: python
 
