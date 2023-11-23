@@ -3,5 +3,6 @@
 <pkgmetadata>
     <upstream>
         <remote-id type="gitlab">vala-panel-project/vala-panel</remote-id>
+        <remote-id type="github">rilian-la-te/vala-panel</remote-id>
     </upstream>
 </pkgmetadata>
