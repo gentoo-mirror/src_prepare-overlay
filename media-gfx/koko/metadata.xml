@@ -5,4 +5,7 @@
         <email>xgqt@protonmail.com</email>
         <name>Maciej Barć</name>
     </maintainer>
+    <upstream>
+      <remote-id type="kde-invent">graphics/koko</remote-id>
+    </upstream>
 </pkgmetadata>
