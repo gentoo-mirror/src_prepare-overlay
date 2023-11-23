@@ -5,6 +5,9 @@
         <email>xgqt@protonmail.com</email>
         <name>Maciej Barć</name>
     </maintainer>
+    <upstream>
+        <remote-id type="gnome-gitlab">ZanderBrown/kgx</remote-id>
+    </upstream>
     <use>
         <flag name="generic">
             Present using the generic name "Terminal"
