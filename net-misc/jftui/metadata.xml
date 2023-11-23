@@ -7,6 +7,7 @@
     </maintainer>
     <upstream>
         <remote-id type="gitlab">Aanok/jftui</remote-id>
+        <remote-id type="github">Aanok/jftui</remote-id>
     </upstream>
     <longdescription>
         jftui is a minimalistic, lightweight C99 command line client for the open source Jellyfin media server.

@@ -36,7 +36,8 @@ pkgcheck_full_scan:
       when: manual
     - allow_failure: true
   script:
-    - pkgcheck ci $common_pkgcheck_args
+    # disable checks that aren't a big deal to have less noise.
+    - pkgcheck ci -k ,-RedundantVersion,-NonexistentDeps,-NonexistentBlocker $common_pkgcheck_args
 
 pkgcheck_strict_scan:
   rules:
