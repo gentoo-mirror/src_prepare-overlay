@@ -5,6 +5,9 @@
 		<email>y0rune@aol.com</email>
 		<name>Marcin Woźniak</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">meganz/sdk</remote-id>
+	</upstream>
 	<use>
 		<flag name="freeimage">Enable support for image I/O via media-libs/freeimage</flag>
 		<flag name="fuse">Build FUSE-based example client</flag>
