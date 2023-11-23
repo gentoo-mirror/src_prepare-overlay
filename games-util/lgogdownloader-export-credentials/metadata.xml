@@ -5,4 +5,7 @@
 		<email>moog621@gmail.com</email>
 		<name>Michał Dec</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">grepwood/lgogdownloader-export-credentials</remote-id>
+	</upstream>
 </pkgmetadata>
