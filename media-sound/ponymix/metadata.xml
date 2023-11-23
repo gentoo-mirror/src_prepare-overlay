@@ -5,4 +5,7 @@
 		<email>y0rune@aol.com</email>
 		<name>Marcin Woźniak</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">falconindy/ponymix</remote-id>
+	</upstream>
 </pkgmetadata>
