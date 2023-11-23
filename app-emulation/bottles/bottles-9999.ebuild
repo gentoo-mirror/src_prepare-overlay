@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 inherit gnome2-utils python-single-r1 meson xdg optfeature
 
 DESCRIPTION="Run Windows software and games on Linux"
@@ -146,7 +146,7 @@ pkg_postinst() {
 	optfeature "vmtouch support" dev-utils/vmtouch
 	#optfeature "MangoHub support" games-util/mangohub
 	#optfeature "obs-vkcapture support" media-video/obs-vkcapture
-	if !use llvm-libunwind; then
+	if ! use llvm-libunwind; then
 		ewarn "When using llvm-libunwind useflag all wine version besides\n"
 		ewarn "wine-vanilla and wine-staging are broken (including the runner dowloading from bottles itself)\n"
 		ewarn "So when using llvm-libunwind system wide is recommended to stick only to system wine mentioned above\n"
