@@ -6,6 +6,6 @@
         <name>Maciej Barć</name>
     </maintainer>
     <upstream>
-        <remote-id type="gitlab">jaseg/lolcat</remote-id>
+        <remote-id type="github">jaseg/lolcat</remote-id>
     </upstream>
 </pkgmetadata>
