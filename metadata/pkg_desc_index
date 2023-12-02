@@ -90,10 +90,10 @@ sci-mathematics/scilab-bin 6.1.0: Scientific software package for numerical comp
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.6.2 1.7.2 1.7.3 9999: Raspberry Pi Imaging Utility
-sys-kernel/xanmod-kernel 6.1.63 6.1.64 6.5.12 6.5.13 6.6.2 6.6.3: Linux kernel built with XanMod and Gentoo patches
-sys-kernel/xanmod-rt-kernel 6.1.59_p16: Linux kernel built with XanMod and Gentoo patches
-sys-kernel/xanmod-rt-sources 6.1.59_p16: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
-sys-kernel/xanmod-sources 6.1.63 6.1.64 6.5.12 6.5.13 6.6.2 6.6.3: Full XanMod sources including the Gentoo patchset
+sys-kernel/xanmod-kernel 6.1.63 6.1.64 6.1.64-r1 6.5.12 6.5.13 6.5.13-r1 6.6.2 6.6.3 6.6.3-r1: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-rt-kernel 6.1.59_p16 6.1.64_p17: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-rt-sources 6.1.59_p16 6.1.64_p17: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
+sys-kernel/xanmod-sources 6.1.63 6.1.64 6.1.64-r1 6.5.12 6.5.13 6.5.13-r1 6.6.2 6.6.3 6.6.3-r1: Full XanMod sources including the Gentoo patchset
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 virtual/dist-kernel 6.1.59-r1 6.1.63 6.1.64 6.5.12 6.5.13 6.6.2 6.6.3: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
