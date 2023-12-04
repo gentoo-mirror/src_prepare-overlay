@@ -9,10 +9,13 @@ app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic
 app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
 app-editors/rehex 0.3.0 9999: Reverse Engineers' Hex Editor
 app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
-app-emacs/ement 9999: Matrix client for GNU Emacs
+app-emacs/ement 0.13 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
-app-emacs/plz 9999: An HTTP library that uses curl as a backend
-app-emacs/ts 9999: Timestamp and date/time library
+app-emacs/plz 0.7 9999: An HTTP library for Emacs
+app-emacs/svg-lib 0.2.7 9999: Emacs SVG libraries for creatings tags, icons and bars
+app-emacs/taxy 0.10.1 9999: Programmable taxonomical hierarchies for arbitrary objects
+app-emacs/taxy-magit-section 0.12.2 9999: Programmable taxonomical hierarchies for arbitrary objects
+app-emacs/ts 0.2.2 9999: Timestamp and date/time library
 app-emulation/bottles 51.9-r1 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
@@ -31,7 +34,7 @@ dev-python/icoextract 0.1.4: Extract icons from Windows PE files (.exe/.dll)
 dev-python/janus 1.0.0: Thread-safe asyncio-aware queue for Python
 dev-python/m2r2 0.2.8: Markdown to reStructuredText converter
 dev-python/matrix-nio 0.22.1-r1 0.23.0: A Python Matrix client library, designed according to sans I/O principles
-dev-python/python-olm 3.2.15-r1 3.2.16: python CFFI bindings for the olm cryptographic ratchet library
+dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic ratchet library
 dev-python/sphinx-py3doc-enhanced-theme 2.4.0-r1: A theme based on the theme of https://docs.python.org/3/.
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.16 9999: Dialect of Scheme designed for Systems Programming
