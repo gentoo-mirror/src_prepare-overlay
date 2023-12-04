@@ -8,7 +8,6 @@ net-analyzer/nutty
 # Indiscriminate mask of packages with NonsolvableDepsInStable
 # Fix or remove
 app-emacs/ement-extras
-app-portage/gen-pkgs
 dev-lang/fstar
 games-fps/quake15
 games-rpg/fallout1
