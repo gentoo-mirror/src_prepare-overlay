@@ -5,8 +5,6 @@
     <email>nuclearspace@gmail.com</email>
     <name>Dima Akater</name>
   </maintainer>
-  <longdescription>Ement.el is a Matrix client for GNU Emacs.  Currently in development but already useful.
-  </longdescription>
   <upstream>
     <remote-id type="github">alphapapa/ement.el</remote-id>
   </upstream>
