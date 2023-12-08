@@ -6,7 +6,7 @@ EAPI="8"
 XANMOD_VERSION=1
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="70"
+K_GENPATCHES_VER="7"
 
 ETYPE="sources"
 K_SECURITY_UNSUPPORTED="1"
@@ -16,7 +16,7 @@ inherit kernel-2
 detect_version
 detect_arch
 
-DESCRIPTION="Full XanMod sources including the Gentoo patchset"
+DESCRIPTION="Full XanMod sources including the Gentoo patchset "
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
 SRC_URI="
