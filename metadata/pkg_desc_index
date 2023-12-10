@@ -20,7 +20,7 @@ app-emulation/bottles 51.9-r1 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
-app-misc/spicetify-cli 2.27.0 2.27.1 2.27.2 2.28.0: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.28.1: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.1_alpha1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.2.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
@@ -94,8 +94,8 @@ sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.6.2 1.7.2 1.7.3 9999: Raspberry Pi Imaging Utility
 sys-kernel/xanmod-kernel 6.1.64-r1 6.1.65 6.1.66 6.5.13-r1 6.6.3-r1 6.6.4 6.6.5: Linux kernel built with XanMod and Gentoo patches
-sys-kernel/xanmod-rt-kernel 6.1.64_p17: Linux kernel built with XanMod and Gentoo patches
-sys-kernel/xanmod-rt-sources 6.1.64_p17: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
+sys-kernel/xanmod-rt-kernel 6.1.64_p17 6.1.66_p19: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-rt-sources 6.1.64_p17 6.1.66_p19: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
 sys-kernel/xanmod-sources 6.1.64-r1 6.1.65 6.1.66 6.5.13-r1 6.6.3-r1 6.6.4 6.6.5: Full XanMod sources including the Gentoo patchset
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 virtual/dist-kernel 6.1.65 6.1.66 6.6.4 6.6.5: Virtual to depend on any Distribution Kernel
