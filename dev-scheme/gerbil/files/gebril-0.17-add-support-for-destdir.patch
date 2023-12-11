@@ -1,0 +1,77 @@
+From 7bb1c82c8cad8818f8805f28e7ff5b39d82c1ab0 Mon Sep 17 00:00:00 2001
+From: Alfred Wingate <parona@protonmail.com>
+Date: Thu, 26 Oct 2023 16:15:45 +0300
+Subject: [PATCH] Add support for destdir
+
+Signed-off-by: Alfred Wingate <parona@protonmail.com>
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -83,9 +83,9 @@ tags:
+ 	cd src && LDFLAGS="$(LIBS)" ./build.sh tags
+ 
+ install:
+-	mkdir -p ${gerbil_bin} ${gerbil_share} ${gerbil_bin_linkdir} ${gerbil_share_linkdir}
+-	cd src && ./install
+-	cp -a --link --remove-destination ${gerbil_bin}/* ${gerbil_bin_linkdir}  || \
+-	cp -a ${gerbil_bin}/* ${gerbil_bin_linkdir}
+-	cp -a --link --remove-destination ${gerbil_share}/* ${gerbil_share_linkdir}  || \
+-	cp -a ${gerbil_share}/* ${gerbil_share_linkdir}
++	mkdir -p $(DESTDIR)${gerbil_bin} $(DESTDIR)${gerbil_share} $(DESTDIR)${gerbil_bin_linkdir} $(DESTDIR)${gerbil_share_linkdir}
++	cd src && ./install $(DESTDIR)
++	cp -a --link --remove-destination $(DESTDIR)${gerbil_bin}/* $(DESTDIR)${gerbil_bin_linkdir}  || \
++	cp -a $(DESTDIR)${gerbil_bin}/* $(DESTDIR)${gerbil_bin_linkdir}
++	cp -a --link --remove-destination $(DESTDIR)${gerbil_share}/* $(DESTDIR)${gerbil_share_linkdir}  || \
++	cp -a $(DESTDIR)${gerbil_share}/* $(DESTDIR)${gerbil_share_linkdir}
+--- a/src/install
++++ b/src/install
+@@ -2,6 +2,7 @@
+ ;; -*- Scheme -*-
+ 
+ (define default-gerbil-home #f)
++(define destdir #f)
+ 
+ (define (die . message-bits)
+   (parameterize ((current-output-port (current-error-port)))
+@@ -28,7 +29,7 @@
+       (copy-file from to))))
+ 
+ (define (patch-gxc-shebang)
+-  (let* ((filename    (string-append default-gerbil-home "/bin/gxc"))
++  (let* ((filename    (string-append destdir default-gerbil-home "/bin/gxc"))
+          (new-content (with-input-from-file filename
+                         (lambda ()
+                           (with-output-to-string
+@@ -40,17 +41,19 @@
+       (lambda ()
+         (display new-content)))))
+ 
+-(define (main)
++(define (main . args)
++  (if args
++    (set! destdir (car args)))
+   (if (not default-gerbil-home)
+     (die "This gerbil build was not configured with a prefix, so there's nothing to do."))
+-  (create-directory-if-necessary default-gerbil-home)
+-  (install "../bin" (string-append default-gerbil-home "/bin"))
+-  (install "../lib" (string-append default-gerbil-home "/lib"))
+-  (create-directory-if-necessary (string-append default-gerbil-home "/share"))
+-  (create-directory-if-necessary (string-append default-gerbil-home "/share/emacs"))
+-  (create-directory-if-necessary (string-append default-gerbil-home "/share/emacs/site-lisp"))
+-  (create-directory-if-necessary (string-append default-gerbil-home "/share/emacs/site-lisp/gerbil"))
+-  (install "../etc/gerbil-mode.el" (string-append default-gerbil-home "/share/emacs/site-lisp/gerbil/gerbil-mode.el"))
+-  (create-directory-if-necessary (string-append default-gerbil-home "/share/gerbil"))
+-  (install "TAGS" (string-append default-gerbil-home "/share/gerbil/TAGS"))
++  (create-directory-if-necessary (string-append destdir default-gerbil-home))
++  (install "../bin" (string-append destdir default-gerbil-home "/bin"))
++  (install "../lib" (string-append destdir default-gerbil-home "/lib"))
++  (create-directory-if-necessary (string-append destdir default-gerbil-home "/share"))
++  (create-directory-if-necessary (string-append destdir default-gerbil-home "/share/emacs"))
++  (create-directory-if-necessary (string-append destdir default-gerbil-home "/share/emacs/site-lisp"))
++  (create-directory-if-necessary (string-append destdir default-gerbil-home "/share/emacs/site-lisp/gerbil"))
++  (install "../etc/gerbil-mode.el" (string-append destdir default-gerbil-home "/share/emacs/site-lisp/gerbil/gerbil-mode.el"))
++  (create-directory-if-necessary (string-append destdir default-gerbil-home "/share/gerbil"))
++  (install "TAGS" (string-append destdir default-gerbil-home "/share/gerbil/TAGS"))
+   (patch-gxc-shebang))
+-- 
+2.42.0
+
