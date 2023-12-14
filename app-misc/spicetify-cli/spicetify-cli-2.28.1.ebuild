@@ -75,9 +75,11 @@ src_install() {
 
 pkg_postinst() {
 	elog "Spicetify requires a Spotify install that it can modify."
-	elog "To give read and write permissions to everyone on the system to run the following commands."
+	elog "To give read and write permissions to everyone on the system to run the following commands as root."
 	elog "# chmod a+wr /opt/spotify/spotify-client"
 	elog "# chmod a+wr /opt/spotify/spotify-client/Apps -R"
+	elog ""
+	elog "WARNING: Do not run spicetify as root please"
 	elog ""
 	elog "Spicetify compatibility is limited to the following Spotify versions:"
 	elog " ${SPOTIFY_VERSIONS}"
