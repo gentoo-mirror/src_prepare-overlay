@@ -9,5 +9,5 @@ LICENSE=BSD-2
 PROPERTIES=live
 RESTRICT=mirror
 SLOT=0
-_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb	font-ebdftopcf	39dc8195299452f48380cb51392cba37	git-r3	5133e393e8717a3a093660f990801dc1
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb	font-ebdftopcf	39dc8195299452f48380cb51392cba37	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
 _md5_=062d3806d5fb2e534ffa98ffd2acf18e
