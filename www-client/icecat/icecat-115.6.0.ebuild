@@ -6,7 +6,7 @@
 EAPI=8
 
 # Using Gentoos firefox patches as system libraries and lto are quite nice
-FIREFOX_PATCHSET="firefox-115esr-patches-07.tar.xz"
+FIREFOX_PATCHSET="firefox-115esr-patches-08.tar.xz"
 
 LLVM_MAX_SLOT=17
 
@@ -612,12 +612,17 @@ src_prepare() {
 		rm -v "${WORKDIR}"/firefox-patches/*ppc64*.patch || die
 	fi
 
-	eapply "${WORKDIR}/firefox-patches"
+	if use x86 && use elibc_glibc ; then
+		rm -v "${WORKDIR}"/firefox-patches/*-musl-non-lfs64-api-on-audio_thread_priority-crate.patch || die
+	fi
 
 	# Workaround for bgo#917599
 	if has_version ">=dev-libs/icu-74.1" && use system-icu ; then
-		eapply "${FILESDIR}"/icecat-115.4.0-icu-74.patch
+		eapply "${WORKDIR}"/firefox-patches/0029-bmo-1862601-system-icu-74.patch
 	fi
+	rm -v "${WORKDIR}"/firefox-patches/0029-bmo-1862601-system-icu-74.patch || die
+
+	eapply "${WORKDIR}/firefox-patches"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	eapply_user
