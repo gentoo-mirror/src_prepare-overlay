@@ -16,7 +16,7 @@ app-emacs/svg-lib 0.2.7 9999: Emacs SVG libraries for creatings tags, icons and 
 app-emacs/taxy 0.10.1 9999: Programmable taxonomical hierarchies for arbitrary objects
 app-emacs/taxy-magit-section 0.12.2 9999: Programmable taxonomical hierarchies for arbitrary objects
 app-emacs/ts 0.2.2 9999: Timestamp and date/time library
-app-emulation/bottles 51.9-r1 9999: Run Windows software and games on Linux
+app-emulation/bottles 51.9-r1 51.10 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
