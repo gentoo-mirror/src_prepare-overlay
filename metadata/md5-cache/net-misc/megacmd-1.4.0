@@ -11,5 +11,5 @@ RDEPEND=>=net-misc/meganz-sdk-3.7.3:=[sodium(+),sqlite] dev-libs/libpcre:3[cxx] 
 RESTRICT=primaryuri
 SLOT=0
 SRC_URI=https://yorune.pl/gentoo/net-misc/megacmd/megacmd-1.4.0 -> megacmd-1.4.0.tar.gz
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
+_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
 _md5_=5bf49ba6c51206766674d305ab843002
