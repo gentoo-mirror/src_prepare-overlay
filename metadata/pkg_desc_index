@@ -27,7 +27,7 @@ app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
 dev-lang/fstar 2021.11.27: Verification system for effectful programs
 dev-lang/lci 0.11.2: LOLCODE interpreter written in C
 dev-libs/sdl-kitchensink 1.0.8-r1 1.0.12: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
-dev-perl/File-Rename 2.01-r1: Perl extension for renaming multiple files
+dev-perl/File-Rename 2.01-r1 2.02: Perl extension for renaming multiple files
 dev-python/FVS 0.3.4-r1: File Versioning System with hash comparison
 dev-python/aspectlib 2.0.0: An aspect-oriented programming, monkey-patch and decorators library.
 dev-python/icoextract 0.1.4: Extract icons from Windows PE files (.exe/.dll)
