@@ -20,7 +20,7 @@ app-emulation/bottles 51.9-r1 51.10 9999: Run Windows software and games on Linu
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8: CLI based audio visualizer
-app-misc/spicetify-cli 2.28.1 2.29.0: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.28.1 2.29.0 2.29.1: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.1_alpha1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.2.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
