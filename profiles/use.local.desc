@@ -33,6 +33,7 @@ net-misc/meganz-sdk:mediainfo - Use media-libs/libmediainfo for media files
 net-misc/meganz-sdk:qt - Install QT bindings
 sys-apps/xbps:lto - Build with Link Time Optimization
 sys-boot/rpi-imager:filter-drivelist - Filters list of drives to just display USB-Drives, SD-Cards and NVME (root excluded)
+sys-kernel/xanmod-kernel:generic-uki - Build and install a generic initramfs and Unified Kernel Image, this is intended for building binpkgs with a pre-generated UKI included (EXPERIMENTAL).
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
 sys-kernel/xanmod-rt-kernel:initramfs - Build initramfs along with the kernel.
 virtual/linux-sources:firmware - Install linux kernel firmware
