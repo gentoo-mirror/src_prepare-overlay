@@ -3,7 +3,7 @@ DEFINED_PHASES=compile config configure install postinst postrm preinst prepare 
 DESCRIPTION=Linux kernel built with XanMod and Gentoo patches
 EAPI=8
 HOMEPAGE=https://www.kernel.org/ https://xanmod.org/
-IDEPEND=generic-uki? ( || ( >=sys-kernel/installkernel-8[-dracut(-),-ukify(-),uki(-)] >=sys-kernel/installkernel-systemd-3 ) ) !generic-uki? ( !initramfs? ( || ( >=sys-kernel/installkernel-8 >=sys-kernel/installkernel-systemd-2-r5 ) ) initramfs? ( >=sys-kernel/dracut-059-r4 || ( >=sys-kernel/installkernel-8[dracut(-)] >=sys-kernel/installkernel-systemd-2-r5 ) ) )
+IDEPEND=generic-uki? ( || ( >=sys-kernel/installkernel-8[-dracut(-),-ukify(-)] >=sys-kernel/installkernel-systemd-3 ) ) !generic-uki? ( !initramfs? ( || ( >=sys-kernel/installkernel-8 >=sys-kernel/installkernel-systemd-2-r5 ) ) initramfs? ( >=sys-kernel/dracut-059-r4 || ( >=sys-kernel/installkernel-8[dracut(-)] >=sys-kernel/installkernel-systemd-2-r5 ) ) )
 INHERIT=kernel-build
 IUSE=debug secureboot savedconfig +initramfs test generic-uki modules-compress +strip modules-sign
 KEYWORDS=-* ~amd64
@@ -14,5 +14,5 @@ REQUIRED_USE=secureboot? ( modules-sign )
 RESTRICT=!test? ( test ) test? ( userpriv ) arm? ( test )
 SLOT=6.6.11
 SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.tar.xz mirror://sourceforge/xanmod/patch-6.6.11-xanmod1.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.6-14.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.6-14.extras.tar.xz https://github.com/mgorny/gentoo-kernel-config/archive/g11.tar.gz -> gentoo-kernel-config-g11.tar.gz
-_eclasses_=secureboot	4911adb593665638c76fbd4e70d451ac	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	042f4cc53680245bf99a84669b94155a	python-any-r1	f5169813d1619761b459800587005fd2	portability	225656ad6c6594fe3b0187bdd50707fb	savedconfig	8b5f9d995a970e49cd427c55d5840285	dist-kernel-utils	145861da258122cbba5240a850f1a5e8	mount-boot	3945d351ee3192381911f938f4ee527a	kernel-install	c973d9a68b8a4246b86cc628ac513589	kernel-build	8a59e6d2f0253d9496b2b0878a5540a6
+_eclasses_=secureboot	4911adb593665638c76fbd4e70d451ac	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	042f4cc53680245bf99a84669b94155a	python-any-r1	f5169813d1619761b459800587005fd2	portability	225656ad6c6594fe3b0187bdd50707fb	savedconfig	8b5f9d995a970e49cd427c55d5840285	dist-kernel-utils	145861da258122cbba5240a850f1a5e8	mount-boot	3945d351ee3192381911f938f4ee527a	kernel-install	9e6c16353c6e7365dab475a7adc175e1	kernel-build	8a59e6d2f0253d9496b2b0878a5540a6
 _md5_=09eb2faf101e0de9a9c1e773335d0b26
