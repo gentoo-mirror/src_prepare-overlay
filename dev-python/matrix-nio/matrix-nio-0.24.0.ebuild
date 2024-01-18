@@ -1,4 +1,4 @@
-# Copyright 2020-2023 Gentoo Authors
+# Copyright 2020-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -20,26 +20,23 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	|| (
-		>=dev-python/python-olm-3.1.3[${PYTHON_USEDEP}]
-		>=dev-libs/olm-3.1.3[python(-),${PYTHON_USEDEP}]
-	)
-	>=dev-python/aiohttp-3.8.3[${PYTHON_USEDEP}]
-	>=dev-python/aiohttp-socks-0.7.0[${PYTHON_USEDEP}]
+	>=dev-python/python-olm-3.2.15[${PYTHON_USEDEP}]
+	>=dev-python/aiohttp-3.9.0[${PYTHON_USEDEP}]
+	>=dev-python/aiohttp-socks-0.8.4[${PYTHON_USEDEP}]
 	>=dev-python/aiofiles-23.1.0[${PYTHON_USEDEP}]
 	>=dev-python/atomicwrites-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/cachetools-4.2.1[${PYTHON_USEDEP}]
 	>=dev-python/h11-0.14.0[${PYTHON_USEDEP}]
 	>=dev-python/h2-4.0.0[${PYTHON_USEDEP}]
 	>=dev-python/jsonschema-4.4.0[${PYTHON_USEDEP}]
-	>=dev-python/peewee-3.14.4[${PYTHON_USEDEP}]
+	>=dev-python/peewee-3.17.0[${PYTHON_USEDEP}]
 	>=dev-python/pycryptodome-3.10.1[${PYTHON_USEDEP}]
 	>=dev-python/unpaddedbase64-2.1.0[${PYTHON_USEDEP}]
 "
 DEPEND="
 	test? (
 		${RDEPEND}
-		>=dev-python/aioresponses-0.7.2[${PYTHON_USEDEP}]
+		>=dev-python/aioresponses-0.7.4[${PYTHON_USEDEP}]
 		>=dev-python/Faker-8.0.0[${PYTHON_USEDEP}]
 		>=dev-python/pytest-aiohttp-0.3.0[${PYTHON_USEDEP}]
 		>=dev-python/hpack-4.0.0[${PYTHON_USEDEP}]
