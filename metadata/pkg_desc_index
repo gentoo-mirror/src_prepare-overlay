@@ -33,7 +33,7 @@ dev-python/aspectlib 2.0.0: An aspect-oriented programming, monkey-patch and dec
 dev-python/icoextract 0.1.4: Extract icons from Windows PE files (.exe/.dll)
 dev-python/janus 1.0.0: Thread-safe asyncio-aware queue for Python
 dev-python/m2r2 0.2.8: Markdown to reStructuredText converter
-dev-python/matrix-nio 0.22.1-r1 0.23.0: A Python Matrix client library, designed according to sans I/O principles
+dev-python/matrix-nio 0.23.0 0.24.0: A Python Matrix client library, designed according to sans I/O principles
 dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic ratchet library
 dev-python/sphinx-py3doc-enhanced-theme 2.4.0-r1: A theme based on the theme of https://docs.python.org/3/.
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
