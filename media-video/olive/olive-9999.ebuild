@@ -41,7 +41,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-qt/linguist-tools:5
-	doc? ( app-doc/doxygen[dot] )
+	doc? ( app-text/doxygen[dot] )
 "
 
 src_configure() {
