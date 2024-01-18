@@ -147,8 +147,8 @@ pkg_postinst() {
 	#optfeature "MangoHub support" games-util/mangohub
 	#optfeature "obs-vkcapture support" media-video/obs-vkcapture
 	if use llvm-libunwind; then
-		ewarn "When using llvm-libunwind useflag all wine version besides wine-vanilla and wine-staging are broken"
-		ewarn "(including the runners downloaded from bottles itself)"
-		ewarn "So when using llvm-libunwind system wide is recommended to stick only to system wine mentioned above."
+		ewarn "When using llvm-libunwind useflag all the runners downloaded from bottles should be broken"
+		ewarn "So when using llvm-libunwind system wide is recommended to stick only to runners compiled by your system"
+		ewarn "Note: Using LLVM Profile Steam Proton works, so you can try bottles runners"
 	fi
 }
