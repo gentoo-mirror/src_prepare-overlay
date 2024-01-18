@@ -25,7 +25,7 @@ RDEPEND="
 	media-libs/libass:=
 "
 BDEPEND="
-	doc? ( app-doc/doxygen )
+	doc? ( app-text/doxygen )
 "
 
 src_prepare() {
