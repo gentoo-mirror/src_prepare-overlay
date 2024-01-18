@@ -2,8 +2,8 @@ acct-group/jellyfin 0: Jelyfin program group
 acct-group/sensu 1: Sensu program group
 acct-user/jellyfin 0: Jellyfin user
 acct-user/sensu 0: Sensu Monitoring Framework
-app-admin/cgls 246 247: cgls from systemd
-app-admin/cgtop 246 247: cgtop from systemd
+app-admin/cgls 247: cgls from systemd
+app-admin/cgtop 247: cgtop from systemd
 app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
 app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
@@ -19,14 +19,14 @@ app-emacs/ts 0.2.2 9999: Timestamp and date/time library
 app-emulation/bottles 51.9-r1 51.10 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
-app-misc/cli-visualizer 1.8: CLI based audio visualizer
+app-misc/cli-visualizer 1.8 1.8_p20220323: CLI based audio visualizer
 app-misc/spicetify-cli 2.28.1 2.29.0 2.29.1 2.30.0: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.1_alpha1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.2.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
 dev-lang/fstar 2021.11.27: Verification system for effectful programs
-dev-lang/lci 0.11.2: LOLCODE interpreter written in C
-dev-libs/sdl-kitchensink 1.0.8-r1 1.0.12: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
+dev-lang/lci 0.11.2 0.11.2_p20191019: LOLCODE interpreter written in C
+dev-libs/sdl-kitchensink 1.0.12: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
 dev-perl/File-Rename 2.01-r1 2.02: Perl extension for renaming multiple files
 dev-python/FVS 0.3.4-r1: File Versioning System with hash comparison
 dev-python/aspectlib 2.0.0: An aspect-oriented programming, monkey-patch and decorators library.
