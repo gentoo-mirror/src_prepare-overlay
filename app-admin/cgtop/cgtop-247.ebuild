@@ -31,7 +31,6 @@ IUSE="selinux"
 
 BDEPEND="
 	>=dev-util/intltool-0.50
-	>=dev-util/meson-0.46
 	>=sys-apps/coreutils-8.16
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xml-dtd:4.5
