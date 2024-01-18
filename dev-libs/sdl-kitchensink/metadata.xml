@@ -4,15 +4,4 @@
   <upstream>
     <remote-id type="github">katajakasa/SDL_kitchensink</remote-id>
   </upstream>
-  <use>
-    <flag name="sanitize">
-      Use sanitizer functions (ASAN/TSAN/etc...)
-    </flag>
-    <flag name="static">
-      Build static libraries
-    </flag>
-    <flag name="examples">
-      Build examples. If static is also set, examples will be linked against static library
-    </flag>
-  </use>
 </pkgmetadata>
