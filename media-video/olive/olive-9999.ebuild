@@ -30,6 +30,7 @@ DEPEND="
 	>=dev-qt/qtopengl-5.6.0
 	>=dev-qt/qtsvg-5.6.0
 	>=dev-qt/qtwidgets-5.6.0
+	media-libs/olivecore
 	>=media-libs/opencolorio-2.0.0:=
 	media-libs/openexr:=
 	>=media-libs/openimageio-2.1.12:=
