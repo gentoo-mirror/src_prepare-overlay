@@ -37,7 +37,7 @@ dev-python/matrix-nio 0.23.0 0.24.0: A Python Matrix client library, designed ac
 dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic ratchet library
 dev-python/sphinx-py3doc-enhanced-theme 2.4.0-r1: A theme based on the theme of https://docs.python.org/3/.
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
-dev-scheme/gerbil 0.16 0.17: Dialect of Scheme designed for Systems Programming
+dev-scheme/gerbil 0.17: Dialect of Scheme designed for Systems Programming
 dev-tex/tectonic 0.14.1: A modernized, complete, self-contained TeX/LaTeX engine.
 dev-tex/texlab 5.11.0 5.12.0 5.12.1: LaTeX Language Server
 dev-util/beekeeper-studio 2.1.4: Modern and easy to use SQL client
@@ -59,10 +59,8 @@ games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader-export-credentials 1: Helper script for src_prepare-overlay GOG eclass that exports credentials.
 games-util/xone 0.3_p20230517: Linux kernel driver for Xbox One and Xbox Series X|S accessories
 mail-client/heirloom-mailx 12.5: The mailx utility from CentOS
-media-fonts/joypixels 6.0.0 6.5.0: Emoji as a Service (formerly EmojiOne)
 media-fonts/labiryntowy 1.53: Practical font realization of the Labirynth Alphabet
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
-media-fonts/spleen 1.7.0 9999: Monospaced bitmap font
 media-gfx/akira 0.0.15_alpha_pre20231116 9999: Native Linux App for UI and UX Design built in Vala and Gtk
 media-gfx/czkawka 2.0.0 2.1.0: App to find duplicates, empty folders and similar images
 media-gfx/drawing 1.0.2 9999: A drawing application for the GNOME desktop
@@ -101,7 +99,7 @@ sys-kernel/xanmod-sources 6.1.72 6.6.11 6.7.0: Full XanMod sources including the
 sys-process/nq 0.3.1 9999: Unix command line queue utility
 virtual/dist-kernel 6.1.69 6.1.72 6.6.11: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
-www-client/icecat 115.5.0 115.6.0: GNU IceCat Web Browser
+www-client/icecat 115.6.0: GNU IceCat Web Browser
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
 x11-misc/portfolio 1.0.0 9999: Minimalist file manager for those who want to use Linux mobile devices
 x11-misc/pscircle 1.3.1 9999: Visualizes Linux processes in a radial tree
