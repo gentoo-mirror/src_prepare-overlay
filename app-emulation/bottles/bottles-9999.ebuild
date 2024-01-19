@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -55,18 +55,10 @@ RDEPEND="
 	media-gfx/imagemagick
 	>=sys-libs/glibc-2.32
 	x11-apps/xdpyinfo
-	llvm-libunwind? (
-		|| (
-			app-emulation/wine-vanilla[X,llvm-libunwind]
-			app-emulation/wine-staging[X,llvm-libunwind]
-		)
-	)
-	!llvm-libunwind? (
-		|| (
-			app-emulation/wine-vanilla[X,-llvm-libunwind]
-			app-emulation/wine-staging[X,-llvm-libunwind]
-			app-emulation/wine-proton[X(+),-llvm-libunwind]
-		)
+	|| (
+		app-emulation/wine-vanilla[X,llvm-libunwind=]
+		app-emulation/wine-staging[X,llvm-libunwind=]
+		app-emulation/wine-proton[X(+),llvm-libunwind=]
 	)
 	$(python_gen_cond_dep '
 		app-arch/patool[${PYTHON_USEDEP}]
