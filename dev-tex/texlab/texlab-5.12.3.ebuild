@@ -1,4 +1,4 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -35,10 +35,10 @@ CRATES="
 	crc32fast@1.3.2
 	criterion-plot@0.5.0
 	criterion@0.5.1
-	crossbeam-channel@0.5.8
+	crossbeam-channel@0.5.11
 	crossbeam-deque@0.8.3
 	crossbeam-epoch@0.9.15
-	crossbeam-utils@0.8.16
+	crossbeam-utils@0.8.19
 	dirs-sys@0.4.1
 	dirs@5.0.1
 	dissimilar@1.0.7
@@ -59,7 +59,7 @@ CRATES="
 	fuzzy-matcher@0.3.7
 	getrandom@0.2.10
 	half@1.8.2
-	hashbrown@0.12.3
+	hashbrown@0.14.3
 	heck@0.4.1
 	hermit-abi@0.3.3
 	human_name@2.0.2
@@ -83,17 +83,18 @@ CRATES="
 	logos-codegen@0.13.0
 	logos-derive@0.13.0
 	logos@0.13.0
-	lsp-server@0.7.4
+	lsp-server@0.7.6
 	lsp-types@0.94.1
 	memchr@2.6.3
 	memoffset@0.9.0
 	miniz_oxide@0.7.1
 	mio@0.8.8
+	multimap@0.9.1
 	notify-debouncer-full@0.3.1
 	notify@6.1.1
 	num-traits@0.2.16
 	num_cpus@1.16.0
-	once_cell@1.18.0
+	once_cell@1.19.0
 	oorandom@11.1.3
 	option-ext@0.2.0
 	parking_lot@0.12.1
@@ -106,8 +107,8 @@ CRATES="
 	plotters-backend@0.3.5
 	plotters-svg@0.3.5
 	plotters@0.3.5
-	proc-macro2@1.0.67
-	quote@1.0.33
+	proc-macro2@1.0.76
+	quote@1.0.35
 	rand@0.8.5
 	rand_core@0.6.4
 	rayon-core@1.12.0
@@ -120,14 +121,14 @@ CRATES="
 	regex-syntax@0.6.29
 	regex-syntax@0.8.2
 	regex@1.10.2
-	rowan@0.15.13
+	rowan@0.15.15
 	rustc-hash@1.1.0
 	rustix@0.38.21
 	ryu@1.0.15
 	same-file@1.0.6
 	scopeguard@1.2.0
-	serde@1.0.193
-	serde_derive@1.0.193
+	serde@1.0.195
+	serde_derive@1.0.195
 	serde_json@1.0.108
 	serde_regex@1.1.0
 	serde_repr@0.1.17
@@ -135,11 +136,11 @@ CRATES="
 	smallstr@0.3.0
 	smallvec@1.11.1
 	strsim@0.10.0
-	syn@2.0.37
+	syn@2.0.48
 	tempfile@3.8.1
 	text-size@1.1.1
-	thiserror-impl@1.0.50
-	thiserror@1.0.50
+	thiserror-impl@1.0.56
+	thiserror@1.0.56
 	thread_local@1.1.7
 	threadpool@1.8.1
 	tinytemplate@1.2.1
