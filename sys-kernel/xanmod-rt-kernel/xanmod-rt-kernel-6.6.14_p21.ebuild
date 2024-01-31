@@ -1,14 +1,17 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
+
+KERNEL_IUSE_GENERIC_UKI=1
+KERNEL_IUSE_MODULES_SIGN=1
 
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
 MY_PV="${PV%_p*}"
 
-GENPATCHES_P=genpatches-${MY_PV%.*}-$(( ${MY_PV##*.} + 8 ))
+GENPATCHES_P=genpatches-${MY_PV%.*}-$(( ${MY_PV##*.} + 3 ))
 GENTOO_CONFIG_VER=g11
 
 RT_PATCHSET="${PV/*_p}"
