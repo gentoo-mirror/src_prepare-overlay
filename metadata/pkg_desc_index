@@ -38,7 +38,7 @@ dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic 
 dev-python/sphinx-py3doc-enhanced-theme 2.4.0-r1: A theme based on the theme of https://docs.python.org/3/.
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.17: Dialect of Scheme designed for Systems Programming
-dev-tex/tectonic 0.14.1: A modernized, complete, self-contained TeX/LaTeX engine.
+dev-tex/tectonic 0.14.1 0.15.0: A modernized, complete, self-contained TeX/LaTeX engine.
 dev-tex/texlab 5.12.2 5.12.3: LaTeX Language Server
 dev-util/beekeeper-studio 2.1.4: Modern and easy to use SQL client
 dev-util/github-desktop 2.9.3-r1: GitHub Desktop for Linux
