@@ -9,7 +9,7 @@ KERNEL_IUSE_MODULES_SIGN=1
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 3 ))
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 4 ))
 GENTOO_CONFIG_VER=g11
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
