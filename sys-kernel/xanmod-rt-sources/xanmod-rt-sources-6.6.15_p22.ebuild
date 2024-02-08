@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -7,7 +7,7 @@ XANMOD_VERSION=1
 RT_PATCHSET="${PV/*_p}"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="82"
+K_GENPATCHES_VER="18"
 
 ETYPE="sources"
 K_SECURITY_UNSUPPORTED="1"
@@ -19,12 +19,12 @@ detect_arch
 
 DESCRIPTION="Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset"
 HOMEPAGE="https://xanmod.org"
-LICENSE+=" CDDL"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	mirror://sourceforge/xanmod/patch-${OKV}-rt${RT_PATCHSET}-xanmod${XANMOD_VERSION}.xz
 	${GENPATCHES_URI}
 "
+LICENSE+=" CDDL"
 
 KEYWORDS="~amd64"
 

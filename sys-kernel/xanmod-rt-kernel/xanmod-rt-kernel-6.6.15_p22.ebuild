@@ -3,12 +3,15 @@
 
 EAPI=8
 
+KERNEL_IUSE_GENERIC_UKI=1
+KERNEL_IUSE_MODULES_SIGN=1
+
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
 MY_PV="${PV%_p*}"
 
-GENPATCHES_P=genpatches-${MY_PV%.*}-$(( ${MY_PV##*.} + 9 ))
+GENPATCHES_P=genpatches-${MY_PV%.*}-$(( ${MY_PV##*.} + 3 ))
 GENTOO_CONFIG_VER=g11
 
 RT_PATCHSET="${PV/*_p}"
@@ -24,9 +27,9 @@ SRC_URI="
 		-> gentoo-kernel-config-${GENTOO_CONFIG_VER}.tar.gz
 "
 S=${WORKDIR}/${MY_P}
-SLOT="${MY_PV}"
 
 LICENSE="GPL-2"
+SLOT="${MY_PV}"
 KEYWORDS="-* ~amd64"
 IUSE="debug"
 
