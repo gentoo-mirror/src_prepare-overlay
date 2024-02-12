@@ -20,20 +20,22 @@ VIRTUALX_REQUIRED="manual"
 inherit autotools check-reqs desktop flag-o-matic gnome2-utils linux-info llvm multiprocessing \
 	optfeature pax-utils python-any-r1 readme.gentoo-r1 toolchain-funcs virtualx xdg
 
+DESCRIPTION="GNU IceCat Web Browser"
+HOMEPAGE="https://www.gnu.org/software/gnuzilla/"
+
 PATCH_URIS=(
 	https://dev.gentoo.org/~juippis/mozilla/patchsets/${FIREFOX_PATCHSET}
 )
 
-SRC_URI="https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-gnu1.tar.bz2
-	${PATCH_URIS[@]}"
+SRC_URI="
+	https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-gnu1.tar.bz2
+	${PATCH_URIS[@]}
+"
+S="${WORKDIR}/${PN}-${PV%_*}"
 
-DESCRIPTION="GNU IceCat Web Browser"
-HOMEPAGE="https://www.gnu.org/software/gnuzilla/"
-
-KEYWORDS="~amd64"
-
-SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
+SLOT="0"
+KEYWORDS="~amd64"
 
 IUSE="+clang cpu_flags_arm_neon dbus debug hardened hwaccel"
 IUSE+=" jack libproxy lto openh264 pgo pulseaudio sndio selinux"
@@ -186,8 +188,6 @@ DEPEND="${COMMON_DEPEND}
 		x11-libs/libICE
 		x11-libs/libSM
 	)"
-
-S="${WORKDIR}/${PN}-${PV%_*}"
 
 llvm_check_deps() {
 	if ! has_version -b "sys-devel/clang:${LLVM_SLOT}" ; then
