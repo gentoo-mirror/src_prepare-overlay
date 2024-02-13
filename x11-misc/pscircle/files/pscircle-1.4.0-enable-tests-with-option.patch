@@ -1,0 +1,43 @@
+From efdaf6cf070a8a57e116b42e87a6fe50b4614026 Mon Sep 17 00:00:00 2001
+From: Alfred Wingate <parona@protonmail.com>
+Date: Tue, 13 Feb 2024 15:40:52 +0200
+Subject: [PATCH] Enable tests with option
+
+Signed-off-by: Alfred Wingate <parona@protonmail.com>
+--- a/meson.build
++++ b/meson.build
+@@ -118,6 +118,6 @@ executable(
+ 	install: true
+ )
+ 
+-if get_option('buildtype').startswith('debug')
++if get_option('enable-tests')
+ 	subdir('tests')
+ endif
+--- a/meson_options.txt
++++ b/meson_options.txt
+@@ -4,4 +4,10 @@ option(
+ 	value: true,
+ 	description : 'Use X11 for displaying image'
+ )
++option(
++	'enable-tests',
++	type: 'boolean',
++	value: false,
++	description: 'Build tests'
++)
+ 
+--- a/tests/meson.build
++++ b/tests/meson.build
+@@ -12,7 +12,7 @@ tests = [
+ 
+ add_languages('cpp')
+ 
+-gtest_dep = dependency('gtest', main : true, required : false)
++gtest_dep = dependency('gtest', main : true)
+ 
+ if gtest_dep.found()
+ 	deps += gtest_dep
+-- 
+2.43.0
+
