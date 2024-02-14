@@ -1,0 +1,16 @@
+BDEPEND=>=dev-build/meson-1.2.1 app-alternatives/ninja dev-build/meson-format-array virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=x11-libs/cairo[X?] X? ( x11-libs/libX11 ) media-libs/libpng test? ( dev-cpp/gtest )
+DESCRIPTION=Visualizes Linux processes in a radial tree
+EAPI=8
+HOMEPAGE=https://gitlab.com/mildlyparallel/pscircle
+INHERIT=flag-o-matic meson savedconfig systemd
+IUSE=test X savedconfig
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=x11-libs/cairo[X?] X? ( x11-libs/libX11 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://gitlab.com/mildlyparallel/pscircle/-/archive/v1.4.0/pscircle-v1.4.0.tar.bz2 -> pscircle-1.4.0.tar.bz2
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	24c947ff5f858625cf0b33c15eed4425	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	042f4cc53680245bf99a84669b94155a	meson	e322276188f86eacb29ae081ba5485c8	portability	225656ad6c6594fe3b0187bdd50707fb	savedconfig	8b5f9d995a970e49cd427c55d5840285	systemd	c8b03e8df84486aa991d4396686e8942
+_md5_=0ad72c3f9d1c968e3ed63a19572dace1
