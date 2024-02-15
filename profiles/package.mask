@@ -1,3 +1,9 @@
+# Alfred Wingate <parona@protonmail.com> (2024-02-15)
+# Masked for NonsolvableDepsInStable
+acct-group/sensu
+acct-user/sensu
+net-analyzer/sensu
+
 # Alfred Wingate <parona@protonmail.com> (2024-02-13)
 # Not maintained actively in this repository.
 # Use ::pentoo instead.
@@ -26,4 +32,3 @@ dev-lang/fstar
 games-fps/quake15
 games-rpg/fallout1
 games-util/lgogdownloader-export-credentials
-net-analyzer/sensu
