@@ -1,9 +1,0 @@
-DEFINED_PHASES=install postinst preinst prerm pretend
-DESCRIPTION=Jellyfin user
-EAPI=7
-INHERIT=acct-user
-KEYWORDS=~amd64 ~arm64
-RDEPEND=acct-group/jellyfin
-SLOT=0
-_eclasses_=user-info	9951b1a0e4f026d16c33a001fd2d5cdf	acct-user	485d9a6aa1311a8ca9da380d8a8c6c76
-_md5_=b030005d17a75582414893c8aaa5cd3e

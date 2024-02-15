@@ -1,6 +1,4 @@
-acct-group/jellyfin 0: Jelyfin program group
 acct-group/sensu 1: Sensu program group
-acct-user/jellyfin 0: Jellyfin user
 acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/cgls 247: cgls from systemd
 app-admin/cgtop 247: cgtop from systemd
