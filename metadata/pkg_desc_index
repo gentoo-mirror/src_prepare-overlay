@@ -96,7 +96,7 @@ sys-kernel/xanmod-kernel 6.1.77 6.6.16 6.7.4: Linux kernel built with XanMod and
 sys-kernel/xanmod-rt-kernel 6.6.15_p22: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-sources 6.6.15_p22: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
 sys-kernel/xanmod-sources 6.1.77 6.6.16 6.7.4: Full XanMod sources including the Gentoo patchset
-sys-process/nq 0.3.1 9999: Unix command line queue utility
+sys-process/nq 0.3.1 0.5 9999: Unix command line queue utility
 virtual/dist-kernel 6.1.77 6.6.15 6.6.16 6.7.4: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
 www-client/icecat 115.7.0: GNU IceCat Web Browser
