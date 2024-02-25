@@ -1,4 +1,4 @@
-# Copyright 2021-2022 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: wise.eclass
@@ -25,7 +25,7 @@ PROPERTIES+="live"
 
 # @ECLASS_VARIABLE: WISE_INSTALLER
 # @DESCRIPTION:
-# WISE installer filename. It can be an array!
+# WISE installer path. It can be an array!
 : ${WISE_INSTALLER:=}
 
 LICENSE+="e_wise-mit-like"
@@ -38,6 +38,10 @@ BDEPEND+="
 	app-arch/p7zip
 "
 
+# @FUNCTION: wise_unpack_installers
+# @DESCRIPTION:
+# This function requires that a global array called WISE_INSTALLER be declared on the package's level.
+# All paths in that variable will be extracted with e_wise for DOS, because a native version does not exist yet.
 wise_unpack_installers() {
 	mkdir wise_output
 	mkdir ewise
