@@ -12,5 +12,5 @@ RDEPEND=app-emulation/winetricks app-shells/bash:0 virtual/wine[abi_x86_32]
 REQUIRED_USE=abi_x86_32
 SLOT=0
 SRC_URI=https://archive.org/download/pc_gta2/GTA2_full.zip
-_eclasses_=run-wine	9f389002a2c57ddceb5b9005ccda8e2e	windows-helper	38cfe9b76a5438ef982643787dca9048
+_eclasses_=run-wine	9f389002a2c57ddceb5b9005ccda8e2e	windows-helper	d8df5df96170552f077ce6608e618e76
 _md5_=beee7336c03eefaf2b06b3961c14c04c
