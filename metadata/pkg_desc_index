@@ -31,7 +31,6 @@ dev-python/janus 1.0.0: Thread-safe asyncio-aware queue for Python
 dev-python/m2r2 0.2.8: Markdown to reStructuredText converter
 dev-python/matrix-nio 0.24.0: A Python Matrix client library, designed according to sans I/O principles
 dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic ratchet library
-dev-python/sphinx-py3doc-enhanced-theme 2.4.0-r1: A theme based on the theme of https://docs.python.org/3/.
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.17: Dialect of Scheme designed for Systems Programming
 dev-tex/tectonic 0.15.0: A modernized, complete, self-contained TeX/LaTeX engine.
