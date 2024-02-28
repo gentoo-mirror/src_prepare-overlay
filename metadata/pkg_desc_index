@@ -14,7 +14,7 @@ app-emacs/taxy-magit-section 0.12.2 9999: Programmable taxonomical hierarchies f
 app-emacs/ts 0.2.2 9999: Timestamp and date/time library
 app-emulation/bottles 51.10-r1 51.11 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
-app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
+app-emulation/windows95 2.3.0 3.1.1: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8_p20220323: CLI based audio visualizer
 app-misc/spicetify-cli 2.32.1 2.33.0: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.1_alpha1 9999: Check if a given package has new upstream versions
@@ -35,8 +35,8 @@ dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.17: Dialect of Scheme designed for Systems Programming
 dev-tex/tectonic 0.15.0: A modernized, complete, self-contained TeX/LaTeX engine.
 dev-tex/texlab 5.12.4: LaTeX Language Server
-dev-util/beekeeper-studio 2.1.4: Modern and easy to use SQL client
-dev-util/github-desktop 2.9.3-r1: GitHub Desktop for Linux
+dev-util/beekeeper-studio 2.1.4 4.1.13: Modern and easy to use SQL client
+dev-util/github-desktop 2.9.3-r1 3.3.6_rc3: GitHub Desktop for Linux
 dev-util/plan9port 2023.09.13: Port of many Plan 9 programs and libraries
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
