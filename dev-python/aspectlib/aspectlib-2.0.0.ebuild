@@ -1,4 +1,4 @@
-# Copyright 2021-2023 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -17,9 +17,6 @@ RESTRICT="!test? ( test )"
 
 RDEPEND="dev-python/fields[${PYTHON_USEDEP}]"
 DEPEND="
-	doc? (
-		dev-python/sphinx-py3doc-enhanced-theme[${PYTHON_USEDEP}]
-	)
 	test? (
 		${RDEPEND}
 		dev-python/process-tests[${PYTHON_USEDEP}]
@@ -27,5 +24,5 @@ DEPEND="
 	)
 "
 
+distutils_enable_sphinx docs dev-python/sphinx-py3doc-enhanced-theme
 distutils_enable_tests pytest
-distutils_enable_sphinx docs
