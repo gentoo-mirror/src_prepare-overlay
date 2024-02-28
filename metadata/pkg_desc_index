@@ -9,8 +9,6 @@ app-editors/rehex 0.3.0 9999: Reverse Engineers' Hex Editor
 app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
 app-emacs/ement 0.13 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
-app-emacs/plz 0.7 9999: An HTTP library for Emacs
-app-emacs/svg-lib 0.2.7 9999: Emacs SVG libraries for creatings tags, icons and bars
 app-emacs/taxy 0.10.1 9999: Programmable taxonomical hierarchies for arbitrary objects
 app-emacs/taxy-magit-section 0.12.2 9999: Programmable taxonomical hierarchies for arbitrary objects
 app-emacs/ts 0.2.2 9999: Timestamp and date/time library
@@ -18,26 +16,26 @@ app-emulation/bottles 51.10-r1 51.11 9999: Run Windows software and games on Lin
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 2.3.0: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8_p20220323: CLI based audio visualizer
-app-misc/spicetify-cli 2.31.3 2.32.1: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.32.1 2.33.0: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.1_alpha1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.2.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
 dev-lang/fstar 2021.11.27: Verification system for effectful programs
 dev-lang/lci 0.11.2_p20191019: LOLCODE interpreter written in C
 dev-libs/sdl-kitchensink 1.0.12: A Simple SDL2 / FFmpeg library for audio/video playback written in C99
-dev-perl/File-Rename 2.01-r1 2.02: Perl extension for renaming multiple files
+dev-perl/File-Rename 2.02: Perl extension for renaming multiple files
 dev-python/FVS 0.3.4-r1: File Versioning System with hash comparison
 dev-python/aspectlib 2.0.0: An aspect-oriented programming, monkey-patch and decorators library.
 dev-python/icoextract 0.1.4: Extract icons from Windows PE files (.exe/.dll)
 dev-python/janus 1.0.0: Thread-safe asyncio-aware queue for Python
 dev-python/m2r2 0.2.8: Markdown to reStructuredText converter
-dev-python/matrix-nio 0.23.0 0.24.0: A Python Matrix client library, designed according to sans I/O principles
+dev-python/matrix-nio 0.24.0: A Python Matrix client library, designed according to sans I/O principles
 dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic ratchet library
 dev-python/sphinx-py3doc-enhanced-theme 2.4.0-r1: A theme based on the theme of https://docs.python.org/3/.
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.17: Dialect of Scheme designed for Systems Programming
-dev-tex/tectonic 0.14.1 0.15.0: A modernized, complete, self-contained TeX/LaTeX engine.
-dev-tex/texlab 5.12.2 5.12.3 5.12.4: LaTeX Language Server
+dev-tex/tectonic 0.15.0: A modernized, complete, self-contained TeX/LaTeX engine.
+dev-tex/texlab 5.12.4: LaTeX Language Server
 dev-util/beekeeper-studio 2.1.4: Modern and easy to use SQL client
 dev-util/github-desktop 2.9.3-r1: GitHub Desktop for Linux
 dev-util/plan9port 2023.09.13: Port of many Plan 9 programs and libraries
@@ -52,7 +50,7 @@ games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 games-puzzle/vvvvvv 2.2 9999: Retro-styled 2D puzzle platformer (source-available release)
 games-rpg/fallout1 1.1: Post-apocalyptic GURPS-like role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
-games-strategy/mindustry-bin 126.2 135: A sandbox tower defense game
+games-strategy/mindustry-bin 135: A sandbox tower defense game
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader-export-credentials 1: Helper script for src_prepare-overlay GOG eclass that exports credentials.
 games-util/xone 0.3_p20230517: Linux kernel driver for Xbox One and Xbox Series X|S accessories
@@ -60,7 +58,7 @@ mail-client/heirloom-mailx 12.5: The mailx utility from CentOS
 media-fonts/labiryntowy 1.53: Practical font realization of the Labirynth Alphabet
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-gfx/akira 0.0.15_alpha_pre20231116 9999: Native Linux App for UI and UX Design built in Vala and Gtk
-media-gfx/czkawka 2.0.0 2.1.0: App to find duplicates, empty folders and similar images
+media-gfx/czkawka 2.1.0: App to find duplicates, empty folders and similar images
 media-gfx/drawing 1.0.2 9999: A drawing application for the GNOME desktop
 media-gfx/figma-bin 0.8.1: Unofficial desktop client for Figma - collaborative interface design tool
 media-gfx/fondo 1.6.1 9999: Wallpaper App for Linux
@@ -70,13 +68,13 @@ media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
 media-gfx/swayimg 1.10 9999: A lightweight image viewer for Sway/Wayland display servers.
 media-libs/olivecore 9999: Common components shared between Olive libraries
 media-libs/opentimelineio 0.15 0.17.0_pre1: Open Source API and interchange format for editorial timeline information.
-media-libs/vkBasalt 0.3.2.9 0.3.2.10: A vulkan post processing layer for linux
+media-libs/vkBasalt 0.3.2.10: A vulkan post processing layer for linux
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
-net-analyzer/ipscan-bin 3.7.5 3.9.1: Angry IP Scanner - fast and friendly network scanner
+net-analyzer/ipscan-bin 3.9.1: Angry IP Scanner - fast and friendly network scanner
 net-analyzer/nutty 1.1.1-r1 9999: A simple application to provide essential information on network related aspects
 net-analyzer/sensu 5.19.3 5.21.3: Simple. Scalable. Multi-cloud monitoring.
-net-firewall/hblock 3.1.3 3.2.0 9999: Improve your security and privacy by blocking ads, tracking and malware domains
+net-firewall/hblock 3.2.0 9999: Improve your security and privacy by blocking ads, tracking and malware domains
 net-im/matrix-commander 7.6.0: Simple but convenient CLI-based Matrix client app for sending and receiving
 net-im/pantalaimon 0.10.5: A Matrix proxy daemon that adds E2E encryption capabilities
 net-misc/ddgr 2.1 9999: DuckDuckGo from the terminal
@@ -85,22 +83,22 @@ net-misc/megacmd 1.4.0 9999: Command Line Interactive and Scriptable Application
 net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
 net-misc/postman-bin 7.35.0: Supercharge your API workflow
 net-wireless/mdk4 4.2_p20220202: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
-sci-mathematics/isabelle-bin 2021: Generic proof assistant with higher-order logic
+sci-mathematics/isabelle-bin 2021 2023: Generic proof assistant with higher-order logic
 sci-mathematics/scilab-bin 6.1.0: Scientific software package for numerical computations
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11: Flash OS images to SD cards & USB drives, safely and easily.
-sys-boot/rpi-imager 1.6.2 1.7.2 1.7.3 9999: Raspberry Pi Imaging Utility
+sys-boot/rpi-imager 1.7.3 9999: Raspberry Pi Imaging Utility
 sys-kernel/xanmod-kernel 6.6.17 6.6.18 6.7.5 6.7.6: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-kernel 6.6.15_p22: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-sources 6.6.15_p22: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
 sys-kernel/xanmod-sources 6.6.17 6.6.18 6.7.5 6.7.6: Full XanMod sources including the Gentoo patchset
-sys-process/nq 0.3.1 0.5 9999: Unix command line queue utility
+sys-process/nq 0.5 9999: Unix command line queue utility
 virtual/dist-kernel 6.6.15 6.6.17 6.6.18 6.7.5 6.7.6: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
 www-client/icecat 115.7.0 115.8.0: GNU IceCat Web Browser
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
 x11-misc/portfolio 1.0.0 9999: Minimalist file manager for those who want to use Linux mobile devices
-x11-misc/pscircle 1.3.1 1.4.0: Visualizes Linux processes in a radial tree
+x11-misc/pscircle 1.4.0: Visualizes Linux processes in a radial tree
 x11-misc/vala-panel 0.4.92 9999: Vala rewrite of SimplePanel
 x11-plugins/enlightenment-clipboard 0.1.0_alpha6 9999: A clipboard module for Enlightenment E21+ desktop
 x11-plugins/purple-discord 0.9_p20230215 9999: Pidgin/Purple PRotocol PLugin for Discord
