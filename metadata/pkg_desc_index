@@ -40,7 +40,7 @@ dev-util/github-desktop 2.9.3-r1 3.3.6_rc3: GitHub Desktop for Linux
 dev-util/plan9port 2023.09.13: Port of many Plan 9 programs and libraries
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
-games-arcade/tetrio-desktop 4.0.0: TETR.IO desktop client
+games-arcade/tetrio-desktop 8: TETR.IO desktop client
 games-emulation/corgi3ds 9999: An LLE dog-themed 3DS emulator
 games-fps/counter-strike-data 1.5: Freeware release of Counter-Strike 1.5
 games-fps/darkplaces 20170829_beta1: Enhanced engine for iD Software's Quake 1
@@ -80,7 +80,7 @@ net-misc/ddgr 2.1 9999: DuckDuckGo from the terminal
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
 net-misc/megacmd 1.4.0 9999: Command Line Interactive and Scriptable Application to access MEGA
 net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
-net-misc/postman-bin 7.35.0 10.23.0: Supercharge your API workflow
+net-misc/postman-bin 10.23.0: Supercharge your API workflow
 net-wireless/mdk4 4.2_p20220202: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
 sci-mathematics/isabelle-bin 2021 2023: Generic proof assistant with higher-order logic
 sci-mathematics/scilab-bin 6.1.0 2024.0.0: Scientific software package for numerical computations
