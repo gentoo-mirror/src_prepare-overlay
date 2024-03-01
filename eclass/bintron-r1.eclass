@@ -143,7 +143,7 @@ bintron-r1_src_install() {
 	doins -r "${S}"/*
 
 	local file type
-	for file in $(find .); do
+	for file in $(find . -type f); do
 
 		# node_modules *shouldn't* have anything which requires executable permissions
 		if [[ ${file} =~ /node_modules/ ]]; then
