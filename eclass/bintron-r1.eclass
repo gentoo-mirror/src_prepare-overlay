@@ -126,7 +126,7 @@ bintron-r1_src_prepare() {
 		for file in $(find .); do
 			type=$(file -b --mime-type "${file}")
 			case ${type} in
-				application/x-sharedlib|application/x-pie-executable)
+				application/x-sharedlib|application/x-executable|application/x-pie-executable)
 					patchelf --add-rpath /usr/$(get_libdir)/chromium ${file} || die
 					;;
 			esac
@@ -147,7 +147,7 @@ bintron-r1_src_install() {
 		type=$(file -b --mime-type "${file}")
 
 		case ${type} in
-			application/x-sharedlib|application/x-pie-executable|text/x-shellscript)
+			application/x-sharedlib|application/x-executable|application/x-pie-executable|text/x-shellscript)
 				fperms 0755 "${BINTRON_HOME}${file#./}"
 				;;
 		esac
