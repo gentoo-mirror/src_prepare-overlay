@@ -88,8 +88,8 @@ sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11 1.18.11-r1: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.7.3 1.8.5 9999: Raspberry Pi Imaging Utility
 sys-kernel/xanmod-kernel 6.6.17 6.6.18 6.7.5 6.7.6: Linux kernel built with XanMod and Gentoo patches
-sys-kernel/xanmod-rt-kernel 6.6.15_p22: Linux kernel built with XanMod and Gentoo patches
-sys-kernel/xanmod-rt-sources 6.6.15_p22: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
+sys-kernel/xanmod-rt-kernel 6.6.15_p22 6.6.18_p23: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-rt-sources 6.6.15_p22 6.6.18_p23: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
 sys-kernel/xanmod-sources 6.6.17 6.6.18 6.7.5 6.7.6: Full XanMod sources including the Gentoo patchset
 sys-process/nq 0.5 9999: Unix command line queue utility
 virtual/dist-kernel 6.6.15 6.6.17 6.6.18 6.7.5 6.7.6: Virtual to depend on any Distribution Kernel
