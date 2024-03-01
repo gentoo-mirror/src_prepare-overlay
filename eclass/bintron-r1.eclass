@@ -74,15 +74,21 @@ IDEPEND="
 QA_PREBUILT='*'
 QA_PRESTRIPPED='*'
 
+# @ECLASS_VARIABLE: BINTRON_NAME
+# @PRE_INHERIT
+# @DESCRIPTION:
+# Name of the package
+: ${BINTRON_NAME:="${PN}"}
+
 # @ECLASS_VARIABLE: BINTRON_HOME
 # @DESCRIPTION:
 # Path where the package contents will we installed.
-: ${BINTRON_HOME:="/opt/${PN}/"}
+: ${BINTRON_HOME:="/opt/${BINTRON_NAME}/"}
 
 # @ECLASS_VARIABLE: BINTRON_EXECUTABLES
 # @DESCRIPTION:
 # List of executable symlinks to create
-: ${BINTRON_EXECUTABLES:="${PN}"}
+: ${BINTRON_EXECUTABLES:="${BINTRON_NAME}"}
 
 # @FUNCTION: bintron-r1_pkg_pretend
 # @DESCRIPTION:
@@ -102,8 +108,8 @@ bintron-r1_src_prepare() {
 	chromium_remove_language_paks
 	popd >/dev/null || die "location reset for language cleanup failed"
 
-	if [[ -d "${WORKDIR}/usr/share/doc/${PN}" ]]; then
-		mv "${WORKDIR}/usr/share/doc/${PN}/" "${WORKDIR}/usr/share/doc/${PF}" || die
+	if [[ -d "${WORKDIR}/usr/share/doc/${BINTRON_NAME}" ]]; then
+		mv "${WORKDIR}/usr/share/doc/${BINTRON_NAME}/" "${WORKDIR}/usr/share/doc/${PF}" || die
 	fi
 
 	if [[ -e "${WORKDIR}/usr/share/doc/${PF}/changelog.gz" ]]; then
