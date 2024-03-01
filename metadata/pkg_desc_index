@@ -49,7 +49,7 @@ games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 games-puzzle/vvvvvv 2.2 9999: Retro-styled 2D puzzle platformer (source-available release)
 games-rpg/fallout1 1.1: Post-apocalyptic GURPS-like role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
-games-strategy/mindustry-bin 135: A sandbox tower defense game
+games-strategy/mindustry-bin 135 146: A sandbox tower defense game
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader-export-credentials 1: Helper script for src_prepare-overlay GOG eclass that exports credentials.
 games-util/xone 0.3_p20230517: Linux kernel driver for Xbox One and Xbox Series X|S accessories
