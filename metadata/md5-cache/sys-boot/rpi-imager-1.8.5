@@ -1,0 +1,17 @@
+BDEPEND=!qt6? ( dev-qt/linguist-tools ) test? ( || ( dev-lang/python:3.12 dev-lang/python:3.11 dev-lang/python:3.10 ) || ( ( dev-lang/python:3.12 dev-python/jsonschema[python_targets_python3_12(-)] dev-python/pytest[python_targets_python3_12(-)] dev-python/urllib3[python_targets_python3_12(-)] ) ( dev-lang/python:3.11 dev-python/jsonschema[python_targets_python3_11(-)] dev-python/pytest[python_targets_python3_11(-)] dev-python/urllib3[python_targets_python3_11(-)] ) ( dev-lang/python:3.10 dev-python/jsonschema[python_targets_python3_10(-)] dev-python/pytest[python_targets_python3_10(-)] dev-python/urllib3[python_targets_python3_10(-)] ) ) ) app-alternatives/ninja >=dev-build/cmake-3.20.5
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test
+DEPEND=app-arch/libarchive:= app-arch/xz-utils net-libs/gnutls:= net-misc/curl !qt6? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtdeclarative:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtwidgets:5 ) qt6? ( dev-qt/qtbase:6[dbus,gui,network,widgets] dev-qt/qtdeclarative:6 ) !qt6? ( dev-qt/qtsvg:5 ) qt6? ( dev-qt/qtsvg:6 )
+DESCRIPTION=Raspberry Pi Imaging Utility
+EAPI=8
+HOMEPAGE=https://github.com/raspberrypi/rpi-imager
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=cmake optfeature python-any-r1 xdg
+IUSE=qt6 +filter-drivelist test
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=app-arch/libarchive:= app-arch/xz-utils net-libs/gnutls:= net-misc/curl !qt6? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtdeclarative:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtwidgets:5 ) qt6? ( dev-qt/qtbase:6[dbus,gui,network,widgets] dev-qt/qtdeclarative:6 )
+RESTRICT=test !test? ( test )
+SLOT=0
+SRC_URI=https://github.com/raspberrypi/rpi-imager/archive/v1.8.5.tar.gz -> rpi-imager-1.8.5.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	24c947ff5f858625cf0b33c15eed4425	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	c7c9a62d6232cac66d4ea32d575c3e7c	optfeature	222cb475c5a4f7ae7cfb0bf510a6fe54	python-utils-r1	042f4cc53680245bf99a84669b94155a	python-any-r1	f5169813d1619761b459800587005fd2	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_md5_=cd8cfd55a961bbcdcd9ad41746aa6730
