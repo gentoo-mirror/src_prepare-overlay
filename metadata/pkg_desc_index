@@ -80,7 +80,7 @@ net-misc/ddgr 2.1 9999: DuckDuckGo from the terminal
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
 net-misc/megacmd 1.4.0 9999: Command Line Interactive and Scriptable Application to access MEGA
 net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
-net-misc/postman-bin 7.35.0: Supercharge your API workflow
+net-misc/postman-bin 7.35.0 10.23.0: Supercharge your API workflow
 net-wireless/mdk4 4.2_p20220202: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
 sci-mathematics/isabelle-bin 2021 2023: Generic proof assistant with higher-order logic
 sci-mathematics/scilab-bin 6.1.0: Scientific software package for numerical computations
