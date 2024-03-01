@@ -1,0 +1,50 @@
+https://github.com/raspberrypi/rpi-imager/commit/a44b9ae85601a0bf9317c8717813fd0e6ac14d3e
+https://github.com/raspberrypi/rpi-imager/pull/816
+https://github.com/raspberrypi/rpi-imager/issues/534
+https://gitlab.com/src_prepare/src_prepare-overlay/-/merge_requests/343
+
+From a44b9ae85601a0bf9317c8717813fd0e6ac14d3e Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?MrSm=C3=B6r?= <66489839+MrSmoer@users.noreply.github.com>
+Date: Fri, 9 Feb 2024 11:08:00 +0100
+Subject: [PATCH] Exposing 'DRIVELIST_FILTER_SYSTEM_DRIVES' as a cmake variable
+
+Makes the filtering-behaviour userconfigureable during compile-time.
+This way its easier to configure the imager for flashing SATA or NVME
+Drives installed in your system (because of lack of adapters),
+or if the drives are (accidentally) labled as systemdrives by drivelist.
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -4,6 +4,7 @@
+ cmake_minimum_required(VERSION 3.9.4)
+ OPTION (ENABLE_CHECK_VERSION "Check for version updates" ON)
+ OPTION (ENABLE_TELEMETRY "Enable sending telemetry" ON)
++OPTION (DRIVELIST_FILTER_SYSTEM_DRIVES "Filter System drives from displayed drives" ON)
+
+ project(rpi-imager LANGUAGES CXX C)
+ set(IMAGER_VERSION_MAJOR 1)
+@@ -164,6 +165,13 @@ else()
+     add_definitions(-DCHECK_VERSION_DEFAULT=false)
+ endif()
+
++if(DRIVELIST_FILTER_SYSTEM_DRIVES)
++   # Hide system drives from list
++   add_definitions(-DDRIVELIST_FILTER_SYSTEM_DRIVES=true)
++else()
++   add_definitions(-DDRIVELIST_FILTER_SYSTEM_DRIVES=false)
++endif()
++
+ # Because dependencies are typically not available by default on Windows, build bundled code
+ if (WIN32)
+     # Target Windows 7 (needed for drivelist module)
+--- a/src/config.h
++++ b/src/config.h
+@@ -19,9 +19,6 @@
+ /* Hash algorithm for verifying (uncompressed image) checksum */
+ #define OSLIST_HASH_ALGORITHM             QCryptographicHash::Sha256
+
+-/* Hide system drives from list */
+-#define DRIVELIST_FILTER_SYSTEM_DRIVES    true
+-
+ /* Update progressbar every 0.1 second */
+ #define PROGRESS_UPDATE_INTERVAL          100
+
