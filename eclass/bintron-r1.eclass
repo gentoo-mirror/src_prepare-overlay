@@ -144,6 +144,12 @@ bintron-r1_src_install() {
 
 	local file type
 	for file in $(find .); do
+
+		# node_modules *shouldn't* have anything which requires executable permissions
+		if [[ ${file} =~ /node_modules/ ]]; then
+			continue
+		fi
+
 		type=$(file -b --mime-type "${file}")
 
 		case ${type} in
