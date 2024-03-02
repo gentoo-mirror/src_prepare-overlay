@@ -54,4 +54,3 @@ www-client/icecat:system-png - Use the system-wide media-libs/libpng instead of 
 www-client/icecat:system-python-libs - Use system's python site instead of bundled python libraries
 www-client/icecat:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
 x11-plugins/purple-discord:qrcode - Add support for qrcodes using media-gfx/qrencode
-x11-terms/kgx:generic - Present using the generic name "Terminal"

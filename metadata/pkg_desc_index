@@ -101,6 +101,5 @@ x11-misc/pscircle 1.4.0: Visualizes Linux processes in a radial tree
 x11-misc/vala-panel 0.4.92 9999: Vala rewrite of SimplePanel
 x11-plugins/enlightenment-clipboard 0.1.0_alpha6 9999: A clipboard module for Enlightenment E21+ desktop
 x11-plugins/purple-discord 0.9_p20230215 9999: Pidgin/Purple PRotocol PLugin for Discord
-x11-terms/kgx 9999: A minimal terminal for GNOME
 x11-terms/xst 9999: Simple terminal implementation for X with Xresources support and other patches
 x11-themes/src_prepare-artwork 9999: Miscellaneous logos, wallpapers and other artwork from src_prepare group
