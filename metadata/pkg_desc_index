@@ -2,10 +2,8 @@ acct-group/sensu 1: Sensu program group
 acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/cgls 247: cgls from systemd
 app-admin/cgtop 247: cgtop from systemd
-app-admin/grub-customizer 5.1.0 9999: A graphical grub2 settings manager
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
 app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
-app-editors/rehex 0.3.0 9999: Reverse Engineers' Hex Editor
 app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
 app-emacs/ement 0.13 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
@@ -14,7 +12,7 @@ app-emacs/taxy-magit-section 0.12.2 9999: Programmable taxonomical hierarchies f
 app-emacs/ts 0.2.2 9999: Timestamp and date/time library
 app-emulation/bottles 51.10-r1 51.11 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
-app-emulation/windows95 2.3.0 3.1.1: Windows 95, running in an Electron app
+app-emulation/windows95 3.1.1: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8_p20220323: CLI based audio visualizer
 app-misc/spicetify-cli 2.32.1 2.33.0 2.33.1 2.33.2: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.1_alpha1 9999: Check if a given package has new upstream versions
@@ -35,8 +33,8 @@ dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.17: Dialect of Scheme designed for Systems Programming
 dev-tex/tectonic 0.15.0: A modernized, complete, self-contained TeX/LaTeX engine.
 dev-tex/texlab 5.12.4 5.13.0: LaTeX Language Server
-dev-util/beekeeper-studio 2.1.4 4.1.13: Modern and easy to use SQL client
-dev-util/github-desktop 2.9.3-r1 3.3.6_rc3: GitHub Desktop for Linux
+dev-util/beekeeper-studio 4.1.13: Modern and easy to use SQL client
+dev-util/github-desktop 3.3.6_rc3: GitHub Desktop for Linux
 dev-util/plan9port 2023.09.13: Port of many Plan 9 programs and libraries
 games-action/gta2 9.6-r2: And remember - respect is everything!
 games-action/stargunner 1.0b: Horizontal shooter by Apogee. Their last game, in fact.
@@ -49,7 +47,7 @@ games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
 games-puzzle/vvvvvv 2.2 9999: Retro-styled 2D puzzle platformer (source-available release)
 games-rpg/fallout1 1.1: Post-apocalyptic GURPS-like role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
-games-strategy/mindustry-bin 135 146: A sandbox tower defense game
+games-strategy/mindustry-bin 146: A sandbox tower defense game
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader-export-credentials 1: Helper script for src_prepare-overlay GOG eclass that exports credentials.
 games-util/xone 0.3_p20230517: Linux kernel driver for Xbox One and Xbox Series X|S accessories
@@ -59,10 +57,8 @@ media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional gl
 media-gfx/akira 0.0.15_alpha_pre20231116 9999: Native Linux App for UI and UX Design built in Vala and Gtk
 media-gfx/czkawka 2.1.0: App to find duplicates, empty folders and similar images
 media-gfx/drawing 1.0.2 9999: A drawing application for the GNOME desktop
-media-gfx/figma-bin 0.8.1 0.11.3: Unofficial desktop client for Figma - collaborative interface design tool
-media-gfx/fondo 1.6.1 9999: Wallpaper App for Linux
+media-gfx/figma-bin 0.11.3: Unofficial desktop client for Figma - collaborative interface design tool
 media-gfx/gpick 0.2.6: Advanced color picker written in C++ using GTK+ toolkit
-media-gfx/koko 9999: Image gallery application by KDE designed for desktop and touch devices
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
 media-gfx/swayimg 1.10 9999: A lightweight image viewer for Sway/Wayland display servers.
 media-libs/olivecore 9999: Common components shared between Olive libraries
@@ -71,7 +67,6 @@ media-libs/vkBasalt 0.3.2.10: A vulkan post processing layer for linux
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
 net-analyzer/ipscan-bin 3.9.1: Angry IP Scanner - fast and friendly network scanner
-net-analyzer/nutty 1.1.1-r1 9999: A simple application to provide essential information on network related aspects
 net-analyzer/sensu 5.19.3 5.21.3: Simple. Scalable. Multi-cloud monitoring.
 net-firewall/hblock 3.2.0 9999: Improve your security and privacy by blocking ads, tracking and malware domains
 net-im/matrix-commander 7.6.0: Simple but convenient CLI-based Matrix client app for sending and receiving
