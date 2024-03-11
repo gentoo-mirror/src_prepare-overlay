@@ -4,26 +4,6 @@ acct-group/sensu
 acct-user/sensu
 net-analyzer/sensu
 
-# Alfred Wingate <parona@protonmail.com> (2024-02-13)
-# Not maintained actively in this repository.
-# Use ::pentoo instead.
-app-editors/rehex
-
-# Alfred Wingate <parona@protonmail.com> (2024-02-12)
-# Not maintained actively in this repository.
-# Use ::guru instead.
-app-admin/grub-customizer
-
-# Alfred Wingate <parona@protonmail.com> (2024-01-21)
-# Requires dependencies which are in still in staging in the kde overlay.
-media-gfx/koko
-
-# Alfred Wingate <parona@protonmail.com> (2023-11-23)
-# Gtk applications that are broken at runtime, most likely due to
-# lack maintenance to work with updated dependencies (libsoup:3 et al).
-media-gfx/fondo
-net-analyzer/nutty
-
 # Alfred Wingate <parona@protonmail.com> (2023-08-31)
 # Indiscriminate mask of packages with NonsolvableDepsInStable
 # Fix or remove
