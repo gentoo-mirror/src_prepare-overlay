@@ -9,11 +9,6 @@ net-analyzer/sensu
 # Use ::pentoo instead.
 app-editors/rehex
 
-# Alfred Wingate <parona@protonmail.com> (2024-02-12)
-# Not maintained actively in this repository.
-# Use ::guru instead.
-app-admin/grub-customizer
-
 # Alfred Wingate <parona@protonmail.com> (2024-01-21)
 # Requires dependencies which are in still in staging in the kde overlay.
 media-gfx/koko
