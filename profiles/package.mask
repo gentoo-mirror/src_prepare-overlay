@@ -4,11 +4,6 @@ acct-group/sensu
 acct-user/sensu
 net-analyzer/sensu
 
-# Alfred Wingate <parona@protonmail.com> (2024-02-13)
-# Not maintained actively in this repository.
-# Use ::pentoo instead.
-app-editors/rehex
-
 # Alfred Wingate <parona@protonmail.com> (2023-08-31)
 # Indiscriminate mask of packages with NonsolvableDepsInStable
 # Fix or remove
