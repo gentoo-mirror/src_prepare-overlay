@@ -77,7 +77,7 @@ net-misc/megacmd 1.4.0 9999: Command Line Interactive and Scriptable Application
 net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
 net-misc/postman-bin 10.23.0: Supercharge your API workflow
 net-wireless/mdk4 4.2_p20220202: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
-sci-mathematics/isabelle-bin 2021 2023: Generic proof assistant with higher-order logic
+sci-mathematics/isabelle-bin 2023: Generic proof assistant with higher-order logic
 sci-mathematics/scilab-bin 2024.0.0: Scientific software package for numerical computations
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11 1.18.11-r1: Flash OS images to SD cards & USB drives, safely and easily.
@@ -89,7 +89,7 @@ sys-kernel/xanmod-sources 6.6.21 6.6.22 6.7.9 6.7.10 6.8.0 6.8.1: Full XanMod so
 sys-process/nq 0.5 9999: Unix command line queue utility
 virtual/dist-kernel 6.6.19 6.6.21 6.6.22 6.7.9 6.7.10 6.8.0 6.8.1: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
-www-client/icecat 115.8.0: GNU IceCat Web Browser
+www-client/icecat 115.8.0 115.9.0: GNU IceCat Web Browser
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
 x11-misc/portfolio 1.0.0 9999: Minimalist file manager for those who want to use Linux mobile devices
 x11-misc/pscircle 1.4.0: Visualizes Linux processes in a radial tree
