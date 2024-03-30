@@ -25,16 +25,16 @@ CRATES="
 	ciborium-io@0.2.1
 	ciborium-ll@0.2.1
 	ciborium@0.2.1
-	clap@4.4.18
-	clap_builder@4.4.18
-	clap_derive@4.4.7
-	clap_lex@0.6.0
+	clap@4.5.3
+	clap_builder@4.5.2
+	clap_derive@4.5.3
+	clap_lex@0.7.0
 	colorchoice@1.0.0
 	countme@3.0.1
 	crc32fast@1.3.2
 	criterion-plot@0.5.0
 	criterion@0.5.1
-	crossbeam-channel@0.5.11
+	crossbeam-channel@0.5.12
 	crossbeam-deque@0.8.3
 	crossbeam-epoch@0.9.15
 	crossbeam-utils@0.8.19
@@ -58,7 +58,7 @@ CRATES="
 	getrandom@0.2.10
 	half@1.8.2
 	hashbrown@0.14.3
-	heck@0.4.1
+	heck@0.5.0
 	hermit-abi@0.3.3
 	human_name@2.0.2
 	idna@0.5.0
@@ -77,7 +77,7 @@ CRATES="
 	libc@0.2.153
 	linux-raw-sys@0.4.13
 	lock_api@0.4.10
-	log@0.4.20
+	log@0.4.21
 	logos-codegen@0.13.0
 	logos-derive@0.13.0
 	logos@0.13.0
@@ -132,12 +132,12 @@ CRATES="
 	siphasher@0.3.11
 	smallstr@0.3.0
 	smallvec@1.11.1
-	strsim@0.10.0
+	strsim@0.11.0
 	syn@2.0.48
 	tempfile@3.10.1
 	text-size@1.1.1
-	thiserror-impl@1.0.56
-	thiserror@1.0.56
+	thiserror-impl@1.0.58
+	thiserror@1.0.58
 	thread_local@1.1.7
 	threadpool@1.8.1
 	tinytemplate@1.2.1
@@ -147,7 +147,7 @@ CRATES="
 	unicode-bidi@0.3.13
 	unicode-case-mapping@0.4.0
 	unicode-ident@1.0.12
-	unicode-normalization@0.1.22
+	unicode-normalization@0.1.23
 	unicode-segmentation@1.10.1
 	unidecode@0.3.0
 	url@2.5.0
