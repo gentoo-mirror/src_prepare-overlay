@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=>=app-arch/libarchive-3.3.3[lz4,zstd]
 RESTRICT=!test? ( test ) mirror
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=226c8b53bc3557608e00a2cd878b021f

@@ -8,5 +8,5 @@ LICENSE=CC0-1.0
 PROPERTIES=live
 RESTRICT=binchecks mirror strip test
 SLOT=0
-_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=922a4092c8d8e5a11ac290a22faa107a
