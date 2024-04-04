@@ -32,7 +32,7 @@ else
 	"
 	S="${WORKDIR}/${MY_PN}-${MY_PV}"
 
-	KEYWORDS="~amd64"
+	KEYWORDS=""
 fi
 
 LICENSE="Apache-2.0"
