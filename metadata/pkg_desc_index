@@ -4,6 +4,7 @@ app-admin/cgls 247: cgls from systemd
 app-admin/cgtop 247: cgtop from systemd
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
 app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
+app-editors/notepadnext 0.7_p20240317: A cross-platform reimplementation of Notepad++ based on Qt
 app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
 app-emacs/ement 0.13 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
