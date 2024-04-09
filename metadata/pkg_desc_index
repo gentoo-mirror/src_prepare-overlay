@@ -52,6 +52,7 @@ games-strategy/mindustry-bin 146: A sandbox tower defense game
 games-strategy/warcraft3 1.26a: Third installment of Warcraft from Blizzard.
 games-util/lgogdownloader-export-credentials 1: Helper script for src_prepare-overlay GOG eclass that exports credentials.
 games-util/xone 0.3_p20230517 0.3_p20240226: Linux kernel driver for Xbox One and Xbox Series X|S accessories
+games-util/xpad-noone 20240109: Linux kernel driver for Xbox 360 controllers with Xbox One support removed
 mail-client/heirloom-mailx 12.5: The mailx utility from CentOS
 media-fonts/labiryntowy 1.53: Practical font realization of the Labirynth Alphabet
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
