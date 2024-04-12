@@ -38,7 +38,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="qt6"
 
-DEPEND="${RDEPEND}"
 RDEPEND="
 	x11-libs/libxcb:=
 	!qt6? (
@@ -54,6 +53,7 @@ RDEPEND="
 		dev-qt/qt5compat:6
 	)
 "
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	default
