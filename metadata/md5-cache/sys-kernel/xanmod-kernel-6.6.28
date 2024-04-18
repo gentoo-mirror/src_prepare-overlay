@@ -8,11 +8,11 @@ INHERIT=kernel-build
 IUSE=debug secureboot savedconfig +initramfs test generic-uki modules-compress +strip modules-sign
 KEYWORDS=-* ~amd64
 LICENSE=GPL-2
-PDEPEND=>=virtual/dist-kernel-6.8.5
-RDEPEND=!sys-kernel/xanmod-kernel-bin:6.8.5 sys-apps/kmod[lzma] virtual/libelf
+PDEPEND=>=virtual/dist-kernel-6.6.28
+RDEPEND=!sys-kernel/xanmod-kernel-bin:6.6.28 sys-apps/kmod[lzma] virtual/libelf
 REQUIRED_USE=secureboot? ( modules-sign )
 RESTRICT=!test? ( test ) test? ( userpriv ) arm? ( test )
-SLOT=6.8.5
-SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.8.tar.xz mirror://sourceforge/xanmod/patch-6.8.5-xanmod1.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.8-8.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.8-8.extras.tar.xz https://github.com/mgorny/gentoo-kernel-config/archive/g11.tar.gz -> gentoo-kernel-config-g11.tar.gz
+SLOT=6.6.28
+SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.tar.xz mirror://sourceforge/xanmod/patch-6.6.28-xanmod1.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.6-35.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.6-35.extras.tar.xz https://github.com/mgorny/gentoo-kernel-config/archive/g11.tar.gz -> gentoo-kernel-config-g11.tar.gz
 _eclasses_=secureboot	4911adb593665638c76fbd4e70d451ac	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	a1229a86bd0db058e474a2d7d9191cca	python-any-r1	f5169813d1619761b459800587005fd2	portability	225656ad6c6594fe3b0187bdd50707fb	savedconfig	8b5f9d995a970e49cd427c55d5840285	dist-kernel-utils	145861da258122cbba5240a850f1a5e8	mount-boot	3945d351ee3192381911f938f4ee527a	kernel-install	8b3f309ac423799839f1fb3253b473b8	kernel-build	99eb00d7450b05352eb000bfb702db53
-_md5_=09eb2faf101e0de9a9c1e773335d0b26
+_md5_=b0c2d9b1a5328c55e3b464200d69ca75
