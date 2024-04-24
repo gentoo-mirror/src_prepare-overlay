@@ -24,5 +24,5 @@ DEPEND="
 	)
 "
 
-distutils_enable_sphinx docs dev-python/sphinx-py3doc-enhanced-theme
+#distutils_enable_sphinx docs dev-python/sphinx-py3doc-enhanced-theme
 distutils_enable_tests pytest
