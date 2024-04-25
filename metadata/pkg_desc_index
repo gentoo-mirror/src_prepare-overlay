@@ -2,6 +2,7 @@ acct-group/sensu 1: Sensu program group
 acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/cgls 247: cgls from systemd
 app-admin/cgtop 247: cgtop from systemd
+app-backup/restic-browser-bin 0.3.0: A GUI to browse and restore restic backup repositories
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
 app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
 app-editors/notepadnext 0.7_p20240317: A cross-platform reimplementation of Notepad++ based on Qt
@@ -15,7 +16,7 @@ app-emulation/bottles 51.10-r1 51.11 9999: Run Windows software and games on Lin
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 3.1.1: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8_p20220323: CLI based audio visualizer
-app-misc/spicetify-cli 2.36.4 2.36.5 2.36.6: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.36.6 2.36.8: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.1_alpha1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.2.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
@@ -45,7 +46,6 @@ games-fps/counter-strike-data 1.5: Freeware release of Counter-Strike 1.5
 games-fps/darkplaces 20170829_beta1: Enhanced engine for iD Software's Quake 1
 games-fps/quake15 0_beta2: A mod that makes Quake faster paced, harder, gorier and more violent.
 games-misc/lolcat-jaseg 1.0 9999: High-performance implementation of lolcat
-games-puzzle/vvvvvv 2.2 9999: Retro-styled 2D puzzle platformer (source-available release)
 games-rpg/fallout1 1.1: Post-apocalyptic GURPS-like role-playing game.
 games-simulation/clou2 2.0f-r1: Burglary simulator
 games-strategy/mindustry-bin 146: A sandbox tower defense game
@@ -73,7 +73,7 @@ net-analyzer/sensu 5.19.3 5.21.3: Simple. Scalable. Multi-cloud monitoring.
 net-firewall/hblock 3.2.0 9999: Improve your security and privacy by blocking ads, tracking and malware domains
 net-im/matrix-commander 7.6.0: Simple but convenient CLI-based Matrix client app for sending and receiving
 net-im/pantalaimon 0.10.5: A Matrix proxy daemon that adds E2E encryption capabilities
-net-misc/ddgr 2.1 9999: DuckDuckGo from the terminal
+net-misc/ddgr 2.1 2.2 9999: DuckDuckGo from the terminal
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
 net-misc/megacmd 1.4.0 9999: Command Line Interactive and Scriptable Application to access MEGA
 net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
@@ -83,7 +83,7 @@ net-wireless/mdk4 4.2_p20220202: Proof-of-concept tool to exploit common IEEE 80
 sci-mathematics/isabelle-bin 2023: Generic proof assistant with higher-order logic
 sci-mathematics/scilab-bin 2024.0.0: Scientific software package for numerical computations
 sys-apps/xbps 0.58 9999: The X Binary Package System
-sys-boot/etcher-bin 1.18.11 1.18.11-r1: Flash OS images to SD cards & USB drives, safely and easily.
+sys-boot/etcher-bin 1.18.11-r1 1.18.12: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.7.3 1.8.5-r1 9999: Raspberry Pi Imaging Utility
 sys-kernel/xanmod-kernel 6.6.27 6.6.28-r1 6.8.6 6.8.7-r1: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-kernel 6.6.25_p29: Linux kernel built with XanMod and Gentoo patches
