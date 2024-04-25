@@ -36,6 +36,6 @@ src_unpack() {
 
 src_install() {
 	dobin "${MY_PN}"
-	newicon "${DISTDIR}/${ICON}" "${MY_PN}"
+	newicon "${DISTDIR}/${ICON}" "${MY_PN}.png"
 	make_desktop_entry "${MY_PN}" Restic-Browser "${MY_PN}"
 }
