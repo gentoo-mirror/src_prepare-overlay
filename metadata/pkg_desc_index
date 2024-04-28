@@ -26,7 +26,7 @@ dev-libs/sdl-kitchensink 1.0.12: A Simple SDL2 / FFmpeg library for audio/video 
 dev-perl/File-Rename 2.02: Perl extension for renaming multiple files
 dev-python/FVS 0.3.4-r1: File Versioning System with hash comparison
 dev-python/aspectlib 2.0.0: An aspect-oriented programming, monkey-patch and decorators library.
-dev-python/icoextract 0.1.4: Extract icons from Windows PE files (.exe/.dll)
+dev-python/icoextract 0.1.4 0.1.5: Extract icons from Windows PE files (.exe/.dll)
 dev-python/janus 1.0.0: Thread-safe asyncio-aware queue for Python
 dev-python/matrix-nio 0.24.0: A Python Matrix client library, designed according to sans I/O principles
 dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic ratchet library
