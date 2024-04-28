@@ -1,16 +1,14 @@
 BDEPEND=>=app-editors/emacs-27.1:*
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=>=app-emacs/transient-0.3.7 >=app-emacs/persist-0.5 >=app-emacs/plz-0.6 >=app-emacs/taxy-0.10 >=app-emacs/taxy-magit-section-0.12.1 >=app-emacs/svg-lib-0.2.5 >=app-emacs/transient-0.3.7
+DEPEND=>=app-emacs/transient-0.3.7 >=app-emacs/persist-0.5 >=app-emacs/plz-0.6 >=app-emacs/taxy-0.10 >=app-emacs/taxy-magit-section-0.13 >=app-emacs/svg-lib-0.2.5 >=app-emacs/transient-0.3.7
 DESCRIPTION=Matrix client for GNU Emacs
 EAPI=8
 HOMEPAGE=https://github.com/alphapapa/ement.el
 INHERIT=elisp
-IUSE=e2e
 KEYWORDS=~amd64
 LICENSE=GPL-3
 RDEPEND=>=app-editors/emacs-27.1:*
-RESTRICT=test
 SLOT=0
-SRC_URI=https://elpa.gnu.org/packages/ement-0.13.tar
+SRC_URI=https://github.com/alphapapa/ement.el/archive/refs/tags/v0.15.tar.gz -> ement-0.15.tar.gz
 _eclasses_=elisp-common	b5740ee671dad911400f832fe315a9a5	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
-_md5_=4c47e9cc1bfba65d9904f08b117d20d4
+_md5_=d9350dd457336f37bc29d5fa81c2b563
