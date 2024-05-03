@@ -20,7 +20,7 @@ DESCRIPTION="Full XanMod sources including the Gentoo patchset "
 HOMEPAGE="https://xanmod.org"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	mirror://sourceforge/xanmod/patch-${OKV}-xanmod${XANMOD_VERSION}.xz
+	https://downloads.sourceforge.net/xanmod/patch-${OKV}-xanmod${XANMOD_VERSION}.xz
 	${GENPATCHES_URI}
 "
 LICENSE+=" CDDL"
