@@ -21,7 +21,7 @@ DESCRIPTION="Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo
 HOMEPAGE="https://xanmod.org"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	mirror://sourceforge/xanmod/patch-${OKV}-rt${RT_PATCHSET}-xanmod${XANMOD_VERSION}.xz
+	https://downloads.sourceforge.net/xanmod/patch-${OKV}-rt${RT_PATCHSET}-xanmod${XANMOD_VERSION}.xz
 	${GENPATCHES_URI}
 "
 LICENSE+=" CDDL"

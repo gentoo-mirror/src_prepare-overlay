@@ -10,13 +10,15 @@ inherit kernel-build
 
 MY_P=linux-${PV%.*}
 GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 3 ))
-GENTOO_CONFIG_VER=g11
+GENTOO_CONFIG_VER=g13
+
+XANMOD_VERSION="1"
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
 HOMEPAGE="https://www.kernel.org/ https://xanmod.org/"
 SRC_URI="
 	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
-	mirror://sourceforge/xanmod/patch-${PV}-xanmod1.xz
+	https://downloads.sourceforge.net/xanmod/patch-${PV}-xanmod${XANMOD_VERSION}.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/mgorny/gentoo-kernel-config/archive/${GENTOO_CONFIG_VER}.tar.gz
@@ -26,6 +28,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 KEYWORDS="-* ~amd64"
+
 IUSE="debug"
 
 RDEPEND="
@@ -49,7 +52,7 @@ src_prepare() {
 
 	local PATCHES=(
 		# meh, genpatches have no directory
-		"${WORKDIR}"/patch-${PV}-xanmod1
+		"${WORKDIR}"/patch-${PV}-xanmod${XANMOD_VERSION}
 		"${WORKDIR}"/*.patch
 	)
 	default
@@ -65,7 +68,7 @@ src_prepare() {
 	esac
 
 	rm "${S}/localversion" || die
-	local myversion="-xanmod1-dist"
+	local myversion="-xanmod${XANMOD_VERSION}-dist"
 	echo "CONFIG_LOCALVERSION=\"${myversion}\"" > "${T}"/version.config || die
 	local dist_conf_path="${WORKDIR}/gentoo-kernel-config-${GENTOO_CONFIG_VER}"
 
