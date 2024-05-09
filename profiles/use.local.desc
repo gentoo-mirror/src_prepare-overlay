@@ -3,7 +3,6 @@
 # * generated automatically using pmaint *
 
 app-emacs/ement:e2e - Enable end to end encryption support via pantalaimon
-app-emulation/dos32a:binary - Fetch binary release instead of compiling the package from source.
 dev-scheme/gerbil:leveldb - Add support for using dev-libs/leveldb
 dev-scheme/gerbil:lmdb - Add support for using dev-db/lmdb
 dev-scheme/gerbil:yaml - Add support for yaml file format
