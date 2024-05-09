@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <use>
-    <flag name="binary">
-      Fetch binary release instead of compiling the package from source.
-    </flag>
-  </use>
+	<upstream>
+		<remote-id type="github">grepwood/dos32a</remote-id>
+	</upstream>
 </pkgmetadata>
