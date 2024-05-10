@@ -6,7 +6,7 @@ EAPI=8
 inherit go-module
 
 WHITELIST_VERSIONS=(
-	"<> 1.2.8 1.2.36"
+	"<> 1.2.8 1.2.37"
 )
 
 whitelist_versions() {
