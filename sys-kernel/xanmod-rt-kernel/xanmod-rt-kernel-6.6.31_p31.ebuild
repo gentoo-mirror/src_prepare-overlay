@@ -11,8 +11,8 @@ inherit kernel-build
 MY_P=linux-${PV%.*}
 MY_PV="${PV%_p*}"
 
-GENPATCHES_P=genpatches-${MY_PV%.*}-$(( ${MY_PV##*.} + 6 ))
-GENTOO_CONFIG_VER=g11
+GENPATCHES_P=genpatches-${MY_PV%.*}-$(( ${MY_PV##*.} + 7 ))
+GENTOO_CONFIG_VER=g13
 
 RT_PATCHSET="${PV/*_p}"
 
