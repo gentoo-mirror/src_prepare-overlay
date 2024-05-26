@@ -4,6 +4,8 @@ sys-kernel/xanmod-kernel:6.9.0
 virtual/dist-kernel:0/6.9.0
 sys-kernel/xanmod-kernel:6.9.1
 virtual/dist-kernel:0/6.9.1
+sys-kernel/xanmod-kernel:6.9.2
+virtual/dist-kernel:0/6.9.2
 
 # Alfred Wingate <parona@protonmail.com> (2024-02-15)
 # Masked for NonsolvableDepsInStable
