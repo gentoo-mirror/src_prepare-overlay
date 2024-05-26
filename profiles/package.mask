@@ -1,7 +1,5 @@
 # Alfred Wingate <parona@protonmail.com> (2024-05-14)
 # Masked until sys-kernel/gentoo-kernel catches up
-sys-kernel/xanmod-kernel:6.9.0
-virtual/dist-kernel:0/6.9.0
 sys-kernel/xanmod-kernel:6.9.1
 virtual/dist-kernel:0/6.9.1
 sys-kernel/xanmod-kernel:6.9.2
