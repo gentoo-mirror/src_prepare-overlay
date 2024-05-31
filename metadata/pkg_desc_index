@@ -58,7 +58,7 @@ media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional gl
 media-gfx/akira 0.0.15_alpha_pre20231116 9999: Native Linux App for UI and UX Design built in Vala and Gtk
 media-gfx/czkawka 2.1.0: App to find duplicates, empty folders and similar images
 media-gfx/drawing 1.0.2 9999: A drawing application for the GNOME desktop
-media-gfx/figma-bin 0.11.3: Unofficial desktop client for Figma - collaborative interface design tool
+media-gfx/figma-bin 0.11.3 0.11.4: Unofficial desktop client for Figma - collaborative interface design tool
 media-gfx/gpick 0.2.6: Advanced color picker written in C++ using GTK+ toolkit
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
 media-gfx/swayimg 1.10 9999: A lightweight image viewer for Sway/Wayland display servers.
@@ -84,12 +84,12 @@ sci-mathematics/scilab-bin 2024.0.0 2024.1.0: Scientific software package for nu
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11-r1 1.18.12: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.7.3 1.8.5-r1 9999: Raspberry Pi Imaging Utility
-sys-kernel/xanmod-kernel 6.6.31 6.6.32 6.8.10 6.8.11 6.9.1 6.9.2: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-kernel 6.6.32 6.8.11 6.9.2 6.9.3: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-kernel 6.6.30_p30 6.6.31_p31: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-sources 6.6.30_p30 6.6.31_p31: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
-sys-kernel/xanmod-sources 6.6.31 6.6.32 6.8.10 6.8.11 6.9.1 6.9.2: Full XanMod sources including the Gentoo patchset
+sys-kernel/xanmod-sources 6.6.32 6.8.11 6.9.2 6.9.3: Full XanMod sources including the Gentoo patchset
 sys-process/nq 0.5 9999: Unix command line queue utility
-virtual/dist-kernel 6.6.30 6.6.31 6.6.32 6.8.10 6.8.11 6.9.1 6.9.2: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.6.30 6.6.31 6.6.32 6.8.11 6.9.2 6.9.3: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
 www-client/icecat 115.10.0 115.11.0: GNU IceCat Web Browser
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
