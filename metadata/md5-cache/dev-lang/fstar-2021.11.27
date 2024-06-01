@@ -11,5 +11,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-ml/batteries:= dev-ml/ocaml-fileutils:= dev-ml/ocaml-process:= dev-ml/ocaml-stdint:= dev-ml/ppx_deriving:= dev-ml/ppx_deriving_yojson:= dev-ml/ppxlib:= dev-ml/yojson:= dev-ml/zarith:= ~sci-mathematics/z3-4.8.5 dev-libs/gmp:= dev-lang/ocaml:=[ocamlopt?]
 SLOT=0/2021.11.27
 SRC_URI=https://github.com/FStarLang/FStar/archive/v2021.11.27.tar.gz -> fstar-2021.11.27.tar.gz
-_eclasses_=findlib	cc1c14904708a0a28bcb256b342a808c
+_eclasses_=findlib	49d5365fca4dea46f13825b9d763c89e
 _md5_=ec126c00064ddb85eef8fc63d9e1de95
