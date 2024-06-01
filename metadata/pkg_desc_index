@@ -79,7 +79,7 @@ net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
 net-misc/postman-bin 10.23.0: Supercharge your API workflow
 net-nntp/nzb-monkey-go 0.1.12: Golang version of the NZB Monkey with included NZB direct search
 net-wireless/mdk4 4.2_p20220202: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
-sci-mathematics/isabelle-bin 2023: Generic proof assistant with higher-order logic
+sci-mathematics/isabelle-bin 2023 2024: Generic proof assistant with higher-order logic
 sci-mathematics/scilab-bin 2024.0.0 2024.1.0: Scientific software package for numerical computations
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11-r1 1.18.12: Flash OS images to SD cards & USB drives, safely and easily.
