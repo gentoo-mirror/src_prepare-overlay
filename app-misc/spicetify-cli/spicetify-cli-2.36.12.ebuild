@@ -5,8 +5,10 @@ EAPI=8
 
 inherit go-module
 
+MY_PN="cli"
+
 WHITELIST_VERSIONS=(
-	"<> 1.2.8 1.2.37"
+	"<> 1.2.8 1.2.39"
 )
 
 whitelist_versions() {
@@ -49,9 +51,10 @@ whitelist_versions
 DESCRIPTION="Commandline tool to customize Spotify client."
 HOMEPAGE="https://spicetify.app/"
 SRC_URI="
-	https://github.com/spicetify/spicetify-cli/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/spicetify/cli/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-deps.tar.xz
 "
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 LICENSE="Apache-2.0 BSD LGPL-2.1 MIT"
 SLOT="0"
