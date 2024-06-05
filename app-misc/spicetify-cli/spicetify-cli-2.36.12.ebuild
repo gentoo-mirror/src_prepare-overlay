@@ -71,9 +71,12 @@ src_compile() {
 
 src_install() {
 	insinto "${INSTALLDIR}"
-	doins -r {CustomApps,Extensions,Themes,jsHelper,spicetify-cli}
-	dobin "${FILESDIR}/spicetify"
-	fperms +x "${INSTALLDIR}/spicetify-cli"
+	doins -r {CustomApps,Extensions,Themes,jsHelper,cli}
+	newbin - spicetify <<-EOF
+	#!/usr/bin/env sh
+	exec /opt/spicetify-cli/cli \$@
+	EOF
+	fperms +x "${INSTALLDIR}/cli"
 }
 
 pkg_postinst() {
