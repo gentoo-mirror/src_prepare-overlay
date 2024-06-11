@@ -79,10 +79,13 @@ BDEPEND="${PYTHON_DEPS}
 	>=dev-util/cbindgen-0.24.3
 	net-libs/nodejs
 	virtual/pkgconfig
-	!clang? ( >=virtual/rust-1.65 )
+	!clang? (
+		>=virtual/rust-1.65
+		<virtual/rust-1.78
+	)
 	!elibc_glibc? (
 		|| (
-			dev-lang/rust
+			<dev-lang/rust-1.78
 			<dev-lang/rust-bin-1.73
 		)
 	)
@@ -95,7 +98,10 @@ BDEPEND="${PYTHON_DEPS}
 			x11-apps/xhost
 		)
 		!X? (
-			>=gui-libs/wlroots-0.15.1-r1[tinywl]
+			|| (
+				gui-wm/tinywl
+				<gui-libs/wlroots-0.17.3[tinywl(-)]
+			)
 			x11-misc/xkeyboard-config
 		)
 	)"
@@ -638,6 +644,8 @@ src_prepare() {
 			export RUST_TARGET="x86_64-unknown-linux-musl"
 		elif use x86 ; then
 			export RUST_TARGET="i686-unknown-linux-musl"
+		elif use arm64 ; then
+			export RUST_TARGET="aarch64-unknown-linux-musl"
 		else
 			die "Unknown musl chost, please post your rustc -vV along with emerge --info on Gentoo's bug #915651"
 		fi
@@ -1296,5 +1304,11 @@ pkg_postinst() {
 		elog "glibc not found! You won't be able to play DRM content."
 		elog "See Gentoo bug #910309 or upstream bug #1843683."
 		elog
+	fi
+
+	if use geckodriver ; then
+		ewarn "You have enabled the 'geckodriver' USE flag. Geckodriver is now"
+		ewarn "packaged separately as net-misc/geckodriver and the use flag will be"
+		ewarn "dropped from main Firefox package by Firefox 128.0 release."
 	fi
 }
