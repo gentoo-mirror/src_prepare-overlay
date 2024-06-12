@@ -56,7 +56,6 @@ mail-client/heirloom-mailx 12.5: The mailx utility from CentOS
 media-fonts/labiryntowy 1.53: Practical font realization of the Labirynth Alphabet
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-gfx/akira 0.0.15_alpha_pre20231116 9999: Native Linux App for UI and UX Design built in Vala and Gtk
-media-gfx/czkawka 2.1.0: App to find duplicates, empty folders and similar images
 media-gfx/drawing 1.0.2 9999: A drawing application for the GNOME desktop
 media-gfx/figma-bin 0.11.3 0.11.4: Unofficial desktop client for Figma - collaborative interface design tool
 media-gfx/gpick 0.2.6: Advanced color picker written in C++ using GTK+ toolkit
