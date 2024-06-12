@@ -9,8 +9,8 @@ PYTHON_COMPAT=( python3_{10..12} )
 inherit distutils-r1
 
 DESCRIPTION="A Python Matrix client library, designed according to sans I/O principles"
-HOMEPAGE="https://github.com/poljar/matrix-nio"
-SRC_URI="https://github.com/poljar/matrix-nio/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
+HOMEPAGE="https://github.com/matrix-nio/matrix-nio"
+SRC_URI="https://github.com/matrix-nio/matrix-nio/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
