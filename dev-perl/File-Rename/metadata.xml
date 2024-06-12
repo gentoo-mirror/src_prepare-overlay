@@ -2,6 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <upstream>
-    <remote-id type="cpan">rename</remote-id>
+    <remote-id type="cpan">File-Rename</remote-id>
   </upstream>
 </pkgmetadata>

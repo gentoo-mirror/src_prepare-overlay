@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit font rpm
 
@@ -10,14 +10,16 @@ HOMEPAGE="
 	https://koschei.fedoraproject.org/package/labiryntowy-fonts
 	http://alfabet-ozdobny.appspot.com/?str=labiryntowy
 "
-SRC_URI="http://fedora.osuosl.org/linux/releases/33/Everything/x86_64/os/Packages/l/${PN}-fonts-${PV}-12.fc33.noarch.rpm -> ${P}.rpm"
+SRC_URI="
+	http://fedora.osuosl.org/linux/releases/40/Everything/x86_64/os/Packages/l/labiryntowy-fonts-1.53-20.fc40.noarch.rpm
+"
+S="${WORKDIR}"
+
+LICENSE="OFL-1.0"
+SLOT="0"
 KEYWORDS="~amd64"
 
 RESTRICT="mirror"
-LICENSE="OFL"
-SLOT="0"
-
-S="${WORKDIR}"
 
 src_install() {
 	newdoc "./usr/share/doc/${PN}-fonts/opis.txt" README.txt

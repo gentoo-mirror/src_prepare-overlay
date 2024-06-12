@@ -8,13 +8,15 @@ PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1
 
+MY_PV="${PV/_/}"
+
 DESCRIPTION="A Python Matrix client library, designed according to sans I/O principles"
 HOMEPAGE="https://github.com/matrix-nio/matrix-nio"
-SRC_URI="https://github.com/matrix-nio/matrix-nio/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
+SRC_URI="https://github.com/matrix-nio/matrix-nio/archive/${MY_PV}.tar.gz -> ${P}.gh.tar.gz"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE="test"
 
 RESTRICT="!test? ( test )"
@@ -48,9 +50,11 @@ DEPEND="
 
 distutils_enable_tests pytest
 # m2r2 mistune woes
-#distutils_enable_sphinx doc dev-python/sphinx-rtd-theme dev-python/m2r2
+#distutils_enable_sphinx doc dev-python/sphinx-autodoc-typehints dev-python/sphinx-rtd-theme dev-python/m2r2
 
 EPYTEST_DESELECT=(
+	# breaks network sandbox
+	"tests/async_client_test.py::TestClass::test_connect_wrapper"
 	# requires pytest-benchmark, not much value in pass/no pass tests
 	"tests/key_export_test.py::TestClass::test_decrypt_rounds"
 	"tests/key_export_test.py::TestClass::test_encrypt_rounds"

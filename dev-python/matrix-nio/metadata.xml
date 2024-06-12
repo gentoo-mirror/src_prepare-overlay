@@ -6,6 +6,6 @@
     <name>Alfred Wingate</name>
   </maintainer>
   <upstream>
-    <remote-id type="github">poljar/matrix-nio</remote-id>
+    <remote-id type="github">matrix-nio/matrix-nio</remote-id>
   </upstream>
 </pkgmetadata>
