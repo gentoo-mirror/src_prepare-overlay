@@ -33,7 +33,7 @@ dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic 
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.17: Dialect of Scheme designed for Systems Programming
 dev-tex/tectonic 0.15.0: A modernized, complete, self-contained TeX/LaTeX engine.
-dev-tex/texlab 5.16.0 5.16.1: LaTeX Language Server
+dev-tex/texlab 5.16.0 5.16.1 5.17.0: LaTeX Language Server
 dev-util/beekeeper-studio 4.3.1 4.3.4 4.6.0: Modern and easy to use SQL client
 dev-util/github-desktop 3.3.6_rc3: GitHub Desktop for Linux
 dev-util/plan9port 2023.09.13: Port of many Plan 9 programs and libraries
@@ -63,7 +63,7 @@ media-gfx/gpick 0.2.6: Advanced color picker written in C++ using GTK+ toolkit
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
 media-gfx/swayimg 1.10 9999: A lightweight image viewer for Sway/Wayland display servers.
 media-libs/olivecore 9999: Common components shared between Olive libraries
-media-libs/opentimelineio 0.15 0.16.0 0.17.0_pre1: Open Source API and interchange format for editorial timeline information.
+media-libs/opentimelineio 0.17.0: Open Source API and interchange format for editorial timeline information.
 media-libs/vkBasalt 0.3.2.10: A vulkan post processing layer for linux
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
@@ -84,12 +84,12 @@ sci-mathematics/scilab-bin 2024.0.0 2024.1.0: Scientific software package for nu
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11-r1 1.18.12 1.19.21: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.7.3 1.8.5-r1 9999: Raspberry Pi Imaging Utility
-sys-kernel/xanmod-kernel 6.6.33 6.6.34 6.9.4 6.9.5: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-kernel 6.6.34 6.6.35 6.9.5 6.9.6: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-kernel 6.6.30_p30 6.6.31_p31: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-sources 6.6.30_p30 6.6.31_p31: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
-sys-kernel/xanmod-sources 6.6.33 6.6.34 6.9.4 6.9.5: Full XanMod sources including the Gentoo patchset
+sys-kernel/xanmod-sources 6.6.34 6.6.35 6.9.5 6.9.6: Full XanMod sources including the Gentoo patchset
 sys-process/nq 0.5 9999: Unix command line queue utility
-virtual/dist-kernel 6.6.30 6.6.31 6.6.33 6.6.34 6.9.4 6.9.5: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.6.30 6.6.31 6.6.34 6.6.35 6.9.5 6.9.6: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
 www-client/icecat 115.11.0 115.12.0: GNU IceCat Web Browser
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
