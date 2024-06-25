@@ -5,34 +5,27 @@ EAPI=8
 
 inherit cmake
 
-MY_PV="${PV/_pre/.dev}"
-
 DESCRIPTION="Open Source API and interchange format for editorial timeline information."
 HOMEPAGE="https://opentimeline.io"
 if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/AcademySoftwareFoundation/OpenTimelineIO.git"
-	EGIT_SUBMODULES="src/deps/{any,optional-lite,rapidjson}"
+	EGIT_SUBMODULES=( '*' )
 else
 	MY_PN="OpenTimelineIO"
+	MY_PV="${PV/_pre/.dev}"
 
-	ANY_COMMIT="bfc77f2e4be6e9a093dd645ef3f1aa30620c9205"
-	OPTIONAL_LITE_COMMIT="be720ebfd7add22abe60e49602735de9231105d0"
 	RAPIDJSON_COMMIT="06d58b9e848c650114556a23294d0b6440078c61"
 
 	SRC_URI="
-		https://github.com/AcademySoftwareFoundation/${MY_PN}/archive/refs/tags/v${MY_PV}.tar.gz
+		https://github.com/AcademySoftwareFoundation/OpenTimelineIO/archive/refs/tags/v${MY_PV}.tar.gz
 			-> ${P}.tar.gz
-		https://github.com/thelink2012/any/archive/${ANY_COMMIT}.tar.gz
-			-> any-${ANY_COMMIT}.tar.gz
-		https://github.com/martinmoene/optional-lite/archive/${OPTIONAL_LITE_COMMIT}.tar.gz
-			-> optional-lite-${OPTIONAL_LITE_COMMIT}.tar.gz
 		https://github.com/Tencent/rapidjson/archive/${RAPIDJSON_COMMIT}.tar.gz
-			-> rapidjson-${RAPDIJSON_COMMIT}.tar.gz
+			-> rapidjson-${RAPIDJSON_COMMIT}.tar.gz
 	"
 	S="${WORKDIR}/${MY_PN}-${MY_PV}"
 
-	KEYWORDS=""
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="Apache-2.0"
@@ -46,14 +39,9 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-#TODO: python
-
 src_prepare() {
 	if [[ "${PV}" != "9999" ]]; then
-		rmdir "${S}/src/deps/"{any,optional-lite,rapidjson} || die
-		mv "${WORKDIR}/any-${ANY_COMMIT}" "${S}/src/deps/any" || die
-		mv "${WORKDIR}/optional-lite-${OPTIONAL_LITE_COMMIT}" "${S}/src/deps/optional-lite" || die
-		mv "${WORKDIR}/rapidjson-${RAPIDJSON_COMMIT}" "${S}/src/deps/rapidjson" || die
+		mv -T "${WORKDIR}/rapidjson-${RAPIDJSON_COMMIT}" "${S}/src/deps/rapidjson" || die
 	fi
 
 	eapply_user
@@ -67,11 +55,6 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		# needed for olive, hopefully set upstream in the final release
-		# (with the removal of bundled any and optional!)
-		# https://github.com/AcademySoftwareFoundation/OpenTimelineIO/pull/1539
-		-DCMAKE_CXX_STANDARD=17
-
 		-DOTIO_AUTOMATIC_SUBMODULES=OFF
 		-DOTIO_FIND_IMATH=ON
 
