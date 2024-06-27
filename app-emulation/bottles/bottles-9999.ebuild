@@ -21,7 +21,7 @@ fi
 LICENSE="GPL-3"
 SLOT="0"
 
-IUSE="test llvm-libunwind"
+IUSE="test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RESTRICT="!test? ( test )"
 
@@ -56,9 +56,9 @@ RDEPEND="
 	>=sys-libs/glibc-2.32
 	x11-apps/xdpyinfo
 	|| (
-		app-emulation/wine-vanilla[X,llvm-libunwind=]
-		app-emulation/wine-staging[X,llvm-libunwind=]
-		app-emulation/wine-proton[X(+),llvm-libunwind=]
+		app-emulation/wine-vanilla[X]
+		app-emulation/wine-staging[X]
+		app-emulation/wine-proton[X(+)]
 	)
 	$(python_gen_cond_dep '
 		app-arch/patool[${PYTHON_USEDEP}]
@@ -138,9 +138,14 @@ pkg_postinst() {
 	optfeature "vmtouch support" dev-utils/vmtouch
 	#optfeature "MangoHub support" games-util/mangohub
 	#optfeature "obs-vkcapture support" media-video/obs-vkcapture
-	if use llvm-libunwind; then
-		ewarn "When using llvm-libunwind useflag all the runners downloaded from bottles should be broken"
-		ewarn "So when using llvm-libunwind system wide is recommended to stick only to runners compiled by your system"
-		ewarn "Note: Using LLVM Profile Steam Proton works, so you can try bottles runners"
+
+	if has_version app-emulation/wine-vanilla[llvm-libunwind] || \
+		has_version app-emulation/wine-staging[llvm-libunwind] || \
+		has_version app-emulation/wine-proton[llvm-libunwind]; then
+		ewarn "With llvm-libunwind all the runners downloaded from bottles are most likely broken"
+		ewarn "So when using llvm-libunwind system wide it is recommended to stick to runners compiled by your system"
+		ewarn "More information:"
+		ewarn "https://gitlab.com/src_prepare/src_prepare-overlay/-/issues/49"
+		ewarn "https://gitlab.com/src_prepare/src_prepare-overlay/-/merge_requests/394#note_1735168806"
 	fi
 }
