@@ -57,7 +57,7 @@ media-fonts/labiryntowy 1.53-r1: Practical font realization of the Labirynth Alp
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-gfx/akira 0.0.15_alpha_pre20231116 9999: Native Linux App for UI and UX Design built in Vala and Gtk
 media-gfx/czkawka 7.0.0: App to find duplicates, empty folders and similar images
-media-gfx/drawing 1.0.2 9999: A drawing application for the GNOME desktop
+media-gfx/drawing 1.0.2-r1 9999: A drawing application for the GNOME desktop
 media-gfx/figma-bin 0.11.3 0.11.4: Unofficial desktop client for Figma - collaborative interface design tool
 media-gfx/gpick 0.2.6: Advanced color picker written in C++ using GTK+ toolkit
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
@@ -72,7 +72,7 @@ net-analyzer/sensu 5.19.3 5.21.3: Simple. Scalable. Multi-cloud monitoring.
 net-firewall/hblock 3.2.0 9999: Improve your security and privacy by blocking ads, tracking and malware domains
 net-im/matrix-commander 7.6.0 7.6.2: Simple but convenient CLI-based Matrix client app for sending and receiving
 net-im/pantalaimon 0.10.5: A Matrix proxy daemon that adds E2E encryption capabilities
-net-misc/ddgr 2.1 2.2 9999: DuckDuckGo from the terminal
+net-misc/ddgr 2.2 9999: DuckDuckGo from the terminal
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
 net-misc/megacmd 1.4.0 9999: Command Line Interactive and Scriptable Application to access MEGA
 net-misc/meganz-sdk 3.7.3 9999: MEGA C++ SDK
@@ -83,7 +83,7 @@ sci-mathematics/isabelle-bin 2023 2024: Generic proof assistant with higher-orde
 sci-mathematics/scilab-bin 2024.0.0 2024.1.0: Scientific software package for numerical computations
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11-r1 1.18.12 1.19.21: Flash OS images to SD cards & USB drives, safely and easily.
-sys-boot/rpi-imager 1.7.3 1.8.5-r1 9999: Raspberry Pi Imaging Utility
+sys-boot/rpi-imager 1.8.5-r1 9999: Raspberry Pi Imaging Utility
 sys-kernel/xanmod-kernel 6.6.35 6.6.36 6.9.6 6.9.7: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-kernel 6.6.31_p31 6.6.35_p34: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-sources 6.6.31_p31 6.6.35_p34: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
