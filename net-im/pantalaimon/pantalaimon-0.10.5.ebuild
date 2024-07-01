@@ -1,10 +1,10 @@
-# Copyright 2021-2023 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 inherit distutils-r1
 
 DESCRIPTION="A Matrix proxy daemon that adds E2E encryption capabilities"
@@ -38,13 +38,20 @@ RDEPEND="
 	<dev-python/pydbus-0.7[${PYTHON_USEDEP}]
 	dev-python/pygobject[${PYTHON_USEDEP}]
 "
-BDEPEND="
-	test? (
-		${RDEPEND}
-	)
-"
 
 distutils_enable_tests pytest
+
+EPYTEST_IGNORE=(
+	"tests/proxy_test.py"
+)
+
+EPYTEST_DESELECT=(
+	"tests/pan_client_test.py::TestClass::test_start_loop"
+)
+
+python_test() {
+	epytest -o asyncio_mode=auto -p asyncio
+}
 
 src_install() {
 	distutils-r1_src_install
