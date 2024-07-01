@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit cmake optfeature python-any-r1 xdg
 
@@ -34,6 +34,7 @@ RDEPEND="
 		dev-qt/qtdeclarative:5
 		dev-qt/qtgui:5
 		dev-qt/qtnetwork:5
+		dev-qt/qtquickcontrols2:5
 		dev-qt/qtwidgets:5
 	)
 	qt6? (
