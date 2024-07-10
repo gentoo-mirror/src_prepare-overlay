@@ -12,7 +12,7 @@ app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU
 app-emacs/taxy 0.10.1 9999: Programmable taxonomical hierarchies for arbitrary objects
 app-emacs/taxy-magit-section 0.13 9999: Programmable taxonomical hierarchies for arbitrary objects
 app-emacs/ts 0.2.2 9999: Timestamp and date/time library
-app-emulation/bottles 51.11 9999: Run Windows software and games on Linux
+app-emulation/bottles 51.11 51.12 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 3.1.1: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8_p20220323: CLI based audio visualizer
@@ -33,7 +33,7 @@ dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic 
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.17: Dialect of Scheme designed for Systems Programming
 dev-tex/tectonic 0.15.0: A modernized, complete, self-contained TeX/LaTeX engine.
-dev-tex/texlab 5.17.0 5.18.0: LaTeX Language Server
+dev-tex/texlab 5.17.0 5.18.0 5.19.0: LaTeX Language Server
 dev-util/beekeeper-studio 4.3.1 4.3.4 4.6.0 4.6.2: Modern and easy to use SQL client
 dev-util/github-desktop 3.3.6_rc3: GitHub Desktop for Linux
 dev-util/plan9port 2023.09.13: Port of many Plan 9 programs and libraries
