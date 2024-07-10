@@ -134,7 +134,7 @@ pkg_postinst() {
 	xdg_pkg_postinst
 	gnome2_schemas_update
 	optfeature "gamemode support" games-util/gamemode
-	optfeature "gamescope support" games-util/gamescope
+	optfeature "gamescope support" games-wm/gamescope
 	optfeature "vmtouch support" dev-utils/vmtouch
 	#optfeature "MangoHub support" games-util/mangohub
 	#optfeature "obs-vkcapture support" media-video/obs-vkcapture
