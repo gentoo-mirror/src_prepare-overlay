@@ -28,7 +28,7 @@ PATCH_URIS=(
 )
 
 SRC_URI="
-	https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-1gnu1.tar.bz2
+	https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-3gnu1.tar.bz2
 	${PATCH_URIS[@]}
 "
 S="${WORKDIR}/${PN}-${PV%_*}"
@@ -79,10 +79,13 @@ BDEPEND="${PYTHON_DEPS}
 	>=dev-util/cbindgen-0.24.3
 	net-libs/nodejs
 	virtual/pkgconfig
-	!clang? ( >=virtual/rust-1.65 )
+	!clang? (
+		>=virtual/rust-1.65
+		<virtual/rust-1.78
+	)
 	!elibc_glibc? (
 		|| (
-			dev-lang/rust
+			<dev-lang/rust-1.78
 			<dev-lang/rust-bin-1.73
 		)
 	)
@@ -95,7 +98,10 @@ BDEPEND="${PYTHON_DEPS}
 			x11-apps/xhost
 		)
 		!X? (
-			>=gui-libs/wlroots-0.15.1-r1[tinywl]
+			|| (
+				gui-wm/tinywl
+				<gui-libs/wlroots-0.17.3[tinywl(-)]
+			)
 			x11-misc/xkeyboard-config
 		)
 	)"
