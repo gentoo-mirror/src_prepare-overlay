@@ -16,7 +16,7 @@ app-emulation/bottles 51.11 51.13 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 3.1.1: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8_p20220323: CLI based audio visualizer
-app-misc/spicetify-cli 2.36.13 2.36.14: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.36.13 2.36.14 2.36.15: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.1_alpha1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.2.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
@@ -32,7 +32,7 @@ dev-python/matrix-nio 0.24.0 0.25.0_rc3: A Python Matrix client library, designe
 dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic ratchet library
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.17: Dialect of Scheme designed for Systems Programming
-dev-tex/tectonic 0.15.0: A modernized, complete, self-contained TeX/LaTeX engine.
+dev-tex/tectonic 0.15.0 0.15.0-r1: A modernized, complete, self-contained TeX/LaTeX engine.
 dev-tex/texlab 5.17.0 5.18.0 5.19.0: LaTeX Language Server
 dev-util/beekeeper-studio 4.3.1 4.3.4 4.6.0 4.6.2: Modern and easy to use SQL client
 dev-util/github-desktop 3.3.6_rc3: GitHub Desktop for Linux
