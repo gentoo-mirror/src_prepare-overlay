@@ -6,9 +6,9 @@
 EAPI=8
 
 # Using Gentoos firefox patches as system libraries and lto are quite nice
-FIREFOX_PATCHSET="firefox-115esr-patches-09.tar.xz"
+FIREFOX_PATCHSET="firefox-115esr-patches-11.tar.xz"
 
-LLVM_MAX_SLOT=17
+LLVM_MAX_SLOT=18
 
 PYTHON_COMPAT=( python3_{10..11} )
 PYTHON_REQ_USE="ncurses,sqlite,ssl"
@@ -54,6 +54,15 @@ FF_ONLY_DEPEND="screencast? ( media-video/pipewire:= )
 	selinux? ( sec-policy/selinux-mozilla )"
 BDEPEND="${PYTHON_DEPS}
 	|| (
+		(
+			sys-devel/clang:18
+			sys-devel/llvm:18
+			clang? (
+				sys-devel/lld:18
+				virtual/rust:0/llvm-18
+				pgo? ( =sys-libs/compiler-rt-sanitizers-18*[profile] )
+			)
+		)
 		(
 			sys-devel/clang:17
 			sys-devel/llvm:17
@@ -630,6 +639,9 @@ src_prepare() {
 		rm -v "${WORKDIR}"/firefox-patches/*bgo-748849-RUST_TARGET_override.patch || die
 	fi
 
+	# Modify patch to apply correctly
+	sed -i -e 's/firefox/icecat/' "${WORKDIR}"/firefox-patches/0033-bmo-1882209-update-crates-for-rust-1.78-stripped-patch-from-bugs.freebsd.org-bug278834.patch || die
+
 	eapply "${WORKDIR}/firefox-patches"
 
 	# Allow user to apply any additional patches without modifing ebuild
@@ -681,6 +693,10 @@ src_prepare() {
 	# Clear cargo checksums from crates we have patched
 	# moz_clear_vendor_checksums crate
 	moz_clear_vendor_checksums audio_thread_priority
+	moz_clear_vendor_checksums bindgen
+	moz_clear_vendor_checksums encoding_rs
+	moz_clear_vendor_checksums any_all_workaround
+	moz_clear_vendor_checksums packed_simd
 
 	# Create build dir
 	BUILD_DIR="${WORKDIR}/${PN}_build"
