@@ -9,18 +9,20 @@ KERNEL_IUSE_MODULES_SIGN=1
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-MY_PV="${PV%_p*}"
 
-GENPATCHES_P=genpatches-${MY_PV%.*}-$(( ${MY_PV##*.} + 7 ))
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 7 ))
 GENTOO_CONFIG_VER=g13
 
-RT_PATCHSET="${PV/*_p}"
+XANMOD_VERSION="1"
+RT_PATCHSET="36"
+
+KV_FULL="${PV}-rt${RT_PATCHSET}-xanmod${XANMOD_VERSION}-dist"
 
 DESCRIPTION="Linux kernel built with XanMod and Gentoo patches"
 HOMEPAGE="https://www.kernel.org/ https://xanmod.org/"
 SRC_URI="
 	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
-	https://downloads.sourceforge.net/xanmod/patch-${MY_PV}-rt${RT_PATCHSET}-xanmod1.xz
+	https://downloads.sourceforge.net/xanmod/patch-${PV}-rt${RT_PATCHSET}-xanmod${XANMOD_VERSION}.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
 	https://github.com/mgorny/gentoo-kernel-config/archive/${GENTOO_CONFIG_VER}.tar.gz
@@ -29,8 +31,8 @@ SRC_URI="
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
-SLOT="${MY_PV}"
 KEYWORDS="-* ~amd64"
+
 IUSE="debug"
 
 RDEPEND="
@@ -40,7 +42,7 @@ BDEPEND="
 	debug? ( dev-util/pahole )
 "
 PDEPEND="
-	>=virtual/dist-kernel-${MY_PV}
+	>=virtual/dist-kernel-${PV}
 "
 
 QA_FLAGS_IGNORED="
@@ -54,7 +56,7 @@ src_prepare() {
 
 	local PATCHES=(
 		# meh, genpatches have no directory
-		"${WORKDIR}"/patch-${MY_PV}-rt${RT_PATCHSET}-xanmod1
+		"${WORKDIR}"/patch-${PV}-rt${RT_PATCHSET}-xanmod${XANMOD_VERSION}
 		"${WORKDIR}"/*.patch
 	)
 	default
@@ -70,7 +72,7 @@ src_prepare() {
 	esac
 
 	rm "${S}"/localversion* || die
-	local myversion="-rt${RT_PATCHSET}-xanmod1-dist"
+	local myversion="-rt${RT_PATCHSET}-xanmod${XANMOD_VERSION}-dist"
 	echo "CONFIG_LOCALVERSION=\"${myversion}\"" > "${T}"/version.config || die
 	local dist_conf_path="${WORKDIR}/gentoo-kernel-config-${GENTOO_CONFIG_VER}"
 
@@ -84,26 +86,4 @@ src_prepare() {
 	)
 
 	kernel-build_merge_configs "${merge_configs[@]}"
-}
-
-# lazy workaround
-kernel-install_pkg_preinst() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	local dir_ver=${PV}${KV_LOCALVERSION}
-	local kernel_dir=${ED}/usr/src/linux-${dir_ver}
-	local relfile=${kernel_dir}/include/config/kernel.release
-	[[ ! -d ${kernel_dir} ]] &&
-		die "Kernel directory ${kernel_dir} not installed!"
-	[[ ! -f ${relfile} ]] &&
-		die "Release file ${relfile} not installed!"
-	local release
-	release="$(<"${relfile}")" || die
-
-	if [[ -L ${EROOT}/lib && ${EROOT}/lib -ef ${EROOT}/usr/lib ]]; then
-		# Adjust symlinks for merged-usr.
-		rm "${ED}/lib/modules/${release}"/{build,source} || die
-		dosym "../../../src/linux-${dir_ver}" "/usr/lib/modules/${release}/build"
-		dosym "../../../src/linux-${dir_ver}" "/usr/lib/modules/${release}/source"
-	fi
 }
