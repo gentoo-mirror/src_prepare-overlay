@@ -18,6 +18,7 @@ media-fonts/siji:pcf - Install Portable Compiled Font (PCF)
 media-gfx/gpick:gtk2 - Enable support for GTK+2 instead of GTK+3
 media-gfx/swayimg:heif - Support for HEIF and AVIF image formats
 media-gfx/swayimg:jpegxl - Support for JPEG XL image format
+media-sound/fooyin:pipewire - Enable sound support via native PipeWire backend
 net-analyzer/sensu:agent - Installs Sensu agent
 net-analyzer/sensu:backend - Install Sensu dashboard and backend server
 net-analyzer/sensu:gcc - Compile with GCC's Go compiler instead of Google's reference Go compiler (NOT SUPPORTED)
