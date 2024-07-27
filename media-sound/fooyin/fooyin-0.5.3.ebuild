@@ -22,7 +22,7 @@ REQUIRED_USE="|| ( alsa pipewire sdl )"
 
 RDEPEND="
 	dev-libs/icu:=
-	dev-qt/kdsingleapplication[qt6]
+	dev-libs/kdsingleapplication
 	dev-qt/qtbase:6[concurrent,dbus,gui,network,sql,widgets]
 	media-libs/taglib
 	media-video/ffmpeg:=
