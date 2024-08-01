@@ -19,4 +19,4 @@ KEYWORDS="~amd64"
 # No tests
 RESTRICT="test"
 
-RDEPEND="media-libs/vkBasalt"
+RDEPEND="media-gfx/vkBasalt"
