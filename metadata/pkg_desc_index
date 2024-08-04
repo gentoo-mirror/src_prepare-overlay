@@ -85,12 +85,12 @@ sys-apps/qdiskinfo 0.2_p20240714: CrystalDiskInfo alternative for Linux
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11-r1 1.18.12 1.19.21: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.8.5-r1 9999: Raspberry Pi Imaging Utility
-sys-kernel/xanmod-kernel 6.6.41 6.6.42 6.6.43 6.9.10 6.9.11 6.9.12 6.10.2: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-kernel 6.6.42 6.6.43 6.6.44 6.9.11 6.9.12 6.10.2 6.10.3: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-kernel 6.6.36_p35 6.6.40 6.6.41 6.6.43: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-sources 6.6.36_p35 6.6.40 6.6.41 6.6.43: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
-sys-kernel/xanmod-sources 6.6.41 6.6.42 6.6.43 6.9.10 6.9.11 6.9.12 6.10.0-r1 6.10.1 6.10.2: Full XanMod sources including the Gentoo patchset
+sys-kernel/xanmod-sources 6.6.42 6.6.43 6.6.44 6.9.11 6.9.12 6.10.0-r1 6.10.2 6.10.3: Full XanMod sources including the Gentoo patchset
 sys-process/nq 0.5 1.0 9999: Unix command line queue utility
-virtual/dist-kernel 6.6.35 6.6.36 6.6.40 6.6.41 6.6.42 6.6.43 6.9.10 6.9.11 6.9.12 6.10.2: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.6.36 6.6.40 6.6.41 6.6.42 6.6.43 6.6.44 6.9.11 6.9.12 6.10.2 6.10.3: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
 www-client/icecat 115.13.0: GNU IceCat Web Browser
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
