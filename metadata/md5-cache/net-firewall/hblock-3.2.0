@@ -10,5 +10,5 @@ RDEPEND=|| ( net-misc/curl[http2,ssl] net-misc/wget[ssl] www-client/fetch )
 RESTRICT=binchecks mirror strip test
 SLOT=0
 SRC_URI=https://github.com/hectorm/hblock/archive/v3.2.0.tar.gz -> hblock-3.2.0.tar.gz
-_eclasses_=toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	c8b03e8df84486aa991d4396686e8942
+_eclasses_=toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	c8b03e8df84486aa991d4396686e8942
 _md5_=c4bb7e0445411a6cec71a5a62a77aa2c
