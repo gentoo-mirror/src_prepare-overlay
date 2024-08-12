@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=poetry
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1
 
@@ -15,9 +15,8 @@ SRC_URI="https://github.com/matrix-nio/matrix-nio/archive/${PV}.tar.gz -> ${P}.g
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="test"
-
-RESTRICT="!test? ( test )"
+PROPERTIES="test_network"
+RESTRICT="test !test? ( test )"
 
 RDEPEND="
 	>=dev-python/python-olm-3.2.15[${PYTHON_USEDEP}]
@@ -35,7 +34,6 @@ RDEPEND="
 "
 DEPEND="
 	test? (
-		${RDEPEND}
 		>=dev-python/aioresponses-0.7.4[${PYTHON_USEDEP}]
 		>=dev-python/Faker-8.0.0[${PYTHON_USEDEP}]
 		>=dev-python/pytest-aiohttp-0.3.0[${PYTHON_USEDEP}]
