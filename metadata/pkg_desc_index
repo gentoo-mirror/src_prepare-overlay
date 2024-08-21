@@ -2,7 +2,7 @@ acct-group/sensu 1: Sensu program group
 acct-user/sensu 0: Sensu Monitoring Framework
 app-admin/cgls 247: cgls from systemd
 app-admin/cgtop 247: cgtop from systemd
-app-backup/restic-browser 0.3.1: A GUI to browse and restore from restic backup repositories
+app-backup/restic-browser 0.3.1 0.3.1-r1: A GUI to browse and restore from restic backup repositories
 app-backup/restic-browser-bin 0.3.0-r1 0.3.1: A GUI to browse and restore restic backup repositories
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
 app-editors/lite 1.11-r1 9999: A lightweight text editor written in Lua
