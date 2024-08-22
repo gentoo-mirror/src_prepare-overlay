@@ -767,9 +767,9 @@ src_configure() {
 }
 
 src_install() {
-	dobin target/$(usex debug debug release)/czkawka_cli
+	dobin $(cargo_target_dir)/czkawka_cli
 
-	use gtk && dobin target/$(usex debug debug release)/czkawka_gui
+	use gtk && dobin $(cargo_target_dir)/czkawka_gui
 
 	if use gui; then
 		doicon data/icons/com.github.qarmin.czkawka.svg
