@@ -544,8 +544,8 @@ CRATES="
 	thread_local@1.1.7
 	tiff@0.9.1
 	time-core@0.1.2
-	time-macros@0.2.17
-	time@0.3.34
+	time-macros@0.2.18
+	time@0.3.36
 	tiny-skia-path@0.11.4
 	tiny-skia@0.11.4
 	tiny-xlib@0.2.2
@@ -753,6 +753,10 @@ BDEPEND="
 "
 
 QA_FLAGS_IGNORED=".*"
+
+PATCHES=(
+	"${FILESDIR}"/czkawka-7.0.0-rust-1.80-breakage.patch
+)
 
 src_configure() {
 	local myfeatures=(
