@@ -544,8 +544,8 @@ CRATES="
 	thread_local@1.1.7
 	tiff@0.9.1
 	time-core@0.1.2
-	time-macros@0.2.17
-	time@0.3.34
+	time-macros@0.2.18
+	time@0.3.36
 	tiny-skia-path@0.11.4
 	tiny-skia@0.11.4
 	tiny-xlib@0.2.2
@@ -694,7 +694,7 @@ CRATES="
 	zvariant_utils@1.0.1
 "
 
-inherit cargo desktop xdg
+inherit cargo desktop xdg virtualx
 
 DESCRIPTION="App to find duplicates, empty folders and similar images"
 HOMEPAGE="https://github.com/qarmin/czkawka"
@@ -730,7 +730,6 @@ IUSE="gui gtk raw heif"
 REQUIRED_USE="
 	gui? ( gtk )
 "
-RESTRICT="test"
 
 DEPEND="
 	gtk? (
@@ -754,6 +753,10 @@ BDEPEND="
 
 QA_FLAGS_IGNORED=".*"
 
+PATCHES=(
+	"${FILESDIR}"/czkawka-7.0.0-rust-1.80-breakage.patch
+)
+
 src_configure() {
 	local myfeatures=(
 		$(usev heif)
@@ -762,10 +765,14 @@ src_configure() {
 	cargo_src_configure --no-default-features --bin czkawka_cli $(usev gui "--bin czkawka_gui")
 }
 
-src_install() {
-	dobin target/$(usex debug debug release)/czkawka_cli
+src_test() {
+	virtx cargo_src_test
+}
 
-	use gtk && dobin target/$(usex debug debug release)/czkawka_gui
+src_install() {
+	dobin $(cargo_target_dir)/czkawka_cli
+
+	use gtk && dobin $(cargo_target_dir)/czkawka_gui
 
 	if use gui; then
 		doicon data/icons/com.github.qarmin.czkawka.svg

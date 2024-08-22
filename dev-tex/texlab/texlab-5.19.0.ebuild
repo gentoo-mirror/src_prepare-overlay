@@ -224,7 +224,7 @@ src_configure() {
 
 src_install() {
 	cargo_src_install --path crates/texlab
-	help2man --output=texlab.1 --no-info "target/$(usex debug debug release)/texlab" || die
+	help2man --output=texlab.1 --no-info "$(cargo_target_dir)/texlab" || die
 	doman texlab.1
 	einstalldocs
 }
