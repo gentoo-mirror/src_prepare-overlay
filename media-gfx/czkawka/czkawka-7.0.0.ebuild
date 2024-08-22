@@ -694,7 +694,7 @@ CRATES="
 	zvariant_utils@1.0.1
 "
 
-inherit cargo desktop xdg
+inherit cargo desktop xdg virtualx
 
 DESCRIPTION="App to find duplicates, empty folders and similar images"
 HOMEPAGE="https://github.com/qarmin/czkawka"
@@ -730,7 +730,6 @@ IUSE="gui gtk raw heif"
 REQUIRED_USE="
 	gui? ( gtk )
 "
-RESTRICT="test"
 
 DEPEND="
 	gtk? (
@@ -764,6 +763,10 @@ src_configure() {
 		$(usev raw libraw)
 	)
 	cargo_src_configure --no-default-features --bin czkawka_cli $(usev gui "--bin czkawka_gui")
+}
+
+src_test() {
+	virtx cargo_src_test
 }
 
 src_install() {
