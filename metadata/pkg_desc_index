@@ -71,7 +71,7 @@ media-video/olive 9999: Professional open-source non-linear video editor
 net-analyzer/ipscan-bin 3.9.1: Angry IP Scanner - fast and friendly network scanner
 net-analyzer/sensu 5.19.3 5.21.3: Simple. Scalable. Multi-cloud monitoring.
 net-firewall/hblock 3.2.0 9999: Improve your security and privacy by blocking ads, tracking and malware domains
-net-im/matrix-commander 7.6.2: Simple but convenient CLI-based Matrix client app for sending and receiving
+net-im/matrix-commander 7.6.2 7.6.3: Simple but convenient CLI-based Matrix client app for sending and receiving
 net-im/pantalaimon 0.10.5: A Matrix proxy daemon that adds E2E encryption capabilities
 net-misc/ddgr 2.2 9999: DuckDuckGo from the terminal
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
