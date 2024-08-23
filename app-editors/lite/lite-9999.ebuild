@@ -1,22 +1,21 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit desktop xdg
+inherit desktop toolchain-funcs xdg
 
 DESCRIPTION="A lightweight text editor written in Lua"
 HOMEPAGE="https://github.com/rxi/lite"
 
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/rxi/${PN}.git"
+	EGIT_REPO_URI="https://github.com/rxi/lite.git"
 else
-	SRC_URI="https://github.com/rxi/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/rxi/lite/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 fi
 
-RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
 
@@ -25,29 +24,29 @@ BDEPEND="
 "
 DEPEND="
 	media-libs/libsdl2
-	net-libs/libasyncns
-	x11-libs/libICE
-	x11-libs/libSM
-	x11-libs/libX11
-	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXcursor
-	x11-libs/libXdmcp
-	x11-libs/libXext
-	x11-libs/libXfixes
-	x11-libs/libXi
-	x11-libs/libXrandr
-	x11-libs/libXrender
-	x11-libs/libXtst
-	x11-libs/libXxf86vm
-	x11-libs/libxcb
 "
 RDEPEND="
 	${DEPEND}
 "
 
+src_prepare() {
+	default
+
+	# 1. no automagic ccache please
+	# 2. respect user compiler
+	# 3. respect user CFLAGS
+	# 4. respect user LDFLAGS
+	sed -i \
+		-e '/if command -v ccache/,/fi/d' \
+		-e 's/compiler="gcc"/compiler="${CC}"/' \
+		-e '/^cflags=/acflags+=" ${CFLAGS}"' \
+		-e '/^lflags=/alflags+=" ${LDFLAGS}"' \
+		build.sh || die
+}
+
 src_compile() {
-	bash build.sh release || die
+	tc-export_build_env CC
+	bash -x build.sh release || die
 
 	cp icon.ico lite.ico || die
 	# This converts to 4 png files
@@ -59,8 +58,6 @@ src_compile() {
 }
 
 src_install() {
-	default
-
 	insinto "/opt/${PN}"
 	doins -r data
 	exeinto "/opt/${PN}"
@@ -79,14 +76,6 @@ src_install() {
 	done
 	doicon "${PN}.ico"
 	make_desktop_entry "${PN}" "${PN^}" "${PN}" "Development;IDE"
-}
 
-pkg_postinst() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_desktop_database_update
-	xdg_icon_cache_update
+	einstalldocs
 }
