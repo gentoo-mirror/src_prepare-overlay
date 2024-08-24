@@ -1,3 +1,7 @@
+# Alfred Wingate <parona@protonmail.com> (2024-08-23)
+# Dead url for bundled luajit
+app-editors/howl
+
 # Alfred Wingate <parona@protonmail.com> (2024-02-15)
 # Masked for NonsolvableDepsInStable
 acct-group/sensu
