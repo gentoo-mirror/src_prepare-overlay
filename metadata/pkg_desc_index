@@ -65,7 +65,7 @@ media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
 media-gfx/swayimg 1.10 9999: A lightweight image viewer for Sway/Wayland display servers.
 media-libs/olivecore 9999: Common components shared between Olive libraries
 media-libs/opentimelineio 0.17.0: Open Source API and interchange format for editorial timeline information.
-media-sound/fooyin 0.5.3 9999: A customizable music player, Qt clone of foobar2000
+media-sound/fooyin 0.5.3 0.6.1 9999: A customizable music player, Qt clone of foobar2000
 media-sound/ponymix 5: CLI volume control for PulseAudio
 media-video/olive 9999: Professional open-source non-linear video editor
 net-analyzer/ipscan-bin 3.9.1: Angry IP Scanner - fast and friendly network scanner
