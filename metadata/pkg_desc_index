@@ -6,7 +6,7 @@ app-backup/restic-browser 0.3.1 0.3.1-r1: A GUI to browse and restore from resti
 app-backup/restic-browser-bin 0.3.0-r1 0.3.1: A GUI to browse and restore restic backup repositories
 app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic interface
 app-editors/lite 1.11-r1 1.11-r2 9999: A lightweight text editor written in Lua
-app-editors/notepadnext 0.7_p20240317 0.8: A cross-platform reimplementation of Notepad++ based on Qt
+app-editors/notepadnext 0.7_p20240317 0.8 0.8_p20240828: A cross-platform reimplementation of Notepad++ based on Qt
 app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
 app-emacs/ement 0.14 0.15 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
