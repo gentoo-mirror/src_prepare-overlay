@@ -7,18 +7,18 @@ inherit gog
 
 DESCRIPTION="Post-apocalyptic GURPS-like role-playing game."
 HOMEPAGE="https://www.gog.com/game/fallout"
-
-LICENSE+=" FALLOUT1_EULA"
-SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
-
 SRC_URI="
 	dos? (	https://archive.org/download/fallout1_dos/fallup1d.zip
 		https://archive.org/download/fallout1_dos/HMIDET.386
 		https://archive.org/download/fallout1_dos/HMIDRV.386 )
 "
+S=${WORKDIR}
 
-IUSE="-dos -wine"
+LICENSE+=" FALLOUT1_EULA"
+SLOT="0"
+KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
+
+IUSE="dos wine"
 
 GOG_GAME_NAME="fallout_classic"
 GOG_GAME_L10N="en"
@@ -38,8 +38,6 @@ RDEPEND+="
 "
 
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}
 
 src_unpack() {
 	gog_initialize
