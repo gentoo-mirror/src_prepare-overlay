@@ -5,10 +5,9 @@ EAPI=7
 
 inherit acct-user
 
-KEYWORDS="~*"
-
 DESCRIPTION="Sensu Monitoring Framework"
 ACCT_USER_ID=60
 ACCT_USER_GROUPS=( sensu )
 acct-user_add_deps
 SLOT="0"
+KEYWORDS="~*"
