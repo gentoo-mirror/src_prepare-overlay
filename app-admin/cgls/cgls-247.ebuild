@@ -22,12 +22,13 @@ else
 	SRC_URI="https://github.com/systemd/systemd/archive/v${PV}.tar.gz -> systemd-${PV}.tar.gz"
 	KEYWORDS="~amd64"
 fi
+S="${WORKDIR}/systemd-${PV}"
 
 # No tests for this one (if I mised them let me know)
-RESTRICT="mirror test"
 LICENSE="BSD-2 GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0"
 IUSE="selinux"
+RESTRICT="mirror test"
 
 BDEPEND="
 	>=dev-util/intltool-0.50
@@ -47,8 +48,6 @@ DEPEND="
 	selinux? ( sys-libs/libselinux:0= )
 "
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/systemd-${PV}"
 
 PATCHES=(
 	"${FILESDIR}/246-${PN}-libshared-static.patch"
