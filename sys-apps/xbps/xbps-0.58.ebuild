@@ -14,10 +14,10 @@ else
 	KEYWORDS="~amd64"
 fi
 
-RESTRICT="!test? ( test ) mirror"
 LICENSE="BSD"
 SLOT="0"
 IUSE="debug doc lto static test"
+RESTRICT="!test? ( test ) mirror"
 
 COMMON_DEPEND="
 	>=app-arch/libarchive-3.3.3[lz4,zstd]
