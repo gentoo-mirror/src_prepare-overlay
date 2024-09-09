@@ -16,9 +16,9 @@ else
 	KEYWORDS="~amd64"
 fi
 
-RESTRICT="binchecks mirror strip test"
 LICENSE="MIT"
 SLOT="0"
+RESTRICT="binchecks mirror strip test"
 
 RDEPEND="
 	|| (
