@@ -19,9 +19,9 @@ else
 	S="${WORKDIR}"/"${MY_PN}-${PV}"
 fi
 
-RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
+RESTRICT="mirror"
 
 DEPEND="
 	x11-wm/enlightenment
