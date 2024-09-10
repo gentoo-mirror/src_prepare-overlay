@@ -14,7 +14,7 @@ GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 7 ))
 GENTOO_CONFIG_VER=g13
 
 XANMOD_VERSION="1"
-RT_PATCHSET="38"
+RT_PATCHSET="41"
 
 KV_FULL="${PV}-rt${RT_PATCHSET}-xanmod${XANMOD_VERSION}-dist"
 
