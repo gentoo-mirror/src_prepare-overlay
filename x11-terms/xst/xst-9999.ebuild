@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit git-r3 multilib savedconfig toolchain-funcs
+inherit desktop git-r3 savedconfig
 
 DESCRIPTION="Simple terminal implementation for X with Xresources support and other patches"
 HOMEPAGE="https://github.com/gnotclub/xst"
 EGIT_REPO_URI="${HOMEPAGE}"
 
-SLOT="0"
 LICENSE="MIT-with-advertising"
+SLOT="0"
 
 IUSE="savedconfig"
 

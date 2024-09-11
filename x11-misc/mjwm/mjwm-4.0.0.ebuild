@@ -16,9 +16,9 @@ else
 	KEYWORDS="~amd64"
 fi
 
-RESTRICT="mirror"
 LICENSE="GPL-2"
 SLOT="0"
+RESTRICT="mirror"
 
 src_prepare() {
 	default

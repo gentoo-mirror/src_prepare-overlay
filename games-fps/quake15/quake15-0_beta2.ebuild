@@ -9,6 +9,7 @@ SRC_URI="
 	https://www.moddb.com/downloads/mirror/173517/114/5090a373c5249e55e509808983481a04 -> Q15_PublicBeta1.7z
 	https://www.moddb.com/downloads/mirror/173707/114/f7627345043efdfcd9e27d4906a382ac -> Q15_patch2.7z
 "
+S="${WORKDIR}"
 
 LICENSE="HPND"
 SLOT="0"
@@ -16,8 +17,6 @@ KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
 
 RDEPEND=">=games-fps/darkplaces-20170829_beta1"
 DEPEND="app-arch/p7zip"
-
-S="${WORKDIR}"
 
 src_install() {
 	insinto "/usr/share/quake1"

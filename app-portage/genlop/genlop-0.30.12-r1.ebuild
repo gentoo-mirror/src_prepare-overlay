@@ -9,6 +9,8 @@ DESCRIPTION="A nice emerge.log parser"
 HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Perl"
 SRC_URI="https://github.com/Ociidii-Works/genlop/archive/genlop-${PV}.tar.gz"
 
+S=${WORKDIR}/genlop-genlop-${PV}
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
@@ -19,7 +21,6 @@ DEPEND="dev-lang/perl
 RDEPEND="${DEPEND}"
 
 # Please send help
-S=${WORKDIR}/genlop-genlop-${PV}
 
 src_install() {
 	echo "S=${S}"

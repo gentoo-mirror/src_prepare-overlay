@@ -16,11 +16,10 @@ else
 	KEYWORDS="~amd64"
 fi
 
-RESTRICT="!test? ( test )"
-
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="doc test"
+RESTRICT="!test? ( test )"
 
 # TODO: qt6
 DEPEND="

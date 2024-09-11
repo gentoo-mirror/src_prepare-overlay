@@ -7,10 +7,10 @@ DESCRIPTION="minimalistic, lightweight command line client for Jellyfin"
 HOMEPAGE="https://github.com/Aanok/jftui"
 SRC_URI="https://github.com/Aanok/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-RESTRICT="mirror"
 LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64"
+RESTRICT="mirror"
 
 RDEPEND="
 	net-misc/curl
