@@ -47,8 +47,7 @@ pkgcheck_strict_scan:
     - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
       when: manual
   script:
-    # temporarily disable BadDefaultUseFlags
-    - pkgcheck ci -k error,-BadDefaultUseFlags $common_pkgcheck_args
+    - pkgcheck ci -k error $common_pkgcheck_args
 
 pkgcheck_merge:
   rules:
