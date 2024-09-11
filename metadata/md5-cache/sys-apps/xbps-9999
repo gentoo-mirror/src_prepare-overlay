@@ -12,4 +12,4 @@ RDEPEND=>=app-arch/libarchive-3.3.3[lz4,zstd]
 RESTRICT=!test? ( test ) mirror
 SLOT=0
 _eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
-_md5_=226c8b53bc3557608e00a2cd878b021f
+_md5_=4ad1e5f7c146687f78ed7313dc7dfac7

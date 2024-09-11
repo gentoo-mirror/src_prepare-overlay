@@ -8,4 +8,4 @@ RDEPEND=net-misc/curl media-video/mpv dev-libs/yajl
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/Aanok/jftui/archive/v0.4.0.tar.gz -> jftui-0.4.0.tar.gz
-_md5_=ba38494b559ce4c5f1dfd1b6445ee0e5
+_md5_=7101970efb24f850c2e9a5b8ce3b6d3c

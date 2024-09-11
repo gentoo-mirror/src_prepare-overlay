@@ -6,4 +6,4 @@ KEYWORDS=~*
 RDEPEND=acct-group/sensu
 SLOT=0
 _eclasses_=user-info	9951b1a0e4f026d16c33a001fd2d5cdf	acct-user	bab50e8bac8e1df6a32a6b9e2fb19a64
-_md5_=bb8b4ae287f47ca906b7645a90de37d9
+_md5_=923168078f4500887a511e2015c0b360

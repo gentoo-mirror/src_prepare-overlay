@@ -8,4 +8,4 @@ LICENSE=HPND
 RDEPEND=>=games-fps/darkplaces-20170829_beta1
 SLOT=0
 SRC_URI=https://www.moddb.com/downloads/mirror/173517/114/5090a373c5249e55e509808983481a04 -> Q15_PublicBeta1.7z https://www.moddb.com/downloads/mirror/173707/114/f7627345043efdfcd9e27d4906a382ac -> Q15_patch2.7z
-_md5_=8201be42b105fcb7e4d84e72ecbdb4de
+_md5_=51a112108b6f141c78d59c7d9aacc193

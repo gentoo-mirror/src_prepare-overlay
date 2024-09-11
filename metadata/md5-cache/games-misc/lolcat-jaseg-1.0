@@ -7,4 +7,4 @@ LICENSE=WTFPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/jaseg/lolcat/archive/v1.0.tar.gz -> lolcat-1.0.tar.gz
-_md5_=9fdf19542082bec0266d97f663072573
+_md5_=6726ce5640f3bb4ef0b42c2b7ff37cbe

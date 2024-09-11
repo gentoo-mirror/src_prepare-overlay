@@ -11,4 +11,4 @@ RDEPEND=>=app-arch/libarchive-3.3.3[lz4,zstd]
 RESTRICT=!test? ( test ) mirror
 SLOT=0
 SRC_URI=https://github.com/void-linux/xbps/archive/0.58.tar.gz -> xbps-0.58.tar.gz
-_md5_=226c8b53bc3557608e00a2cd878b021f
+_md5_=4ad1e5f7c146687f78ed7313dc7dfac7
