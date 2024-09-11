@@ -18,9 +18,9 @@ else
 	S="${WORKDIR}/${MY_P}"
 fi
 
-RESTRICT="mirror"
 LICENSE="WTFPL-2"
 SLOT="0"
+RESTRICT="mirror"
 
 src_install() {
 	einstalldocs

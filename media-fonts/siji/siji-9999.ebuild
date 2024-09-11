@@ -8,11 +8,11 @@ inherit git-r3 font
 DESCRIPTION="An iconic bitmap font based on Stlarch with additional glyphs"
 HOMEPAGE="https://github.com/stark/siji"
 EGIT_REPO_URI="https://github.com/stark/siji.git"
-RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="+pcf"
+RESTRICT="mirror"
 
 DEPEND="
 	x11-apps/bdftopcf

@@ -9,9 +9,9 @@ DESCRIPTION="Miscellaneous logos, wallpapers and other artwork from src_prepare 
 HOMEPAGE="https://gitlab.com/src_prepare/artwork"
 EGIT_REPO_URI="https://gitlab.com/src_prepare/artwork"
 
-RESTRICT="binchecks mirror strip test"
 LICENSE="CC0-1.0"
 SLOT="0"
+RESTRICT="binchecks mirror strip test"
 
 arr_install() {
 	local IFS=$'\n'

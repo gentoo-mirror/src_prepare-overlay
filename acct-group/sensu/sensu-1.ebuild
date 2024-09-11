@@ -5,8 +5,7 @@ EAPI=7
 
 inherit acct-group
 
-KEYWORDS="~*"
-
 DESCRIPTION="Sensu program group"
 ACCT_GROUP_ID=499
 SLOT="0"
+KEYWORDS="~*"
