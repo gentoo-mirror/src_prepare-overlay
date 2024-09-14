@@ -1,15 +1,16 @@
-BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install prepare test unpack
+BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-db/sqlite:3 dev-libs/crypto++:= dev-libs/icu:= dev-libs/libsodium:= dev-libs/openssl:= net-dns/c-ares:= net-misc/curl ffmpeg? ( <media-video/ffmpeg-6 ) freeimage? ( media-libs/freeimage ) fuse? ( sys-fs/fuse ) libuv? ( dev-libs/libuv:= ) mediainfo? ( media-libs/libmediainfo media-libs/libzen ) qt? ( dev-qt/qtcore:5 ) sys-libs/readline
 DESCRIPTION=MEGA C++ SDK
 EAPI=8
 HOMEPAGE=https://github.com/meganz/sdk
-INHERIT=cmake flag-o-matic git-r3
+INHERIT=cmake flag-o-matic
 IUSE=examples ffmpeg freeimage fuse libuv mediainfo qt test
+KEYWORDS=~amd64
 LICENSE=BSD-2
-PROPERTIES=live
 RDEPEND=dev-db/sqlite:3 dev-libs/crypto++:= dev-libs/icu:= dev-libs/libsodium:= dev-libs/openssl:= net-dns/c-ares:= net-misc/curl ffmpeg? ( <media-video/ffmpeg-6 ) freeimage? ( media-libs/freeimage ) fuse? ( sys-fs/fuse ) libuv? ( dev-libs/libuv:= ) mediainfo? ( media-libs/libmediainfo media-libs/libzen ) qt? ( dev-qt/qtcore:5 )
 RESTRICT=!test? ( test )
-SLOT=0/9999
-_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	cmake	10a50dfaf728b802fcfd37f8d0da9056	git-r3	875eb471682d3e1f18da124be97dcc81
+SLOT=0/7.10.0
+SRC_URI=https://github.com/meganz/sdk/archive/v7.10.0.tar.gz -> meganz-sdk-7.10.0.tar.gz
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	cmake	10a50dfaf728b802fcfd37f8d0da9056
 _md5_=946ab0f4834584ea493461541640943e
