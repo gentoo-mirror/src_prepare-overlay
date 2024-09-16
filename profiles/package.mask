@@ -1,4 +1,9 @@
 # Alfred Wingate <parona@protonmail.com> (2024-08-23)
+# Mask until main tree dist-kernel added
+>=sys-kernel/xanmod-kernel-6.11.0
+>=virtual/dist-kernel-6.11.0
+
+# Alfred Wingate <parona@protonmail.com> (2024-08-23)
 # Dead url for bundled luajit
 app-editors/howl
 
