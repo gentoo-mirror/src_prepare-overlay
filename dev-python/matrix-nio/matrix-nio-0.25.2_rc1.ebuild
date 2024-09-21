@@ -3,8 +3,8 @@
 
 EAPI=8
 
-DISTUTILS_USE_PEP517=poetry
-PYTHON_COMPAT=( python3_{10..13} )
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{11..13} )
 
 inherit distutils-r1
 
@@ -17,20 +17,21 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="ISC"
 SLOT="0"
+
 PROPERTIES="test_network"
 RESTRICT="test !test? ( test )"
 
 RDEPEND="
 	>=dev-python/python-olm-3.2.15[${PYTHON_USEDEP}]
-	>=dev-python/aiohttp-3.9.0[${PYTHON_USEDEP}]
+	>=dev-python/aiohttp-3.10.0[${PYTHON_USEDEP}]
 	>=dev-python/aiohttp-socks-0.8.4[${PYTHON_USEDEP}]
-	>=dev-python/aiofiles-23.1.0[${PYTHON_USEDEP}]
+	>=dev-python/aiofiles-24.1.0[${PYTHON_USEDEP}]
 	>=dev-python/atomicwrites-1.4.0[${PYTHON_USEDEP}]
-	>=dev-python/cachetools-4.2.1[${PYTHON_USEDEP}]
+	>=dev-python/cachetools-5.3.0[${PYTHON_USEDEP}]
 	>=dev-python/h11-0.14.0[${PYTHON_USEDEP}]
 	>=dev-python/h2-4.0.0[${PYTHON_USEDEP}]
-	>=dev-python/jsonschema-4.4.0[${PYTHON_USEDEP}]
-	>=dev-python/peewee-3.17.0[${PYTHON_USEDEP}]
+	>=dev-python/jsonschema-4.14.0[${PYTHON_USEDEP}]
+	>=dev-python/peewee-3.2.0[${PYTHON_USEDEP}]
 	>=dev-python/pycryptodome-3.10.1[${PYTHON_USEDEP}]
 	>=dev-python/unpaddedbase64-2.1.0[${PYTHON_USEDEP}]
 "
@@ -39,6 +40,7 @@ DEPEND="
 		>=dev-python/aioresponses-0.7.4[${PYTHON_USEDEP}]
 		>=dev-python/Faker-8.0.0[${PYTHON_USEDEP}]
 		>=dev-python/pytest-aiohttp-0.3.0[${PYTHON_USEDEP}]
+		>=dev-python/pytest-asyncio-0.24.0[${PYTHON_USEDEP}]
 		>=dev-python/hpack-4.0.0[${PYTHON_USEDEP}]
 		>=dev-python/hyperframe-6.0.0[${PYTHON_USEDEP}]
 		>=dev-python/hypothesis-6.8.9[${PYTHON_USEDEP}]
@@ -47,8 +49,7 @@ DEPEND="
 "
 
 distutils_enable_tests pytest
-# m2r2 mistune woes
-#distutils_enable_sphinx doc dev-python/sphinx-autodoc-typehints dev-python/sphinx-rtd-theme dev-python/m2r2
+distutils_enable_sphinx doc dev-python/sphinx-autodoc-typehints dev-python/sphinx-rtd-theme dev-python/sphinx-mdinclude
 
 EPYTEST_DESELECT=(
 	# breaks network sandbox
