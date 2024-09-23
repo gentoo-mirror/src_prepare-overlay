@@ -1,5 +1,5 @@
 BDEPEND=>=app-editors/emacs-27.1:* >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
 DEPEND=>=app-emacs/transient-0.3.7 >=app-emacs/persist-0.5 >=app-emacs/plz-0.6 >=app-emacs/taxy-0.10 >=app-emacs/taxy-magit-section-0.12.1 >=app-emacs/svg-lib-0.2.5 >=app-emacs/transient-0.3.7
 DESCRIPTION=Matrix client for GNU Emacs
 EAPI=8
@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=>=app-editors/emacs-27.1:*
 RESTRICT=test
 SLOT=0
-_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	875eb471682d3e1f18da124be97dcc81
+_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	elisp	e7149f29f0c141396a0cec7cc59947a6	git-r3	875eb471682d3e1f18da124be97dcc81
 _md5_=4c47e9cc1bfba65d9904f08b117d20d4
