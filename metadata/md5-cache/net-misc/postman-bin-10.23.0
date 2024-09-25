@@ -12,5 +12,5 @@ RDEPEND=app-crypt/libsecret dev-libs/wayland app-accessibility/at-spi2-core:2 de
 RESTRICT=mirror strip test
 SLOT=0
 SRC_URI=https://dl.pstmn.io/download/version/10.23.0/linux64 -> postman-bin-10.23.0-amd64.tar.gz
-_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	chromium-2	93690d770dc2e27deaa89794e2f9fe3f	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097	bintron-r1	06e7a11ae53d672e47f0d6a907a82e5b	desktop	56973babb9c5f19cab0eeb53ece644c6
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	chromium-2	93690d770dc2e27deaa89794e2f9fe3f	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	854eae304447322625df5991e20ed18f	bintron-r1	06e7a11ae53d672e47f0d6a907a82e5b	desktop	56973babb9c5f19cab0eeb53ece644c6
 _md5_=bcf5c41162ee4255eefb704450e97358
