@@ -28,7 +28,7 @@ PATCH_URIS=(
 )
 
 SRC_URI="
-	https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-2gnu1.tar.bz2
+	https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-1gnu1.tar.bz2
 	${PATCH_URIS[@]}
 "
 S="${WORKDIR}/${PN}-${PV%_*}"
