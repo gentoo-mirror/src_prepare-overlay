@@ -94,7 +94,7 @@ sys-kernel/xanmod-sources 6.6.51 6.6.52 6.6.53 6.10.10 6.10.11 6.10.12 6.11.0 6.
 sys-process/nq 0.5 1.0 9999: Unix command line queue utility
 virtual/dist-kernel 6.6.49 6.6.50 6.6.51 6.6.52 6.6.53 6.10.10 6.10.11 6.10.12 6.11.0 6.11.1: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
-www-client/icecat 115.14.0 115.15.0: GNU IceCat Web Browser
+www-client/icecat 115.15.0 115.16.0: GNU IceCat Web Browser
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
 x11-misc/portfolio 1.0.0 9999: Minimalist file manager for those who want to use Linux mobile devices
 x11-misc/pscircle 1.4.0: Visualizes Linux processes in a radial tree
