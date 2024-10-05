@@ -17,6 +17,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="ISC"
 SLOT="0"
+KEYWORDS="~amd64"
 
 PROPERTIES="test_network"
 RESTRICT="test !test? ( test )"
