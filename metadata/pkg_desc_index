@@ -35,7 +35,7 @@ dev-python/sphinx-mdinclude 0.6.2: Markdown extension for Sphinx
 dev-python/vkbasalt-cli 3.1.1: Command-line utility for vkBasalt
 dev-scheme/gerbil 0.17: Dialect of Scheme designed for Systems Programming
 dev-tex/tectonic 0.15.0-r1: A modernized, complete, self-contained TeX/LaTeX engine.
-dev-tex/texlab 5.19.0: LaTeX Language Server
+dev-tex/texlab 5.19.0 5.20.0: LaTeX Language Server
 dev-util/beekeeper-studio 4.3.1 4.3.4 4.6.0 4.6.2: Modern and easy to use SQL client
 dev-util/github-desktop 3.3.6_rc3: GitHub Desktop for Linux
 dev-util/plan9port 2023.09.13: Port of many Plan 9 programs and libraries
