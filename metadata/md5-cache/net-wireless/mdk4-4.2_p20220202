@@ -10,5 +10,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/libnl:3 net-libs/libpcap
 SLOT=0
 SRC_URI=https://github.com/aircrack-ng/mdk4/archive/4ba85e4c94a79b634b63d26e64a977e568551367.tar.gz -> mdk4-4ba85e4c94a79b634b63d26e64a977e568551367.tar.gz
-_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94
+_eclasses_=toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe
 _md5_=0a05a8050e2d73038f6c9816c879a7a1
