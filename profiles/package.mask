@@ -1,3 +1,11 @@
+# Alfred Wingate <parona@protonmail.com> (2024-10-08)
+# Upstream is going to vendor dependencies.
+# rpi-imager is also packaged on ::guru as
+# dev-util/rpi-imager which may be something
+# to look out for if it persists.
+# https://github.com/raspberrypi/rpi-imager/issues/924
+sys-boot/rpi-imager
+
 # SigHunter <sighunter@gmx.de> (2024-09-21)
 # Not maintained actively in this repository.
 # Use ::guru instead.
