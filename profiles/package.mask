@@ -1,3 +1,9 @@
+# SigHunter <sighunter@gmx.de> (2024-10-15)
+# No reason to keep the bin around anymore
+# Use the source based app-backup/restic-browser instead.
+# Removal on 2024-11-15
+app-backup/restic-browser-bin
+
 # Alfred Wingate <parona@protonmail.com> (2024-10-08)
 # Upstream is going to vendor dependencies.
 # rpi-imager is also packaged on ::guru as
