@@ -442,6 +442,7 @@ RDEPEND="
 	app-backup/restic
 	!app-backup/restic-browser-bin
 	net-libs/webkit-gtk:4
+	x11-libs/gtk+:3[wayland]
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
