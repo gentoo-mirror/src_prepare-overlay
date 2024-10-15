@@ -43,6 +43,9 @@ RDEPEND="
 	dev-qt/qt5compat:6
 "
 DEPEND="${RDEPEND}"
+BDEPEND="
+	dev-qt/qttools:6
+"
 
 src_prepare() {
 	default
