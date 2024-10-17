@@ -13,7 +13,7 @@ app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU
 app-emacs/taxy 0.10.1 0.10.2 9999: Programmable taxonomical hierarchies for arbitrary objects
 app-emacs/taxy-magit-section 0.13 0.14 9999: Programmable taxonomical hierarchies for arbitrary objects
 app-emacs/ts 0.2.2 9999: Timestamp and date/time library
-app-emulation/bottles 51.13 9999: Run Windows software and games on Linux
+app-emulation/bottles 51.13 51.15 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 3.1.1: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8_p20220323: CLI based audio visualizer
@@ -88,12 +88,12 @@ sys-apps/qdiskinfo 0.2_p20240714 0.3: CrystalDiskInfo alternative for Linux
 sys-apps/xbps 0.58 9999: The X Binary Package System
 sys-boot/etcher-bin 1.18.11-r1 1.18.12 1.19.21: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.8.5-r1 9999: Raspberry Pi Imaging Utility
-sys-kernel/xanmod-kernel 6.6.53 6.6.54 6.6.56 6.10.12 6.11.1 6.11.2 6.11.3: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-kernel 6.6.54 6.6.56 6.6.57 6.11.2 6.11.3 6.11.4: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-kernel 6.6.49 6.6.50 6.6.52: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-sources 6.6.49 6.6.50 6.6.52: Full XanMod sources with CONFIG_PREEMPT_RT and including the Gentoo patchset
-sys-kernel/xanmod-sources 6.6.53 6.6.54 6.6.56 6.10.12 6.11.1 6.11.2 6.11.3: Full XanMod sources including the Gentoo patchset
+sys-kernel/xanmod-sources 6.6.54 6.6.56 6.6.57 6.11.2 6.11.3 6.11.4: Full XanMod sources including the Gentoo patchset
 sys-process/nq 0.5 1.0 9999: Unix command line queue utility
-virtual/dist-kernel 6.6.49 6.6.50 6.6.52 6.6.53 6.6.54 6.6.56 6.10.12 6.11.1 6.11.2 6.11.3: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.6.49 6.6.50 6.6.52 6.6.54 6.6.56 6.6.57 6.11.2 6.11.3 6.11.4: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3: Virtual for Linux kernel sources
 www-client/icecat 115.16.0 115.16.1: GNU IceCat Web Browser
 x11-misc/mjwm 4.0.0 9999: mjwm creates JWM application menu from (freedesktop) desktop files
