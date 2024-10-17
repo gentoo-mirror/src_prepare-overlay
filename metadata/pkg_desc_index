@@ -8,7 +8,7 @@ app-editors/howl 0.6 9999: Lightweight editor with keyboard-centric minimalistic
 app-editors/lite 1.11-r1 1.11-r2 9999: A lightweight text editor written in Lua
 app-editors/notepadnext 0.8 0.8_p20240828: A cross-platform reimplementation of Notepad++ based on Qt
 app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
-app-emacs/ement 0.14 0.15 9999: Matrix client for GNU Emacs
+app-emacs/ement 0.15 0.16 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
 app-emacs/taxy 0.10.1 0.10.2 9999: Programmable taxonomical hierarchies for arbitrary objects
 app-emacs/taxy-magit-section 0.13 0.14 9999: Programmable taxonomical hierarchies for arbitrary objects
@@ -59,9 +59,9 @@ mail-client/heirloom-mailx 12.5: The mailx utility from CentOS
 media-fonts/labiryntowy 1.53-r1: Practical font realization of the Labirynth Alphabet
 media-fonts/siji 9999: An iconic bitmap font based on Stlarch with additional glyphs
 media-gfx/akira 0.0.15_alpha_pre20231116 9999: Native Linux App for UI and UX Design built in Vala and Gtk
-media-gfx/czkawka 7.0.0: App to find duplicates, empty folders and similar images
+media-gfx/czkawka 7.0.0 8.0.0: App to find duplicates, empty folders and similar images
 media-gfx/drawing 1.0.2-r1 9999: A drawing application for the GNOME desktop
-media-gfx/figma-bin 0.11.3 0.11.4: Unofficial desktop client for Figma - collaborative interface design tool
+media-gfx/figma-bin 0.11.4 0.11.5: Unofficial desktop client for Figma - collaborative interface design tool
 media-gfx/gpick 0.2.6: Advanced color picker written in C++ using GTK+ toolkit
 media-gfx/mspaint 5.1.2600-r1: Microsoft Paint for Windows XP.
 media-gfx/swayimg 1.10 9999: A lightweight image viewer for Sway/Wayland display servers.
@@ -78,7 +78,7 @@ net-im/pantalaimon 0.10.5: A Matrix proxy daemon that adds E2E encryption capabi
 net-misc/ddgr 2.2 9999: DuckDuckGo from the terminal
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
 net-misc/megacmd 1.4.0 9999: Command Line Interactive and Scriptable Application to access MEGA
-net-misc/meganz-sdk 3.7.3 7.10.0 9999: MEGA C++ SDK
+net-misc/meganz-sdk 3.7.3 7.10.0 7.12.0 9999: MEGA C++ SDK
 net-misc/postman-bin 10.23.0: Supercharge your API workflow
 net-nntp/nzb-monkey-go 0.1.14 0.1.15 0.1.16: Golang version of the NZB Monkey with included NZB direct search
 net-wireless/mdk4 4.2_p20220202: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
@@ -86,7 +86,7 @@ sci-mathematics/isabelle-bin 2023 2024: Generic proof assistant with higher-orde
 sci-mathematics/scilab-bin 2024.0.0 2024.1.0: Scientific software package for numerical computations
 sys-apps/qdiskinfo 0.2_p20240714 0.3: CrystalDiskInfo alternative for Linux
 sys-apps/xbps 0.58 9999: The X Binary Package System
-sys-boot/etcher-bin 1.18.11-r1 1.18.12 1.19.21: Flash OS images to SD cards & USB drives, safely and easily.
+sys-boot/etcher-bin 1.19.21 1.19.25: Flash OS images to SD cards & USB drives, safely and easily.
 sys-boot/rpi-imager 1.8.5-r1 9999: Raspberry Pi Imaging Utility
 sys-kernel/xanmod-kernel 6.6.54 6.6.56 6.6.57 6.11.2 6.11.3 6.11.4: Linux kernel built with XanMod and Gentoo patches
 sys-kernel/xanmod-rt-kernel 6.6.49 6.6.50 6.6.52: Linux kernel built with XanMod and Gentoo patches
