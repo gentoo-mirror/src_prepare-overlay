@@ -1,0 +1,27 @@
+FAILED: tests/unit/CMakeFiles/test_unit.dir/utils_test.cpp.o
+/usr/bin/x86_64-pc-linux-gnu-g++ -DENABLE_SYNC -DSUPPORTS_TI_EMULATION_MODE=1 -I/var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0/include -I/var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0_build -I/var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0/include/mega/posix -I/var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0/src/fuse/common -I/var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0/tests  -DDEBUG=1 -O3 -march=znver2 -pipe -flto=auto -fuse-linker-plugin -frecord-gcc-switches -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing -std=gnu++17 -Wall -Wextra -Wconversion -Wno-unused-parameter -DGTEST_HAS_PTHREAD=1 -MD -MT tests/unit/CMakeFiles/test_unit.dir/utils_test.cpp.o -MF tests/unit/CMakeFiles/test_unit.dir/utils_test.cpp.o.d -o tests/unit/CMakeFiles/test_unit.dir/utils_test.cpp.o -c /var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0/tests/unit/utils_test.cpp
+/var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0/tests/unit/utils_test.cpp: In member function ‘virtual void Filesystem_EscapesReservedCharacters_Test::TestBody()’:
+/var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0/tests/unit/utils_test.cpp:104:26: error: ‘setfill’ is not a member of ‘std’
+  104 |                  << std::setfill('0')
+      |                          ^~~~~~~
+/var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0/tests/unit/utils_test.cpp:28:1: note: ‘std::setfill’ is defined in header ‘<iomanip>’; this is probably fixable by adding ‘#include <iomanip>’
+   27 | #include <mega/process.h>
+  +++ |+#include <iomanip>
+   28 | #include <mega/scoped_helpers.h>
+/var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0/tests/unit/utils_test.cpp:105:26: error: ‘setw’ is not a member of ‘std’
+  105 |                  << std::setw(2)
+      |                          ^~~~
+/var/tmp/portage/net-misc/meganz-sdk-7.12.0/work/sdk-7.12.0/tests/unit/utils_test.cpp:105:26: note: ‘std::setw’ is defined in header ‘<iomanip>’; this is probably fixable by adding ‘#include <iomanip>’
+
+diff --git a/tests/unit/utils_test.cpp b/tests/unit/utils_test.cpp
+index f28e21623..484d20a05 100644
+--- a/tests/unit/utils_test.cpp
++++ b/tests/unit/utils_test.cpp
+@@ -29,6 +29,7 @@
+ #include <mega/utils.h>
+
+ #include <array>
++#include <iomanip>
+ #include <tuple>
+
+ TEST(utils, readLines)
