@@ -16,7 +16,7 @@ inherit bintron-r1 unpacker
 DESCRIPTION="Flash OS images to SD cards & USB drives, safely and easily."
 HOMEPAGE="https://etcher.balena.io"
 SRC_URI="https://github.com/balena-io/etcher/releases/download/v${PV}/balena-etcher_${PV}_amd64.deb"
-S="${WORKDIR}/opt/balenaEtcher/"
+S="${WORKDIR}/usr/lib/balena-etcher"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -29,3 +29,10 @@ RDEPEND="
 "
 
 QA_PREBUILT="/opt/balenaEtcher/*"
+
+src_prepare() {
+	bintron-r1_src_prepare
+
+	# Weird symlink
+	rm balenaEtcher || die
+}
