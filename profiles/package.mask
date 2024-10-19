@@ -12,11 +12,6 @@ app-backup/restic-browser-bin
 # https://github.com/raspberrypi/rpi-imager/issues/924
 sys-boot/rpi-imager
 
-# SigHunter <sighunter@gmx.de> (2024-09-21)
-# Not maintained actively in this repository.
-# Use ::guru instead.
-media-sound/fooyin
-
 # Alfred Wingate <parona@protonmail.com> (2024-08-23)
 # Dead url for bundled luajit
 app-editors/howl
