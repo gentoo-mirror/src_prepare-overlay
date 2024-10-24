@@ -10,7 +10,7 @@ inherit kernel-build
 
 MY_P=linux-${PV%.*}
 GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 1 ))
-GENTOO_CONFIG_VER=g13
+GENTOO_CONFIG_VER=g14
 
 XANMOD_VERSION="1"
 
@@ -79,7 +79,6 @@ src_prepare() {
 	)
 	use debug || merge_configs+=(
 		"${dist_conf_path}"/no-debug.config
-		"${FILESDIR}"/no-debug-extra.config
 	)
 
 	use secureboot && merge_configs+=( "${dist_conf_path}/secureboot.config" )

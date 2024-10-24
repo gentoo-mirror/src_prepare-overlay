@@ -54,7 +54,6 @@ src_install() {
 			dosym "${DESTDIR}/bin/${executable}" "/usr/bin/${executable}"
 		fi
 	done
-	fperms +x ${DESTDIR}/thirdparty/java/lib/*
 
 	insinto "${DESTDIR}/share"
 	doins -r share/{locale,scilab}
