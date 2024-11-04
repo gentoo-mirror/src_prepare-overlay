@@ -17,7 +17,7 @@ app-emulation/bottles 51.13 51.15 9999: Run Windows software and games on Linux
 app-emulation/dos32a 9.1.2: Free replacement for DOS4GW.
 app-emulation/windows95 3.1.1: Windows 95, running in an Electron app
 app-misc/cli-visualizer 1.8_p20220323: CLI based audio visualizer
-app-misc/spicetify-cli 2.38.4: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.38.4-r1: Commandline tool to customize Spotify client.
 app-portage/euscan-ng 1.0.1_alpha1 9999: Check if a given package has new upstream versions
 app-portage/gen-pkgs 1.2.0 9999: Create HTML page based off of a given overlay URL
 app-portage/genlop 0.30.12-r1 9999: A nice emerge.log parser
@@ -28,7 +28,7 @@ dev-perl/File-Rename 2.02: Perl extension for renaming multiple files
 dev-python/FVS 0.3.4-r1: File Versioning System with hash comparison
 dev-python/aspectlib 2.0.0: An aspect-oriented programming, monkey-patch and decorators library.
 dev-python/icoextract 0.1.5: Extract icons from Windows PE files (.exe/.dll)
-dev-python/janus 1.0.0: Thread-safe asyncio-aware queue for Python
+dev-python/janus 1.0.0 1.1.0: Thread-safe asyncio-aware queue for Python
 dev-python/matrix-nio 0.25.1 0.25.2: A Python Matrix client library, designed according to sans I/O principles
 dev-python/python-olm 3.2.16-r1: python CFFI bindings for the olm cryptographic ratchet library
 dev-python/sphinx-mdinclude 0.6.2: Markdown extension for Sphinx
@@ -72,12 +72,12 @@ media-video/olive 9999: Professional open-source non-linear video editor
 net-analyzer/ipscan-bin 3.9.1: Angry IP Scanner - fast and friendly network scanner
 net-analyzer/sensu 5.19.3 5.21.3: Simple. Scalable. Multi-cloud monitoring.
 net-firewall/hblock 3.2.0 9999: Improve your security and privacy by blocking ads, tracking and malware domains
-net-im/matrix-commander 7.7.0 7.7.1: Simple but convenient CLI-based Matrix client app for sending and receiving
+net-im/matrix-commander 7.7.0 7.7.1 8.0.0: Simple but convenient CLI-based Matrix client app for sending and receiving
 net-im/pantalaimon 0.10.5: A Matrix proxy daemon that adds E2E encryption capabilities
 net-misc/ddgr 2.2 9999: DuckDuckGo from the terminal
 net-misc/jftui 0.4.0: minimalistic, lightweight command line client for Jellyfin
 net-misc/megacmd 1.4.0 9999: Command Line Interactive and Scriptable Application to access MEGA
-net-misc/meganz-sdk 3.7.3 7.10.0 7.12.0 9999: MEGA C++ SDK
+net-misc/meganz-sdk 3.7.3 7.10.0 7.12.0 7.13.0 9999: MEGA C++ SDK
 net-misc/postman-bin 10.23.0: Supercharge your API workflow
 net-nntp/nzb-monkey-go 0.1.14 0.1.15 0.1.16: Golang version of the NZB Monkey with included NZB direct search
 net-wireless/mdk4 4.2_p20220202: Proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
