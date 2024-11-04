@@ -8,7 +8,7 @@ inherit go-module
 MY_PN="cli"
 
 WHITELIST_VERSIONS=(
-	"<> 1.2.14 1.2.47"
+	"<> 1.2.14 1.2.49"
 )
 
 whitelist_versions() {
