@@ -39,7 +39,7 @@ RDEPEND="
 DEPEND="
 	test? (
 		>=dev-python/aioresponses-0.7.4[${PYTHON_USEDEP}]
-		>=dev-python/Faker-8.0.0[${PYTHON_USEDEP}]
+		>=dev-python/faker-8.0.0[${PYTHON_USEDEP}]
 		>=dev-python/pytest-aiohttp-0.3.0[${PYTHON_USEDEP}]
 		>=dev-python/pytest-asyncio-0.24.0[${PYTHON_USEDEP}]
 		>=dev-python/hpack-4.0.0[${PYTHON_USEDEP}]
