@@ -1,8 +1,3 @@
-# Alfred Wingate <parona@protonmail.com> (2024-11-23)
-# Mask until main tree dist-kernel added
->=sys-kernel/xanmod-kernel-6.12.0
->=virtual/dist-kernel-6.12.0
-
 # SigHunter <sighunter@gmx.de> (2024-10-15)
 # No reason to keep the bin around anymore
 # Use the source based app-backup/restic-browser instead.
