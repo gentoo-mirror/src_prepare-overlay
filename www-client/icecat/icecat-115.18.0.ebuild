@@ -29,7 +29,7 @@ PATCH_URIS=(
 )
 
 SRC_URI="
-	https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-1gnu1.tar.bz2
+	https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-1gnu2.tar.bz2
 	${PATCH_URIS[@]}
 "
 S="${WORKDIR}/${PN}-${PV%_*}"
@@ -582,6 +582,8 @@ src_prepare() {
 	sed -i -e 's/firefox/icecat/' "${WORKDIR}"/firefox-patches/0033-bmo-1882209-update-crates-for-rust-1.78-stripped-patch-from-bugs.freebsd.org-bug278834.patch || die
 
 	eapply "${WORKDIR}/firefox-patches"
+
+	eapply "${FILESDIR}/icecat-115.18.0-python3.12-fix.patch"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	eapply_user
