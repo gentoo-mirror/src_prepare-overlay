@@ -11,5 +11,5 @@ RDEPEND=>=app-emacs/magit-3.2.1 >=app-emacs/taxy-0.10 >=app-editors/emacs-26.3:*
 RESTRICT=test
 SLOT=0
 SRC_URI=https://elpa.gnu.org/packages/taxy-magit-section-0.13.tar
-_eclasses_=elisp-common	4ee3453b022aae73f4d827a0f98920c2	elisp	e7149f29f0c141396a0cec7cc59947a6
+_eclasses_=elisp-common	4ee3453b022aae73f4d827a0f98920c2	elisp	8dfc7a00348fe9c91895014adc78a4a5
 _md5_=ed599b04630f4def2a808d9e2aec3205
