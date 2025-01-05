@@ -1,0 +1,19 @@
+Title: src_prepare-overlay archival
+Author: Alfred Wingate <parona@protonmail.com>
+Content-Type: text/plain
+Posted: 2025-01-05
+Revision: 1
+News-Item-Format: 2.0
+
+src_prepare-overlay will be archived.
+
+Recommended action is to see what packages you use and then either find other overlays that maintain them or copy them to your own overlay. Once that is done you can remove this overlay.
+
+There is no rush to remove the overlay, but its not guaranteed that it will work forever as changes in ::gentoo can break assumptions for the overlay over time.
+
+I (Parona) will personally continue to maintain GNU Icecat, Xanmod kernels and spicetify-cli on my own overlay [1].
+
+Matrix room will continue to be open if you have questions about ebuilds [2].
+
+[1] https://gitlab.com/Parona/parona-overlay
+[2] https://matrix.to/#/#src_prepare:matrix.org
